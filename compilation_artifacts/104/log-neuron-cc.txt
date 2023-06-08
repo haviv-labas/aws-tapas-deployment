@@ -1,0 +1,1797 @@
+06/07/2023 11:12:23 AM INFO 29120 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104
+06/07/2023 11:12:23 AM INFO 29120 [pipeline.custom.0]: Running pipeline custom.0
+06/07/2023 11:12:23 AM INFO 29120 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/07/2023 11:12:23 AM INFO 29120 [pipeline.compile.0]: Running pipeline compile.0
+06/07/2023 11:12:23 AM INFO 29120 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/07/2023 11:12:23 AM INFO 29120 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {"tensor.1:0": [[], "int64"], "1:0": [[3, 512], "int64"], "2:0": [[3, 512], "int64"]}, "outputs": ["TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0"]}'
+06/07/2023 11:12:24 AM INFO 29120 [job.Frontend.4]: IR signature: b2c9365d2332fb68cc8f21091e4abac33b7ca8d9bf61088c5a884cf03f5b0269 for graph_def.pb
+06/07/2023 11:12:24 AM INFO 29120 [job.Frontend.4]: total padded opcount is 0
+06/07/2023 11:12:24 AM INFO 29120 [job.Frontend.4]: Finished Jellyfish import
+06/07/2023 11:12:24 AM INFO 29120 [job.Frontend.4]: Start tensorization
+06/07/2023 11:12:24 AM INFO 29120 [job.Frontend.4]: IR signature: 7ed3e1e242f4ac8fc7a024387d64588765dbffe75304cab769ba5f01f47d7314 for relay_graph_post_opt_unit_level.txt
+06/07/2023 11:12:24 AM INFO 29120 [root/Tensorizer/All]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Tensorizer]: Tensorizer options:  --fp32-cast=all  --disable-bitcasted-transpose  --disable-expensive-checks  --disable-max-stride-tiling  --enable-replication  --max-local-tensor-tile-size-in-bytes=16384  --tensor-layout-p-order=0  --tensor-layout-b-order=1  --enable-advanced-delinearization  --weight-coalescing-threshold=512  --disable-shifted-fusion  --enable-bir-converter=enable 
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RelayPasses]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RelayPasses]: Exit time region: delta=0.005s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/IRBuilder]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/IRBuilder]: Exit time region: delta=0.004s
+06/07/2023 11:12:24 AM INFO 29120 [Tensorizer]: Tensorizer options:  --fp32-cast=all  --disable-bitcasted-transpose  --disable-expensive-checks  --disable-max-stride-tiling  --enable-replication  --max-local-tensor-tile-size-in-bytes=16384  --tensor-layout-p-order=0  --tensor-layout-b-order=1  --enable-advanced-delinearization  --weight-coalescing-threshold=512  --disable-shifted-fusion  --enable-bir-converter=enable 
+06/07/2023 11:12:24 AM INFO 29120 [Tensorizer]: Generate: 1 statements from relay. Start optimizations ...
+06/07/2023 11:12:24 AM INFO 29120 [Statistics]: Weights total number of bytes: 12304
+06/07/2023 11:12:24 AM INFO 29120 [Statistics]: RelayIF total number of bytes: 12288.0
+06/07/2023 11:12:24 AM INFO 29120 [Statistics]: RelayOF total number of bytes: 12288.0
+06/07/2023 11:12:24 AM INFO 29120 [Statistics]: Weights total number of bytes: 12304.0
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DoNothing]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DoNothing]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DoNothing]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/MutateDataType]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [MutateDataType]: Finished (changed=True #instances=30720)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/MutateDataType]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ResolveEqualPredicates]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ResolveEqualPredicates]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ResolveEqualPredicates]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/EliminateDivs]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [EliminateDivs]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/EliminateDivs]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [SimplifyPredicates]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Simplifier]: Finished (changed=True #instances=26112)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.004s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TCTransform]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TCTransform]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TCTransform]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/CommuteConcat]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [CommuteConcat]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/CommuteConcat]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LoopFusion]: Finished (changed=True #instances=10752)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.004s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Simplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DelinearIndices]: Finished (changed=True #instances=10752)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Delinearization]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DeadStoreElimination]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DeadStoreElimination]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DeadStoreElimination]: Exit time region: delta=0.005s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Simplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LICM]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DelinearIndices]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Delinearization]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LoopFusion]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LICM]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Simplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ValueNumbering]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LICM]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/MemcpyElimination]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [MemcpyElimination]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/MemcpyElimination]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PadElimination]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [PadElimination]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PadElimination]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DelinearIndices]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Delinearization]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LoopFusion]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Simplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LICM]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ValueNumbering]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TCTransform]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TCTransform]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TCTransform]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/CommuteConcat]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [CommuteConcat]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/CommuteConcat]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LoopFusion]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ValueNumbering]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RecognizeOpIdiom]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [RecognizeOpIdiom]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RecognizeOpIdiom]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DeadCodeElimination]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DeadCodeElimination]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DeadCodeElimination]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [Tensorizer]: After optimization: 1 statements
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/AutoCastFP32]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [AutoCastFP32]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/AutoCastFP32]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LoopFusion]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Simplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [Delinearization]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ResolveAccessConflict]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ResolveAccessConflict]: Finished (changed=True #instances=16896)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ResolveAccessConflict]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TransformLayout]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TransformLayout]: Finished (changed=True #instances=16896)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TransformLayout]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PartitionLocalityOpt]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [PartitionLocalityOpt]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PartitionLocalityOpt]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenPartitionAxes]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [FlattenPartitionAxes]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenPartitionAxes]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSizeTiling]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaSizeTiling]: Finished (changed=True #instances=36)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSizeTiling]: Exit time region: delta=0.008s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TilingProfiler]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TilingProfiler]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TilingProfiler]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [Tensorizer]: Default layout and tiling instruction count within range.
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [FlattenMacroLoop]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RetileSIMDMacro]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [RetileSIMDMacro]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RetileSIMDMacro]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/InferTongaTensor]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [InferTongaTensor]: Finished (changed=True #instances=36)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/InferTongaTensor]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaSimplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LICM]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RewriteReplicationMatmul]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [RewriteReplicationMatmul]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RewriteReplicationMatmul]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [FlattenMacroLoop]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [SimplifyPredicates]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DataLocalityOpt]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DataLocalityOpt]: Finished (changed=True #instances=61)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DataLocalityOpt]: Exit time region: delta=0.038s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaSimplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaMacro]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LegalizeTongaMacro]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaMacro]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaSimplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PerfectLoopNest]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [PerfectLoopNest]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PerfectLoopNest]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [FlattenMacroLoop]: Finished (changed=True #instances=61)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RewriteWeights]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [RewriteWeights]: Finished (changed=True #instances=61)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RewriteWeights]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ReshapeWeights]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ReshapeWeights]: Finished (changed=True #instances=61)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ReshapeWeights]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [FlattenMacroLoop]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [SimplifyPredicates]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/InferInitValue]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [InferInitValue]: Finished (changed=True #instances=61)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/InferInitValue]: Exit time region: delta=0.014s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SplitUnionSets]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [SplitUnionSets]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SplitUnionSets]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaSimplifier]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyTongaTensor]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [SimplifyTongaTensor]: Finished (changed=True #instances=61)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyTongaTensor]: Exit time region: delta=0.004s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaStore]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LegalizeTongaStore]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaStore]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LICM]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaISel]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaISel]: Finished (changed=True #instances=97)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaISel]: Exit time region: delta=0.004s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaAffineLoopXform]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaAffineLoopXform]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaAffineLoopXform]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaLoopFusion]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaLoopFusion]: Finished (changed=True #instances=97)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaLoopFusion]: Exit time region: delta=0.009s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaLICM]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaLICM]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaLICM]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FactorizeBlkDims]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [FactorizeBlkDims]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/FactorizeBlkDims]: Exit time region: delta=0.004s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaInstComb]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaInstComb]: Finished (changed=True #instances=86)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaInstComb]: Exit time region: delta=0.011s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaValueNumbering]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaValueNumbering]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaValueNumbering]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LowerTranspose]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LowerTranspose]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LowerTranspose]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaType]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LegalizeTongaType]: Finished (changed=True #instances=87)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaType]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PartialLoopFusion]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [PartialLoopFusion]: Finished (changed=True #instances=87)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/PartialLoopFusion]: Exit time region: delta=0.017s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ShortenLifeInterval]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ShortenLifeInterval]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ShortenLifeInterval]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/GlobalBatchOpt]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [GlobalBatchOpt]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/GlobalBatchOpt]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SpillPSum]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [SpillPSum]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SpillPSum]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaType]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LegalizeTongaType]: Finished (changed=True #instances=87)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaType]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/InferPSumTensor]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [InferPSumTensor]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/InferPSumTensor]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/VectorizeMatMult]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [VectorizeMatMult]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/VectorizeMatMult]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/WeightCoalescing]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [WeightCoalescing]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/WeightCoalescing]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LowerPartitionTile]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LowerPartitionTile]: Finished (changed=True #instances=149)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LowerPartitionTile]: Exit time region: delta=0.008s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/BroadcastWeights]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [BroadcastWeights]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/BroadcastWeights]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TensorInitialization]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TensorInitialization]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TensorInitialization]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaAccess]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LegalizeTongaAccess]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizeTongaAccess]: Exit time region: delta=0.004s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaAffineLoopXform]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TongaAffineLoopXform]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TongaAffineLoopXform]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RelaxPredicates]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [RelaxPredicates]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/RelaxPredicates]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TensorInitialization]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [TensorInitialization]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/TensorInitialization]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ExpandISAMacro]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ExpandISAMacro]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ExpandISAMacro]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizePartitionTile]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LegalizePartitionTile]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LegalizePartitionTile]: Exit time region: delta=0.002s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyTongaTensor]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [SimplifyTongaTensor]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/SimplifyTongaTensor]: Exit time region: delta=0.005s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LinearizeFreeDim]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [LinearizeFreeDim]: Finished (changed=True #instances=149)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/LinearizeFreeDim]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DataStreaming]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [DataStreaming]: Finished (changed=False)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/DataStreaming]: Exit time region: delta=0.003s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ILPOpt]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [ILPOpt]: Finished (changed=True #instances=61)
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/ILPOpt]: Exit time region: delta=0.030s
+06/07/2023 11:12:24 AM INFO 29120 [sg00/Tensorizer/StaticProfiler]: Enter time region
+06/07/2023 11:12:24 AM INFO 29120 [StaticProfiler]: Finished (changed=False)
+06/07/2023 11:12:25 AM INFO 29120 [sg00/Tensorizer/StaticProfiler]: Exit time region: delta=0.006s
+06/07/2023 11:12:25 AM INFO 29120 [sg00/Tensorizer/LowerAPIndices]: Enter time region
+06/07/2023 11:12:25 AM INFO 29120 [LowerAPIndices]: Finished (changed=True #instances=61)
+06/07/2023 11:12:25 AM INFO 29120 [sg00/Tensorizer/LowerAPIndices]: Exit time region: delta=0.006s
+06/07/2023 11:12:25 AM INFO 29120 [sg00/Tensorizer/LowerMisc]: Enter time region
+06/07/2023 11:12:25 AM INFO 29120 [LowerMisc]: Finished (changed=False)
+06/07/2023 11:12:25 AM INFO 29120 [sg00/Tensorizer/LowerMisc]: Exit time region: delta=0.002s
+06/07/2023 11:12:25 AM INFO 29120 [sg00/Tensorizer/BirCodeGenLoop]: Enter time region
+06/07/2023 11:12:25 AM INFO 29120 [BirCodeGenLoop]: Finished (changed=False)
+06/07/2023 11:12:25 AM INFO 29120 [sg00/Tensorizer/BirCodeGenLoop]: Exit time region: delta=0.004s
+06/07/2023 11:12:25 AM INFO 29120 [Tensorizer]: IR signature: c8ea2edfb18cedf289b4c922a9c8759390c6592a63619ddee0db34dc898201a0 for sg00/Tensorizer
+06/07/2023 11:12:25 AM INFO 29120 [Tensorizer]: Weights total number of bytes: 6144
+06/07/2023 11:12:25 AM INFO 29120 [Tensorizer]: Finalize
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]: --- Penguin Statistics ---
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  AffinePredicateResolution  Number of const tensor evaluated from predicate values
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  AutoCastTCInputs  Tensor shrink for matmult down-cast (in bytes
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  BroadcastWeights  Number of matmults inserted to broadcast weights
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  CommuteConcat     Number of concat operand commuted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  CommuteConcat     Number of concat operand distributed
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ConcatLoopFusion  Number of concat loops fused
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:             6144  DTypeMutator      Number of bytes statically casted in weight tensor
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  DTypeMutator      Number of load whose tensor type mutated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DTypeMutator      Number of operator whose dst type is mutated for legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  DataLocalityOpt   Number of deferred flush inserted for DMA write
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  DataLocalityOpt   Number of delinearized weight by rewriting
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DataLocalityOpt   Number of prefetch failed due to isl codegen
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                2  DataLocalityOpt   Number of prefetch inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DataLocalityOpt   Number of tranposes skipped because of illegal partition address
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DataLocalityOpt   Number of transpose inserted for DMA write
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DeConcat          Number of concat operand distributed
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DeadStoreElimination  Number of bytes eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DeadStoreElimination  Number of iteration eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DeadStoreElimination  Number of loops eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DeadStoreElimination  Number of strided axes
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DeadStoreElimination  Number of tensors eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DelinearizationBase  Number of loops tiled by delinearization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                5  DelinearizationBase  Number of tensors delinearized
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  DotTransform      Number of times a transformation rollback due to transformation crash
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  EliminateDivs     Number of axes tiled to eliminate div/mod
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  EliminateDivs     Number of div/mod with offset
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ExpandISAMacro    Number of per-partition bytes copy for tensor-tensor legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ExpandISAMacro    Number of sbatomload/sbatomstore expand
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ExpandISAMacro    Number of total per-partition bytes copy/cast for legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                2  FlattenMacroLoop  Number of axes coalesced
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                2  FlattenMacroLoop  Number of tensors reshaped
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  GlobalLayoutOpt   Number of BFTransposes inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  GlobalLayoutOpt   Number of PFTransposes inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  GlobalLayoutOpt   Number of PFTransposes inserted for IO tensors
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  GlobalLayoutOpt   Number of dmas needed for transpose
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferNonLocalTensor  num of non-local tensors infered
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferPSumTensor   Number of bytes copied to psum per-partition
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferPSumTensor   Number of instructions whose result inferred into PSUM
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferPSumTensor   Number of psum copy instructions inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferPSumTensor   Number of total bytes inferred into PSUM
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferStaticWeight  Number of bytes allocated as static allocation
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                2  InferTongaTensor  Number of local tensor inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferTongaTensor  Number of tensors that can not be inferred as local because of the non-compatible access pattern
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferTongaTensor  Number of tensors that cannot be inferred as local because their size cannot fit in
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferTongaTensor  Total Number of bytes of non-compatible tensors
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  InferTongaTensor  Total Number of bytes of tensors with large tile size
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:            24576  InferTongaTensor  Total number of bytes of local tensors
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  IntegerSetWrapper  Number of times compute_quota exceed
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  IslSimplifier     Number of iteration eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  IslSimplifier     Number of loops eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  IslSimplifier     Number of predicate eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  IslSimplifier     Number of strided axes
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  LayoutAnalysis    Number of loopnests (DAGs) whose tensors layout are not propagated but re-calculated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for Activation legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for MatMul legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomLoad SB address legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomLoad legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomSave SB address legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomSave legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for TensorScalarPtr legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for TensorTensor legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of tensor reshaped to legalize the ptr operand of the tensorscalarptr
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaAccess  Number of total per-partition bytes copy/cast for legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LegalizeTongaMacro  Explicit psum copy because of too many partitions
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                4  LegalizeTongaType  Number of bytes copy/cast at the producer instructions
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                4  LegalizeTongaType  Number of bytes copy/cast for legalization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LinearScanAllocator  Number of bytes allocated in psumbuffer
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LinearScanAllocator  Number of bytes allocated in statebuffer
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LinearScanAllocator  PSumbuffer utilization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LinearScanAllocator  Statebuffer utilization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                5  LoopFusion        Number of loops fused
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                2  LoopFusion        Number of trivial copy eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LowerPartitionTile  Number of broadcast buffer shrink
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LowerPartitionTile  Number of matmult instruction lowered
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                6  LowerPartitionTile  Number of tonga instruction (except matmult) lowered
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LowerTranspose    Number of lossless transpose generated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LowerTranspose    Number of lossless transpose with bitcast generated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  LowerTranspose    Number of lossy transpose generated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MPDLoopFusion     Missed loop fusions
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MatMultCombiner   Number of matmul fused among contract axes
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MatMultCombiner   Number of matmul fused among rows
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MatMultCombiner   Number of matmul operand copy
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MatMultCombiner   Number of matmul operand extend inplace
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MatMultCombiner   Number of matmul operand extend inplace
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MatMultCombiner   Number of weight fused for matmul fusion
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemcpyElimination  Number of bytes copied by memcpy
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemcpyElimination  Number of bytes eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemcpyElimination  Number of cast inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemcpyElimination  Number of failure in access folding
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemcpyElimination  Number of memcopy eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemcpyElimination  Number of quasi affine expr generated during addr rewrite
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemcpyElimination  Number of simple dag moved
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemoryProfiler    Estimated peak psum utilization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  MemoryProfiler    Estimated peak statebuffer utilization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  ModDivDelinear    Number of loops tiled by delinearization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ModDivDelinear    Number of tensors delinearized
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ModuloAllocation  Number of dma for prefetch buffer moved
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                6  ModuloAllocation  Number of parallel loops generated by modulo buffer allocation
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  PadElimination    Number of padding eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  PartialLoopFusion  Number of instruction rematerialized
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                4  PartialLoopFusion  Number of loops fused
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  PartialLoopFusion  Number of loops fused with loop-carried dependencies
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  PolyhedralInterfereGraph  Number of inplace replacement pairs identified
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  PreScheduler      Number of instruction moved to shorten live-interval
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  PrefetchAllocation  Number of inputs/weights prefetched
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RecognizeOpIdiom  Number of channel-wise prelu inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RecognizeOpIdiom  Number of gelu (tanh approximated) inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RecognizeOpIdiom  Number of gelu inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RecognizeOpIdiom  Number of mish inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RecognizeOpIdiom  Number of prelu inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RecognizeOpIdiom  Number of rsqrt inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RecognizeOpIdiom  Number of softplus inferred
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  Recompute         Number of bytes recomputed
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  Recompute         Number of flops recomputed
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RelaxPredicates   Number of predicates dropped
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RelayFE           Number of MAC count in relay
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:            86032  RelayFE           Number of total read bytes of FMAP and weight in relay
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  ReshapeWeights    Number of weights being reshaped into 2-D array
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ResolveAccessConflict  Number of dag splitted to resolve access conflict
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ResolvePredicates  Number of subdomain generated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RetileSIMDMacro   Number of SIMD macro retiled to match size of psum
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RewriteReplicationMatmul  Number of replication access generated for matmul
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  RewriteReplicationMatmul  Number of software replication generated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  SimplifyTensorBase  Number of dead stores deleted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                2  SimplifyTensorBase  Number of tensors simplified
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  SimplifyTensorBase  Number of tensors splitted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                2  SimplifyTensorBase  Number of tensors squeezed
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  SpillPSum         Number of total per-partition bytes spilled from psum to sb
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  SplitAccGrp       Number of accumulation groups splitted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  SplitFreeDim      Number of tensors whose blocks are further split
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  SplitUnionSets    Number of subdomain generated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:           0.1500  StaticProfiler    Arithmetic intensity upper bound if we only load/store I/O tensors once (excluding gather weight tensor)
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity upper bound if we only load/store I/O tensors once (excluding weights)
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity without non-local tensor loads
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:           0.2500  StaticProfiler    Arithmetic intensity without weights and non-local loads
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:           7.6800  StaticProfiler    Average dma length per-partition
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:           6.0000  StaticProfiler    Average dma length per-partition (exclude weights)
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:         100.0000  StaticProfiler    Average partition utilization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Average pe (systolic array) utilization
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:               96  StaticProfiler    Biggest tensor tile size in StateBuffer/PSum
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Matmul compute efficiency: (Relay MAC counts/128/64/2) / (Total elements per partition)
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Num of matmul transpose instructions
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:             4608  StaticProfiler    Number of arithmetic computation
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by activation
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by gettensorptr
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by matmul
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by reciprocal
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by tensorreduce
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:             1536  StaticProfiler    Number of arithmetic computation by tensorscalar
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:             3072  StaticProfiler    Number of arithmetic computation by tensorscalarptr
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by tensortensor
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:            18944  StaticProfiler    Number of bytes moved by tensor copy and shuffle
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:             6144  StaticProfiler    Number of bytes of weights loaded
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:               48  StaticProfiler    Number of bytes of weights loaded in partition 0
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:            24576  StaticProfiler    Number of bytes transfer between ddr and local memory
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:               25  StaticProfiler    Number of dma whose length is smaller than 512 bytes
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:               24  StaticProfiler    Number of dma whose length is smaller than 512 bytes (exclude weights)
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of matmul instructions
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of tensorcopy after transpose
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of tensorcopy from psum
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                8  StaticProfiler    Number of tensorcopy instructions
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Number of tensorcopy to psum
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:              109  StaticProfiler    Number of total dynamic instances of tonga instructions (number of instructions after unroll)
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  StaticProfiler    Utilized psum size / Max psum size
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:         125.0000  StaticProfiler    io tensor size / ddr transfer size
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:         125.0000  StaticProfiler    io tensor size / ddr transfer size ignoring nonlocal/gather tensors
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TensorInitialization  Number of explicit initialization inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingForNewLayout  Number of inherit tiles
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingForNewLayout  Number of instructions after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingForNewLayout  Number of places global layout clobbered
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:         100.0000  TilingProfiler    Average partition utilization calculated after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Average pe (systolic array) utilization calculated after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from dmas after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from gather/scatter after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from matmults after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for IO tensors after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for local tensors after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for nonlocal tensors after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of insts from reduce macros after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of non-IO DRAM tensor after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of pf transposes
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of pf transposes for IO tensors
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of pf transposes for local tensors
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TilingProfiler    Number of pf transposes for nonlocal tensors
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:               36  TilingProfiler    Number of total insts after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaCpyElim      Number of failure in access folding
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaCpyElim      Number of tensor copy/cast eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaInstComb     Number of bias_add combined to activation
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaInstComb     Number of result of boolean computation shrink
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaInstComb     Number of scale combined to activation
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  TongaInstComb     Number of tensorscalar fold into tensorscalarptr
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaInstComb     Number of tensortensor add replace by psum accumulation
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaInstComb     Number of transpose pairs folded
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  TongaInstComb     Number of trivial access pattern eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaLICM         Number of instruction hoisted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaLICM         Number of instruction sunk
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaLayoutGroupAnalysis  Number of loopnests (DAGs) whose tensors layout are not propagated but re-calculated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                1  TongaLoopFusion   Number of loops fused
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaLoopFusion   Number of matmul fused for psum locality
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaSizeTiling   Number of inherit tiles
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaSizeTiling   Number of instructions after tiling
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaSizeTiling   Number of places global layout clobbered
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaValueNumbering  Number of instructions deleted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TongaValueNumbering  Number of tensors deleted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TransformLayoutPass  Number of static layout transforms on input/outputs
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TransformLayoutPass  Number of transpose inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TransformLayoutPass  Number of transpose insertions failed because of predicates
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  TransformLayoutPass  Number of unknown transpose inserted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  VDNSPrep          Number of tensor rewritten for virtual node splitting
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ValueNumbering    Number of instructions deleted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  ValueNumbering    Number of tensors deleted
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                6  Vectorizer        Number of instruction vectorized
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  WeightCoalescing  Number of empty loopnest eliminated
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  WeightCoalescing  Number of load instruction merged
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:            12288  WeightRewriter    Number of bytes re-written for weights
+06/07/2023 11:12:25 AM INFO 29120 [Statistics]:                0  WeightRewriter    Number of bytes reused for weight rewrite
+06/07/2023 11:12:25 AM INFO 29120 [root/Tensorizer/All]: Exit time region: delta=1.192s
+06/07/2023 11:12:25 AM INFO 29120 [job.Frontend.4]: wrote bir.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Frontend.4]: wrote tensor_map.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Frontend.4]: End tensorization
+06/07/2023 11:12:25 AM INFO 29120 [job.Frontend.4]: Job finished
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Finished job job.Frontend.4 with state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Starting job job.HHChecker.0 state state 0
+06/07/2023 11:12:25 AM INFO 29120 [job.HHChecker.0]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "bir.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline HHChecker
+06/07/2023 11:12:25 AM INFO 29120 [job.HHChecker.0]: Job finished
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Finished job job.HHChecker.0 with state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Starting job job.WalrusDriver.3 state state 0
+06/07/2023 11:12:25 AM INFO 29120 [job.WalrusDriver.3]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "bir.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline WalrusDriver
+06/07/2023 11:12:25 AM INFO 29120 [job.WalrusDriver.3]: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/neuroncc/starfish/bin/walrus_driver --state-numerical-id=0 --optlevel 2 --allocator coloring --verbose 20 -o walrus_bir.out.json -i bir.json --min_split_size 10240 --skip_split_vns  --no_split_dram --max-partitions 1 --policy 2 --auxflag 0 --interleave none --internal-hyper-parameters /opt/ml/input/config/hyperparameters.json --tuning 2 --numcores 1 --unified-walrus-and-stargazer --tensor-map tensor_map.json --act-root-json /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/neuroncc/pwp/pwp_bin_with_ln/act_info.json
+06/07/2023 11:12:25 AM INFO 29120 [job.WalrusDriver.3]: IR signature: 0b0507ac9b5712cdd9292e689d9c4d0b6027a1dc6cff19e32b38dcd2b193f9b3 for sg00/walrus_bir.out.json
+06/07/2023 11:12:25 AM INFO 29120 [job.WalrusDriver.3]: Job finished
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Finished job job.WalrusDriver.3 with state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Starting job job.Backend.3 state state 0
+06/07/2023 11:12:25 AM INFO 29120 [job.Backend.3]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "walrus_bir.out.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline Backend --enable-experimental-bir-backend
+06/07/2023 11:12:25 AM INFO 29120 [job.Backend.3]: IR signature: 24ef55c3029cf1699ddf9e4160666713e8a070075c518cf13c2d3de65b21357b for sg00/wavegraph-bin.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Backend.3]: IR signature: 383b6d4250c41b7ee59649da1b8b88d11a5321959725d283c84155e5cfae71b9 for sg00/def.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Backend.3]: IR signature: 5ead06b7d7042f96493f731be818e73408f6e3de3debecb2cb78b76fd997ef9f for sg00/pe.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Backend.3]: IR signature: adb39a73be92d940f06f1239225ea09616fdcd2c66a74f5d9c751ae396749d2b for sg00/pool.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Backend.3]: IR signature: c31126b76a65f91aba902e4daa3cebc9524160936a995076a7bea8f841599aa6 for sg00/act.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Backend.3]: Job finished
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Finished job job.Backend.3 with state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Starting job job.Kelper.2 state state 0
+06/07/2023 11:12:25 AM INFO 29120 [job.Kelper.2]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "walrus_bir.out.json", "wavegraph": "wavegraph-bin.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline Kelper
+06/07/2023 11:12:25 AM WARNING 29120 [job.Kelper.2]: writeKelp missing file sg00/nn_def.json
+06/07/2023 11:12:25 AM WARNING 29120 [job.Kelper.2]: writeKelp missing file sg00/kelf.json
+06/07/2023 11:12:25 AM INFO 29120 [job.Kelper.2]: neuroncc version is 1.15.0.0+eec0c3604, neff version is 1.0 (features 0)
+06/07/2023 11:12:25 AM INFO 29120 [job.Kelper.2]: wrote /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.neff
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Finished job job.Kelper.2 with state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Finished pipeline compile
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.compile.0]: Job finished
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.custom.0]: Finished job pipeline.compile.0 with state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.custom.0]: Starting job job.SaveTemps.0 state state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.custom.0]: Finished job job.SaveTemps.0 with state 0
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.custom.0]: Finished pipeline custom
+06/07/2023 11:12:25 AM INFO 29120 [pipeline.custom.0]: Job finished
+06/07/2023 11:12:25 AM INFO 29120 [root]: Compiler status PASS
+06/08/2023 07:51:45 AM INFO 18514 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104
+06/08/2023 07:51:45 AM INFO 18514 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 07:51:45 AM INFO 18514 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 07:51:45 AM INFO 18514 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 07:51:45 AM INFO 18514 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 07:51:45 AM INFO 18514 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104", "state_id": "root"}' --pipeline Frontend --io-config '{"inputs": {"tensor.1:0": [[], "int64"], "1:0": [[3, 512], "int64"], "2:0": [[3, 512], "int64"]}, "outputs": ["TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0"]}' --framework TENSORFLOW
+06/08/2023 07:51:47 AM INFO 18514 [job.Frontend.4]: IR signature: 3bf6c6deafec0260aec2313e675fe1056c40d36824b2adeb2b78018d225e11ba for graph_def.pb
+06/08/2023 07:51:47 AM INFO 18514 [job.Frontend.4]: total padded opcount is 0
+06/08/2023 07:51:47 AM INFO 18514 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 07:51:47 AM INFO 18514 [job.Frontend.4]: Start tensorization
+06/08/2023 07:51:47 AM INFO 18514 [job.Frontend.4]: IR signature: 7ed3e1e242f4ac8fc7a024387d64588765dbffe75304cab769ba5f01f47d7314 for relay_graph_post_opt_unit_level.txt
+06/08/2023 07:51:47 AM INFO 18514 [root/Tensorizer/All]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: Tensorizer options:  --fp32-cast=all  --disable-bitcasted-transpose  --disable-expensive-checks  --disable-max-stride-tiling  --enable-replication  --max-local-tensor-tile-size-in-bytes=16384  --tensor-layout-p-order=0  --tensor-layout-b-order=1  --enable-advanced-delinearization  --weight-coalescing-threshold=512  --disable-shifted-fusion  --enable-bir-converter=enable 
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RelayPasses]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RelayPasses]: Exit time region: delta=0.005s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/IRBuilder]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/IRBuilder]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: Tensorizer options:  --fp32-cast=all  --disable-bitcasted-transpose  --disable-expensive-checks  --disable-max-stride-tiling  --enable-replication  --max-local-tensor-tile-size-in-bytes=16384  --tensor-layout-p-order=0  --tensor-layout-b-order=1  --enable-advanced-delinearization  --weight-coalescing-threshold=512  --disable-shifted-fusion  --enable-bir-converter=enable 
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: Generate: 1 statements from relay. Start optimizations ...
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]: Weights total number of bytes: 12304
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]: RelayIF total number of bytes: 12288.0
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]: RelayOF total number of bytes: 12288.0
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]: Weights total number of bytes: 12304.0
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DoNothing]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DoNothing]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DoNothing]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/MutateDataType]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [MutateDataType]: Finished (changed=True #instances=30720)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/MutateDataType]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ResolveEqualPredicates]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ResolveEqualPredicates]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ResolveEqualPredicates]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/EliminateDivs]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [EliminateDivs]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/EliminateDivs]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [SimplifyPredicates]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Simplifier]: Finished (changed=True #instances=26112)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TCTransform]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TCTransform]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TCTransform]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/CommuteConcat]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [CommuteConcat]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/CommuteConcat]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LoopFusion]: Finished (changed=True #instances=10752)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Simplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DelinearIndices]: Finished (changed=True #instances=10752)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Delinearization]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DeadStoreElimination]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DeadStoreElimination]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DeadStoreElimination]: Exit time region: delta=0.005s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Simplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LICM]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DelinearIndices]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Delinearization]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LoopFusion]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LICM]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Simplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ValueNumbering]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LICM]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/MemcpyElimination]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [MemcpyElimination]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/MemcpyElimination]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PadElimination]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [PadElimination]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PadElimination]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DelinearIndices]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Delinearization]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LoopFusion]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Simplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LICM]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ValueNumbering]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TCTransform]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TCTransform]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TCTransform]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/CommuteConcat]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [CommuteConcat]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/CommuteConcat]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LoopFusion]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ValueNumbering]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RecognizeOpIdiom]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [RecognizeOpIdiom]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RecognizeOpIdiom]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DeadCodeElimination]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DeadCodeElimination]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DeadCodeElimination]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: After optimization: 1 statements
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/AutoCastFP32]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [AutoCastFP32]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/AutoCastFP32]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LoopFusion]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Simplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [Delinearization]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ResolveAccessConflict]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ResolveAccessConflict]: Finished (changed=True #instances=16896)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ResolveAccessConflict]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TransformLayout]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TransformLayout]: Finished (changed=True #instances=16896)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TransformLayout]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PartitionLocalityOpt]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [PartitionLocalityOpt]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PartitionLocalityOpt]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenPartitionAxes]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [FlattenPartitionAxes]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenPartitionAxes]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSizeTiling]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaSizeTiling]: Finished (changed=True #instances=36)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSizeTiling]: Exit time region: delta=0.008s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TilingProfiler]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TilingProfiler]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TilingProfiler]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: Default layout and tiling instruction count within range.
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [FlattenMacroLoop]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RetileSIMDMacro]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [RetileSIMDMacro]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RetileSIMDMacro]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/InferTongaTensor]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [InferTongaTensor]: Finished (changed=True #instances=36)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/InferTongaTensor]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LICM]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RewriteReplicationMatmul]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [RewriteReplicationMatmul]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RewriteReplicationMatmul]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [FlattenMacroLoop]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [SimplifyPredicates]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DataLocalityOpt]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DataLocalityOpt]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DataLocalityOpt]: Exit time region: delta=0.039s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaMacro]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LegalizeTongaMacro]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaMacro]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PerfectLoopNest]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [PerfectLoopNest]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PerfectLoopNest]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [FlattenMacroLoop]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RewriteWeights]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [RewriteWeights]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RewriteWeights]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ReshapeWeights]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ReshapeWeights]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ReshapeWeights]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [FlattenMacroLoop]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [SimplifyPredicates]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/InferInitValue]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [InferInitValue]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/InferInitValue]: Exit time region: delta=0.014s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SplitUnionSets]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [SplitUnionSets]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SplitUnionSets]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyTongaTensor]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [SimplifyTongaTensor]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyTongaTensor]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaStore]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LegalizeTongaStore]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaStore]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LICM]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaISel]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaISel]: Finished (changed=True #instances=97)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaISel]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaAffineLoopXform]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaAffineLoopXform]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaAffineLoopXform]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaLoopFusion]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaLoopFusion]: Finished (changed=True #instances=97)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaLoopFusion]: Exit time region: delta=0.009s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaLICM]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaLICM]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaLICM]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FactorizeBlkDims]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [FactorizeBlkDims]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/FactorizeBlkDims]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaInstComb]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaInstComb]: Finished (changed=True #instances=86)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaInstComb]: Exit time region: delta=0.011s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaValueNumbering]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaValueNumbering]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaValueNumbering]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerTranspose]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LowerTranspose]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerTranspose]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaType]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LegalizeTongaType]: Finished (changed=True #instances=87)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaType]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PartialLoopFusion]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [PartialLoopFusion]: Finished (changed=True #instances=87)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/PartialLoopFusion]: Exit time region: delta=0.017s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ShortenLifeInterval]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ShortenLifeInterval]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ShortenLifeInterval]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/GlobalBatchOpt]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [GlobalBatchOpt]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/GlobalBatchOpt]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SpillPSum]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [SpillPSum]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SpillPSum]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaType]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LegalizeTongaType]: Finished (changed=True #instances=87)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaType]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/InferPSumTensor]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [InferPSumTensor]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/InferPSumTensor]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/VectorizeMatMult]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [VectorizeMatMult]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/VectorizeMatMult]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/WeightCoalescing]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [WeightCoalescing]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/WeightCoalescing]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerPartitionTile]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LowerPartitionTile]: Finished (changed=True #instances=149)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerPartitionTile]: Exit time region: delta=0.007s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/BroadcastWeights]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [BroadcastWeights]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/BroadcastWeights]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TensorInitialization]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TensorInitialization]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TensorInitialization]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaAccess]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LegalizeTongaAccess]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizeTongaAccess]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaAffineLoopXform]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TongaAffineLoopXform]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TongaAffineLoopXform]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RelaxPredicates]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [RelaxPredicates]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/RelaxPredicates]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TensorInitialization]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [TensorInitialization]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/TensorInitialization]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ExpandISAMacro]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ExpandISAMacro]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ExpandISAMacro]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizePartitionTile]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LegalizePartitionTile]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LegalizePartitionTile]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyTongaTensor]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [SimplifyTongaTensor]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/SimplifyTongaTensor]: Exit time region: delta=0.005s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LinearizeFreeDim]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LinearizeFreeDim]: Finished (changed=True #instances=149)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LinearizeFreeDim]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DataStreaming]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [DataStreaming]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/DataStreaming]: Exit time region: delta=0.003s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ILPOpt]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [ILPOpt]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/ILPOpt]: Exit time region: delta=0.029s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/StaticProfiler]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [StaticProfiler]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/StaticProfiler]: Exit time region: delta=0.006s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerAPIndices]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LowerAPIndices]: Finished (changed=True #instances=61)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerAPIndices]: Exit time region: delta=0.006s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerMisc]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [LowerMisc]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/LowerMisc]: Exit time region: delta=0.002s
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/BirCodeGenLoop]: Enter time region
+06/08/2023 07:51:47 AM INFO 18514 [BirCodeGenLoop]: Finished (changed=False)
+06/08/2023 07:51:47 AM INFO 18514 [sg00/Tensorizer/BirCodeGenLoop]: Exit time region: delta=0.004s
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: IR signature: c8ea2edfb18cedf289b4c922a9c8759390c6592a63619ddee0db34dc898201a0 for sg00/Tensorizer
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: Weights total number of bytes: 6144
+06/08/2023 07:51:47 AM INFO 18514 [Tensorizer]: Finalize
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]: --- Penguin Statistics ---
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  AffinePredicateResolution  Number of const tensor evaluated from predicate values
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  AutoCastTCInputs  Tensor shrink for matmult down-cast (in bytes
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  BroadcastWeights  Number of matmults inserted to broadcast weights
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  CommuteConcat     Number of concat operand commuted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  CommuteConcat     Number of concat operand distributed
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ConcatLoopFusion  Number of concat loops fused
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:             6144  DTypeMutator      Number of bytes statically casted in weight tensor
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  DTypeMutator      Number of load whose tensor type mutated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DTypeMutator      Number of operator whose dst type is mutated for legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  DataLocalityOpt   Number of deferred flush inserted for DMA write
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  DataLocalityOpt   Number of delinearized weight by rewriting
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DataLocalityOpt   Number of prefetch failed due to isl codegen
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                2  DataLocalityOpt   Number of prefetch inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DataLocalityOpt   Number of tranposes skipped because of illegal partition address
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DataLocalityOpt   Number of transpose inserted for DMA write
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DeConcat          Number of concat operand distributed
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DeadStoreElimination  Number of bytes eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DeadStoreElimination  Number of iteration eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DeadStoreElimination  Number of loops eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DeadStoreElimination  Number of strided axes
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DeadStoreElimination  Number of tensors eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DelinearizationBase  Number of loops tiled by delinearization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                5  DelinearizationBase  Number of tensors delinearized
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  DotTransform      Number of times a transformation rollback due to transformation crash
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  EliminateDivs     Number of axes tiled to eliminate div/mod
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  EliminateDivs     Number of div/mod with offset
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ExpandISAMacro    Number of per-partition bytes copy for tensor-tensor legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ExpandISAMacro    Number of sbatomload/sbatomstore expand
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ExpandISAMacro    Number of total per-partition bytes copy/cast for legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                2  FlattenMacroLoop  Number of axes coalesced
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                2  FlattenMacroLoop  Number of tensors reshaped
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  GlobalLayoutOpt   Number of BFTransposes inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  GlobalLayoutOpt   Number of PFTransposes inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  GlobalLayoutOpt   Number of PFTransposes inserted for IO tensors
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  GlobalLayoutOpt   Number of dmas needed for transpose
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferNonLocalTensor  num of non-local tensors infered
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferPSumTensor   Number of bytes copied to psum per-partition
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferPSumTensor   Number of instructions whose result inferred into PSUM
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferPSumTensor   Number of psum copy instructions inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferPSumTensor   Number of total bytes inferred into PSUM
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferStaticWeight  Number of bytes allocated as static allocation
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                2  InferTongaTensor  Number of local tensor inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferTongaTensor  Number of tensors that can not be inferred as local because of the non-compatible access pattern
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferTongaTensor  Number of tensors that cannot be inferred as local because their size cannot fit in
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferTongaTensor  Total Number of bytes of non-compatible tensors
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  InferTongaTensor  Total Number of bytes of tensors with large tile size
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:            24576  InferTongaTensor  Total number of bytes of local tensors
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  IntegerSetWrapper  Number of times compute_quota exceed
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  IslSimplifier     Number of iteration eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  IslSimplifier     Number of loops eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  IslSimplifier     Number of predicate eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  IslSimplifier     Number of strided axes
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  LayoutAnalysis    Number of loopnests (DAGs) whose tensors layout are not propagated but re-calculated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for Activation legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for MatMul legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomLoad SB address legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomLoad legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomSave SB address legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomSave legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for TensorScalarPtr legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for TensorTensor legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of tensor reshaped to legalize the ptr operand of the tensorscalarptr
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaAccess  Number of total per-partition bytes copy/cast for legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LegalizeTongaMacro  Explicit psum copy because of too many partitions
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                4  LegalizeTongaType  Number of bytes copy/cast at the producer instructions
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                4  LegalizeTongaType  Number of bytes copy/cast for legalization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LinearScanAllocator  Number of bytes allocated in psumbuffer
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LinearScanAllocator  Number of bytes allocated in statebuffer
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LinearScanAllocator  PSumbuffer utilization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LinearScanAllocator  Statebuffer utilization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                5  LoopFusion        Number of loops fused
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                2  LoopFusion        Number of trivial copy eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LowerPartitionTile  Number of broadcast buffer shrink
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LowerPartitionTile  Number of matmult instruction lowered
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                6  LowerPartitionTile  Number of tonga instruction (except matmult) lowered
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LowerTranspose    Number of lossless transpose generated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LowerTranspose    Number of lossless transpose with bitcast generated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  LowerTranspose    Number of lossy transpose generated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MPDLoopFusion     Missed loop fusions
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MatMultCombiner   Number of matmul fused among contract axes
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MatMultCombiner   Number of matmul fused among rows
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MatMultCombiner   Number of matmul operand copy
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MatMultCombiner   Number of matmul operand extend inplace
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MatMultCombiner   Number of matmul operand extend inplace
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MatMultCombiner   Number of weight fused for matmul fusion
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemcpyElimination  Number of bytes copied by memcpy
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemcpyElimination  Number of bytes eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemcpyElimination  Number of cast inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemcpyElimination  Number of failure in access folding
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemcpyElimination  Number of memcopy eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemcpyElimination  Number of quasi affine expr generated during addr rewrite
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemcpyElimination  Number of simple dag moved
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemoryProfiler    Estimated peak psum utilization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  MemoryProfiler    Estimated peak statebuffer utilization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  ModDivDelinear    Number of loops tiled by delinearization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ModDivDelinear    Number of tensors delinearized
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ModuloAllocation  Number of dma for prefetch buffer moved
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                6  ModuloAllocation  Number of parallel loops generated by modulo buffer allocation
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  PadElimination    Number of padding eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  PartialLoopFusion  Number of instruction rematerialized
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                4  PartialLoopFusion  Number of loops fused
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  PartialLoopFusion  Number of loops fused with loop-carried dependencies
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  PolyhedralInterfereGraph  Number of inplace replacement pairs identified
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  PreScheduler      Number of instruction moved to shorten live-interval
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  PrefetchAllocation  Number of inputs/weights prefetched
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RecognizeOpIdiom  Number of channel-wise prelu inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RecognizeOpIdiom  Number of gelu (tanh approximated) inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RecognizeOpIdiom  Number of gelu inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RecognizeOpIdiom  Number of mish inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RecognizeOpIdiom  Number of prelu inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RecognizeOpIdiom  Number of rsqrt inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RecognizeOpIdiom  Number of softplus inferred
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  Recompute         Number of bytes recomputed
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  Recompute         Number of flops recomputed
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RelaxPredicates   Number of predicates dropped
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RelayFE           Number of MAC count in relay
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:            86032  RelayFE           Number of total read bytes of FMAP and weight in relay
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  ReshapeWeights    Number of weights being reshaped into 2-D array
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ResolveAccessConflict  Number of dag splitted to resolve access conflict
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ResolvePredicates  Number of subdomain generated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RetileSIMDMacro   Number of SIMD macro retiled to match size of psum
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RewriteReplicationMatmul  Number of replication access generated for matmul
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  RewriteReplicationMatmul  Number of software replication generated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  SimplifyTensorBase  Number of dead stores deleted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                2  SimplifyTensorBase  Number of tensors simplified
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  SimplifyTensorBase  Number of tensors splitted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                2  SimplifyTensorBase  Number of tensors squeezed
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  SpillPSum         Number of total per-partition bytes spilled from psum to sb
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  SplitAccGrp       Number of accumulation groups splitted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  SplitFreeDim      Number of tensors whose blocks are further split
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  SplitUnionSets    Number of subdomain generated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:           0.1500  StaticProfiler    Arithmetic intensity upper bound if we only load/store I/O tensors once (excluding gather weight tensor)
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity upper bound if we only load/store I/O tensors once (excluding weights)
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity without non-local tensor loads
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:           0.2500  StaticProfiler    Arithmetic intensity without weights and non-local loads
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:           7.6800  StaticProfiler    Average dma length per-partition
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:           6.0000  StaticProfiler    Average dma length per-partition (exclude weights)
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:         100.0000  StaticProfiler    Average partition utilization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Average pe (systolic array) utilization
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:               96  StaticProfiler    Biggest tensor tile size in StateBuffer/PSum
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Matmul compute efficiency: (Relay MAC counts/128/64/2) / (Total elements per partition)
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Num of matmul transpose instructions
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:             4608  StaticProfiler    Number of arithmetic computation
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by activation
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by gettensorptr
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by matmul
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by reciprocal
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by tensorreduce
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:             1536  StaticProfiler    Number of arithmetic computation by tensorscalar
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:             3072  StaticProfiler    Number of arithmetic computation by tensorscalarptr
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by tensortensor
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:            18944  StaticProfiler    Number of bytes moved by tensor copy and shuffle
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:             6144  StaticProfiler    Number of bytes of weights loaded
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:               48  StaticProfiler    Number of bytes of weights loaded in partition 0
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:            24576  StaticProfiler    Number of bytes transfer between ddr and local memory
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:               25  StaticProfiler    Number of dma whose length is smaller than 512 bytes
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:               24  StaticProfiler    Number of dma whose length is smaller than 512 bytes (exclude weights)
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of matmul instructions
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of tensorcopy after transpose
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of tensorcopy from psum
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                8  StaticProfiler    Number of tensorcopy instructions
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Number of tensorcopy to psum
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:              109  StaticProfiler    Number of total dynamic instances of tonga instructions (number of instructions after unroll)
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  StaticProfiler    Utilized psum size / Max psum size
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:         125.0000  StaticProfiler    io tensor size / ddr transfer size
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:         125.0000  StaticProfiler    io tensor size / ddr transfer size ignoring nonlocal/gather tensors
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TensorInitialization  Number of explicit initialization inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingForNewLayout  Number of inherit tiles
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingForNewLayout  Number of instructions after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingForNewLayout  Number of places global layout clobbered
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:         100.0000  TilingProfiler    Average partition utilization calculated after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Average pe (systolic array) utilization calculated after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from dmas after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from gather/scatter after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from matmults after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for IO tensors after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for local tensors after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for nonlocal tensors after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of insts from reduce macros after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of non-IO DRAM tensor after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of pf transposes
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of pf transposes for IO tensors
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of pf transposes for local tensors
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TilingProfiler    Number of pf transposes for nonlocal tensors
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:               36  TilingProfiler    Number of total insts after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaCpyElim      Number of failure in access folding
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaCpyElim      Number of tensor copy/cast eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaInstComb     Number of bias_add combined to activation
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaInstComb     Number of result of boolean computation shrink
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaInstComb     Number of scale combined to activation
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  TongaInstComb     Number of tensorscalar fold into tensorscalarptr
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaInstComb     Number of tensortensor add replace by psum accumulation
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaInstComb     Number of transpose pairs folded
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  TongaInstComb     Number of trivial access pattern eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaLICM         Number of instruction hoisted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaLICM         Number of instruction sunk
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaLayoutGroupAnalysis  Number of loopnests (DAGs) whose tensors layout are not propagated but re-calculated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                1  TongaLoopFusion   Number of loops fused
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaLoopFusion   Number of matmul fused for psum locality
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaSizeTiling   Number of inherit tiles
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaSizeTiling   Number of instructions after tiling
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaSizeTiling   Number of places global layout clobbered
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaValueNumbering  Number of instructions deleted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TongaValueNumbering  Number of tensors deleted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TransformLayoutPass  Number of static layout transforms on input/outputs
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TransformLayoutPass  Number of transpose inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TransformLayoutPass  Number of transpose insertions failed because of predicates
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  TransformLayoutPass  Number of unknown transpose inserted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  VDNSPrep          Number of tensor rewritten for virtual node splitting
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ValueNumbering    Number of instructions deleted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  ValueNumbering    Number of tensors deleted
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                6  Vectorizer        Number of instruction vectorized
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  WeightCoalescing  Number of empty loopnest eliminated
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  WeightCoalescing  Number of load instruction merged
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:            12288  WeightRewriter    Number of bytes re-written for weights
+06/08/2023 07:51:47 AM INFO 18514 [Statistics]:                0  WeightRewriter    Number of bytes reused for weight rewrite
+06/08/2023 07:51:48 AM INFO 18514 [root/Tensorizer/All]: Exit time region: delta=1.179s
+06/08/2023 07:51:48 AM INFO 18514 [job.Frontend.4]: wrote bir.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Frontend.4]: wrote tensor_map.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Frontend.4]: End tensorization
+06/08/2023 07:51:48 AM INFO 18514 [job.Frontend.4]: Job finished
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Finished job job.Frontend.4 with state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Starting job job.HHChecker.0 state state 0
+06/08/2023 07:51:48 AM INFO 18514 [job.HHChecker.0]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "bir.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline HHChecker
+06/08/2023 07:51:48 AM INFO 18514 [job.HHChecker.0]: Job finished
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Finished job job.HHChecker.0 with state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Starting job job.WalrusDriver.3 state state 0
+06/08/2023 07:51:48 AM INFO 18514 [job.WalrusDriver.3]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "bir.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline WalrusDriver
+06/08/2023 07:51:48 AM INFO 18514 [job.WalrusDriver.3]: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/neuroncc/starfish/bin/walrus_driver --state-numerical-id=0 --optlevel 2 --allocator coloring --verbose 20 -o walrus_bir.out.json -i bir.json --min_split_size 10240 --skip_split_vns  --no_split_dram --max-partitions 1 --policy 2 --auxflag 0 --interleave none --internal-hyper-parameters /opt/ml/input/config/hyperparameters.json --tuning 2 --numcores 1 --unified-walrus-and-stargazer --tensor-map tensor_map.json --act-root-json /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/neuroncc/pwp/pwp_bin_with_ln/act_info.json
+06/08/2023 07:51:48 AM INFO 18514 [job.WalrusDriver.3]: IR signature: 0b0507ac9b5712cdd9292e689d9c4d0b6027a1dc6cff19e32b38dcd2b193f9b3 for sg00/walrus_bir.out.json
+06/08/2023 07:51:48 AM INFO 18514 [job.WalrusDriver.3]: Job finished
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Finished job job.WalrusDriver.3 with state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Starting job job.Backend.3 state state 0
+06/08/2023 07:51:48 AM INFO 18514 [job.Backend.3]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "walrus_bir.out.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline Backend --enable-experimental-bir-backend
+06/08/2023 07:51:48 AM INFO 18514 [job.Backend.3]: IR signature: 24ef55c3029cf1699ddf9e4160666713e8a070075c518cf13c2d3de65b21357b for sg00/wavegraph-bin.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Backend.3]: IR signature: 383b6d4250c41b7ee59649da1b8b88d11a5321959725d283c84155e5cfae71b9 for sg00/def.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Backend.3]: IR signature: 5ead06b7d7042f96493f731be818e73408f6e3de3debecb2cb78b76fd997ef9f for sg00/pe.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Backend.3]: IR signature: adb39a73be92d940f06f1239225ea09616fdcd2c66a74f5d9c751ae396749d2b for sg00/pool.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Backend.3]: IR signature: c31126b76a65f91aba902e4daa3cebc9524160936a995076a7bea8f841599aa6 for sg00/act.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Backend.3]: Job finished
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Finished job job.Backend.3 with state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Starting job job.Kelper.2 state state 0
+06/08/2023 07:51:48 AM INFO 18514 [job.Kelper.2]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "walrus_bir.out.json", "wavegraph": "wavegraph-bin.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline Kelper
+06/08/2023 07:51:48 AM WARNING 18514 [job.Kelper.2]: writeKelp missing file sg00/nn_def.json
+06/08/2023 07:51:48 AM WARNING 18514 [job.Kelper.2]: writeKelp missing file sg00/kelf.json
+06/08/2023 07:51:48 AM INFO 18514 [job.Kelper.2]: neuroncc version is 1.15.0.0+eec0c3604, neff version is 1.0 (features 0)
+06/08/2023 07:51:48 AM INFO 18514 [job.Kelper.2]: wrote /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.neff
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Finished job job.Kelper.2 with state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Finished pipeline compile
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.compile.0]: Job finished
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.custom.0]: Finished job pipeline.compile.0 with state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.custom.0]: Starting job job.SaveTemps.0 state state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.custom.0]: Finished job job.SaveTemps.0 with state 0
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.custom.0]: Finished pipeline custom
+06/08/2023 07:51:48 AM INFO 18514 [pipeline.custom.0]: Job finished
+06/08/2023 07:51:48 AM INFO 18514 [root]: Compiler status PASS
+06/08/2023 08:11:50 AM INFO 6170 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104
+06/08/2023 08:11:50 AM INFO 6170 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 08:11:50 AM INFO 6170 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 08:11:50 AM INFO 6170 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 08:11:50 AM INFO 6170 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 08:11:50 AM INFO 6170 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {"tensor.1:0": [[], "int64"], "1:0": [[3, 128], "int64"], "2:0": [[3, 128], "int64"]}, "outputs": ["TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0"]}'
+06/08/2023 08:11:52 AM INFO 6170 [job.Frontend.4]: IR signature: a1cd7b368cdea1262f88934e5e1061e79644d961501e08a176e67d91d0f054e3 for graph_def.pb
+06/08/2023 08:11:52 AM INFO 6170 [job.Frontend.4]: total padded opcount is 0
+06/08/2023 08:11:52 AM INFO 6170 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 08:11:52 AM INFO 6170 [job.Frontend.4]: Start tensorization
+06/08/2023 08:11:52 AM INFO 6170 [job.Frontend.4]: IR signature: 0d2a26e7eddafebdf6f362f0433f1033b03198210a8799f4348f233eb07db3af for relay_graph_post_opt_unit_level.txt
+06/08/2023 08:11:52 AM INFO 6170 [root/Tensorizer/All]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: Tensorizer options:  --fp32-cast=all  --disable-bitcasted-transpose  --disable-expensive-checks  --disable-max-stride-tiling  --enable-replication  --max-local-tensor-tile-size-in-bytes=16384  --tensor-layout-p-order=0  --tensor-layout-b-order=1  --enable-advanced-delinearization  --weight-coalescing-threshold=512  --disable-shifted-fusion  --enable-bir-converter=enable 
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RelayPasses]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RelayPasses]: Exit time region: delta=0.005s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/IRBuilder]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/IRBuilder]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: Tensorizer options:  --fp32-cast=all  --disable-bitcasted-transpose  --disable-expensive-checks  --disable-max-stride-tiling  --enable-replication  --max-local-tensor-tile-size-in-bytes=16384  --tensor-layout-p-order=0  --tensor-layout-b-order=1  --enable-advanced-delinearization  --weight-coalescing-threshold=512  --disable-shifted-fusion  --enable-bir-converter=enable 
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: Generate: 1 statements from relay. Start optimizations ...
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]: Weights total number of bytes: 3088
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]: RelayIF total number of bytes: 3072.0
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]: RelayOF total number of bytes: 3072.0
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]: Weights total number of bytes: 3088.0
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DoNothing]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DoNothing]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DoNothing]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/MutateDataType]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [MutateDataType]: Finished (changed=True #instances=7680)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/MutateDataType]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ResolveEqualPredicates]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ResolveEqualPredicates]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ResolveEqualPredicates]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/EliminateDivs]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [EliminateDivs]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/EliminateDivs]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [SimplifyPredicates]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Simplifier]: Finished (changed=True #instances=6528)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TCTransform]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TCTransform]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TCTransform]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/CommuteConcat]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [CommuteConcat]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/CommuteConcat]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LoopFusion]: Finished (changed=True #instances=2688)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Simplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DelinearIndices]: Finished (changed=True #instances=2688)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Delinearization]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DeadStoreElimination]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DeadStoreElimination]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DeadStoreElimination]: Exit time region: delta=0.005s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Simplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LICM]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DelinearIndices]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Delinearization]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LoopFusion]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LICM]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Simplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ValueNumbering]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LICM]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/MemcpyElimination]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [MemcpyElimination]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/MemcpyElimination]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PadElimination]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [PadElimination]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PadElimination]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DelinearIndices]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DelinearIndices]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DelinearIndices]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Delinearization]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LoopFusion]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Simplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LICM]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ValueNumbering]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TCTransform]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TCTransform]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TCTransform]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/CommuteConcat]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [CommuteConcat]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/CommuteConcat]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LoopFusion]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ValueNumbering]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ValueNumbering]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ValueNumbering]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RecognizeOpIdiom]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [RecognizeOpIdiom]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RecognizeOpIdiom]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DeadCodeElimination]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DeadCodeElimination]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DeadCodeElimination]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: After optimization: 1 statements
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/AutoCastFP32]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [AutoCastFP32]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/AutoCastFP32]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LoopFusion]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LoopFusion]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Simplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Simplifier]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [Delinearization]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/Delinearization]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ResolveAccessConflict]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ResolveAccessConflict]: Finished (changed=True #instances=4224)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ResolveAccessConflict]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TransformLayout]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TransformLayout]: Finished (changed=True #instances=4224)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TransformLayout]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PartitionLocalityOpt]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [PartitionLocalityOpt]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PartitionLocalityOpt]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenPartitionAxes]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [FlattenPartitionAxes]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenPartitionAxes]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSizeTiling]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaSizeTiling]: Finished (changed=True #instances=3)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSizeTiling]: Exit time region: delta=0.006s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TilingProfiler]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TilingProfiler]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TilingProfiler]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: Default layout and tiling instruction count within range.
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [FlattenMacroLoop]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RetileSIMDMacro]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [RetileSIMDMacro]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RetileSIMDMacro]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/InferTongaTensor]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [InferTongaTensor]: Finished (changed=True #instances=3)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/InferTongaTensor]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LICM]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RewriteReplicationMatmul]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [RewriteReplicationMatmul]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RewriteReplicationMatmul]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [FlattenMacroLoop]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [SimplifyPredicates]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DataLocalityOpt]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DataLocalityOpt]: Finished (changed=True #instances=8)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DataLocalityOpt]: Exit time region: delta=0.024s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaMacro]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LegalizeTongaMacro]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaMacro]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PerfectLoopNest]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [PerfectLoopNest]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PerfectLoopNest]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [FlattenMacroLoop]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RewriteWeights]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [RewriteWeights]: Finished (changed=True #instances=8)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RewriteWeights]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ReshapeWeights]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ReshapeWeights]: Finished (changed=True #instances=8)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ReshapeWeights]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [FlattenMacroLoop]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FlattenMacroLoop]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyPredicates]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [SimplifyPredicates]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyPredicates]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/InferInitValue]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [InferInitValue]: Finished (changed=True #instances=8)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/InferInitValue]: Exit time region: delta=0.012s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SplitUnionSets]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [SplitUnionSets]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SplitUnionSets]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaSimplifier]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaSimplifier]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyTongaTensor]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [SimplifyTongaTensor]: Finished (changed=True #instances=8)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyTongaTensor]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaStore]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LegalizeTongaStore]: Finished (changed=True #instances=10)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaStore]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LICM]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LICM]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaISel]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaISel]: Finished (changed=True #instances=13)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaISel]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaAffineLoopXform]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaAffineLoopXform]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaAffineLoopXform]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaLoopFusion]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaLoopFusion]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaLoopFusion]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaLICM]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaLICM]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaLICM]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FactorizeBlkDims]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [FactorizeBlkDims]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/FactorizeBlkDims]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaInstComb]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaInstComb]: Finished (changed=True #instances=13)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaInstComb]: Exit time region: delta=0.009s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaValueNumbering]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaValueNumbering]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaValueNumbering]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerTranspose]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LowerTranspose]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerTranspose]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaType]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LegalizeTongaType]: Finished (changed=True #instances=13)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaType]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PartialLoopFusion]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [PartialLoopFusion]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/PartialLoopFusion]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ShortenLifeInterval]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ShortenLifeInterval]: Finished (changed=True #instances=13)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ShortenLifeInterval]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/GlobalBatchOpt]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [GlobalBatchOpt]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/GlobalBatchOpt]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SpillPSum]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [SpillPSum]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SpillPSum]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaType]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LegalizeTongaType]: Finished (changed=True #instances=13)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaType]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/InferPSumTensor]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [InferPSumTensor]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/InferPSumTensor]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/VectorizeMatMult]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [VectorizeMatMult]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/VectorizeMatMult]: Exit time region: delta=0.001s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/WeightCoalescing]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [WeightCoalescing]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/WeightCoalescing]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerPartitionTile]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LowerPartitionTile]: Finished (changed=True #instances=19)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerPartitionTile]: Exit time region: delta=0.006s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/BroadcastWeights]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [BroadcastWeights]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/BroadcastWeights]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TensorInitialization]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TensorInitialization]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TensorInitialization]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaAccess]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LegalizeTongaAccess]: Finished (changed=True #instances=22)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizeTongaAccess]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaAffineLoopXform]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TongaAffineLoopXform]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TongaAffineLoopXform]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RelaxPredicates]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [RelaxPredicates]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/RelaxPredicates]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TensorInitialization]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [TensorInitialization]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/TensorInitialization]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ExpandISAMacro]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ExpandISAMacro]: Finished (changed=True #instances=26)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ExpandISAMacro]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizePartitionTile]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LegalizePartitionTile]: Finished (changed=True #instances=29)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LegalizePartitionTile]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyTongaTensor]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [SimplifyTongaTensor]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/SimplifyTongaTensor]: Exit time region: delta=0.008s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LinearizeFreeDim]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LinearizeFreeDim]: Finished (changed=True #instances=29)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LinearizeFreeDim]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DataStreaming]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [DataStreaming]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/DataStreaming]: Exit time region: delta=0.003s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ILPOpt]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [ILPOpt]: Finished (changed=True #instances=25)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/ILPOpt]: Exit time region: delta=0.017s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/StaticProfiler]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [StaticProfiler]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/StaticProfiler]: Exit time region: delta=0.005s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerAPIndices]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LowerAPIndices]: Finished (changed=True #instances=25)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerAPIndices]: Exit time region: delta=0.006s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerMisc]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [LowerMisc]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/LowerMisc]: Exit time region: delta=0.002s
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/BirCodeGenLoop]: Enter time region
+06/08/2023 08:11:52 AM INFO 6170 [BirCodeGenLoop]: Finished (changed=False)
+06/08/2023 08:11:52 AM INFO 6170 [sg00/Tensorizer/BirCodeGenLoop]: Exit time region: delta=0.004s
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: IR signature: 999d14b3d83cf80b44e06787c42984134f8f0f8c98bbfa27368dba2bf355965e for sg00/Tensorizer
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: Weights total number of bytes: 1536
+06/08/2023 08:11:52 AM INFO 6170 [Tensorizer]: Finalize
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]: --- Penguin Statistics ---
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  AffinePredicateResolution  Number of const tensor evaluated from predicate values
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  AutoCastTCInputs  Tensor shrink for matmult down-cast (in bytes
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  BroadcastWeights  Number of matmults inserted to broadcast weights
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  CommuteConcat     Number of concat operand commuted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  CommuteConcat     Number of concat operand distributed
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ConcatLoopFusion  Number of concat loops fused
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DTypeMutator      Number of bytes statically casted in weight tensor
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DTypeMutator      Number of load whose tensor type mutated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DTypeMutator      Number of operator whose dst type is mutated for legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                1  DataLocalityOpt   Number of deferred flush inserted for DMA write
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DataLocalityOpt   Number of delinearized weight by rewriting
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DataLocalityOpt   Number of prefetch failed due to isl codegen
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                2  DataLocalityOpt   Number of prefetch inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DataLocalityOpt   Number of tranposes skipped because of illegal partition address
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DataLocalityOpt   Number of transpose inserted for DMA write
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DeConcat          Number of concat operand distributed
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DeadStoreElimination  Number of bytes eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DeadStoreElimination  Number of iteration eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DeadStoreElimination  Number of loops eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DeadStoreElimination  Number of strided axes
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DeadStoreElimination  Number of tensors eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DelinearizationBase  Number of loops tiled by delinearization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                2  DelinearizationBase  Number of tensors delinearized
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  DotTransform      Number of times a transformation rollback due to transformation crash
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  EliminateDivs     Number of axes tiled to eliminate div/mod
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  EliminateDivs     Number of div/mod with offset
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:               48  ExpandISAMacro    Number of per-partition bytes copy for tensor-tensor legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ExpandISAMacro    Number of sbatomload/sbatomstore expand
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:               48  ExpandISAMacro    Number of total per-partition bytes copy/cast for legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  FlattenMacroLoop  Number of axes coalesced
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  FlattenMacroLoop  Number of tensors reshaped
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  GlobalLayoutOpt   Number of BFTransposes inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  GlobalLayoutOpt   Number of PFTransposes inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  GlobalLayoutOpt   Number of PFTransposes inserted for IO tensors
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  GlobalLayoutOpt   Number of dmas needed for transpose
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferNonLocalTensor  num of non-local tensors infered
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferPSumTensor   Number of bytes copied to psum per-partition
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferPSumTensor   Number of instructions whose result inferred into PSUM
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferPSumTensor   Number of psum copy instructions inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferPSumTensor   Number of total bytes inferred into PSUM
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferStaticWeight  Number of bytes allocated as static allocation
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                2  InferTongaTensor  Number of local tensor inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferTongaTensor  Number of tensors that can not be inferred as local because of the non-compatible access pattern
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferTongaTensor  Number of tensors that cannot be inferred as local because their size cannot fit in
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferTongaTensor  Total Number of bytes of non-compatible tensors
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  InferTongaTensor  Total Number of bytes of tensors with large tile size
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:             6144  InferTongaTensor  Total number of bytes of local tensors
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  IntegerSetWrapper  Number of times compute_quota exceed
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  IslSimplifier     Number of iteration eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  IslSimplifier     Number of loops eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  IslSimplifier     Number of predicate eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  IslSimplifier     Number of strided axes
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                1  LayoutAnalysis    Number of loopnests (DAGs) whose tensors layout are not propagated but re-calculated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for Activation legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for MatMul legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomLoad SB address legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomLoad legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomSave SB address legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for SBAtomSave legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for TensorScalarPtr legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of per-partition bytes copy for TensorTensor legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of tensor reshaped to legalize the ptr operand of the tensorscalarptr
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaAccess  Number of total per-partition bytes copy/cast for legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaMacro  Explicit psum copy because of too many partitions
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaType  Number of bytes copy/cast at the producer instructions
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LegalizeTongaType  Number of bytes copy/cast for legalization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LinearScanAllocator  Number of bytes allocated in psumbuffer
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LinearScanAllocator  Number of bytes allocated in statebuffer
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LinearScanAllocator  PSumbuffer utilization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LinearScanAllocator  Statebuffer utilization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                5  LoopFusion        Number of loops fused
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                2  LoopFusion        Number of trivial copy eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LowerPartitionTile  Number of broadcast buffer shrink
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LowerPartitionTile  Number of matmult instruction lowered
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                6  LowerPartitionTile  Number of tonga instruction (except matmult) lowered
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LowerTranspose    Number of lossless transpose generated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LowerTranspose    Number of lossless transpose with bitcast generated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  LowerTranspose    Number of lossy transpose generated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MPDLoopFusion     Missed loop fusions
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MatMultCombiner   Number of matmul fused among contract axes
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MatMultCombiner   Number of matmul fused among rows
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MatMultCombiner   Number of matmul operand copy
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MatMultCombiner   Number of matmul operand extend inplace
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MatMultCombiner   Number of matmul operand extend inplace
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MatMultCombiner   Number of weight fused for matmul fusion
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemcpyElimination  Number of bytes copied by memcpy
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemcpyElimination  Number of bytes eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemcpyElimination  Number of cast inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemcpyElimination  Number of failure in access folding
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemcpyElimination  Number of memcopy eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemcpyElimination  Number of quasi affine expr generated during addr rewrite
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemcpyElimination  Number of simple dag moved
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemoryProfiler    Estimated peak psum utilization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  MemoryProfiler    Estimated peak statebuffer utilization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ModDivDelinear    Number of loops tiled by delinearization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ModDivDelinear    Number of tensors delinearized
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ModuloAllocation  Number of dma for prefetch buffer moved
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                6  ModuloAllocation  Number of parallel loops generated by modulo buffer allocation
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  PadElimination    Number of padding eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  PartialLoopFusion  Number of instruction rematerialized
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  PartialLoopFusion  Number of loops fused
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  PartialLoopFusion  Number of loops fused with loop-carried dependencies
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  PolyhedralInterfereGraph  Number of inplace replacement pairs identified
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                1  PreScheduler      Number of instruction moved to shorten live-interval
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  PrefetchAllocation  Number of inputs/weights prefetched
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RecognizeOpIdiom  Number of channel-wise prelu inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RecognizeOpIdiom  Number of gelu (tanh approximated) inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RecognizeOpIdiom  Number of gelu inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RecognizeOpIdiom  Number of mish inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RecognizeOpIdiom  Number of prelu inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RecognizeOpIdiom  Number of rsqrt inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RecognizeOpIdiom  Number of softplus inferred
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  Recompute         Number of bytes recomputed
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  Recompute         Number of flops recomputed
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RelaxPredicates   Number of predicates dropped
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RelayFE           Number of MAC count in relay
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:            21520  RelayFE           Number of total read bytes of FMAP and weight in relay
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                1  ReshapeWeights    Number of weights being reshaped into 2-D array
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ResolveAccessConflict  Number of dag splitted to resolve access conflict
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ResolvePredicates  Number of subdomain generated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RetileSIMDMacro   Number of SIMD macro retiled to match size of psum
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RewriteReplicationMatmul  Number of replication access generated for matmul
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  RewriteReplicationMatmul  Number of software replication generated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  SimplifyTensorBase  Number of dead stores deleted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                2  SimplifyTensorBase  Number of tensors simplified
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  SimplifyTensorBase  Number of tensors splitted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                2  SimplifyTensorBase  Number of tensors squeezed
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  SpillPSum         Number of total per-partition bytes spilled from psum to sb
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  SplitAccGrp       Number of accumulation groups splitted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  SplitFreeDim      Number of tensors whose blocks are further split
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  SplitUnionSets    Number of subdomain generated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:           0.1500  StaticProfiler    Arithmetic intensity upper bound if we only load/store I/O tensors once (excluding gather weight tensor)
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity upper bound if we only load/store I/O tensors once (excluding weights)
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:           0.1875  StaticProfiler    Arithmetic intensity without non-local tensor loads
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:           0.2500  StaticProfiler    Arithmetic intensity without weights and non-local loads
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:           6.8571  StaticProfiler    Average dma length per-partition
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:           6.0000  StaticProfiler    Average dma length per-partition (exclude weights)
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:         100.0000  StaticProfiler    Average partition utilization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Average pe (systolic array) utilization
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:               32  StaticProfiler    Biggest tensor tile size in StateBuffer/PSum
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Matmul compute efficiency: (Relay MAC counts/128/64/2) / (Total elements per partition)
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Num of matmul transpose instructions
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:             1152  StaticProfiler    Number of arithmetic computation
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by activation
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by gettensorptr
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by matmul
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by reciprocal
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by tensorreduce
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:              768  StaticProfiler    Number of arithmetic computation by tensorscalar
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of arithmetic computation by tensorscalarptr
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:              384  StaticProfiler    Number of arithmetic computation by tensortensor
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:             9216  StaticProfiler    Number of bytes moved by tensor copy and shuffle
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:             1536  StaticProfiler    Number of bytes of weights loaded
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:               12  StaticProfiler    Number of bytes of weights loaded in partition 0
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:             6144  StaticProfiler    Number of bytes transfer between ddr and local memory
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                7  StaticProfiler    Number of dma whose length is smaller than 512 bytes
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                6  StaticProfiler    Number of dma whose length is smaller than 512 bytes (exclude weights)
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of matmul instructions
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of tensorcopy after transpose
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of tensorcopy from psum
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:               12  StaticProfiler    Number of tensorcopy instructions
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Number of tensorcopy to psum
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:               39  StaticProfiler    Number of total dynamic instances of tonga instructions (number of instructions after unroll)
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  StaticProfiler    Utilized psum size / Max psum size
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:         125.0000  StaticProfiler    io tensor size / ddr transfer size
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:         125.0000  StaticProfiler    io tensor size / ddr transfer size ignoring nonlocal/gather tensors
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TensorInitialization  Number of explicit initialization inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingForNewLayout  Number of inherit tiles
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingForNewLayout  Number of instructions after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingForNewLayout  Number of places global layout clobbered
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:         100.0000  TilingProfiler    Average partition utilization calculated after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Average pe (systolic array) utilization calculated after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from dmas after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from gather/scatter after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from matmults after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for IO tensors after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for local tensors after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from pf transposes for nonlocal tensors after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of insts from reduce macros after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of non-IO DRAM tensor after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of pf transposes
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of pf transposes for IO tensors
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of pf transposes for local tensors
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TilingProfiler    Number of pf transposes for nonlocal tensors
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                3  TilingProfiler    Number of total insts after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaCpyElim      Number of failure in access folding
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaCpyElim      Number of tensor copy/cast eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaInstComb     Number of bias_add combined to activation
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaInstComb     Number of result of boolean computation shrink
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaInstComb     Number of scale combined to activation
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaInstComb     Number of tensorscalar fold into tensorscalarptr
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaInstComb     Number of tensortensor add replace by psum accumulation
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaInstComb     Number of transpose pairs folded
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                1  TongaInstComb     Number of trivial access pattern eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaLICM         Number of instruction hoisted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaLICM         Number of instruction sunk
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaLayoutGroupAnalysis  Number of loopnests (DAGs) whose tensors layout are not propagated but re-calculated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaLoopFusion   Number of loops fused
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaLoopFusion   Number of matmul fused for psum locality
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaSizeTiling   Number of inherit tiles
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaSizeTiling   Number of instructions after tiling
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaSizeTiling   Number of places global layout clobbered
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaValueNumbering  Number of instructions deleted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TongaValueNumbering  Number of tensors deleted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TransformLayoutPass  Number of static layout transforms on input/outputs
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TransformLayoutPass  Number of transpose inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TransformLayoutPass  Number of transpose insertions failed because of predicates
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  TransformLayoutPass  Number of unknown transpose inserted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  VDNSPrep          Number of tensor rewritten for virtual node splitting
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ValueNumbering    Number of instructions deleted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  ValueNumbering    Number of tensors deleted
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                1  Vectorizer        Number of instruction vectorized
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  WeightCoalescing  Number of empty loopnest eliminated
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  WeightCoalescing  Number of load instruction merged
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:             1536  WeightRewriter    Number of bytes re-written for weights
+06/08/2023 08:11:52 AM INFO 6170 [Statistics]:                0  WeightRewriter    Number of bytes reused for weight rewrite
+06/08/2023 08:11:53 AM INFO 6170 [root/Tensorizer/All]: Exit time region: delta=1.241s
+06/08/2023 08:11:53 AM INFO 6170 [job.Frontend.4]: wrote bir.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Frontend.4]: wrote tensor_map.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Frontend.4]: End tensorization
+06/08/2023 08:11:53 AM INFO 6170 [job.Frontend.4]: Job finished
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Finished job job.Frontend.4 with state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Starting job job.HHChecker.0 state state 0
+06/08/2023 08:11:53 AM INFO 6170 [job.HHChecker.0]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "bir.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline HHChecker
+06/08/2023 08:11:53 AM INFO 6170 [job.HHChecker.0]: Job finished
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Finished job job.HHChecker.0 with state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Starting job job.WalrusDriver.3 state state 0
+06/08/2023 08:11:53 AM INFO 6170 [job.WalrusDriver.3]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "bir.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline WalrusDriver
+06/08/2023 08:11:53 AM INFO 6170 [job.WalrusDriver.3]: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/neuroncc/starfish/bin/walrus_driver --state-numerical-id=0 --optlevel 2 --allocator coloring --verbose 20 -o walrus_bir.out.json -i bir.json --min_split_size 10240 --skip_split_vns  --no_split_dram --max-partitions 1 --policy 2 --auxflag 0 --interleave none --internal-hyper-parameters /opt/ml/input/config/hyperparameters.json --tuning 2 --numcores 1 --unified-walrus-and-stargazer --tensor-map tensor_map.json --act-root-json /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/neuroncc/pwp/pwp_bin_with_ln/act_info.json
+06/08/2023 08:11:53 AM INFO 6170 [job.WalrusDriver.3]: IR signature: 04a612b09f2aa14a060e2a706fcf4aeae5c9b31b742c1d2eb345b07484268488 for sg00/walrus_bir.out.json
+06/08/2023 08:11:53 AM INFO 6170 [job.WalrusDriver.3]: Job finished
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Finished job job.WalrusDriver.3 with state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Starting job job.Backend.3 state state 0
+06/08/2023 08:11:53 AM INFO 6170 [job.Backend.3]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "walrus_bir.out.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline Backend --enable-experimental-bir-backend
+06/08/2023 08:11:53 AM INFO 6170 [job.Backend.3]: IR signature: 5cfb967dd9bdffe85e2e27f922f5fe310d0ca09c9ea485c566a80391ef955d2a for sg00/wavegraph-bin.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Backend.3]: IR signature: 6616d4447cf57f2688e1de6791230802099d32a8a653ecff2f224eb39431b462 for sg00/def.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Backend.3]: IR signature: 5ead06b7d7042f96493f731be818e73408f6e3de3debecb2cb78b76fd997ef9f for sg00/pe.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Backend.3]: IR signature: 55a0078667340b54f17e2c6eb7a3cd2630153af7715024e7d192d176fb69e5ff for sg00/pool.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Backend.3]: IR signature: c31126b76a65f91aba902e4daa3cebc9524160936a995076a7bea8f841599aa6 for sg00/act.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Backend.3]: Job finished
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Finished job job.Backend.3 with state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Starting job job.Kelper.2 state state 0
+06/08/2023 08:11:53 AM INFO 6170 [job.Kelper.2]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.pb"], "tensormap": "tensor_map.json", "bir": "walrus_bir.out.json", "wavegraph": "wavegraph-bin.json", "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/sg00", "state_id": "sg00"}' --pipeline Kelper
+06/08/2023 08:11:53 AM WARNING 6170 [job.Kelper.2]: writeKelp missing file sg00/nn_def.json
+06/08/2023 08:11:53 AM WARNING 6170 [job.Kelper.2]: writeKelp missing file sg00/kelf.json
+06/08/2023 08:11:53 AM INFO 6170 [job.Kelper.2]: neuroncc version is 1.15.0.0+eec0c3604, neff version is 1.0 (features 0)
+06/08/2023 08:11:53 AM INFO 6170 [job.Kelper.2]: wrote /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/104/graph_def.neff
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Finished job job.Kelper.2 with state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Finished pipeline compile
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.compile.0]: Job finished
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.custom.0]: Finished job pipeline.compile.0 with state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.custom.0]: Starting job job.SaveTemps.0 state state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.custom.0]: Finished job job.SaveTemps.0 with state 0
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.custom.0]: Finished pipeline custom
+06/08/2023 08:11:53 AM INFO 6170 [pipeline.custom.0]: Job finished
+06/08/2023 08:11:53 AM INFO 6170 [root]: Compiler status PASS

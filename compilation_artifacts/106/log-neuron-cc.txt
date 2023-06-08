@@ -1,0 +1,180 @@
+06/07/2023 11:12:28 AM INFO 29254 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106
+06/07/2023 11:12:28 AM INFO 29254 [pipeline.custom.0]: Running pipeline custom.0
+06/07/2023 11:12:28 AM INFO 29254 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/07/2023 11:12:28 AM INFO 29254 [pipeline.compile.0]: Running pipeline compile.0
+06/07/2023 11:12:28 AM INFO 29254 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/07/2023 11:12:28 AM INFO 29254 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {"tensor.1:0": [[3, 512], "int64"], "1:0": [[3, 512, 256], "float32"], "2:0": [[3, 512, 256], "float32"], "3:0": [[3, 512, 256], "float32"], "4:0": [[3, 512, 256], "float32"], "5:0": [[3, 512, 256], "float32"], "6:0": [[3, 512, 256], "float32"], "7:0": [[3, 512, 256], "float32"], "8:0": [[3, 512, 256], "float32"], "9:0": [[3, 512, 256], "float32"], "tensor.9:0": [[3, 512, 7], "int64"], "tensor.25:0": [[], "int64"], "tensor.39:0": [[], "int64"], "tensor.59:0": [[], "int64"], "tensor.75:0": [[], "int64"]}, "outputs": ["TapasModel_7/TapasPooler_29/Tanh_11/aten_tanh/Tanh:0", "aten_to_5/Const:0", "aten_add/add:0", "aten_reshape/Reshape:0", "aten_expand/Cast_1:0", "aten_zeros/zeros:0", "aten_ones/ones:0", "aten_expand_1/Cast_1:0", "aten_reshape_1/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros_1/zeros:0", "aten_ones_1/ones:0", "aten_expand_3/Cast_1:0", "aten_to_18/Cast:0", "aten_reshape_2/Reshape:0", "aten_expand_4/Cast_1:0", "aten_zeros_2/zeros:0", "aten_ones_2/ones:0", "aten_expand_5/Cast_1:0", "aten_reshape_3/Reshape:0", "aten_view_8/Reshape:0", "aten_to_28/Cast:0"]}'
+06/07/2023 11:12:31 AM INFO 29254 [job.Frontend.4]: IR signature: 5f87a7ffadfa8de159f2800cb3b20b6bf8ae01acca1386d36dcf932bc0e0f695 for graph_def.pb
+06/07/2023 11:12:31 AM INFO 29254 [job.Frontend.4]: total padded opcount is 6444417024
+06/07/2023 11:12:31 AM INFO 29254 [job.Frontend.4]: Finished Jellyfish import
+06/07/2023 11:12:31 AM INFO 29254 [job.Frontend.4]: Start tensorization
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: ***************************************************************
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:  An Internal Compiler Error has occurred
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: ***************************************************************
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: 
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: Error message:  Traceback (most recent call last):
+  [bt] (5) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(TVMFuncCall+0x52) [0x7f5c956dd442]
+  [bt] (4) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xb456f4) [0x7f5c9545e6f4]
+  [bt] (3) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xb44155) [0x7f5c9545d155]
+  [bt] (2) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xba3d3b) [0x7f5c954bcd3b]
+  [bt] (1) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xba1e40) [0x7f5c954bae40]
+  [bt] (0) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0x5edf75) [0x7f5c94f06f75]
+  File "/opt/brazil-pkg-cache/packages/DmlcTvm/DmlcTvm-1.15.0.0/AL2_x86_64/generic-flavor/src/src/relay/pass/partition_graph.cc", line 850
+TVMError: Check failed: found: Could not find primary output
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: 
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: Error class:    TVMError
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: Error location: Unknown
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.neff --io-config '{"inputs": {"tensor.1:0": [[3, 512], "int64"], "1:0": [[3, 512, 256], "float32"], "2:0": [[3, 512, 256], "float32"], "3:0": [[3, 512, 256], "float32"], "4:0": [[3, 512, 256], "float32"], "5:0": [[3, 512, 256], "float32"], "6:0": [[3, 512, 256], "float32"], "7:0": [[3, 512, 256], "float32"], "8:0": [[3, 512, 256], "float32"], "9:0": [[3, 512, 256], "float32"], "tensor.9:0": [[3, 512, 7], "int64"], "tensor.25:0": [[], "int64"], "tensor.39:0": [[], "int64"], "tensor.59:0": [[], "int64"], "tensor.75:0": [[], "int64"]}, "outputs": ["TapasModel_7/TapasPooler_29/Tanh_11/aten_tanh/Tanh:0", "aten_to_5/Const:0", "aten_add/add:0", "aten_reshape/Reshape:0", "aten_expand/Cast_1:0", "aten_zeros/zeros:0", "aten_ones/ones:0", "aten_expand_1/Cast_1:0", "aten_reshape_1/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros_1/zeros:0", "aten_ones_1/ones:0", "aten_expand_3/Cast_1:0", "aten_to_18/Cast:0", "aten_reshape_2/Reshape:0", "aten_expand_4/Cast_1:0", "aten_zeros_2/zeros:0", "aten_ones_2/ones:0", "aten_expand_5/Cast_1:0", "aten_reshape_3/Reshape:0", "aten_view_8/Reshape:0", "aten_to_28/Cast:0"]}' --verbose 1
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: 
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: Internal details:
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 765, in build_graph
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:     coloring_map, color_to_target_map)
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 1261, in color_graph
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:     pre_color_map_internal, pre_target_map_internal)
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/_ffi/_ctypes/function.py", line 190, in __call__
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:     raise get_last_ffi_error()
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: 
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: Version information:
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   NEFF version Dynamic
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   TVM version 1.15.0.0+0
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   NumPy version 1.18.5
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   MXNet not available
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]:   TF not available
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: 
+06/07/2023 11:12:33 AM ERROR 29254 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106
+06/08/2023 07:51:50 AM INFO 18650 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106
+06/08/2023 07:51:50 AM INFO 18650 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 07:51:50 AM INFO 18650 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 07:51:50 AM INFO 18650 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 07:51:50 AM INFO 18650 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 07:51:50 AM INFO 18650 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {"tensor.1:0": [[3, 512], "int64"], "1:0": [[3, 512, 256], "float32"], "2:0": [[3, 512, 256], "float32"], "3:0": [[3, 512, 256], "float32"], "4:0": [[3, 512, 256], "float32"], "5:0": [[3, 512, 256], "float32"], "6:0": [[3, 512, 256], "float32"], "7:0": [[3, 512, 256], "float32"], "8:0": [[3, 512, 256], "float32"], "9:0": [[3, 512, 256], "float32"], "tensor.9:0": [[3, 512, 7], "int64"], "tensor.25:0": [[], "int64"], "tensor.39:0": [[], "int64"], "tensor.59:0": [[], "int64"], "tensor.75:0": [[], "int64"]}, "outputs": ["TapasModel_7/TapasPooler_29/Tanh_11/aten_tanh/Tanh:0", "aten_to_5/Const:0", "aten_add/add:0", "aten_reshape/Reshape:0", "aten_expand/Cast_1:0", "aten_zeros/zeros:0", "aten_ones/ones:0", "aten_expand_1/Cast_1:0", "aten_reshape_1/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros_1/zeros:0", "aten_ones_1/ones:0", "aten_expand_3/Cast_1:0", "aten_to_18/Cast:0", "aten_reshape_2/Reshape:0", "aten_expand_4/Cast_1:0", "aten_zeros_2/zeros:0", "aten_ones_2/ones:0", "aten_expand_5/Cast_1:0", "aten_reshape_3/Reshape:0", "aten_view_8/Reshape:0", "aten_to_28/Cast:0"]}'
+06/08/2023 07:51:54 AM INFO 18650 [job.Frontend.4]: IR signature: ce938f771d643d8af918bcb0269c5a9b07ea48db10ef863258a71bde576007a9 for graph_def.pb
+06/08/2023 07:51:54 AM INFO 18650 [job.Frontend.4]: total padded opcount is 6444417024
+06/08/2023 07:51:54 AM INFO 18650 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 07:51:54 AM INFO 18650 [job.Frontend.4]: Start tensorization
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: ***************************************************************
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:  An Internal Compiler Error has occurred
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: ***************************************************************
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: 
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: Error message:  Traceback (most recent call last):
+  [bt] (5) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(TVMFuncCall+0x52) [0x7fe85b4ec442]
+  [bt] (4) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xb456f4) [0x7fe85b26d6f4]
+  [bt] (3) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xb44155) [0x7fe85b26c155]
+  [bt] (2) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xba3d3b) [0x7fe85b2cbd3b]
+  [bt] (1) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xba1e40) [0x7fe85b2c9e40]
+  [bt] (0) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0x5edf75) [0x7fe85ad15f75]
+  File "/opt/brazil-pkg-cache/packages/DmlcTvm/DmlcTvm-1.15.0.0/AL2_x86_64/generic-flavor/src/src/relay/pass/partition_graph.cc", line 850
+TVMError: Check failed: found: Could not find primary output
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: 
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: Error class:    TVMError
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: Error location: Unknown
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.neff --io-config '{"inputs": {"tensor.1:0": [[3, 512], "int64"], "1:0": [[3, 512, 256], "float32"], "2:0": [[3, 512, 256], "float32"], "3:0": [[3, 512, 256], "float32"], "4:0": [[3, 512, 256], "float32"], "5:0": [[3, 512, 256], "float32"], "6:0": [[3, 512, 256], "float32"], "7:0": [[3, 512, 256], "float32"], "8:0": [[3, 512, 256], "float32"], "9:0": [[3, 512, 256], "float32"], "tensor.9:0": [[3, 512, 7], "int64"], "tensor.25:0": [[], "int64"], "tensor.39:0": [[], "int64"], "tensor.59:0": [[], "int64"], "tensor.75:0": [[], "int64"]}, "outputs": ["TapasModel_7/TapasPooler_29/Tanh_11/aten_tanh/Tanh:0", "aten_to_5/Const:0", "aten_add/add:0", "aten_reshape/Reshape:0", "aten_expand/Cast_1:0", "aten_zeros/zeros:0", "aten_ones/ones:0", "aten_expand_1/Cast_1:0", "aten_reshape_1/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros_1/zeros:0", "aten_ones_1/ones:0", "aten_expand_3/Cast_1:0", "aten_to_18/Cast:0", "aten_reshape_2/Reshape:0", "aten_expand_4/Cast_1:0", "aten_zeros_2/zeros:0", "aten_ones_2/ones:0", "aten_expand_5/Cast_1:0", "aten_reshape_3/Reshape:0", "aten_view_8/Reshape:0", "aten_to_28/Cast:0"]}' --verbose 1
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: 
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: Internal details:
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 765, in build_graph
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:     coloring_map, color_to_target_map)
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 1261, in color_graph
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:     pre_color_map_internal, pre_target_map_internal)
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/_ffi/_ctypes/function.py", line 190, in __call__
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:     raise get_last_ffi_error()
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: 
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: Version information:
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   NEFF version Dynamic
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   TVM version 1.15.0.0+0
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   NumPy version 1.18.5
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   MXNet not available
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]:   TF not available
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: 
+06/08/2023 07:51:56 AM ERROR 18650 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106
+06/08/2023 08:11:55 AM INFO 6336 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106
+06/08/2023 08:11:55 AM INFO 6336 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 08:11:55 AM INFO 6336 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 08:11:55 AM INFO 6336 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 08:11:55 AM INFO 6336 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 08:11:55 AM INFO 6336 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106", "state_id": "root"}' --pipeline Frontend --io-config '{"inputs": {"tensor.1:0": [[3, 128], "int64"], "1:0": [[3, 128, 256], "float32"], "2:0": [[3, 128, 256], "float32"], "3:0": [[3, 128, 256], "float32"], "4:0": [[3, 128, 256], "float32"], "5:0": [[3, 128, 256], "float32"], "6:0": [[3, 128, 256], "float32"], "7:0": [[3, 128, 256], "float32"], "8:0": [[3, 128, 256], "float32"], "9:0": [[3, 128, 256], "float32"], "tensor.9:0": [[3, 128, 7], "int64"], "tensor.25:0": [[], "int64"], "tensor.39:0": [[], "int64"], "tensor.59:0": [[], "int64"], "tensor.75:0": [[], "int64"]}, "outputs": ["TapasModel_7/TapasPooler_29/Tanh_11/aten_tanh/Tanh:0", "aten_to_5/Const:0", "aten_add/add:0", "aten_reshape/Reshape:0", "aten_expand/Cast_1:0", "aten_zeros/zeros:0", "aten_ones/ones:0", "aten_expand_1/Cast_1:0", "aten_reshape_1/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros_1/zeros:0", "aten_ones_1/ones:0", "aten_expand_3/Cast_1:0", "aten_to_18/Cast:0", "aten_reshape_2/Reshape:0", "aten_expand_4/Cast_1:0", "aten_zeros_2/zeros:0", "aten_ones_2/ones:0", "aten_expand_5/Cast_1:0", "aten_reshape_3/Reshape:0", "aten_view_8/Reshape:0", "aten_to_28/Cast:0"]}' --framework TENSORFLOW
+06/08/2023 08:11:59 AM INFO 6336 [job.Frontend.4]: IR signature: a931c2f0960ebdce673e8b9617373d0cea2cf6f60421c912579ad6a135a12464 for graph_def.pb
+06/08/2023 08:11:59 AM INFO 6336 [job.Frontend.4]: total padded opcount is 1007419392
+06/08/2023 08:11:59 AM INFO 6336 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 08:11:59 AM INFO 6336 [job.Frontend.4]: Start tensorization
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: ***************************************************************
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:  An Internal Compiler Error has occurred
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: ***************************************************************
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: 
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: Error message:  Traceback (most recent call last):
+  [bt] (5) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(TVMFuncCall+0x52) [0x7f98a2264442]
+  [bt] (4) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xb456f4) [0x7f98a1fe56f4]
+  [bt] (3) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xb44155) [0x7f98a1fe4155]
+  [bt] (2) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xba3d3b) [0x7f98a2043d3b]
+  [bt] (1) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0xba1e40) [0x7f98a2041e40]
+  [bt] (0) /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/libtvm.so(+0x5edf75) [0x7f98a1a8df75]
+  File "/opt/brazil-pkg-cache/packages/DmlcTvm/DmlcTvm-1.15.0.0/AL2_x86_64/generic-flavor/src/src/relay/pass/partition_graph.cc", line 850
+TVMError: Check failed: found: Could not find primary output
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: 
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: Error class:    TVMError
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: Error location: Unknown
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106/graph_def.neff --io-config '{"inputs": {"tensor.1:0": [[3, 128], "int64"], "1:0": [[3, 128, 256], "float32"], "2:0": [[3, 128, 256], "float32"], "3:0": [[3, 128, 256], "float32"], "4:0": [[3, 128, 256], "float32"], "5:0": [[3, 128, 256], "float32"], "6:0": [[3, 128, 256], "float32"], "7:0": [[3, 128, 256], "float32"], "8:0": [[3, 128, 256], "float32"], "9:0": [[3, 128, 256], "float32"], "tensor.9:0": [[3, 128, 7], "int64"], "tensor.25:0": [[], "int64"], "tensor.39:0": [[], "int64"], "tensor.59:0": [[], "int64"], "tensor.75:0": [[], "int64"]}, "outputs": ["TapasModel_7/TapasPooler_29/Tanh_11/aten_tanh/Tanh:0", "aten_to_5/Const:0", "aten_add/add:0", "aten_reshape/Reshape:0", "aten_expand/Cast_1:0", "aten_zeros/zeros:0", "aten_ones/ones:0", "aten_expand_1/Cast_1:0", "aten_reshape_1/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros_1/zeros:0", "aten_ones_1/ones:0", "aten_expand_3/Cast_1:0", "aten_to_18/Cast:0", "aten_reshape_2/Reshape:0", "aten_expand_4/Cast_1:0", "aten_zeros_2/zeros:0", "aten_ones_2/ones:0", "aten_expand_5/Cast_1:0", "aten_reshape_3/Reshape:0", "aten_view_8/Reshape:0", "aten_to_28/Cast:0"]}' --verbose 1
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: 
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: Internal details:
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 765, in build_graph
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:     coloring_map, color_to_target_map)
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 1261, in color_graph
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:     pre_color_map_internal, pre_target_map_internal)
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/_ffi/_ctypes/function.py", line 190, in __call__
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:     raise get_last_ffi_error()
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: 
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: Version information:
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   NEFF version Dynamic
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   TVM version 1.15.0.0+0
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   NumPy version 1.18.5
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   MXNet not available
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]:   TF not available
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: 
+06/08/2023 08:12:01 AM ERROR 6336 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/106

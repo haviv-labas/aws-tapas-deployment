@@ -1,0 +1,192 @@
+{
+    "dma": [
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "13-TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-1",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 56,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                    "to_off": 1024,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 0,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "14-TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-2",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 64,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                    "to_off": 2048,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 1,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "15-TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-0",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 48,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                    "to_off": 0,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 2,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "0-TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-0",
+            "desc": [
+                {
+                    "from": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                    "from_off": 0,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98280,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 0,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "1-TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-1",
+            "desc": [
+                {
+                    "from": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                    "from_off": 1024,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98288,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 1,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "2-TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-2",
+            "desc": [
+                {
+                    "from": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                    "from_off": 2048,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98296,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 2,
+            "queue": "qPoolIn0"
+        }
+    ],
+    "instr": "pool.bin",
+    "name": "pool_json"
+}

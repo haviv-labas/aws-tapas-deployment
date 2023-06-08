@@ -1,0 +1,108 @@
+{
+    "act": "act.json",
+    "act_instr": "act.bin",
+    "debug_info": {
+        "wavegraph": "wavegraph-bin.json"
+    },
+    "dma_queue": {
+        "qPoolIn0": {
+            "fabric_path": "main",
+            "owner": "pool",
+            "semaphore": 4,
+            "type": "in"
+        },
+        "qPoolOut0": {
+            "fabric_path": "main",
+            "owner": "pool",
+            "semaphore": 5,
+            "type": "out"
+        },
+        "qPoolPW0": {
+            "fabric_path": "main",
+            "pinned": true,
+            "type": "data"
+        },
+        "qPoolPW1": {
+            "fabric_path": "alt",
+            "pinned": true,
+            "type": "data"
+        }
+    },
+    "name": "definition",
+    "pe": "pe.json",
+    "pe_instr": "pe.bin",
+    "pool": "pool.json",
+    "pool_instr": "pool.bin",
+    "var": {
+        "SB": {
+            "type": "state-buffer",
+            "var_id": 0
+        },
+        "TapasModel_7/TapasEmbeddings_27/aten_add/add:0": {
+            "#file-name": "value_TapasModel_7__TapasEmbeddings_27__aten_add__add:0-simout.npy",
+            "#transfer-type": "output",
+            "element_size": 4,
+            "internal_shape": [
+                3,
+                256
+            ],
+            "ops": [],
+            "size": 3072,
+            "type": "output",
+            "var_id": 5
+        },
+        "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0": {
+            "#transfer-type": "input",
+            "element_size": 4,
+            "internal_shape": [
+                3,
+                128,
+                2
+            ],
+            "ops": [],
+            "size": 3072,
+            "type": "input",
+            "var_id": 2
+        },
+        "TapasModel_7/TapasEmbeddings_27/aten_select_1/Slice:0": {
+            "#transfer-type": "input",
+            "element_size": 4,
+            "internal_shape": [
+                3,
+                128,
+                2
+            ],
+            "ops": [],
+            "size": 3072,
+            "type": "input",
+            "var_id": 1
+        },
+        "TapasModel_7/TapasEmbeddings_27/aten_view_1/Reshape:0": {
+            "#file-name": "value_TapasModel_7__TapasEmbeddings_27__aten_view_1__Reshape:0-simout.npy",
+            "#transfer-type": "output",
+            "element_size": 4,
+            "internal_shape": [
+                768
+            ],
+            "ops": [],
+            "size": 3072,
+            "type": "output",
+            "var_id": 6
+        },
+        "t33-98-100-v0": {
+            "#transfer-type": "weight",
+            "fabric_path": "main",
+            "file_name": "value_sg00_t33-98-100_CRSM_0.npy",
+            "type": "file",
+            "var_id": 3
+        },
+        "t33-98-100-v1": {
+            "#transfer-type": "weight",
+            "fabric_path": "alt",
+            "file_name": "value_sg00_t33-98-100_CRSM_1.npy",
+            "type": "file",
+            "var_id": 4
+        }
+    },
+    "version": "0.6"
+}

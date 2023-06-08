@@ -1,0 +1,162 @@
+06/07/2023 11:12:45 AM INFO 29738 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127
+06/07/2023 11:12:45 AM INFO 29738 [pipeline.custom.0]: Running pipeline custom.0
+06/07/2023 11:12:45 AM INFO 29738 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/07/2023 11:12:45 AM INFO 29738 [pipeline.compile.0]: Running pipeline compile.0
+06/07/2023 11:12:45 AM INFO 29738 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/07/2023 11:12:45 AM INFO 29738 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {"0:0": [[6144], "float32"], "1:0": [[6144], "float32"], "2:0": [[6144], "float32"], "3:0": [[6144], "float32"], "tensor.1:0": [[3, 2048], "int64"], "tensor.7:0": [[], "int64"], "tensor.9:0": [[], "int64"], "tensor.23:0": [[], "int64"]}, "outputs": ["aten_view/Reshape:0", "aten_reshape/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros/zeros:0", "Identity:0", "aten_reshape_1/Reshape:0", "aten_expand_3/Cast_1:0", "aten_zeros_1/zeros:0"]}'
+06/07/2023 11:12:46 AM INFO 29738 [job.Frontend.4]: IR signature: 172fb0fe2e84f4384e8416de4dc271e7d2f289d4160aeb55fbdb860dc8e7011f for graph_def.pb
+06/07/2023 11:12:46 AM INFO 29738 [job.Frontend.4]: total padded opcount is 0
+06/07/2023 11:12:46 AM INFO 29738 [job.Frontend.4]: Finished Jellyfish import
+06/07/2023 11:12:46 AM INFO 29738 [job.Frontend.4]: Start tensorization
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: ***************************************************************
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:  An Internal Compiler Error has occurred
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: ***************************************************************
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: 
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: Error message:  'TongaOpNode' object has no attribute 'op_name'
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: 
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: Error class:    AttributeError
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: Error location: Unknown
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.neff --io-config '{"inputs": {"0:0": [[6144], "float32"], "1:0": [[6144], "float32"], "2:0": [[6144], "float32"], "3:0": [[6144], "float32"], "tensor.1:0": [[3, 2048], "int64"], "tensor.7:0": [[], "int64"], "tensor.9:0": [[], "int64"], "tensor.23:0": [[], "int64"]}, "outputs": ["aten_view/Reshape:0", "aten_reshape/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros/zeros:0", "Identity:0", "aten_reshape_1/Reshape:0", "aten_expand_3/Cast_1:0", "aten_zeros_1/zeros:0"]}' --verbose 1
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: 
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: Internal details:
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 841, in build_graph
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:     graph_json = graph_gen.get_graph_json(func)
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 815, in get_graph_json
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:     graph_json = self._get_json()
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 516, in _get_json
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:     nodes.append(node.to_json())
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 184, in to_json
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:     "The number of outputs mismatch for NeuronOpNode " + self.op_name)
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: 
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: Version information:
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   NEFF version Dynamic
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   TVM version 1.15.0.0+0
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   NumPy version 1.18.5
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   MXNet not available
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]:   TF not available
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: 
+06/07/2023 11:12:46 AM ERROR 29738 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127
+06/08/2023 07:52:08 AM INFO 19716 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127
+06/08/2023 07:52:08 AM INFO 19716 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 07:52:08 AM INFO 19716 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 07:52:08 AM INFO 19716 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 07:52:08 AM INFO 19716 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 07:52:08 AM INFO 19716 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127", "state_id": "root"}' --pipeline Frontend --io-config '{"inputs": {"0:0": [[6144], "float32"], "1:0": [[6144], "float32"], "2:0": [[6144], "float32"], "3:0": [[6144], "float32"], "tensor.1:0": [[3, 2048], "int64"], "tensor.7:0": [[], "int64"], "tensor.9:0": [[], "int64"], "tensor.23:0": [[], "int64"]}, "outputs": ["aten_view/Reshape:0", "aten_reshape/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros/zeros:0", "Identity:0", "aten_reshape_1/Reshape:0", "aten_expand_3/Cast_1:0", "aten_zeros_1/zeros:0"]}' --framework TENSORFLOW
+06/08/2023 07:52:09 AM INFO 19716 [job.Frontend.4]: IR signature: 504a297421ccefab868414f8e242479a1916d2cc2ff028296d64708bad94360b for graph_def.pb
+06/08/2023 07:52:09 AM INFO 19716 [job.Frontend.4]: total padded opcount is 0
+06/08/2023 07:52:09 AM INFO 19716 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 07:52:09 AM INFO 19716 [job.Frontend.4]: Start tensorization
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: ***************************************************************
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:  An Internal Compiler Error has occurred
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: ***************************************************************
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: 
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: Error message:  'TongaOpNode' object has no attribute 'op_name'
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: 
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: Error class:    AttributeError
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: Error location: Unknown
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.neff --io-config '{"inputs": {"0:0": [[6144], "float32"], "1:0": [[6144], "float32"], "2:0": [[6144], "float32"], "3:0": [[6144], "float32"], "tensor.1:0": [[3, 2048], "int64"], "tensor.7:0": [[], "int64"], "tensor.9:0": [[], "int64"], "tensor.23:0": [[], "int64"]}, "outputs": ["aten_view/Reshape:0", "aten_reshape/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros/zeros:0", "Identity:0", "aten_reshape_1/Reshape:0", "aten_expand_3/Cast_1:0", "aten_zeros_1/zeros:0"]}' --verbose 1
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: 
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: Internal details:
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 841, in build_graph
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:     graph_json = graph_gen.get_graph_json(func)
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 815, in get_graph_json
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:     graph_json = self._get_json()
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 516, in _get_json
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:     nodes.append(node.to_json())
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 184, in to_json
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:     "The number of outputs mismatch for NeuronOpNode " + self.op_name)
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: 
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: Version information:
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   NEFF version Dynamic
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   TVM version 1.15.0.0+0
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   NumPy version 1.18.5
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   MXNet not available
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]:   TF not available
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: 
+06/08/2023 07:52:09 AM ERROR 19716 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127
+06/08/2023 08:12:12 AM INFO 7087 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127
+06/08/2023 08:12:12 AM INFO 7087 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 08:12:12 AM INFO 7087 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 08:12:12 AM INFO 7087 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 08:12:12 AM INFO 7087 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 08:12:12 AM INFO 7087 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {"0:0": [[6144], "float32"], "1:0": [[6144], "float32"], "2:0": [[6144], "float32"], "3:0": [[6144], "float32"], "tensor.1:0": [[3, 2048], "int64"], "tensor.7:0": [[], "int64"], "tensor.9:0": [[], "int64"], "tensor.23:0": [[], "int64"]}, "outputs": ["aten_view/Reshape:0", "aten_reshape/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros/zeros:0", "Identity:0", "aten_reshape_1/Reshape:0", "aten_expand_3/Cast_1:0", "aten_zeros_1/zeros:0"]}'
+06/08/2023 08:12:14 AM INFO 7087 [job.Frontend.4]: IR signature: 446503e57e9e7e83e56cea5d7fcdb0dabca5519cd717e93ecf66ad2ad9ac7fd3 for graph_def.pb
+06/08/2023 08:12:14 AM INFO 7087 [job.Frontend.4]: total padded opcount is 0
+06/08/2023 08:12:14 AM INFO 7087 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 08:12:14 AM INFO 7087 [job.Frontend.4]: Start tensorization
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: ***************************************************************
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:  An Internal Compiler Error has occurred
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: ***************************************************************
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: 
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: Error message:  'TongaOpNode' object has no attribute 'op_name'
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: 
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: Error class:    AttributeError
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: Error location: Unknown
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127/graph_def.neff --io-config '{"inputs": {"0:0": [[6144], "float32"], "1:0": [[6144], "float32"], "2:0": [[6144], "float32"], "3:0": [[6144], "float32"], "tensor.1:0": [[3, 2048], "int64"], "tensor.7:0": [[], "int64"], "tensor.9:0": [[], "int64"], "tensor.23:0": [[], "int64"]}, "outputs": ["aten_view/Reshape:0", "aten_reshape/Reshape:0", "aten_expand_2/Cast_1:0", "aten_zeros/zeros:0", "Identity:0", "aten_reshape_1/Reshape:0", "aten_expand_3/Cast_1:0", "aten_zeros_1/zeros:0"]}' --verbose 1
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: 
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: Internal details:
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 841, in build_graph
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:     graph_json = graph_gen.get_graph_json(func)
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 815, in get_graph_json
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:     graph_json = self._get_json()
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 516, in _get_json
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:     nodes.append(node.to_json())
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/backend/graph_runtime_codegen.py", line 184, in to_json
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:     "The number of outputs mismatch for NeuronOpNode " + self.op_name)
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: 
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: Version information:
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   NEFF version Dynamic
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   TVM version 1.15.0.0+0
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   NumPy version 1.18.5
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   MXNet not available
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]:   TF not available
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: 
+06/08/2023 08:12:14 AM ERROR 7087 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/127

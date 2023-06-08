@@ -1,0 +1,53 @@
+v0.0.1
+%47 = fn (%v0:0: Tensor[(6144,), float32], %v1:0: Tensor[(6144,), float32], %v2:0: Tensor[(6144,), float32], %v3:0: Tensor[(6144,), float32], %tensor.7:0: int64, %tensor.1:0: Tensor[(3, 2048), int64]) -> (Tensor[(3, 2048), float32], Tensor[(6144,), float32], Tensor[(6144,), int64], Tensor[(96,), float32], int64, Tensor[(6144,), float32], Tensor[(6144,), int64], Tensor[(96,), float32]) {
+  %0 = copy(%v0:0, framework_op_name="copy1", output_tensors_name=["copy1:0"], input_tensors_name=[], framework_op_debug_info="aten_div/truediv", axis=0) // ty=Tensor[(6144,), float32]
+  %1 = copy(%v1:0, framework_op_name="copy2", output_tensors_name=["copy2:0"], input_tensors_name=[], framework_op_debug_info="aten_expand/BroadcastTo", axis=0) // ty=Tensor[(6144,), float32]
+  %2 = broadcast_to(%1, framework_op_name="aten_expand/BroadcastTo", output_tensors_name=["aten_expand/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="aten_expand/BroadcastTo", shape=[6144]) // ty=Tensor[(6144,), float32]
+  %3 = rdivide_scalar(%2, framework_op_name="rdivide_scalar0", output_tensors_name=["rdivide_scalar0:0"], input_tensors_name=[], framework_op_debug_info="aten_div/truediv", scalar=1) // ty=Tensor[(6144,), float32]
+  %4 = multiply(%0, %3, framework_op_name="aten_div/truediv", output_tensors_name=["aten_div/truediv:0"], input_tensors_name=[], framework_op_debug_info="aten_div/truediv", axis=0) // ty=Tensor[(6144,), float32]
+  %5 = reshape(%4, framework_op_name="reshape0", output_tensors_name=["reshape0:0"], input_tensors_name=[], framework_op_debug_info="", newshape=[3, 2048]) // ty=Tensor[(3, 2048), float32]
+  %6 = copy(%5, framework_op_name="aten_view/Reshape", output_tensors_name=["aten_view/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_view/Reshape", axis=0) // ty=Tensor[(3, 2048), float32]
+  %7 = copy(%v2:0, framework_op_name="copy3", output_tensors_name=["copy3:0"], input_tensors_name=[], framework_op_debug_info="aten_div_1/truediv", axis=0) // ty=Tensor[(6144,), float32]
+  %8 = copy(%v3:0, framework_op_name="copy4", output_tensors_name=["copy4:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_1/BroadcastTo", axis=0) // ty=Tensor[(6144,), float32]
+  %9 = broadcast_to(%8, framework_op_name="aten_expand_1/BroadcastTo", output_tensors_name=["aten_expand_1/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_1/BroadcastTo", shape=[6144]) // ty=Tensor[(6144,), float32]
+  %10 = rdivide_scalar(%9, framework_op_name="rdivide_scalar1", output_tensors_name=["rdivide_scalar1:0"], input_tensors_name=[], framework_op_debug_info="aten_div_1/truediv", scalar=1) // ty=Tensor[(6144,), float32]
+  %11 = multiply(%7, %10, framework_op_name="aten_div_1/truediv", output_tensors_name=["aten_div_1/truediv:0"], input_tensors_name=[], framework_op_debug_info="aten_div_1/truediv", axis=0) // ty=Tensor[(6144,), float32]
+  %12 = reshape(%11, framework_op_name="aten_view_1/Reshape", output_tensors_name=["aten_view_1/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_view_1/Reshape", newshape=[3, 2048]) // ty=Tensor[(3, 2048), float32]
+  %13 = multiply(%12, %5, framework_op_name="aten_mul/mul", output_tensors_name=["aten_mul/mul:0"], input_tensors_name=[], framework_op_debug_info="aten_mul/mul", axis=0) // ty=Tensor[(3, 2048), float32]
+  %14 = reshape(%13, framework_op_name="reshape1", output_tensors_name=["reshape1:0"], input_tensors_name=[], framework_op_debug_info="", newshape=[-1]) // ty=Tensor[(6144,), float32]
+  %15 = copy(%14, framework_op_name="aten_reshape/Reshape", output_tensors_name=["aten_reshape/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_reshape/Reshape", axis=0) // ty=Tensor[(6144,), float32]
+  %16 = copy(%tensor.7:0, framework_op_name="copy5", output_tensors_name=["copy5:0"], input_tensors_name=[], framework_op_debug_info="aten_mul_1/mul", axis=0) // ty=int64
+  %17 = multiply(meta[relay.Constant][0] // ty=Tensor[(3,), int64], %16, framework_op_name="aten_mul_1/mul", output_tensors_name=["aten_mul_1/mul:0"], input_tensors_name=[], framework_op_debug_info="aten_mul_1/mul", axis=0) // ty=Tensor[(3,), int64]
+  %18 = expand_dims(%17, framework_op_name="aten_unsqueeze/ExpandDims", output_tensors_name=["aten_unsqueeze/ExpandDims:0"], input_tensors_name=[], framework_op_debug_info="aten_unsqueeze/ExpandDims", axis=-1) // ty=Tensor[(3, 1), int64]
+  %19 = broadcast_to(%18, framework_op_name="aten_add/BroadcastTo", output_tensors_name=["aten_add/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="aten_add/BroadcastTo", shape=[3, 2048]) // ty=Tensor[(3, 2048), int64]
+  %20 = copy(%tensor.1:0, framework_op_name="copy6", output_tensors_name=["copy6:0"], input_tensors_name=[], framework_op_debug_info="aten_to/Cast", axis=0) // ty=Tensor[(3, 2048), int64]
+  %21 = cast(%20, framework_op_name="aten_to/Cast", output_tensors_name=["aten_to/Cast:0"], input_tensors_name=[], framework_op_debug_info="aten_to/Cast", dtype="float32") // ty=Tensor[(3, 2048), float32]
+  %22 = floor(%21, framework_op_name="aten_floor/Floor", output_tensors_name=["aten_floor/Floor:0"], input_tensors_name=[], framework_op_debug_info="aten_floor/Floor", axis=0) // ty=Tensor[(3, 2048), float32]
+  %23 = cast(%22, framework_op_name="aten_to_1/Cast", output_tensors_name=["aten_to_1/Cast:0"], input_tensors_name=[], framework_op_debug_info="aten_to_1/Cast", dtype="int64") // ty=Tensor[(3, 2048), int64]
+  %24 = add(%19, %23, framework_op_name="aten_add/add", output_tensors_name=["aten_add/add:0"], input_tensors_name=[], framework_op_debug_info="aten_add/add", axis=0) // ty=Tensor[(3, 2048), int64]
+  %25 = reshape(%24, framework_op_name="aten_view_3/Reshape", output_tensors_name=["aten_view_3/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_view_3/Reshape", newshape=[-1]) // ty=Tensor[(6144,), int64]
+  %26 = cast(%25, framework_op_name="aten_expand_2/Cast", output_tensors_name=["aten_expand_2/Cast:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_2/Cast", dtype="float32") // ty=Tensor[(6144,), float32]
+  %27 = broadcast_to(%26, framework_op_name="aten_expand_2/BroadcastTo", output_tensors_name=["aten_expand_2/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_2/BroadcastTo", shape=[6144]) // ty=Tensor[(6144,), float32]
+  %28 = cast(%27, framework_op_name="cast0", output_tensors_name=["cast0:0"], input_tensors_name=[], framework_op_debug_info="", dtype="int64") // ty=Tensor[(6144,), int64]
+  %29 = copy(%28, framework_op_name="aten_expand_2/Cast_1", output_tensors_name=["aten_expand_2/Cast_1:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_2/Cast_1", axis=0) // ty=Tensor[(6144,), int64]
+  %30 = copy(meta[relay.Constant][1] // ty=Tensor[(96,), float32], framework_op_name="aten_zeros/zeros", output_tensors_name=["aten_zeros/zeros:0"], input_tensors_name=[], framework_op_debug_info="aten_zeros/zeros", axis=0) // ty=Tensor[(96,), float32]
+  %31 = copy(%tensor.7:0, framework_op_name="copy7", output_tensors_name=["copy7:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=int64
+  %32 = copy(%31, framework_op_name="copy0", output_tensors_name=["copy0:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=int64
+  %33 = copy(%32, framework_op_name="Identity", output_tensors_name=["Identity:0"], input_tensors_name=[], framework_op_debug_info="Identity", axis=0) // ty=int64
+  %34 = reshape(%5, framework_op_name="reshape2", output_tensors_name=["reshape2:0"], input_tensors_name=[], framework_op_debug_info="", newshape=[-1]) // ty=Tensor[(6144,), float32]
+  %35 = copy(%34, framework_op_name="aten_reshape_1/Reshape", output_tensors_name=["aten_reshape_1/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_reshape_1/Reshape", axis=0) // ty=Tensor[(6144,), float32]
+  %36 = copy(%tensor.7:0, framework_op_name="copy8", output_tensors_name=["copy8:0"], input_tensors_name=[], framework_op_debug_info="aten_mul_2/mul", axis=0) // ty=int64
+  %37 = multiply(meta[relay.Constant][0] // ty=Tensor[(3,), int64], %36, framework_op_name="aten_mul_2/mul", output_tensors_name=["aten_mul_2/mul:0"], input_tensors_name=[], framework_op_debug_info="aten_mul_2/mul", axis=0) // ty=Tensor[(3,), int64]
+  %38 = expand_dims(%37, framework_op_name="aten_unsqueeze_1/ExpandDims", output_tensors_name=["aten_unsqueeze_1/ExpandDims:0"], input_tensors_name=[], framework_op_debug_info="aten_unsqueeze_1/ExpandDims", axis=-1) // ty=Tensor[(3, 1), int64]
+  %39 = broadcast_to(%38, framework_op_name="aten_add_1/BroadcastTo", output_tensors_name=["aten_add_1/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="aten_add_1/BroadcastTo", shape=[3, 2048]) // ty=Tensor[(3, 2048), int64]
+  %40 = add(%39, %23, framework_op_name="aten_add_1/add", output_tensors_name=["aten_add_1/add:0"], input_tensors_name=[], framework_op_debug_info="aten_add_1/add", axis=0) // ty=Tensor[(3, 2048), int64]
+  %41 = reshape(%40, framework_op_name="aten_view_5/Reshape", output_tensors_name=["aten_view_5/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_view_5/Reshape", newshape=[-1]) // ty=Tensor[(6144,), int64]
+  %42 = cast(%41, framework_op_name="aten_expand_3/Cast", output_tensors_name=["aten_expand_3/Cast:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_3/Cast", dtype="float32") // ty=Tensor[(6144,), float32]
+  %43 = broadcast_to(%42, framework_op_name="aten_expand_3/BroadcastTo", output_tensors_name=["aten_expand_3/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_3/BroadcastTo", shape=[6144]) // ty=Tensor[(6144,), float32]
+  %44 = cast(%43, framework_op_name="cast1", output_tensors_name=["cast1:0"], input_tensors_name=[], framework_op_debug_info="", dtype="int64") // ty=Tensor[(6144,), int64]
+  %45 = copy(%44, framework_op_name="aten_expand_3/Cast_1", output_tensors_name=["aten_expand_3/Cast_1:0"], input_tensors_name=[], framework_op_debug_info="aten_expand_3/Cast_1", axis=0) // ty=Tensor[(6144,), int64]
+  %46 = (%6, %15, %29, %30, %33, %35, %45, %30)
+  %46
+}
+%47
+// meta data omitted. you can use show_meta_data=True to include meta data

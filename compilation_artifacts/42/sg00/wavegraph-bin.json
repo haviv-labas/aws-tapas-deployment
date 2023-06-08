@@ -1,0 +1,837 @@
+{
+    "arch": "inferentia",
+    "data_type": "float16",
+    "net_name": "",
+    "tensor_map": {
+        "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0": {
+            "dtype": "int32",
+            "is_const": false,
+            "kind": "output",
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+            "sim_format": "NC",
+            "sim_shape": [
+                3,
+                256
+            ],
+            "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape:0.npy",
+            "tf_format": "NC",
+            "tf_shape": [
+                3,
+                256
+            ]
+        },
+        "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0": {
+            "dtype": "int32",
+            "is_const": false,
+            "kind": "input",
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+            "sim_format": "NHC",
+            "sim_shape": [
+                3,
+                128,
+                2
+            ],
+            "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0.npy",
+            "tf_format": "NHC",
+            "tf_shape": [
+                3,
+                128,
+                2
+            ]
+        }
+    },
+    "waveops": [
+        {
+            "contain_weights": false,
+            "data_type": "int32",
+            "dtype": "int32",
+            "engine": "pool",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_step_bytes": 0,
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    0
+                ]
+            },
+            "layer_name": "unknown",
+            "length": 4,
+            "num_partitions": 128,
+            "offset_in_file": 0,
+            "order": 0,
+            "partition_step": 1,
+            "partition_step_bytes": 8,
+            "pinned": false,
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "queue0": "qPoolIn0",
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0.npy",
+            "ref_file_shape": [
+                3,
+                128,
+                2
+            ],
+            "ref_file_sz": 3072,
+            "sb_address": 98280,
+            "start_at_part_num": 0,
+            "stride": 1,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+            "trig_ord0": 1,
+            "trig_ord1": -1,
+            "update_value0": 0,
+            "waveop_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-0",
+            "waveop_type": "SBAtomLoad"
+        },
+        {
+            "contain_weights": false,
+            "data_type": "int32",
+            "dtype": "int32",
+            "engine": "pool",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_step_bytes": 0,
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    64
+                ]
+            },
+            "layer_name": "unknown",
+            "length": 4,
+            "num_partitions": 128,
+            "offset_in_file": 1024,
+            "order": 1,
+            "partition_step": 1,
+            "partition_step_bytes": 8,
+            "pinned": false,
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-0"
+            ],
+            "queue0": "qPoolIn0",
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0.npy",
+            "ref_file_shape": [
+                3,
+                128,
+                2
+            ],
+            "ref_file_sz": 3072,
+            "sb_address": 98288,
+            "start_at_part_num": 0,
+            "stride": 1,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+            "trig_ord0": 2,
+            "trig_ord1": -1,
+            "update_value0": 0,
+            "waveop_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-1",
+            "waveop_type": "SBAtomLoad"
+        },
+        {
+            "contain_weights": false,
+            "data_type": "int32",
+            "dtype": "int32",
+            "engine": "pool",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_step_bytes": 0,
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    128
+                ]
+            },
+            "layer_name": "unknown",
+            "length": 4,
+            "num_partitions": 128,
+            "offset_in_file": 2048,
+            "order": 2,
+            "partition_step": 1,
+            "partition_step_bytes": 8,
+            "pinned": false,
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-1"
+            ],
+            "queue0": "qPoolIn0",
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0.npy",
+            "ref_file_shape": [
+                3,
+                128,
+                2
+            ],
+            "ref_file_sz": 3072,
+            "sb_address": 98296,
+            "start_at_part_num": 0,
+            "stride": 1,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+            "trig_ord0": 3,
+            "trig_ord1": -1,
+            "update_value0": 0,
+            "waveop_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-2",
+            "waveop_type": "SBAtomLoad"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 0,
+            "dst_start_at_part_num": 0,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    192,
+                    256
+                ]
+            },
+            "layer_name": "unknown",
+            "num_partitions": 64,
+            "order": 3,
+            "out_dtype": "int32",
+            "previous_syncs": [
+                {
+                    "sync_type": "semaphore"
+                }
+            ],
+            "previous_waveops": [
+                "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-2"
+            ],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0_local_27.npy",
+            "ref_file_shape": [
+                128,
+                4,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98280,
+            "src_start_at_part_num": 0,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 2,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
+            "waveop_name": "I-45-0",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 16,
+            "dst_start_at_part_num": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "imm_val0": 31.0,
+            "imm_val1": 0.0,
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    320
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "op0": "arith_shift_right",
+            "op1": "bypass",
+            "order": 4,
+            "out_dtype": "int32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "I-45-0"
+            ],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t23_i1.npy",
+            "ref_file_shape": [
+                128,
+                4,
+                1
+            ],
+            "reverse0": false,
+            "reverse1": false,
+            "src_is_psum": false,
+            "src_sb_address": 0,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
+            "waveop_name": "I-39-0",
+            "waveop_type": "TensorScalar"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 32,
+            "dst_start_at_part_num": 0,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    384
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "order": 5,
+            "out_dtype": "int32",
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t23_i0.npy",
+            "ref_file_shape": [
+                128,
+                4,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 0,
+            "src_start_at_part_num": 0,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
+            "waveop_name": "I-42-0",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 0,
+            "dst_start_at_part_num": 64,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    448
+                ]
+            },
+            "layer_name": "unknown",
+            "num_partitions": 64,
+            "order": 6,
+            "out_dtype": "int32",
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0_local_27.npy",
+            "ref_file_shape": [
+                128,
+                4,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98280,
+            "src_start_at_part_num": 64,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 2,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
+            "waveop_name": "I-45-1",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 16,
+            "dst_start_at_part_num": 64,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "imm_val0": 31.0,
+            "imm_val1": 0.0,
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    512
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "op0": "arith_shift_right",
+            "op1": "bypass",
+            "order": 7,
+            "out_dtype": "int32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "I-45-1"
+            ],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t23_i1.npy",
+            "ref_file_shape": [
+                128,
+                4,
+                1
+            ],
+            "reverse0": false,
+            "reverse1": false,
+            "src_is_psum": false,
+            "src_sb_address": 0,
+            "src_start_at_part_num": 64,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
+            "waveop_name": "I-39-1",
+            "waveop_type": "TensorScalar"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 32,
+            "dst_start_at_part_num": 64,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    576
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "order": 8,
+            "out_dtype": "int32",
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t23_i0.npy",
+            "ref_file_shape": [
+                128,
+                4,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 0,
+            "src_start_at_part_num": 64,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
+            "waveop_name": "I-42-1",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 48,
+            "dst_start_at_part_num": 0,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 2,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    640
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "order": 9,
+            "out_dtype": "int32",
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t34.npy",
+            "ref_file_shape": [
+                128,
+                6,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 32,
+            "src_start_at_part_num": 0,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
+            "waveop_name": "I-40-0",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 52,
+            "dst_start_at_part_num": 0,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 2,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    704
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "order": 10,
+            "out_dtype": "int32",
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t34.npy",
+            "ref_file_shape": [
+                128,
+                6,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 16,
+            "src_start_at_part_num": 0,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
+            "waveop_name": "I-40-2",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 48,
+            "dst_start_at_part_num": 64,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 2,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    768
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "order": 11,
+            "out_dtype": "int32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "I-42-1"
+            ],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t34.npy",
+            "ref_file_shape": [
+                128,
+                6,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 32,
+            "src_start_at_part_num": 64,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
+            "waveop_name": "I-40-1",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 52,
+            "dst_start_at_part_num": 64,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 2,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "int32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    832
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "num_partitions": 64,
+            "order": 12,
+            "out_dtype": "int32",
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape_t34.npy",
+            "ref_file_shape": [
+                128,
+                6,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 16,
+            "src_start_at_part_num": 64,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
+            "waveop_name": "I-40-3",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "data_type": "int32",
+            "dtype": "int32",
+            "engine": "pool",
+            "final_layer_ofmap": true,
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    896
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "length": 8,
+            "num_partitions": 128,
+            "offset_in_file": 1024,
+            "order": 13,
+            "partition_step": 1,
+            "partition_step_bytes": 8,
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "I-40-3"
+            ],
+            "queue0": "qPoolOut0",
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape:0-simout.npy",
+            "ref_file_shape": [
+                3,
+                256
+            ],
+            "ref_file_sz": 3072,
+            "sb_address": 56,
+            "start_at_part_num": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+            "trig_ord0": 1,
+            "trig_ord1": -1,
+            "update_value0": 0,
+            "waveop_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-1",
+            "waveop_type": "SBAtomSave"
+        },
+        {
+            "contain_weights": false,
+            "data_type": "int32",
+            "dtype": "int32",
+            "engine": "pool",
+            "final_layer_ofmap": true,
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    960
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "length": 8,
+            "num_partitions": 128,
+            "offset_in_file": 2048,
+            "order": 14,
+            "partition_step": 1,
+            "partition_step_bytes": 8,
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-1"
+            ],
+            "queue0": "qPoolOut0",
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape:0-simout.npy",
+            "ref_file_shape": [
+                3,
+                256
+            ],
+            "ref_file_sz": 3072,
+            "sb_address": 64,
+            "start_at_part_num": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+            "trig_ord0": 2,
+            "trig_ord1": -1,
+            "update_value0": 0,
+            "waveop_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-2",
+            "waveop_type": "SBAtomSave"
+        },
+        {
+            "contain_weights": false,
+            "data_type": "int32",
+            "dtype": "int32",
+            "engine": "pool",
+            "final_layer_ofmap": true,
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    1024
+                ]
+            },
+            "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+            "length": 8,
+            "num_partitions": 128,
+            "offset_in_file": 0,
+            "order": 15,
+            "partition_step": 1,
+            "partition_step_bytes": 8,
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-2"
+            ],
+            "queue0": "qPoolOut0",
+            "ref_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape:0-simout.npy",
+            "ref_file_shape": [
+                3,
+                256
+            ],
+            "ref_file_sz": 3072,
+            "sb_address": 48,
+            "start_at_part_num": 0,
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+            "trig_ord0": 3,
+            "trig_ord1": -1,
+            "update_value0": 0,
+            "waveop_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-0",
+            "waveop_type": "SBAtomSave"
+        }
+    ]
+}

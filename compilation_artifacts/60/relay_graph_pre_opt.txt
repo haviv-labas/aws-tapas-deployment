@@ -1,0 +1,5 @@
+v0.0.1
+%0 = fn (%prim_Constant/Const:0: Tensor[(1,), int64]) -> Tensor[(1,), int64] {
+  %prim_Constant/Const:0
+}
+%0

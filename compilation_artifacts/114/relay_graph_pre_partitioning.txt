@@ -1,0 +1,6 @@
+v0.0.1
+%0 = fn () -> Tensor[(6144,), float32] {
+  meta[relay.Constant][0] // ty=Tensor[(6144,), float32]
+}
+%0
+// meta data omitted. you can use show_meta_data=True to include meta data

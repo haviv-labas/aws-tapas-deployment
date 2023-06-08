@@ -1,0 +1,174 @@
+06/07/2023 11:12:07 AM INFO 28680 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84
+06/07/2023 11:12:07 AM INFO 28680 [pipeline.custom.0]: Running pipeline custom.0
+06/07/2023 11:12:07 AM INFO 28680 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/07/2023 11:12:07 AM INFO 28680 [pipeline.compile.0]: Running pipeline compile.0
+06/07/2023 11:12:07 AM INFO 28680 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/07/2023 11:12:07 AM INFO 28680 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {}, "outputs": ["prim_Constant/Const:0"]}'
+06/07/2023 11:12:08 AM INFO 28680 [job.Frontend.4]: IR signature: ab875240dd5fb2be32ba8d257cbc116697d30fba7f99310b78527f4dca000680 for graph_def.pb
+06/07/2023 11:12:08 AM INFO 28680 [job.Frontend.4]: total padded opcount is 0
+06/07/2023 11:12:08 AM INFO 28680 [job.Frontend.4]: Finished Jellyfish import
+06/07/2023 11:12:08 AM INFO 28680 [job.Frontend.4]: Start tensorization
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: ***************************************************************
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:  An Internal Compiler Error has occurred
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: ***************************************************************
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: 
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: Error message:  
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: 
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: Error class:    AssertionError
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: Error location: Unknown
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.neff --io-config '{"inputs": {}, "outputs": ["prim_Constant/Const:0"]}' --verbose 1
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: 
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: Internal details:
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 747, in build_graph
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:     func = ir_pass.add_copy_to_primary_outputs(func, tensor_names)
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 2078, in add_copy_to_primary_outputs
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:     return name_collector.visit(expr)
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 27, in visit
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:     res = self.visit_function(expr)
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 120, in visit_function
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:     new_body = self.visit(fn.body)
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 43, in visit
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:     res = self.visit_constant(expr)
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 2065, in visit_constant
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:     assert len(self.output_tensor_names)
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: 
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: Version information:
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   NEFF version Dynamic
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   TVM version 1.15.0.0+0
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   NumPy version 1.18.5
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   MXNet not available
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]:   TF not available
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: 
+06/07/2023 11:12:08 AM ERROR 28680 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84
+06/08/2023 07:51:29 AM INFO 18069 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84
+06/08/2023 07:51:29 AM INFO 18069 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 07:51:29 AM INFO 18069 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 07:51:29 AM INFO 18069 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 07:51:29 AM INFO 18069 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 07:51:29 AM INFO 18069 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84", "state_id": "root"}' --pipeline Frontend --framework TENSORFLOW --io-config '{"inputs": {}, "outputs": ["prim_Constant/Const:0"]}'
+06/08/2023 07:51:31 AM INFO 18069 [job.Frontend.4]: IR signature: ab875240dd5fb2be32ba8d257cbc116697d30fba7f99310b78527f4dca000680 for graph_def.pb
+06/08/2023 07:51:31 AM INFO 18069 [job.Frontend.4]: total padded opcount is 0
+06/08/2023 07:51:31 AM INFO 18069 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 07:51:31 AM INFO 18069 [job.Frontend.4]: Start tensorization
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: ***************************************************************
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:  An Internal Compiler Error has occurred
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: ***************************************************************
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: 
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: Error message:  
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: 
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: Error class:    AssertionError
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: Error location: Unknown
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.neff --io-config '{"inputs": {}, "outputs": ["prim_Constant/Const:0"]}' --verbose 1
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: 
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: Internal details:
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 747, in build_graph
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:     func = ir_pass.add_copy_to_primary_outputs(func, tensor_names)
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 2078, in add_copy_to_primary_outputs
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:     return name_collector.visit(expr)
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 27, in visit
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:     res = self.visit_function(expr)
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 120, in visit_function
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:     new_body = self.visit(fn.body)
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 43, in visit
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:     res = self.visit_constant(expr)
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 2065, in visit_constant
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:     assert len(self.output_tensor_names)
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: 
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: Version information:
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   NEFF version Dynamic
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   TVM version 1.15.0.0+0
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   NumPy version 1.18.5
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   MXNet not available
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]:   TF not available
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: 
+06/08/2023 07:51:31 AM ERROR 18069 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84
+06/08/2023 08:11:35 AM INFO 5601 [root]: Intermediate files stored in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84, output in /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84
+06/08/2023 08:11:35 AM INFO 5601 [pipeline.custom.0]: Running pipeline custom.0
+06/08/2023 08:11:35 AM INFO 5601 [pipeline.custom.0]: Starting job pipeline.compile.0 state state 0
+06/08/2023 08:11:35 AM INFO 5601 [pipeline.compile.0]: Running pipeline compile.0
+06/08/2023 08:11:35 AM INFO 5601 [pipeline.compile.0]: Starting job job.Frontend.4 state state 0
+06/08/2023 08:11:35 AM INFO 5601 [job.Frontend.4]: Replay this job by calling: /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile --framework TENSORFLOW --state '{"model": ["/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.pb"], "state_dir": "/home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84", "state_id": "root"}' --pipeline Frontend --io-config '{"inputs": {}, "outputs": ["prim_Constant/Const:0"]}' --framework TENSORFLOW
+06/08/2023 08:11:36 AM INFO 5601 [job.Frontend.4]: IR signature: ab875240dd5fb2be32ba8d257cbc116697d30fba7f99310b78527f4dca000680 for graph_def.pb
+06/08/2023 08:11:36 AM INFO 5601 [job.Frontend.4]: total padded opcount is 0
+06/08/2023 08:11:36 AM INFO 5601 [job.Frontend.4]: Finished Jellyfish import
+06/08/2023 08:11:36 AM INFO 5601 [job.Frontend.4]: Start tensorization
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: ***************************************************************
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:  An Internal Compiler Error has occurred
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: ***************************************************************
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: 
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: Error message:  
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: 
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: Error class:    AssertionError
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: Error location: Unknown
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: Command line:   /home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/bin/neuron-cc compile /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.pb --framework TENSORFLOW --pipeline compile SaveTemps --output /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84/graph_def.neff --io-config '{"inputs": {}, "outputs": ["prim_Constant/Const:0"]}' --verbose 1
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: 
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: Internal details:
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/CommandDriver.py", line 224, in neuroncc.driver.CommandDriver.CommandDriver.run
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 580, in neuroncc.driver.commands.CompileCommand.CompileCommand.run
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 558, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/commands/CompileCommand.py", line 562, in neuroncc.driver.commands.CompileCommand.CompileCommand.runPipeline
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/Pipeline.py", line 30, in neuroncc.driver.Pipeline.Pipeline.runSingleInput
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/Job.py", line 289, in neuroncc.driver.Job.SingleInputJob.run
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 429, in neuroncc.driver.jobs.Frontend.Frontend.runSingleInput
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 379, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 380, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "neuroncc/driver/jobs/Frontend.py", line 384, in neuroncc.driver.jobs.Frontend.Frontend.runTVMFrontend
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/build_module.py", line 747, in build_graph
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:     func = ir_pass.add_copy_to_primary_outputs(func, tensor_names)
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 2078, in add_copy_to_primary_outputs
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:     return name_collector.visit(expr)
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 27, in visit
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:     res = self.visit_function(expr)
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 120, in visit_function
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:     new_body = self.visit(fn.body)
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/expr_functor.py", line 43, in visit
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:     res = self.visit_constant(expr)
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   File "/home/ec2-user/anaconda3/envs/amazonei_pytorch_latest_p37/lib/python3.7/site-packages/tvm/relay/ir_pass.py", line 2065, in visit_constant
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:     assert len(self.output_tensor_names)
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: 
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: Version information:
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   Neuron Compiler version 1.15.0.0+eec0c3604
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   HWM version 1.14.1.0-a9fb5c73a
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   NEFF version Dynamic
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   TVM version 1.15.0.0+0
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   NumPy version 1.18.5
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   MXNet not available
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]:   TF not available
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: 
+06/08/2023 08:11:36 AM ERROR 5601 [neuron-cc]: Artifacts stored in: /home/ec2-user/SageMaker/ssh/scrub/compilation_artifacts/84

@@ -1,0 +1,9 @@
+v0.0.1
+%3 = fn (%v2:0: Tensor[(3, 128), float32], %v0:0: Tensor[(3, 256), float32]) -> (Tensor[(3, 128), float32], Tensor[(3, 4), float32]) {
+  %0 = nn.dense(%v0:0, meta[relay.Constant][0] // ty=Tensor[(4, 256), float32], framework_op_name="Linear_648/aten_linear/MatMul", output_tensors_name=["Linear_648/aten_linear/MatMul:0"], input_tensors_name=[], framework_op_debug_info="Linear_648/aten_linear/MatMul", units=4) // ty=Tensor[(3, 4), float32]
+  %1 = add(%0, meta[relay.Constant][1] // ty=Tensor[(4,), float32], framework_op_name="Linear_648/aten_linear/Add", output_tensors_name=["Linear_648/aten_linear/Add:0"], input_tensors_name=[], framework_op_debug_info="Linear_648/aten_linear/Add", axis=0) // ty=Tensor[(3, 4), float32]
+  %2 = (%v2:0, %1)
+  %2
+}
+%3
+// meta data omitted. you can use show_meta_data=True to include meta data

@@ -1,0 +1,79 @@
+{
+    "nodes": [
+        {
+            "op": "tvm_op",
+            "name": "sg_tonga0",
+            "attrs": {
+                "func_name": "__kelf",
+                "flatten_data": "0",
+                "num_inputs": "0",
+                "kelf": "kelf-a.json",
+                "num_outputs": "2"
+            },
+            "inputs": [],
+            "output_names": [
+                "TapasModel_7/TapasEmbeddings_27/aten_to_1/Const:0",
+                "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape:0"
+            ]
+        }
+    ],
+    "arg_nodes": [],
+    "heads": [
+        [
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            1,
+            0
+        ]
+    ],
+    "attrs": {
+        "shape": [
+            "list_shape",
+            [
+                [
+                    1
+                ],
+                [
+                    384
+                ]
+            ]
+        ],
+        "storage_id": [
+            "list_int",
+            [
+                0,
+                1
+            ]
+        ],
+        "dltype": [
+            "list_str",
+            [
+                "int64",
+                "int64"
+            ]
+        ]
+    },
+    "node_row_ptr": [
+        0,
+        2
+    ],
+    "metadata": {
+        "signatures": {
+            "default": {
+                "outputs": {
+                    "sg_tonga0": {
+                        "id": 0,
+                        "dtype": "int64",
+                        "shape": [
+                            1
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

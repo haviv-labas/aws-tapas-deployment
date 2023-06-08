@@ -1,0 +1,20 @@
+v0.0.1
+%8 = fn () -> Tensor[(3,), int64] {
+  %6 = fn (, __dict__=meta[StrMap][0]) -> Tensor[(3,), int64] {
+    %1 = fn (%p0: Tensor[(3,), int64], __dict__=meta[StrMap][1]) -> Tensor[(3,), int64] {
+      %0 = copy(%p0, framework_op_name="copy41", output_tensors_name=["copy41:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3,), int64]
+      %0
+    }
+    %2 = %1(meta[relay.Constant][0] // ty=Tensor[(3,), int64]) // ty=Tensor[(3,), int64]
+    %4 = fn (%p01: Tensor[(3,), int64], __dict__=meta[StrMap][2]) -> Tensor[(3,), int64] {
+      %3 = copy(%p01, framework_op_name="aten_slice_12/StridedSlice/end", output_tensors_name=["aten_slice_12/StridedSlice/end:0"], input_tensors_name=[], framework_op_debug_info="aten_slice_12/StridedSlice/end", axis=0) // ty=Tensor[(3,), int64]
+      %3
+    }
+    %5 = %4(%2) // ty=Tensor[(3,), int64]
+    %5
+  }
+  %7 = %6() // ty=Tensor[(3,), int64]
+  %7
+}
+%8
+// meta data omitted. you can use show_meta_data=True to include meta data

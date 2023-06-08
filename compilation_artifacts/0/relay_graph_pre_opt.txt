@@ -1,0 +1,11 @@
+v0.0.1
+%6 = fn (%TapasModel_7/TapasEmbeddings_27/aten_to_1/Const:0: Tensor[(1,), int64], %TapasModel_7/TapasEmbeddings_27/aten_arange/range: Tensor[(128,), int64]) -> (Tensor[(1,), int64], Tensor[(384,), int64]) {
+  %0 = expand_dims(%TapasModel_7/TapasEmbeddings_27/aten_arange/range, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_unsqueeze/ExpandDims", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_unsqueeze/ExpandDims:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_unsqueeze/ExpandDims", axis=0) // ty=Tensor[(1, 128), int64]
+  %1 = cast(%0, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_expand/Cast", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_expand/Cast:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_expand/Cast", dtype="float32") // ty=Tensor[(1, 128), float32]
+  %2 = broadcast_to(%1, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_expand/BroadcastTo", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_expand/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_expand/BroadcastTo", shape=[3, 128]) // ty=Tensor[(3, 128), float32]
+  %3 = cast(%2, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_expand/Cast_1", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_expand/Cast_1:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_expand/Cast_1", dtype="int64") // ty=Tensor[(3, 128), int64]
+  %4 = reshape(%3, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape", newshape=[-1]) // ty=Tensor[(384,), int64]
+  %5 = (%TapasModel_7/TapasEmbeddings_27/aten_to_1/Const:0, %4)
+  %5
+}
+%6

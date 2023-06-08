@@ -1,0 +1,68 @@
+{
+    "0:0": {
+        "dtype": "int32",
+        "is_const": false,
+        "kind": "input",
+        "layer_name": "0:0",
+        "sim_format": "N",
+        "sim_shape": [
+            393216
+        ],
+        "tf_file": "value_0:0.npy",
+        "tf_format": "N",
+        "tf_shape": [
+            393216
+        ]
+    },
+    "1:0": {
+        "dtype": "int32",
+        "is_const": false,
+        "kind": "input",
+        "layer_name": "1:0",
+        "sim_format": "NC",
+        "sim_shape": [
+            3,
+            256
+        ],
+        "tf_file": "value_1:0.npy",
+        "tf_format": "NC",
+        "tf_shape": [
+            3,
+            256
+        ]
+    },
+    "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape:0": {
+        "dtype": "int32",
+        "is_const": false,
+        "kind": "output",
+        "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape:0",
+        "sim_format": "NC",
+        "sim_shape": [
+            3,
+            131072
+        ],
+        "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_view__Reshape:0.npy",
+        "tf_format": "NC",
+        "tf_shape": [
+            3,
+            131072
+        ]
+    },
+    "copy1:0": {
+        "dtype": "int32",
+        "is_const": false,
+        "kind": "output",
+        "layer_name": "copy1:0",
+        "sim_format": "NC",
+        "sim_shape": [
+            3,
+            256
+        ],
+        "tf_file": "value_copy1:0.npy",
+        "tf_format": "NC",
+        "tf_shape": [
+            3,
+            256
+        ]
+    }
+}

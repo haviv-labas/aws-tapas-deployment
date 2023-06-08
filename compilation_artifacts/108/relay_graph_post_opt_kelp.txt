@@ -1,0 +1,11 @@
+v0.0.1
+%3 = fn () -> Tensor[(6144,), float32] {
+  %1 = fn (, __dict__=meta[StrMap][0]) -> Tensor[(6144,), float32] {
+    %0 = copy(meta[relay.Constant][0] // ty=Tensor[(6144,), float32], framework_op_name="aten_zeros/zeros", output_tensors_name=["aten_zeros/zeros:0"], input_tensors_name=[], framework_op_debug_info="aten_zeros/zeros", axis=0) // ty=Tensor[(6144,), float32]
+    %0
+  }
+  %2 = %1() // ty=Tensor[(6144,), float32]
+  %2
+}
+%3
+// meta data omitted. you can use show_meta_data=True to include meta data

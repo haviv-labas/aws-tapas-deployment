@@ -1,0 +1,38 @@
+{
+    "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0": {
+        "dtype": "int32",
+        "is_const": false,
+        "kind": "output",
+        "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+        "sim_format": "NC",
+        "sim_shape": [
+            3,
+            256
+        ],
+        "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape:0.npy",
+        "tf_format": "NC",
+        "tf_shape": [
+            3,
+            256
+        ]
+    },
+    "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0": {
+        "dtype": "int32",
+        "is_const": false,
+        "kind": "input",
+        "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+        "sim_format": "NHC",
+        "sim_shape": [
+            3,
+            128,
+            2
+        ],
+        "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0.npy",
+        "tf_format": "NHC",
+        "tf_shape": [
+            3,
+            128,
+            2
+        ]
+    }
+}

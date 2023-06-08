@@ -1,0 +1,347 @@
+{
+    "dma": [
+        {
+            "#block_num_bytes": 32,
+            "#block_num_descs": 4,
+            "#comment": "0-identity_145_TO_identity_local_147_Load_I-149-0",
+            "desc": [
+                {
+                    "from": "identity_145-v0",
+                    "from_off": 0,
+                    "from_sizes": [
+                        8,
+                        4
+                    ],
+                    "from_steps": [
+                        1,
+                        256
+                    ],
+                    "to": "SB",
+                    "to_off": 1312,
+                    "to_sizes": [
+                        8,
+                        4
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 0,
+            "queue": "qPoolPW0"
+        },
+        {
+            "#block_num_bytes": 16384,
+            "#block_num_descs": 64,
+            "#comment": "3-identity_129_TO_identity_local_131_Load_I-133-0",
+            "desc": [
+                {
+                    "from": "identity_129-v0",
+                    "from_off": 0,
+                    "from_sizes": [
+                        16384,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        256
+                    ],
+                    "to": "SB",
+                    "to_off": 98048,
+                    "to_sizes": [
+                        256,
+                        64
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 1,
+            "queue": "qPoolPW0"
+        },
+        {
+            "#block_num_bytes": 16384,
+            "#block_num_descs": 64,
+            "#comment": "3-identity_129_TO_identity_local_131_Load_I-133-0",
+            "desc": [
+                {
+                    "from": "identity_129-v1",
+                    "from_off": 0,
+                    "from_sizes": [
+                        16384,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        256
+                    ],
+                    "to": "SB",
+                    "to_off": 8486656,
+                    "to_sizes": [
+                        256,
+                        64
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 0,
+            "queue": "qPoolPW1"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 64,
+            "#comment": "4-t13-76-101-105_TO_t13-76_local_82_Load_I-117-0",
+            "desc": [
+                {
+                    "from": "t13-76-101-105-v0",
+                    "from_off": 0,
+                    "from_sizes": [
+                        1024,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        16
+                    ],
+                    "to": "SB",
+                    "to_off": 96496,
+                    "to_sizes": [
+                        16,
+                        64
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 2,
+            "queue": "qPoolPW0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 64,
+            "#comment": "4-t13-76-101-105_TO_t13-76_local_82_Load_I-117-0",
+            "desc": [
+                {
+                    "from": "t13-76-101-105-v1",
+                    "from_off": 0,
+                    "from_sizes": [
+                        1024,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        16
+                    ],
+                    "to": "SB",
+                    "to_off": 8485104,
+                    "to_sizes": [
+                        16,
+                        64
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 1,
+            "queue": "qPoolPW1"
+        },
+        {
+            "#block_num_bytes": 8,
+            "#block_num_descs": 2,
+            "#comment": "5-t20-103-107_TO__t164_Load_I-119-0",
+            "desc": [
+                {
+                    "from": "t20-103-107-v0",
+                    "from_off": 0,
+                    "from_sizes": [
+                        8,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        4
+                    ],
+                    "to": "SB",
+                    "to_off": 8486648,
+                    "to_sizes": [
+                        4,
+                        2
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 3,
+            "queue": "qPoolPW0"
+        },
+        {
+            "#block_num_bytes": 8,
+            "#block_num_descs": 2,
+            "#comment": "5-t20-103-107_TO__t164_Load_I-119-0",
+            "desc": [
+                {
+                    "from": "t20-103-107-v1",
+                    "from_off": 0,
+                    "from_sizes": [
+                        8,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        4
+                    ],
+                    "to": "SB",
+                    "to_off": 8748792,
+                    "to_sizes": [
+                        4,
+                        2
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 2,
+            "queue": "qPoolPW1"
+        },
+        {
+            "#block_num_bytes": 1536,
+            "#block_num_descs": 3,
+            "#comment": "21-copy0_t166_TO_copy0:0_Save_I-123-0",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 8389416,
+                    "from_sizes": [
+                        512,
+                        3
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "copy0:0",
+                    "to_off": 0,
+                    "to_sizes": [
+                        1536,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        512
+                    ]
+                }
+            ],
+            "id": 0,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 48,
+            "#block_num_descs": 3,
+            "#comment": "30-_t167_TO_aten_view/Reshape:0_Save_I-125-0",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 8388608,
+                    "from_sizes": [
+                        16,
+                        3
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "aten_view/Reshape:0",
+                    "to_off": 0,
+                    "to_sizes": [
+                        48,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        16
+                    ]
+                }
+            ],
+            "id": 1,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1536,
+            "#block_num_descs": 3,
+            "#comment": "1-2:0_TO_2:0_t165_Load_I-114-0",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 0,
+                    "from_sizes": [
+                        1536,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        512
+                    ],
+                    "to": "SB",
+                    "to_off": 96512,
+                    "to_sizes": [
+                        512,
+                        3
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 0,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 3072,
+            "#block_num_descs": 3,
+            "#comment": "2-0:0_TO_0:0_local_67_Load_I-112-0",
+            "desc": [
+                {
+                    "from": "0:0",
+                    "from_off": 0,
+                    "from_sizes": [
+                        3072,
+                        1
+                    ],
+                    "from_steps": [
+                        1,
+                        1024
+                    ],
+                    "to": "SB",
+                    "to_off": 97024,
+                    "to_sizes": [
+                        1024,
+                        3
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 1,
+            "queue": "qPoolIn0"
+        }
+    ],
+    "instr": "pool.bin",
+    "name": "pool_json"
+}
