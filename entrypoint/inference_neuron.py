@@ -91,18 +91,3 @@ def output_fn(prediction_output, accept=JSON_CONTENT_TYPE):
         return json.dumps(prediction_output), accept
 
     raise Exception('Requested unsupported ContentType in Accept: ' + accept)
-
-"""
-model_neuron = model_fn("./")
-
-input_data = [{"data": {"Actors": ["Brad Pitt", "Leonardo Di Caprio", "George Clooney"], "Number of movies": ["87", "53", "69"]},
-"queries": [
-"What is the name of the first actor?",
-"How many movies has George Clooney played in?",
-"What is the total number of movies?",
-]}]
-
-print(predict_fn(input_data, model_neuron))
-pdb.set_trace()
-x=0
-"""

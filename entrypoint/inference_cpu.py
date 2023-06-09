@@ -9,8 +9,6 @@ import torch
 import torch_neuron
 
 JSON_CONTENT_TYPE = 'application/json'
-os.environ['NEURON_RT_NUM_CORES']='1'
-
 
 def model_fn(model_dir):
     model_name = "google/tapas-base-finetuned-wtq"
@@ -20,23 +18,13 @@ def model_fn(model_dir):
 
 
 def input_fn(serialized_input_data, content_type=JSON_CONTENT_TYPE):
-    
-    example_query = [{"data": {"Actors": ["Brad Pitt", "Leonardo Di Caprio", "George Clooney"], "Number of movies": ["87", "53", "69"]},
-"queries": [
-    "What is the name of the first actor?",
-    "How many movies has George Clooney played in?",
-    "What is the total number of movies?",
-    ]}]
     if content_type == JSON_CONTENT_TYPE:
         input_data = json.loads(serialized_input_data)
         return input_data
-        #return example_query
 
     else:
         raise Exception('Requested unsupported ContentType in Accept: ' + content_type)
         return
-        #return example_query
-
 
 def predict_fn(input_data, models):
     model_tapas, tokenizer = models
@@ -53,7 +41,6 @@ def predict_fn(input_data, models):
     inputs, outputs.logits.detach(), outputs.logits_aggregation.detach()
     )
 
-    # let's print out the results:
     id2aggregation = {0: "NONE", 1: "SUM", 2: "AVERAGE", 3: "COUNT"}
     aggregation_predictions_string = [
         id2aggregation[x] for x in predicted_aggregation_indices
@@ -62,10 +49,8 @@ def predict_fn(input_data, models):
     answers = []
     for coordinates in predicted_answer_coordinates:
         if len(coordinates) == 1:
-            # only a single cell:
             answers.append(table.iat[coordinates[0]])
         else:
-            # multiple cells
             cell_values = []
             for coordinate in coordinates:
                 cell_values.append(table.iat[coordinate])
@@ -76,7 +61,6 @@ def predict_fn(input_data, models):
     for query, answer, predicted_agg in zip(
         queries, answers, aggregation_predictions_string
     ):
-        print(query)
         if predicted_agg == "NONE":
             print("Predicted answer: " + answer)
             queries_and_answers.append(f"Query:{query}\nAnswer:{answer}")
@@ -84,7 +68,6 @@ def predict_fn(input_data, models):
             print("Predicted answer: " + predicted_agg + " > " + answer)
             queries_and_answers.append(f"Query:{query}\nAnswer:{predicted_agg} > {answer}")
 
-    # return "SUCCESSFUL MODEL RUN"
     return "\n".join(queries_and_answers)
 
 def output_fn(prediction_output, accept=JSON_CONTENT_TYPE):
