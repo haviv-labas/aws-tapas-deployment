@@ -7,4 +7,4 @@ RUN pip install --upgrade --no-cache-dir 'transformers==4.6.0'
 RUN pip install "torch-scatter==2.1.1"
 RUN wget -qO - https://apt.repos.neuron.amazonaws.com/GPG-PUB-KEY-AMAZON-AWS-NEURON.PUB | apt-key add -
 RUN apt-get update
-RUN apt-get install -y aws-neuronx-dkms
+RUN apt-get install -y aws-neuron-dkms

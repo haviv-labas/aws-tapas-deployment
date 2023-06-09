@@ -22,7 +22,7 @@ os.environ['NEURON_RT_NUM_CORES']='1'
 
 def model_fn(model_dir):
     model_name = "google/tapas-mini-finetuned-wtq"
-    tokenizer = TapasTokenizer.from_pretrained(moel_name)
+    tokenizer = TapasTokenizer.from_pretrained(model_name)
     model_file =os.path.join(model_dir, 'neuron_compiled_model.pt')
     model_neuron = torch.jit.load(model_file)
     model_cpu = TapasForQuestionAnswering.from_pretrained(model_name)
