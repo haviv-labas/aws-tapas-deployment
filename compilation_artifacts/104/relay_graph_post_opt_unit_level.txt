@@ -1,14 +1,14 @@
 v0.0.1
-%7 = fn (%v2:0: Tensor[(3, 128), int64]) -> Tensor[(3, 128), int64] {
-  %5 = fn (%v2:01: Tensor[(3, 128), int64], __dict__=meta[StrMap][0]) -> Tensor[(3, 128), int64] {
-    %0 = copy(%v2:01, framework_op_name="copy3", output_tensors_name=["copy3:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_sub/mul", axis=0) // ty=Tensor[(3, 128), int64]
-    %1 = multiply(%0, meta[relay.Constant][2] // ty=Tensor[(1,), int64], framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_sub/mul", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_sub/mul:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_sub/mul", axis=0) // ty=Tensor[(3, 128), int64]
-    %2 = subtract(meta[relay.Constant][1] // ty=Tensor[(3, 128), int64], %1, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_sub/sub", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_sub/sub:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_sub/sub", axis=0) // ty=Tensor[(3, 128), int64]
-    %3 = minimum(meta[relay.Constant][0] // ty=Tensor[(1,), int64], %2, framework_op_name="minimum0", output_tensors_name=["minimum0:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 128), int64]
-    %4 = copy(%3, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_min/Minimum", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_min/Minimum", axis=0) // ty=Tensor[(3, 128), int64]
+%7 = fn (%v2:0: Tensor[(3, 512), int64]) -> Tensor[(3, 512), int64] {
+  %5 = fn (%v2:01: Tensor[(3, 512), int64], __dict__=meta[StrMap][0]) -> Tensor[(3, 512), int64] {
+    %0 = copy(%v2:01, framework_op_name="copy3", output_tensors_name=["copy3:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_sub/mul", axis=0) // ty=Tensor[(3, 512), int64]
+    %1 = multiply(%0, meta[relay.Constant][2] // ty=Tensor[(1,), int64], framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_sub/mul", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_sub/mul:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_sub/mul", axis=0) // ty=Tensor[(3, 512), int64]
+    %2 = subtract(meta[relay.Constant][1] // ty=Tensor[(3, 512), int64], %1, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_sub/sub", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_sub/sub:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_sub/sub", axis=0) // ty=Tensor[(3, 512), int64]
+    %3 = minimum(meta[relay.Constant][0] // ty=Tensor[(1,), int64], %2, framework_op_name="minimum0", output_tensors_name=["minimum0:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 512), int64]
+    %4 = copy(%3, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_min/Minimum", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_min/Minimum", axis=0) // ty=Tensor[(3, 512), int64]
     %4
   }
-  %6 = %5(%v2:0) // ty=Tensor[(3, 128), int64]
+  %6 = %5(%v2:0) // ty=Tensor[(3, 512), int64]
   %6
 }
 %7

@@ -7,13 +7,13 @@
         "sim_format": "NC",
         "sim_shape": [
             3,
-            256
+            1024
         ],
         "tf_file": "value_2:0.npy",
         "tf_format": "NC",
         "tf_shape": [
             3,
-            256
+            1024
         ]
     },
     "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0": {
@@ -24,23 +24,23 @@
         "sim_format": "NC",
         "sim_shape": [
             3,
-            256
+            1024
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_min__Minimum:0.npy",
         "tf_format": "NC",
         "tf_shape": [
             3,
-            256
+            1024
         ]
     },
-    "t4-55-57": {
-        "dtype": "int32",
+    "t4-45-59-61": {
+        "dtype": "float32",
         "is_const": true,
         "layer_name": "t4",
         "sim_format": "CRSM",
         "sim_shape": [
             128,
-            3,
+            12,
             1,
             1
         ],
@@ -49,14 +49,14 @@
             64
         ],
         "split_npys": [
-            "value_sg00_t4-55-57_CRSM_0.npy",
-            "value_sg00_t4-55-57_CRSM_1.npy"
+            "value_sg00_t4-45-59-61_CRSM_0.npy",
+            "value_sg00_t4-45-59-61_CRSM_1.npy"
         ],
-        "tf_file": "value_sg00_t4-55-57_CRSM.npy",
+        "tf_file": "value_sg00_t4-45-59-61_CRSM.npy",
         "tf_format": "CRSM",
         "tf_shape": [
             128,
-            3,
+            12,
             1,
             1
         ]

@@ -1,7 +1,7 @@
 v0.0.1
-%8 = fn (%v2:0: Tensor[(3, 128), float32], %v0:0: Tensor[(3, 256), float32]) -> (Tensor[(3, 128), float32], Tensor[(3, 4), float32]) {
-  %6 = fn (%v2:01: Tensor[(3, 128), float32], %v0:01: Tensor[(3, 256), float32], __dict__=meta[StrMap][0]) -> (Tensor[(3, 128), float32], Tensor[(3, 4), float32]) {
-    %0 = copy(%v2:01, framework_op_name="copy0", output_tensors_name=["copy0:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 128), float32]
+%8 = fn (%v2:0: Tensor[(3, 512), float32], %v0:0: Tensor[(3, 256), float32]) -> (Tensor[(3, 512), float32], Tensor[(3, 4), float32]) {
+  %6 = fn (%v2:01: Tensor[(3, 512), float32], %v0:01: Tensor[(3, 256), float32], __dict__=meta[StrMap][0]) -> (Tensor[(3, 512), float32], Tensor[(3, 4), float32]) {
+    %0 = copy(%v2:01, framework_op_name="copy0", output_tensors_name=["copy0:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 512), float32]
     %1 = copy(%v0:01, framework_op_name="copy1", output_tensors_name=["copy1:0"], input_tensors_name=[], framework_op_debug_info="Linear_648/aten_linear/MatMul", axis=0) // ty=Tensor[(3, 256), float32]
     %2 = nn.dense(%1, meta[relay.Constant][0] // ty=Tensor[(4, 256), float32], framework_op_name="Linear_648/aten_linear/MatMul", output_tensors_name=["Linear_648/aten_linear/MatMul:0"], input_tensors_name=[], framework_op_debug_info="Linear_648/aten_linear/MatMul", units=4) // ty=Tensor[(3, 4), float32]
     %3 = add(%2, meta[relay.Constant][1] // ty=Tensor[(4,), float32], framework_op_name="add0", output_tensors_name=["add0:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 4), float32]
@@ -9,7 +9,7 @@ v0.0.1
     %5 = (%0, %4)
     %5
   }
-  %7 = %6(%v2:0, %v0:0) // ty=(Tensor[(3, 128), float32], Tensor[(3, 4), float32])
+  %7 = %6(%v2:0, %v0:0) // ty=(Tensor[(3, 512), float32], Tensor[(3, 4), float32])
   %7
 }
 %8

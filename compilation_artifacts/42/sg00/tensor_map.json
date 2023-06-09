@@ -7,13 +7,13 @@
         "sim_format": "NC",
         "sim_shape": [
             3,
-            256
+            1024
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Reshape:0.npy",
         "tf_format": "NC",
         "tf_shape": [
             3,
-            256
+            1024
         ]
     },
     "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0": {
@@ -24,14 +24,14 @@
         "sim_format": "NHC",
         "sim_shape": [
             3,
-            128,
+            512,
             2
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0.npy",
         "tf_format": "NHC",
         "tf_shape": [
             3,
-            128,
+            512,
             2
         ]
     }

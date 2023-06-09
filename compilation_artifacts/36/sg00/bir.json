@@ -9,9 +9,9 @@
                         "dtype": "int32",
                         "format": "NHC",
                         "partition_dim": 0,
-                        "shape": [ 3, 128, 2 ],
+                        "shape": [ 3, 512, 2 ],
                         "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
-                        "tensor_shape": [ 3, 128, 2 ]
+                        "tensor_shape": [ 3, 4, 128, 2 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -23,7 +23,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 1024 ],
+                            "dims": [ 3, 4096 ],
                             "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
                             "pinned": false,
                             "type": "DRAM"
@@ -31,7 +31,7 @@
                     ],
                     "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128, 2 ]
+                    "tensor_shape": [ 3, 4, 128, 2 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -39,9 +39,9 @@
                         "dtype": "int32",
                         "format": "NC",
                         "partition_dim": 0,
-                        "shape": [ 3, 256 ],
+                        "shape": [ 3, 1024 ],
                         "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
-                        "tensor_shape": [ 3, 128, 2 ]
+                        "tensor_shape": [ 3, 4, 128, 2 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -53,7 +53,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 1024 ],
+                            "dims": [ 3, 4096 ],
                             "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
                             "pinned": false,
                             "type": "DRAM"
@@ -61,7 +61,7 @@
                     ],
                     "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128, 2 ]
+                    "tensor_shape": [ 3, 4, 128, 2 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -69,9 +69,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 1,
-                        "shape": [ 128, 4, 1 ],
+                        "shape": [ 128, 24, 1 ],
                         "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23",
-                        "tensor_shape": [ 2, 128, 4 ]
+                        "tensor_shape": [ 2, 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -83,7 +83,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 16 ],
+                            "dims": [ 128, 96 ],
                             "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23",
                             "pinned": false,
                             "type": "SB"
@@ -91,7 +91,7 @@
                     ],
                     "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_set",
                     "partition_dim": 1,
-                    "tensor_shape": [ 2, 128, 4 ]
+                    "tensor_shape": [ 2, 128, 24 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -99,9 +99,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 6, 1 ],
-                        "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                        "tensor_shape": [ 128, 6 ]
+                        "shape": [ 128, 24, 1 ],
+                        "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                        "tensor_shape": [ 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -113,15 +113,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 24 ],
-                            "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
+                            "dims": [ 128, 96 ],
+                            "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
+                    "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 6 ]
+                    "tensor_shape": [ 128, 24 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -129,9 +129,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 4, 1 ],
-                        "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                        "tensor_shape": [ 128, 4 ]
+                        "shape": [ 128, 24, 1 ],
+                        "tensor_name": "_t44",
+                        "tensor_shape": [ 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -143,45 +143,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 16 ],
-                            "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
+                            "dims": [ 128, 96 ],
+                            "name": "_t44",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
+                    "name": "_t44_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 4 ]
-                },
-                {
-                    "Skind": "memory_location_set",
-                    "debug": {
-                        "dtype": "int32",
-                        "format": "UNDEF",
-                        "partition_dim": 0,
-                        "shape": [ 128, 6, 1 ],
-                        "tensor_name": "_t46",
-                        "tensor_shape": [ 128, 6 ]
-                    },
-                    "dtype": "int32",
-                    "file": "",
-                    "kind": "Internal",
-                    "memorylocations": [
-                        {
-                            "Skind": "memory_location",
-                            "addr": 0,
-                            "allocated": false,
-                            "bank": 0,
-                            "base": 0,
-                            "dims": [ 128, 24 ],
-                            "name": "_t46",
-                            "pinned": false,
-                            "type": "SB"
-                        }
-                    ],
-                    "name": "_t46_set",
-                    "partition_dim": 0,
-                    "tensor_shape": [ 128, 6 ]
+                    "tensor_shape": [ 128, 24 ]
                 }
             ],
             "attributes": [
@@ -195,7 +165,7 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "c1_25",
+                                "name": "i0_2_34",
                                 "stride": 1,
                                 "ub": 3
                             },
@@ -203,69 +173,107 @@
                                 {
                                     "instructions": [
                                         {
-                                            "debug": {
-                                                "op_name": "unknown"
+                                            "LoopAxis": {
+                                                "lb": 0,
+                                                "name": "i1_2_0_34",
+                                                "stride": 1,
+                                                "ub": 4
                                             },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "DMA",
-                                            "ins": [
+                                            "blocks": [
                                                 {
-                                                    "addrs": [
+                                                    "instructions": [
                                                         {
-                                                            "c": 0,
-                                                            "terms": [
+                                                            "debug": {
+                                                                "op_name": "unknown"
+                                                            },
+                                                            "dependencies": [],
+                                                            "descendants": [],
+                                                            "engine": "DMA",
+                                                            "ins": [
                                                                 {
-                                                                    "AxisLabel": "c1_25",
-                                                                    "coef": 1
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_2_34",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i1_2_0_34",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set"
                                                                 }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
+                                                            ],
+                                                            "loopnest": [
+                                                                "i0_2_34",
+                                                                "i1_2_0_34"
+                                                            ],
+                                                            "name": "I-37",
+                                                            "opcode": "AbstractCopy",
+                                                            "outs": [
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_2_34",
+                                                                                    "coef": 8
+                                                                                },
+                                                                                {
+                                                                                    "AxisLabel": "i1_2_0_34",
+                                                                                    "coef": 2
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 24, 128 ], [ 24, 1 ], [ 1, 1 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "_t44",
+                                                                    "memsetref": "_t44_set"
+                                                                }
+                                                            ],
+                                                            "predicates": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
-                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set"
+                                                    "name": "block0"
                                                 }
                                             ],
-                                            "loopnest": [
-                                                "c1_25"
-                                            ],
-                                            "name": "I-36",
-                                            "opcode": "AbstractCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "c1_25",
-                                                                    "coef": 2
-                                                                }
-                                                            ]
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 6, 128 ], [ 6, 1 ], [ 1, 1 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "_t46",
-                                                    "memsetref": "_t46_set"
-                                                }
-                                            ],
+                                            "engine": "Unassigned",
+                                            "ins": [],
+                                            "isBasicBlock": false,
+                                            "isParallel": true,
+                                            "loopnest": [],
+                                            "name": "i1_2_0_34_loop",
+                                            "opcode": "Loop",
+                                            "outs": [],
                                             "predicates": []
                                         }
                                     ],
@@ -277,7 +285,7 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "c1_25_loop",
+                            "name": "i0_2_34_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []
@@ -285,7 +293,7 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "p_47_48",
+                                "name": "p_45_47_49",
                                 "stride": 1,
                                 "ub": 2
                             },
@@ -294,7 +302,7 @@
                                     "instructions": [
                                         {
                                             "debug": {
-                                                "op_name": "unknown"
+                                                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape"
                                             },
                                             "dependencies": [],
                                             "descendants": [],
@@ -306,7 +314,7 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_47_48",
+                                                                    "AxisLabel": "p_45_47_49",
                                                                     "coef": 64
                                                                 }
                                                             ]
@@ -316,26 +324,30 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "_t46",
-                                                    "memsetref": "_t46_set"
+                                                    "memref": "_t44",
+                                                    "memsetref": "_t44_set"
                                                 }
                                             ],
                                             "loopnest": [
-                                                "p_47_48"
+                                                "p_45_47_49"
                                             ],
-                                            "name": "I-45",
+                                            "name": "I-43",
                                             "opcode": "TensorCopy",
                                             "outs": [
                                                 {
                                                     "addrs": [
                                                         {
                                                             "c": 0,
+                                                            "terms": []
+                                                        },
+                                                        {
+                                                            "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_47_48",
+                                                                    "AxisLabel": "p_45_47_49",
                                                                     "coef": 64
                                                                 }
                                                             ]
@@ -345,39 +357,15 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set"
+                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23",
+                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_set"
                                                 }
                                             ],
                                             "predicates": []
-                                        }
-                                    ],
-                                    "name": "block0"
-                                }
-                            ],
-                            "engine": "Unassigned",
-                            "ins": [],
-                            "isBasicBlock": false,
-                            "isParallel": true,
-                            "loopnest": [],
-                            "name": "p_47_48_loop",
-                            "opcode": "Loop",
-                            "outs": [],
-                            "predicates": []
-                        },
-                        {
-                            "LoopAxis": {
-                                "lb": 0,
-                                "name": "p_43",
-                                "stride": 1,
-                                "ub": 2
-                            },
-                            "blocks": [
-                                {
-                                    "instructions": [
+                                        },
                                         {
                                             "debug": {
                                                 "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape"
@@ -400,7 +388,7 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_43",
+                                                                    "AxisLabel": "p_45_47_49",
                                                                     "coef": 64
                                                                 }
                                                             ]
@@ -410,17 +398,17 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set"
+                                                    "memref": "_t44",
+                                                    "memsetref": "_t44_set"
                                                 }
                                             ],
                                             "loopnest": [
-                                                "p_43"
+                                                "p_45_47_49"
                                             ],
-                                            "name": "I-39",
+                                            "name": "I-40",
                                             "op0": "arith_shift_right",
                                             "op1": "bypass",
                                             "opcode": "TensorScalarSymbolic",
@@ -435,7 +423,7 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_43",
+                                                                    "AxisLabel": "p_45_47_49",
                                                                     "coef": 64
                                                                 }
                                                             ]
@@ -445,7 +433,7 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
                                                     "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23",
@@ -459,72 +447,6 @@
                                             "value1": [
                                                 0.0
                                             ]
-                                        },
-                                        {
-                                            "debug": {
-                                                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape"
-                                            },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "Pool",
-                                            "ins": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_43",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set"
-                                                }
-                                            ],
-                                            "loopnest": [
-                                                "p_43"
-                                            ],
-                                            "name": "I-42",
-                                            "opcode": "TensorCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_43",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23",
-                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_set"
-                                                }
-                                            ],
-                                            "predicates": []
                                         }
                                     ],
                                     "name": "block0"
@@ -535,7 +457,7 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "p_43_loop",
+                            "name": "p_45_47_49_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []
@@ -553,7 +475,7 @@
                                         {
                                             "LoopAxis": {
                                                 "lb": 0,
-                                                "name": "p_44",
+                                                "name": "p_46",
                                                 "stride": 1,
                                                 "ub": 2
                                             },
@@ -583,7 +505,7 @@
                                                                             "c": 0,
                                                                             "terms": [
                                                                                 {
-                                                                                    "AxisLabel": "p_44",
+                                                                                    "AxisLabel": "p_46",
                                                                                     "coef": 64
                                                                                 }
                                                                             ]
@@ -593,7 +515,7 @@
                                                                             "terms": []
                                                                         }
                                                                     ],
-                                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                                     "dtype": "int32",
                                                                     "kind": "symbolic_ap",
                                                                     "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23",
@@ -602,9 +524,9 @@
                                                             ],
                                                             "loopnest": [
                                                                 "i2_2",
-                                                                "p_44"
+                                                                "p_46"
                                                             ],
-                                                            "name": "I-40",
+                                                            "name": "I-41",
                                                             "opcode": "TensorCopy",
                                                             "outs": [
                                                                 {
@@ -613,7 +535,7 @@
                                                                             "c": 0,
                                                                             "terms": [
                                                                                 {
-                                                                                    "AxisLabel": "p_44",
+                                                                                    "AxisLabel": "p_46",
                                                                                     "coef": 64
                                                                                 }
                                                                             ]
@@ -628,11 +550,11 @@
                                                                             ]
                                                                         }
                                                                     ],
-                                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
+                                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                                     "dtype": "int32",
                                                                     "kind": "symbolic_ap",
-                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set"
+                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set"
                                                                 }
                                                             ],
                                                             "predicates": []
@@ -646,7 +568,7 @@
                                             "isBasicBlock": false,
                                             "isParallel": true,
                                             "loopnest": [],
-                                            "name": "p_44_loop",
+                                            "name": "p_46_loop",
                                             "opcode": "Loop",
                                             "outs": [],
                                             "predicates": []
@@ -668,7 +590,7 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "i0_2_33",
+                                "name": "i0_2_34_49_50",
                                 "stride": 1,
                                 "ub": 3
                             },
@@ -676,69 +598,107 @@
                                 {
                                     "instructions": [
                                         {
-                                            "debug": {
-                                                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape"
+                                            "LoopAxis": {
+                                                "lb": 0,
+                                                "name": "i1_2_0_34_47_48_50",
+                                                "stride": 1,
+                                                "ub": 4
                                             },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "DMA",
-                                            "ins": [
+                                            "blocks": [
                                                 {
-                                                    "addrs": [
+                                                    "instructions": [
                                                         {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
+                                                            "debug": {
+                                                                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape"
+                                                            },
+                                                            "dependencies": [],
+                                                            "descendants": [],
+                                                            "engine": "DMA",
+                                                            "ins": [
                                                                 {
-                                                                    "AxisLabel": "i0_2_33",
-                                                                    "coef": 2
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_2_34_49_50",
+                                                                                    "coef": 8
+                                                                                },
+                                                                                {
+                                                                                    "AxisLabel": "i1_2_0_34_47_48_50",
+                                                                                    "coef": 2
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 24, 128 ], [ 24, 1 ], [ 1, 2 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set"
                                                                 }
-                                                            ]
+                                                            ],
+                                                            "loopnest": [
+                                                                "i0_2_34_49_50",
+                                                                "i1_2_0_34_47_48_50"
+                                                            ],
+                                                            "name": "I-42",
+                                                            "opcode": "AbstractCopy",
+                                                            "outs": [
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_2_34_49_50",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i1_2_0_34_47_48_50",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 2, 128 ], [ 2, 1 ], [ 1, 2 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set"
+                                                                }
+                                                            ],
+                                                            "predicates": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 6, 128 ], [ 6, 1 ], [ 1, 2 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set"
+                                                    "name": "block0"
                                                 }
                                             ],
-                                            "loopnest": [
-                                                "i0_2_33"
-                                            ],
-                                            "name": "I-41",
-                                            "opcode": "AbstractCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "i0_2_33",
-                                                                    "coef": 1
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 2, 128 ], [ 2, 1 ], [ 1, 2 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
-                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set"
-                                                }
-                                            ],
+                                            "engine": "Unassigned",
+                                            "ins": [],
+                                            "isBasicBlock": false,
+                                            "isParallel": true,
+                                            "loopnest": [],
+                                            "name": "i1_2_0_34_47_48_50_loop",
+                                            "opcode": "Loop",
+                                            "outs": [],
                                             "predicates": []
                                         }
                                     ],
@@ -750,7 +710,7 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "i0_2_33_loop",
+                            "name": "i0_2_34_49_50_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []

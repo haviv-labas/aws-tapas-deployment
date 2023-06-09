@@ -44,19 +44,19 @@
             "ops": [],
             "size": 3072,
             "type": "input",
-            "var_id": 3
+            "var_id": 2
         },
         "2:0": {
             "#transfer-type": "input",
             "element_size": 4,
             "internal_shape": [
                 3,
-                128
+                512
             ],
             "ops": [],
-            "size": 1536,
+            "size": 6144,
             "type": "input",
-            "var_id": 2
+            "var_id": 3
         },
         "SB": {
             "type": "state-buffer",
@@ -73,7 +73,7 @@
             "ops": [],
             "size": 48,
             "type": "output",
-            "var_id": 11
+            "var_id": 10
         },
         "copy0:0": {
             "#file-name": "value_copy0:0-simout.npy",
@@ -81,59 +81,59 @@
             "element_size": 4,
             "internal_shape": [
                 3,
-                128
+                512
             ],
             "ops": [],
-            "size": 1536,
+            "size": 6144,
             "type": "output",
-            "var_id": 10
+            "var_id": 11
         },
-        "identity_129-v0": {
+        "identity_131-v0": {
             "#transfer-type": "weight",
             "fabric_path": "main",
-            "file_name": "value_sg00_identity_129_CRSM_0.npy",
+            "file_name": "value_sg00_identity_131_CRSM_0.npy",
             "type": "file",
             "var_id": 4
         },
-        "identity_129-v1": {
+        "identity_131-v1": {
             "#transfer-type": "weight",
             "fabric_path": "alt",
-            "file_name": "value_sg00_identity_129_CRSM_1.npy",
+            "file_name": "value_sg00_identity_131_CRSM_1.npy",
             "type": "file",
             "var_id": 5
         },
-        "identity_145-v0": {
+        "identity_146-v0": {
             "#transfer-type": "weight",
             "fabric_path": "main",
-            "file_name": "value_sg00_identity_145_CRSM_0.npy",
+            "file_name": "value_sg00_identity_146_CRSM_0.npy",
             "type": "file",
             "var_id": 1
         },
-        "t13-76-101-105-v0": {
+        "t13-77-103-107-v0": {
             "#transfer-type": "weight",
             "fabric_path": "main",
-            "file_name": "value_sg00_t13-76-101-105_CRSM_0.npy",
+            "file_name": "value_sg00_t13-77-103-107_CRSM_0.npy",
             "type": "file",
             "var_id": 6
         },
-        "t13-76-101-105-v1": {
+        "t13-77-103-107-v1": {
             "#transfer-type": "weight",
             "fabric_path": "alt",
-            "file_name": "value_sg00_t13-76-101-105_CRSM_1.npy",
+            "file_name": "value_sg00_t13-77-103-107_CRSM_1.npy",
             "type": "file",
             "var_id": 7
         },
-        "t20-103-107-v0": {
+        "t20-105-109-v0": {
             "#transfer-type": "weight",
             "fabric_path": "main",
-            "file_name": "value_sg00_t20-103-107_CRSM_0.npy",
+            "file_name": "value_sg00_t20-105-109_CRSM_0.npy",
             "type": "file",
             "var_id": 8
         },
-        "t20-103-107-v1": {
+        "t20-105-109-v1": {
             "#transfer-type": "weight",
             "fabric_path": "alt",
-            "file_name": "value_sg00_t20-103-107_CRSM_1.npy",
+            "file_name": "value_sg00_t20-105-109_CRSM_1.npy",
             "type": "file",
             "var_id": 9
         }

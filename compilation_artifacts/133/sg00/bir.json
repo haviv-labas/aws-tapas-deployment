@@ -9,9 +9,9 @@
                         "dtype": "float32",
                         "format": "NC",
                         "partition_dim": 0,
-                        "shape": [ 3, 128 ],
+                        "shape": [ 3, 512 ],
                         "tensor_name": "2:0",
-                        "tensor_shape": [ 3, 128 ]
+                        "tensor_shape": [ 3, 512 ]
                     },
                     "dtype": "float32",
                     "file": "",
@@ -23,7 +23,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 512 ],
+                            "dims": [ 3, 2048 ],
                             "name": "2:0",
                             "pinned": false,
                             "type": "DRAM"
@@ -31,7 +31,7 @@
                     ],
                     "name": "2:0_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128 ]
+                    "tensor_shape": [ 3, 512 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -69,9 +69,9 @@
                         "dtype": "float32",
                         "format": "NC",
                         "partition_dim": 0,
-                        "shape": [ 3, 128 ],
+                        "shape": [ 3, 512 ],
                         "tensor_name": "copy0:0",
-                        "tensor_shape": [ 3, 128 ]
+                        "tensor_shape": [ 3, 512 ]
                     },
                     "dtype": "float32",
                     "file": "",
@@ -83,7 +83,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 512 ],
+                            "dims": [ 3, 2048 ],
                             "name": "copy0:0",
                             "pinned": false,
                             "type": "DRAM"
@@ -91,7 +91,7 @@
                     ],
                     "name": "copy0:0_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128 ]
+                    "tensor_shape": [ 3, 512 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -160,7 +160,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 4, 3, 1 ],
-                        "tensor_name": "Linear_648/aten_linear/MatMul_t90",
+                        "tensor_name": "Linear_648/aten_linear/MatMul_t96",
                         "tensor_shape": [ 4, 3 ]
                     },
                     "dtype": "float32",
@@ -174,12 +174,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 4, 12 ],
-                            "name": "Linear_648/aten_linear/MatMul_t90",
+                            "name": "Linear_648/aten_linear/MatMul_t96",
                             "pinned": false,
                             "type": "PSUM"
                         }
                     ],
-                    "name": "Linear_648/aten_linear/MatMul_t90_set",
+                    "name": "Linear_648/aten_linear/MatMul_t96_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 4, 3 ]
                 },
@@ -194,7 +194,7 @@
                         "tensor_shape": [ 128, 8 ]
                     },
                     "dtype": "bfloat16",
-                    "file": "value_sg00_t13-76-101-105_CRSM.npy",
+                    "file": "value_sg00_t13-77-103-107_CRSM.npy",
                     "kind": "Const",
                     "memorylocations": [
                         {
@@ -204,12 +204,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 1024, 2 ],
-                            "name": "t13-76-101-105",
+                            "name": "t13-77-103-107",
                             "pinned": false,
                             "type": "DRAM"
                         }
                     ],
-                    "name": "t13-76-101-105_set",
+                    "name": "t13-77-103-107_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 128, 8 ]
                 },
@@ -246,6 +246,36 @@
                 {
                     "Skind": "memory_location_set",
                     "debug": {
+                        "dtype": "float32",
+                        "format": "UNDEF",
+                        "partition_dim": 0,
+                        "shape": [ 3, 512, 1 ],
+                        "tensor_name": "2:0_local_74",
+                        "tensor_shape": [ 3, 512 ]
+                    },
+                    "dtype": "float32",
+                    "file": "",
+                    "kind": "Internal",
+                    "memorylocations": [
+                        {
+                            "Skind": "memory_location",
+                            "addr": 0,
+                            "allocated": false,
+                            "bank": 0,
+                            "base": 0,
+                            "dims": [ 3, 2048 ],
+                            "name": "2:0_local_74",
+                            "pinned": false,
+                            "type": "SB"
+                        }
+                    ],
+                    "name": "2:0_local_74_set",
+                    "partition_dim": 0,
+                    "tensor_shape": [ 3, 512 ]
+                },
+                {
+                    "Skind": "memory_location_set",
+                    "debug": {
                         "dtype": "bfloat16",
                         "format": "UNDEF",
                         "partition_dim": 0,
@@ -264,12 +294,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 128, 16 ],
-                            "name": "t13-76_local_82",
+                            "name": "t13-77_local_83",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "t13-76_local_82_set",
+                    "name": "t13-77_local_83_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 128, 8 ]
                 },
@@ -280,7 +310,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 64, 12, 1 ],
-                        "tensor_name": "0:0_t126",
+                        "tensor_name": "0:0_t128",
                         "tensor_shape": [ 64, 12 ]
                     },
                     "dtype": "float32",
@@ -294,12 +324,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 64, 48 ],
-                            "name": "0:0_t126",
+                            "name": "0:0_t128",
                             "pinned": false,
                             "type": "PSUM"
                         }
                     ],
-                    "name": "0:0_t126_set",
+                    "name": "0:0_t128_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 64, 12 ]
                 },
@@ -310,7 +340,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 128, 128, 1 ],
-                        "tensor_name": "identity_local_131",
+                        "tensor_name": "identity_local_133",
                         "tensor_shape": [ 128, 128 ]
                     },
                     "dtype": "float16",
@@ -324,12 +354,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 128, 256 ],
-                            "name": "identity_local_131",
+                            "name": "identity_local_133",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "identity_local_131_set",
+                    "name": "identity_local_133_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 128, 128 ]
                 },
@@ -339,9 +369,9 @@
                         "dtype": "float32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 3, 128, 1 ],
-                        "tensor_name": "copy0_t140",
-                        "tensor_shape": [ 3, 128 ]
+                        "shape": [ 64, 24, 1 ],
+                        "tensor_name": "2:0_t138",
+                        "tensor_shape": [ 64, 24 ]
                     },
                     "dtype": "float32",
                     "file": "",
@@ -353,15 +383,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 512 ],
-                            "name": "copy0_t140",
+                            "dims": [ 64, 96 ],
+                            "name": "2:0_t138",
                             "pinned": false,
                             "type": "PSUM"
                         }
                     ],
-                    "name": "copy0_t140_set",
+                    "name": "2:0_t138_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128 ]
+                    "tensor_shape": [ 64, 24 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -370,7 +400,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 3, 4, 1 ],
-                        "tensor_name": "_t144",
+                        "tensor_name": "_t145",
                         "tensor_shape": [ 3, 4 ]
                     },
                     "dtype": "float32",
@@ -384,12 +414,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 3, 16 ],
-                            "name": "_t144",
+                            "name": "_t145",
                             "pinned": false,
                             "type": "PSUM"
                         }
                     ],
-                    "name": "_t144_set",
+                    "name": "_t145_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 3, 4 ]
                 },
@@ -400,7 +430,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 128, 128, 1 ],
-                        "tensor_name": "identity_local_147",
+                        "tensor_name": "identity_local_148",
                         "tensor_shape": [ 128, 128 ]
                     },
                     "dtype": "bfloat16",
@@ -414,12 +444,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 128, 256 ],
-                            "name": "identity_local_147",
+                            "name": "identity_local_148",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "identity_local_147_set",
+                    "name": "identity_local_148_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 128, 128 ]
                 },
@@ -434,7 +464,7 @@
                         "tensor_shape": [ 4, 1 ]
                     },
                     "dtype": "float32",
-                    "file": "value_sg00_t20-103-107_CRSM.npy",
+                    "file": "value_sg00_t20-105-109_CRSM.npy",
                     "kind": "Const",
                     "memorylocations": [
                         {
@@ -444,12 +474,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 4, 4 ],
-                            "name": "t20-103-107",
+                            "name": "t20-105-109",
                             "pinned": false,
                             "type": "DRAM"
                         }
                     ],
-                    "name": "t20-103-107_set",
+                    "name": "t20-105-109_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 4, 1 ]
                 },
@@ -459,9 +489,9 @@
                         "dtype": "float32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 4, 1 ],
-                        "tensor_name": "2:0_t152",
-                        "tensor_shape": [ 128, 4 ]
+                        "shape": [ 3, 512, 1 ],
+                        "tensor_name": "copy0_t153",
+                        "tensor_shape": [ 3, 512 ]
                     },
                     "dtype": "float32",
                     "file": "",
@@ -473,15 +503,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 16 ],
-                            "name": "2:0_t152",
+                            "dims": [ 3, 2048 ],
+                            "name": "copy0_t153",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "2:0_t152_set",
+                    "name": "copy0_t153_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 4 ]
+                    "tensor_shape": [ 3, 512 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -489,9 +519,9 @@
                         "dtype": "float32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 64, 6, 1 ],
-                        "tensor_name": "2:0_t154",
-                        "tensor_shape": [ 64, 6 ]
+                        "shape": [ 3, 512, 1 ],
+                        "tensor_name": "copy0_t155",
+                        "tensor_shape": [ 3, 512 ]
                     },
                     "dtype": "float32",
                     "file": "",
@@ -503,15 +533,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 64, 24 ],
-                            "name": "2:0_t154",
+                            "dims": [ 3, 2048 ],
+                            "name": "copy0_t155",
                             "pinned": false,
                             "type": "PSUM"
                         }
                     ],
-                    "name": "2:0_t154_set",
+                    "name": "copy0_t155_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 64, 6 ]
+                    "tensor_shape": [ 3, 512 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -520,7 +550,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 3, 256, 1 ],
-                        "tensor_name": "0:0_t155",
+                        "tensor_name": "0:0_t156",
                         "tensor_shape": [ 3, 256 ]
                     },
                     "dtype": "float16",
@@ -534,12 +564,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 3, 512 ],
-                            "name": "0:0_t155",
+                            "name": "0:0_t156",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "0:0_t155_set",
+                    "name": "0:0_t156_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 3, 256 ]
                 },
@@ -549,9 +579,9 @@
                         "dtype": "float16",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 3, 128, 1 ],
-                        "tensor_name": "2:0_t157",
-                        "tensor_shape": [ 3, 128 ]
+                        "shape": [ 128, 16, 1 ],
+                        "tensor_name": "copy0_t158",
+                        "tensor_shape": [ 128, 16 ]
                     },
                     "dtype": "float16",
                     "file": "",
@@ -563,45 +593,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 256 ],
-                            "name": "2:0_t157",
+                            "dims": [ 128, 32 ],
+                            "name": "copy0_t158",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "2:0_t157_set",
+                    "name": "copy0_t158_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128 ]
-                },
-                {
-                    "Skind": "memory_location_set",
-                    "debug": {
-                        "dtype": "bfloat16",
-                        "format": "UNDEF",
-                        "partition_dim": 0,
-                        "shape": [ 4, 4, 1 ],
-                        "tensor_name": "Linear_648/aten_linear/MatMul_t159",
-                        "tensor_shape": [ 4, 4 ]
-                    },
-                    "dtype": "bfloat16",
-                    "file": "",
-                    "kind": "Internal",
-                    "memorylocations": [
-                        {
-                            "Skind": "memory_location",
-                            "addr": 0,
-                            "allocated": false,
-                            "bank": 0,
-                            "base": 0,
-                            "dims": [ 4, 8 ],
-                            "name": "Linear_648/aten_linear/MatMul_t159",
-                            "pinned": false,
-                            "type": "SB"
-                        }
-                    ],
-                    "name": "Linear_648/aten_linear/MatMul_t159_set",
-                    "partition_dim": 0,
-                    "tensor_shape": [ 4, 4 ]
+                    "tensor_shape": [ 128, 16 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -609,9 +609,9 @@
                         "dtype": "float16",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 4, 1 ],
-                        "tensor_name": "copy0_t160",
-                        "tensor_shape": [ 128, 4 ]
+                        "shape": [ 3, 512, 1 ],
+                        "tensor_name": "2:0_t159",
+                        "tensor_shape": [ 3, 512 ]
                     },
                     "dtype": "float16",
                     "file": "",
@@ -623,15 +623,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 8 ],
-                            "name": "copy0_t160",
+                            "dims": [ 3, 1024 ],
+                            "name": "2:0_t159",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "copy0_t160_set",
+                    "name": "2:0_t159_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 4 ]
+                    "tensor_shape": [ 3, 512 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -640,7 +640,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 4, 2, 1 ],
-                        "tensor_name": "_t164",
+                        "tensor_name": "_t162",
                         "tensor_shape": [ 4, 2 ]
                     },
                     "dtype": "float32",
@@ -654,26 +654,26 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 4, 8 ],
-                            "name": "_t164",
+                            "name": "_t162",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "_t164_set",
+                    "name": "_t162_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 4, 2 ]
                 },
                 {
                     "Skind": "memory_location_set",
                     "debug": {
-                        "dtype": "float32",
+                        "dtype": "bfloat16",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 3, 128, 1 ],
-                        "tensor_name": "2:0_t165",
-                        "tensor_shape": [ 3, 128 ]
+                        "shape": [ 4, 3, 1 ],
+                        "tensor_name": "Linear_648/aten_linear/MatMul_t163",
+                        "tensor_shape": [ 4, 3 ]
                     },
-                    "dtype": "float32",
+                    "dtype": "bfloat16",
                     "file": "",
                     "kind": "Internal",
                     "memorylocations": [
@@ -683,45 +683,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 512 ],
-                            "name": "2:0_t165",
+                            "dims": [ 4, 6 ],
+                            "name": "Linear_648/aten_linear/MatMul_t163",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "2:0_t165_set",
+                    "name": "Linear_648/aten_linear/MatMul_t163_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128 ]
-                },
-                {
-                    "Skind": "memory_location_set",
-                    "debug": {
-                        "dtype": "float32",
-                        "format": "UNDEF",
-                        "partition_dim": 0,
-                        "shape": [ 3, 128, 1 ],
-                        "tensor_name": "copy0_t166",
-                        "tensor_shape": [ 3, 128 ]
-                    },
-                    "dtype": "float32",
-                    "file": "",
-                    "kind": "Internal",
-                    "memorylocations": [
-                        {
-                            "Skind": "memory_location",
-                            "addr": 0,
-                            "allocated": false,
-                            "bank": 0,
-                            "base": 0,
-                            "dims": [ 3, 512 ],
-                            "name": "copy0_t166",
-                            "pinned": false,
-                            "type": "SB"
-                        }
-                    ],
-                    "name": "copy0_t166_set",
-                    "partition_dim": 0,
-                    "tensor_shape": [ 3, 128 ]
+                    "tensor_shape": [ 4, 3 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -730,7 +700,7 @@
                         "format": "UNDEF",
                         "partition_dim": 0,
                         "shape": [ 3, 4, 1 ],
-                        "tensor_name": "_t167",
+                        "tensor_name": "_t164",
                         "tensor_shape": [ 3, 4 ]
                     },
                     "dtype": "float32",
@@ -744,12 +714,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 3, 16 ],
-                            "name": "_t167",
+                            "name": "_t164",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "_t167_set",
+                    "name": "_t164_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 3, 4 ]
                 },
@@ -760,11 +730,11 @@
                         "format": "CRSM",
                         "partition_dim": 0,
                         "shape": [ 128, 128, 1, 1 ],
-                        "tensor_name": "identity_129",
+                        "tensor_name": "identity_131",
                         "tensor_shape": [ 128, 128 ]
                     },
                     "dtype": "float16",
-                    "file": "value_sg00_identity_129_CRSM.npy",
+                    "file": "value_sg00_identity_131_CRSM.npy",
                     "kind": "Const",
                     "memorylocations": [
                         {
@@ -774,12 +744,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 16384, 2 ],
-                            "name": "identity_129",
+                            "name": "identity_131",
                             "pinned": false,
                             "type": "DRAM"
                         }
                     ],
-                    "name": "identity_129_set",
+                    "name": "identity_131_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 128, 128 ]
                 },
@@ -790,11 +760,11 @@
                         "format": "CRSM",
                         "partition_dim": 0,
                         "shape": [ 128, 128, 1, 1 ],
-                        "tensor_name": "identity_145",
+                        "tensor_name": "identity_146",
                         "tensor_shape": [ 128, 128 ]
                     },
                     "dtype": "bfloat16",
-                    "file": "value_sg00_identity_145_CRSM.npy",
+                    "file": "value_sg00_identity_146_CRSM.npy",
                     "kind": "Const",
                     "memorylocations": [
                         {
@@ -804,12 +774,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 16384, 2 ],
-                            "name": "identity_145",
+                            "name": "identity_146",
                             "pinned": false,
                             "type": "DRAM"
                         }
                     ],
-                    "name": "identity_145_set",
+                    "name": "identity_146_set",
                     "partition_dim": 0,
                     "tensor_shape": [ 128, 128 ]
                 }
@@ -844,12 +814,12 @@
                                     "ap": [ [ 128, 128 ], [ 128, 1 ], [ 1, 128 ] ],
                                     "dtype": "bfloat16",
                                     "kind": "symbolic_ap",
-                                    "memref": "identity_145",
-                                    "memsetref": "identity_145_set"
+                                    "memref": "identity_146",
+                                    "memsetref": "identity_146_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-149",
+                            "name": "I-150",
                             "opcode": "AbstractCopy",
                             "outs": [
                                 {
@@ -866,8 +836,8 @@
                                     "ap": [ [ 128, 128 ], [ 128, 1 ], [ 1, 128 ] ],
                                     "dtype": "bfloat16",
                                     "kind": "symbolic_ap",
-                                    "memref": "identity_local_147",
-                                    "memsetref": "identity_local_147_set"
+                                    "memref": "identity_local_148",
+                                    "memsetref": "identity_local_148_set"
                                 }
                             ],
                             "predicates": []
@@ -894,12 +864,12 @@
                                     "ap": [ [ 128, 128 ], [ 128, 1 ], [ 1, 128 ] ],
                                     "dtype": "float16",
                                     "kind": "symbolic_ap",
-                                    "memref": "identity_129",
-                                    "memsetref": "identity_129_set"
+                                    "memref": "identity_131",
+                                    "memsetref": "identity_131_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-133",
+                            "name": "I-135",
                             "opcode": "AbstractCopy",
                             "outs": [
                                 {
@@ -916,8 +886,8 @@
                                     "ap": [ [ 128, 128 ], [ 128, 1 ], [ 1, 128 ] ],
                                     "dtype": "float16",
                                     "kind": "symbolic_ap",
-                                    "memref": "identity_local_131",
-                                    "memsetref": "identity_local_131_set"
+                                    "memref": "identity_local_133",
+                                    "memsetref": "identity_local_133_set"
                                 }
                             ],
                             "predicates": []
@@ -949,7 +919,7 @@
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-112",
+                            "name": "I-114",
                             "opcode": "AbstractCopy",
                             "outs": [
                                 {
@@ -999,7 +969,7 @@
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-128",
+                            "name": "I-130",
                             "opcode": "TensorCopy",
                             "outs": [
                                 {
@@ -1016,8 +986,8 @@
                                     "ap": [ [ 256, 3 ], [ 256, 1 ], [ 1, 256 ] ],
                                     "dtype": "float16",
                                     "kind": "symbolic_ap",
-                                    "memref": "0:0_t155",
-                                    "memsetref": "0:0_t155_set"
+                                    "memref": "0:0_t156",
+                                    "memsetref": "0:0_t156_set"
                                 }
                             ],
                             "predicates": []
@@ -1025,7 +995,7 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "T_i0_4_0_168",
+                                "name": "T_i0_4_0_165",
                                 "stride": 1,
                                 "ub": 2
                             },
@@ -1035,7 +1005,7 @@
                                         {
                                             "LoopAxis": {
                                                 "lb": 0,
-                                                "name": "p_156_168",
+                                                "name": "p_157_165",
                                                 "stride": 1,
                                                 "ub": 2
                                             },
@@ -1064,8 +1034,8 @@
                                                                     "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 3 ] ],
                                                                     "dtype": "float16",
                                                                     "kind": "symbolic_ap",
-                                                                    "memref": "identity_local_131",
-                                                                    "memsetref": "identity_local_131_set"
+                                                                    "memref": "identity_local_133",
+                                                                    "memsetref": "identity_local_133_set"
                                                                 },
                                                                 {
                                                                     "addrs": [
@@ -1077,11 +1047,11 @@
                                                                             "c": 0,
                                                                             "terms": [
                                                                                 {
-                                                                                    "AxisLabel": "T_i0_4_0_168",
+                                                                                    "AxisLabel": "T_i0_4_0_165",
                                                                                     "coef": 128
                                                                                 },
                                                                                 {
-                                                                                    "AxisLabel": "p_156_168",
+                                                                                    "AxisLabel": "p_157_165",
                                                                                     "coef": 64
                                                                                 }
                                                                             ]
@@ -1090,15 +1060,15 @@
                                                                     "ap": [ [ 256, 3 ], [ 1, 64 ] ],
                                                                     "dtype": "float16",
                                                                     "kind": "symbolic_ap",
-                                                                    "memref": "0:0_t155",
-                                                                    "memsetref": "0:0_t155_set"
+                                                                    "memref": "0:0_t156",
+                                                                    "memsetref": "0:0_t156_set"
                                                                 }
                                                             ],
                                                             "loopnest": [
-                                                                "T_i0_4_0_168",
-                                                                "p_156_168"
+                                                                "T_i0_4_0_165",
+                                                                "p_157_165"
                                                             ],
-                                                            "name": "I-134",
+                                                            "name": "I-136",
                                                             "opcode": "Matmult",
                                                             "outs": [
                                                                 {
@@ -1111,11 +1081,11 @@
                                                                             "c": 0,
                                                                             "terms": [
                                                                                 {
-                                                                                    "AxisLabel": "T_i0_4_0_168",
+                                                                                    "AxisLabel": "T_i0_4_0_165",
                                                                                     "coef": 6
                                                                                 },
                                                                                 {
-                                                                                    "AxisLabel": "p_156_168",
+                                                                                    "AxisLabel": "p_157_165",
                                                                                     "coef": 3
                                                                                 }
                                                                             ]
@@ -1124,8 +1094,8 @@
                                                                     "ap": [ [ 12, 64 ], [ 12, 1 ], [ 1, 3 ] ],
                                                                     "dtype": "float32",
                                                                     "kind": "symbolic_ap",
-                                                                    "memref": "0:0_t126",
-                                                                    "memsetref": "0:0_t126_set"
+                                                                    "memref": "0:0_t128",
+                                                                    "memsetref": "0:0_t128_set"
                                                                 }
                                                             ],
                                                             "predicates": [],
@@ -1143,7 +1113,7 @@
                                             "isBasicBlock": false,
                                             "isParallel": true,
                                             "loopnest": [],
-                                            "name": "p_156_168_loop",
+                                            "name": "p_157_165_loop",
                                             "opcode": "Loop",
                                             "outs": [],
                                             "predicates": []
@@ -1157,7 +1127,7 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "T_i0_4_0_168_loop",
+                            "name": "T_i0_4_0_165_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []
@@ -1165,7 +1135,7 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "p_156_168_169",
+                                "name": "p_157_165_166",
                                 "stride": 1,
                                 "ub": 2
                             },
@@ -1190,7 +1160,7 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_156_168_169",
+                                                                    "AxisLabel": "p_157_165_166",
                                                                     "coef": 3
                                                                 }
                                                             ]
@@ -1199,14 +1169,14 @@
                                                     "ap": [ [ 12, 64 ], [ 6, 2 ], [ 1, 3 ] ],
                                                     "dtype": "float32",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "0:0_t126",
-                                                    "memsetref": "0:0_t126_set"
+                                                    "memref": "0:0_t128",
+                                                    "memsetref": "0:0_t128_set"
                                                 }
                                             ],
                                             "loopnest": [
-                                                "p_156_168_169"
+                                                "p_157_165_166"
                                             ],
-                                            "name": "I-127",
+                                            "name": "I-129",
                                             "opcode": "TensorCopy",
                                             "outs": [
                                                 {
@@ -1215,7 +1185,7 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_156_168_169",
+                                                                    "AxisLabel": "p_157_165_166",
                                                                     "coef": 64
                                                                 }
                                                             ]
@@ -1243,7 +1213,7 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "p_156_168_169_loop",
+                            "name": "p_157_165_166_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []
@@ -1267,7 +1237,7 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
                                     "memref": "2:0",
@@ -1275,7 +1245,7 @@
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-114",
+                            "name": "I-116",
                             "opcode": "AbstractCopy",
                             "outs": [
                                 {
@@ -1289,11 +1259,11 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "2:0_t165",
-                                    "memsetref": "2:0_t165_set"
+                                    "memref": "2:0_local_74",
+                                    "memsetref": "2:0_local_74_set"
                                 }
                             ],
                             "predicates": []
@@ -1317,15 +1287,15 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "2:0_t165",
-                                    "memsetref": "2:0_t165_set"
+                                    "memref": "2:0_local_74",
+                                    "memsetref": "2:0_local_74_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-137",
+                            "name": "I-139",
                             "opcode": "TensorCopy",
                             "outs": [
                                 {
@@ -1339,11 +1309,11 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
                                     "dtype": "float16",
                                     "kind": "symbolic_ap",
-                                    "memref": "2:0_t157",
-                                    "memsetref": "2:0_t157_set"
+                                    "memref": "2:0_t159",
+                                    "memsetref": "2:0_t159_set"
                                 }
                             ],
                             "predicates": []
@@ -1351,7 +1321,147 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "p_158",
+                                "name": "T_i0_3_0_167",
+                                "stride": 1,
+                                "ub": 4
+                            },
+                            "blocks": [
+                                {
+                                    "instructions": [
+                                        {
+                                            "LoopAxis": {
+                                                "lb": 0,
+                                                "name": "p_160_167",
+                                                "stride": 1,
+                                                "ub": 2
+                                            },
+                                            "blocks": [
+                                                {
+                                                    "instructions": [
+                                                        {
+                                                            "debug": {
+                                                                "op_name": "2:0"
+                                                            },
+                                                            "dependencies": [],
+                                                            "descendants": [],
+                                                            "engine": "PE",
+                                                            "ins": [
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 3 ] ],
+                                                                    "dtype": "float16",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "identity_local_133",
+                                                                    "memsetref": "identity_local_133_set"
+                                                                },
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "T_i0_3_0_167",
+                                                                                    "coef": 128
+                                                                                },
+                                                                                {
+                                                                                    "AxisLabel": "p_160_167",
+                                                                                    "coef": 64
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                                                                    "dtype": "float16",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "2:0_t159",
+                                                                    "memsetref": "2:0_t159_set"
+                                                                }
+                                                            ],
+                                                            "loopnest": [
+                                                                "T_i0_3_0_167",
+                                                                "p_160_167"
+                                                            ],
+                                                            "name": "I-140",
+                                                            "opcode": "Matmult",
+                                                            "outs": [
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "T_i0_3_0_167",
+                                                                                    "coef": 6
+                                                                                },
+                                                                                {
+                                                                                    "AxisLabel": "p_160_167",
+                                                                                    "coef": 3
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 1, 3 ] ],
+                                                                    "dtype": "float32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "2:0_t138",
+                                                                    "memsetref": "2:0_t138_set"
+                                                                }
+                                                            ],
+                                                            "predicates": [],
+                                                            "replication_num_rows": 0,
+                                                            "replication_resolution": 0,
+                                                            "replication_shift_amnt": 0,
+                                                            "start_tensor_calc": false
+                                                        }
+                                                    ],
+                                                    "name": "block0"
+                                                }
+                                            ],
+                                            "engine": "Unassigned",
+                                            "ins": [],
+                                            "isBasicBlock": false,
+                                            "isParallel": true,
+                                            "loopnest": [],
+                                            "name": "p_160_167_loop",
+                                            "opcode": "Loop",
+                                            "outs": [],
+                                            "predicates": []
+                                        }
+                                    ],
+                                    "name": "block0"
+                                }
+                            ],
+                            "engine": "Unassigned",
+                            "ins": [],
+                            "isBasicBlock": false,
+                            "isParallel": true,
+                            "loopnest": [],
+                            "name": "T_i0_3_0_167_loop",
+                            "opcode": "Loop",
+                            "outs": [],
+                            "predicates": []
+                        },
+                        {
+                            "LoopAxis": {
+                                "lb": 0,
+                                "name": "p_160_167_168",
                                 "stride": 1,
                                 "ub": 2
                             },
@@ -1360,7 +1470,93 @@
                                     "instructions": [
                                         {
                                             "debug": {
-                                                "op_name": "2:0"
+                                                "op_name": "copy0"
+                                            },
+                                            "dependencies": [],
+                                            "descendants": [],
+                                            "engine": "Pool",
+                                            "ins": [
+                                                {
+                                                    "addrs": [
+                                                        {
+                                                            "c": 0,
+                                                            "terms": []
+                                                        },
+                                                        {
+                                                            "c": 0,
+                                                            "terms": [
+                                                                {
+                                                                    "AxisLabel": "p_160_167_168",
+                                                                    "coef": 3
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "ap": [ [ 24, 64 ], [ 6, 4 ], [ 1, 3 ] ],
+                                                    "dtype": "float32",
+                                                    "kind": "symbolic_ap",
+                                                    "memref": "2:0_t138",
+                                                    "memsetref": "2:0_t138_set"
+                                                }
+                                            ],
+                                            "loopnest": [
+                                                "p_160_167_168"
+                                            ],
+                                            "name": "I-142",
+                                            "opcode": "TensorCopy",
+                                            "outs": [
+                                                {
+                                                    "addrs": [
+                                                        {
+                                                            "c": 0,
+                                                            "terms": [
+                                                                {
+                                                                    "AxisLabel": "p_160_167_168",
+                                                                    "coef": 64
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "c": 0,
+                                                            "terms": []
+                                                        }
+                                                    ],
+                                                    "ap": [ [ 16, 64 ], [ 4, 4 ], [ 1, 3 ] ],
+                                                    "dtype": "float16",
+                                                    "kind": "symbolic_ap",
+                                                    "memref": "copy0_t158",
+                                                    "memsetref": "copy0_t158_set"
+                                                }
+                                            ],
+                                            "predicates": []
+                                        }
+                                    ],
+                                    "name": "block0"
+                                }
+                            ],
+                            "engine": "Unassigned",
+                            "ins": [],
+                            "isBasicBlock": false,
+                            "isParallel": true,
+                            "loopnest": [],
+                            "name": "p_160_167_168_loop",
+                            "opcode": "Loop",
+                            "outs": [],
+                            "predicates": []
+                        },
+                        {
+                            "LoopAxis": {
+                                "lb": 0,
+                                "name": "T_i0_3_0_167_168_169",
+                                "stride": 1,
+                                "ub": 4
+                            },
+                            "blocks": [
+                                {
+                                    "instructions": [
+                                        {
+                                            "debug": {
+                                                "op_name": "copy0"
                                             },
                                             "dependencies": [],
                                             "descendants": [],
@@ -1377,11 +1573,11 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 128, 128 ], [ 128, 1 ], [ 1, 128 ] ],
                                                     "dtype": "float16",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "identity_local_131",
-                                                    "memsetref": "identity_local_131_set"
+                                                    "memref": "identity_local_133",
+                                                    "memsetref": "identity_local_133_set"
                                                 },
                                                 {
                                                     "addrs": [
@@ -1393,23 +1589,23 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_158",
-                                                                    "coef": 64
+                                                                    "AxisLabel": "T_i0_3_0_167_168_169",
+                                                                    "coef": 4
                                                                 }
                                                             ]
                                                         }
                                                     ],
-                                                    "ap": [ [ 128, 3 ], [ 1, 64 ] ],
+                                                    "ap": [ [ 16, 128 ], [ 1, 3 ] ],
                                                     "dtype": "float16",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "2:0_t157",
-                                                    "memsetref": "2:0_t157_set"
+                                                    "memref": "copy0_t158",
+                                                    "memsetref": "copy0_t158_set"
                                                 }
                                             ],
                                             "loopnest": [
-                                                "p_158"
+                                                "T_i0_3_0_167_168_169"
                                             ],
-                                            "name": "I-138",
+                                            "name": "I-143",
                                             "opcode": "Matmult",
                                             "outs": [
                                                 {
@@ -1422,17 +1618,17 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_158",
-                                                                    "coef": 3
+                                                                    "AxisLabel": "T_i0_3_0_167_168_169",
+                                                                    "coef": 128
                                                                 }
                                                             ]
                                                         }
                                                     ],
-                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 128 ] ],
                                                     "dtype": "float32",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "2:0_t154",
-                                                    "memsetref": "2:0_t154_set"
+                                                    "memref": "copy0_t155",
+                                                    "memsetref": "copy0_t155_set"
                                                 }
                                             ],
                                             "predicates": [],
@@ -1440,68 +1636,6 @@
                                             "replication_resolution": 0,
                                             "replication_shift_amnt": 0,
                                             "start_tensor_calc": false
-                                        },
-                                        {
-                                            "debug": {
-                                                "op_name": "2:0"
-                                            },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "Pool",
-                                            "ins": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_158",
-                                                                    "coef": 3
-                                                                }
-                                                            ]
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "float32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "2:0_t154",
-                                                    "memsetref": "2:0_t154_set"
-                                                }
-                                            ],
-                                            "loopnest": [
-                                                "p_158"
-                                            ],
-                                            "name": "I-153",
-                                            "opcode": "TensorCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_158",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "float32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "2:0_t152",
-                                                    "memsetref": "2:0_t152_set"
-                                                }
-                                            ],
-                                            "predicates": []
                                         }
                                     ],
                                     "name": "block0"
@@ -1512,9 +1646,109 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "p_158_loop",
+                            "name": "T_i0_3_0_167_168_169_loop",
                             "opcode": "Loop",
                             "outs": [],
+                            "predicates": []
+                        },
+                        {
+                            "debug": {
+                                "op_name": "copy0"
+                            },
+                            "dependencies": [],
+                            "descendants": [],
+                            "engine": "Pool",
+                            "ins": [
+                                {
+                                    "addrs": [
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        },
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        }
+                                    ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
+                                    "dtype": "float32",
+                                    "kind": "symbolic_ap",
+                                    "memref": "copy0_t155",
+                                    "memsetref": "copy0_t155_set"
+                                }
+                            ],
+                            "loopnest": [],
+                            "name": "I-154",
+                            "opcode": "TensorCopy",
+                            "outs": [
+                                {
+                                    "addrs": [
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        },
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        }
+                                    ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
+                                    "dtype": "float32",
+                                    "kind": "symbolic_ap",
+                                    "memref": "copy0_t153",
+                                    "memsetref": "copy0_t153_set"
+                                }
+                            ],
+                            "predicates": []
+                        },
+                        {
+                            "debug": {
+                                "op_name": "copy0"
+                            },
+                            "dependencies": [],
+                            "descendants": [],
+                            "engine": "DMA",
+                            "ins": [
+                                {
+                                    "addrs": [
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        },
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        }
+                                    ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
+                                    "dtype": "float32",
+                                    "kind": "symbolic_ap",
+                                    "memref": "copy0_t153",
+                                    "memsetref": "copy0_t153_set"
+                                }
+                            ],
+                            "loopnest": [],
+                            "name": "I-125",
+                            "opcode": "AbstractCopy",
+                            "outs": [
+                                {
+                                    "addrs": [
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        },
+                                        {
+                                            "c": 0,
+                                            "terms": []
+                                        }
+                                    ],
+                                    "ap": [ [ 512, 3 ], [ 512, 1 ], [ 1, 512 ] ],
+                                    "dtype": "float32",
+                                    "kind": "symbolic_ap",
+                                    "memref": "copy0:0",
+                                    "memsetref": "copy0:0_set"
+                                }
+                            ],
                             "predicates": []
                         },
                         {
@@ -1539,12 +1773,12 @@
                                     "ap": [ [ 8, 128 ], [ 8, 1 ], [ 1, 8 ] ],
                                     "dtype": "bfloat16",
                                     "kind": "symbolic_ap",
-                                    "memref": "t13-76-101-105",
-                                    "memsetref": "t13-76-101-105_set"
+                                    "memref": "t13-77-103-107",
+                                    "memsetref": "t13-77-103-107_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-117",
+                            "name": "I-119",
                             "opcode": "AbstractCopy",
                             "outs": [
                                 {
@@ -1561,8 +1795,8 @@
                                     "ap": [ [ 8, 128 ], [ 8, 1 ], [ 1, 8 ] ],
                                     "dtype": "bfloat16",
                                     "kind": "symbolic_ap",
-                                    "memref": "t13-76_local_82",
-                                    "memsetref": "t13-76_local_82_set"
+                                    "memref": "t13-77_local_83",
+                                    "memsetref": "t13-77_local_83_set"
                                 }
                             ],
                             "predicates": []
@@ -1626,14 +1860,14 @@
                                                     "ap": [ [ 8, 128 ], [ 1, 4 ] ],
                                                     "dtype": "bfloat16",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "t13-76_local_82",
-                                                    "memsetref": "t13-76_local_82_set"
+                                                    "memref": "t13-77_local_83",
+                                                    "memsetref": "t13-77_local_83_set"
                                                 }
                                             ],
                                             "loopnest": [
                                                 "i2_4_0"
                                             ],
-                                            "name": "I-118",
+                                            "name": "I-120",
                                             "opcode": "Matmult",
                                             "outs": [
                                                 {
@@ -1650,8 +1884,8 @@
                                                     "ap": [ [ 3, 4 ], [ 3, 1 ], [ 1, 3 ] ],
                                                     "dtype": "float32",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "Linear_648/aten_linear/MatMul_t90",
-                                                    "memsetref": "Linear_648/aten_linear/MatMul_t90_set"
+                                                    "memref": "Linear_648/aten_linear/MatMul_t96",
+                                                    "memsetref": "Linear_648/aten_linear/MatMul_t96_set"
                                                 }
                                             ],
                                             "predicates": [],
@@ -1696,12 +1930,12 @@
                                     "ap": [ [ 1, 4 ], [ 1, 1 ], [ 1, 1 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "t20-103-107",
-                                    "memsetref": "t20-103-107_set"
+                                    "memref": "t20-105-109",
+                                    "memsetref": "t20-105-109_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-119",
+                            "name": "I-121",
                             "opcode": "AbstractCopy",
                             "outs": [
                                 {
@@ -1718,8 +1952,8 @@
                                     "ap": [ [ 2, 4 ], [ 2, 1 ], [ 1, 1 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "_t164",
-                                    "memsetref": "_t164_set"
+                                    "memref": "_t162",
+                                    "memsetref": "_t162_set"
                                 }
                             ],
                             "predicates": []
@@ -1746,8 +1980,8 @@
                                     "ap": [ [ 3, 4 ], [ 3, 1 ], [ 1, 3 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "Linear_648/aten_linear/MatMul_t90",
-                                    "memsetref": "Linear_648/aten_linear/MatMul_t90_set"
+                                    "memref": "Linear_648/aten_linear/MatMul_t96",
+                                    "memsetref": "Linear_648/aten_linear/MatMul_t96_set"
                                 },
                                 {
                                     "addrs": [
@@ -1763,12 +1997,12 @@
                                     "ap": [ [ 2, 4 ], [ 2, 1 ], [ 1, 1 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "_t164",
-                                    "memsetref": "_t164_set"
+                                    "memref": "_t162",
+                                    "memsetref": "_t162_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-121",
+                            "name": "I-123",
                             "op0": "add",
                             "op1": "bypass",
                             "opcode": "TensorScalarPtr",
@@ -1784,273 +2018,16 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 4, 4 ], [ 4, 1 ], [ 1, 3 ] ],
+                                    "ap": [ [ 3, 4 ], [ 3, 1 ], [ 1, 3 ] ],
                                     "dtype": "bfloat16",
                                     "kind": "symbolic_ap",
-                                    "memref": "Linear_648/aten_linear/MatMul_t159",
-                                    "memsetref": "Linear_648/aten_linear/MatMul_t159_set"
+                                    "memref": "Linear_648/aten_linear/MatMul_t163",
+                                    "memsetref": "Linear_648/aten_linear/MatMul_t163_set"
                                 }
                             ],
                             "predicates": [],
                             "reverse0": false,
                             "reverse1": false
-                        },
-                        {
-                            "LoopAxis": {
-                                "lb": 0,
-                                "name": "p_161",
-                                "stride": 1,
-                                "ub": 2
-                            },
-                            "blocks": [
-                                {
-                                    "instructions": [
-                                        {
-                                            "debug": {
-                                                "op_name": "copy0"
-                                            },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "Pool",
-                                            "ins": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_161",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "float32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "2:0_t152",
-                                                    "memsetref": "2:0_t152_set"
-                                                }
-                                            ],
-                                            "loopnest": [
-                                                "p_161"
-                                            ],
-                                            "name": "I-141",
-                                            "opcode": "TensorCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_161",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "float16",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "copy0_t160",
-                                                    "memsetref": "copy0_t160_set"
-                                                }
-                                            ],
-                                            "predicates": []
-                                        }
-                                    ],
-                                    "name": "block0"
-                                }
-                            ],
-                            "engine": "Unassigned",
-                            "ins": [],
-                            "isBasicBlock": false,
-                            "isParallel": true,
-                            "loopnest": [],
-                            "name": "p_161_loop",
-                            "opcode": "Loop",
-                            "outs": [],
-                            "predicates": []
-                        },
-                        {
-                            "debug": {
-                                "op_name": "copy0"
-                            },
-                            "dependencies": [],
-                            "descendants": [],
-                            "engine": "PE",
-                            "ins": [
-                                {
-                                    "addrs": [
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        },
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        }
-                                    ],
-                                    "ap": [ [ 128, 128 ], [ 128, 1 ], [ 1, 128 ] ],
-                                    "dtype": "float16",
-                                    "kind": "symbolic_ap",
-                                    "memref": "identity_local_131",
-                                    "memsetref": "identity_local_131_set"
-                                },
-                                {
-                                    "addrs": [
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        },
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        }
-                                    ],
-                                    "ap": [ [ 4, 128 ], [ 1, 3 ] ],
-                                    "dtype": "float16",
-                                    "kind": "symbolic_ap",
-                                    "memref": "copy0_t160",
-                                    "memsetref": "copy0_t160_set"
-                                }
-                            ],
-                            "loopnest": [],
-                            "name": "I-142",
-                            "opcode": "Matmult",
-                            "outs": [
-                                {
-                                    "addrs": [
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        },
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        }
-                                    ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
-                                    "dtype": "float32",
-                                    "kind": "symbolic_ap",
-                                    "memref": "copy0_t140",
-                                    "memsetref": "copy0_t140_set"
-                                }
-                            ],
-                            "predicates": [],
-                            "replication_num_rows": 0,
-                            "replication_resolution": 0,
-                            "replication_shift_amnt": 0,
-                            "start_tensor_calc": false
-                        },
-                        {
-                            "debug": {
-                                "op_name": "copy0"
-                            },
-                            "dependencies": [],
-                            "descendants": [],
-                            "engine": "Pool",
-                            "ins": [
-                                {
-                                    "addrs": [
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        },
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        }
-                                    ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
-                                    "dtype": "float32",
-                                    "kind": "symbolic_ap",
-                                    "memref": "copy0_t140",
-                                    "memsetref": "copy0_t140_set"
-                                }
-                            ],
-                            "loopnest": [],
-                            "name": "I-162",
-                            "opcode": "TensorCopy",
-                            "outs": [
-                                {
-                                    "addrs": [
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        },
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        }
-                                    ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
-                                    "dtype": "float32",
-                                    "kind": "symbolic_ap",
-                                    "memref": "copy0_t166",
-                                    "memsetref": "copy0_t166_set"
-                                }
-                            ],
-                            "predicates": []
-                        },
-                        {
-                            "debug": {
-                                "op_name": "copy0"
-                            },
-                            "dependencies": [],
-                            "descendants": [],
-                            "engine": "DMA",
-                            "ins": [
-                                {
-                                    "addrs": [
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        },
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        }
-                                    ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
-                                    "dtype": "float32",
-                                    "kind": "symbolic_ap",
-                                    "memref": "copy0_t166",
-                                    "memsetref": "copy0_t166_set"
-                                }
-                            ],
-                            "loopnest": [],
-                            "name": "I-123",
-                            "opcode": "AbstractCopy",
-                            "outs": [
-                                {
-                                    "addrs": [
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        },
-                                        {
-                                            "c": 0,
-                                            "terms": []
-                                        }
-                                    ],
-                                    "ap": [ [ 128, 3 ], [ 128, 1 ], [ 1, 128 ] ],
-                                    "dtype": "float32",
-                                    "kind": "symbolic_ap",
-                                    "memref": "copy0:0",
-                                    "memsetref": "copy0:0_set"
-                                }
-                            ],
-                            "predicates": []
                         },
                         {
                             "debug": {
@@ -2074,8 +2051,8 @@
                                     "ap": [ [ 128, 4 ], [ 128, 1 ], [ 1, 4 ] ],
                                     "dtype": "bfloat16",
                                     "kind": "symbolic_ap",
-                                    "memref": "identity_local_147",
-                                    "memsetref": "identity_local_147_set"
+                                    "memref": "identity_local_148",
+                                    "memsetref": "identity_local_148_set"
                                 },
                                 {
                                     "addrs": [
@@ -2088,15 +2065,15 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 4, 4 ], [ 1, 3 ] ],
+                                    "ap": [ [ 3, 4 ], [ 1, 3 ] ],
                                     "dtype": "bfloat16",
                                     "kind": "symbolic_ap",
-                                    "memref": "Linear_648/aten_linear/MatMul_t159",
-                                    "memsetref": "Linear_648/aten_linear/MatMul_t159_set"
+                                    "memref": "Linear_648/aten_linear/MatMul_t163",
+                                    "memsetref": "Linear_648/aten_linear/MatMul_t163_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-150",
+                            "name": "I-151",
                             "opcode": "Matmult",
                             "outs": [
                                 {
@@ -2113,8 +2090,8 @@
                                     "ap": [ [ 4, 3 ], [ 4, 1 ], [ 1, 4 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "_t144",
-                                    "memsetref": "_t144_set"
+                                    "memref": "_t145",
+                                    "memsetref": "_t145_set"
                                 }
                             ],
                             "predicates": [],
@@ -2145,12 +2122,12 @@
                                     "ap": [ [ 4, 3 ], [ 4, 1 ], [ 1, 4 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "_t144",
-                                    "memsetref": "_t144_set"
+                                    "memref": "_t145",
+                                    "memsetref": "_t145_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-163",
+                            "name": "I-161",
                             "opcode": "TensorCopy",
                             "outs": [
                                 {
@@ -2167,8 +2144,8 @@
                                     "ap": [ [ 4, 3 ], [ 4, 1 ], [ 1, 4 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "_t167",
-                                    "memsetref": "_t167_set"
+                                    "memref": "_t164",
+                                    "memsetref": "_t164_set"
                                 }
                             ],
                             "predicates": []
@@ -2195,12 +2172,12 @@
                                     "ap": [ [ 4, 3 ], [ 4, 1 ], [ 1, 4 ] ],
                                     "dtype": "float32",
                                     "kind": "symbolic_ap",
-                                    "memref": "_t167",
-                                    "memsetref": "_t167_set"
+                                    "memref": "_t164",
+                                    "memsetref": "_t164_set"
                                 }
                             ],
                             "loopnest": [],
-                            "name": "I-125",
+                            "name": "I-127",
                             "opcode": "AbstractCopy",
                             "outs": [
                                 {

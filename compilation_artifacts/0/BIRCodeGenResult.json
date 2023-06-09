@@ -39,9 +39,9 @@
                         "dtype": "int32",
                         "format": "N",
                         "partition_dim": 0,
-                        "shape": [ 768 ],
+                        "shape": [ 3072 ],
                         "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape:0",
-                        "tensor_shape": [ 3, 128, 2 ]
+                        "tensor_shape": [ 12, 128, 2 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -53,7 +53,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 768, 4 ],
+                            "dims": [ 3072, 4 ],
                             "name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape:0",
                             "pinned": false,
                             "type": "DRAM"
@@ -61,7 +61,7 @@
                     ],
                     "name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape:0_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128, 2 ]
+                    "tensor_shape": [ 12, 128, 2 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -99,9 +99,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 1,
-                        "shape": [ 128, 6, 1 ],
+                        "shape": [ 128, 24, 1 ],
                         "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t23",
-                        "tensor_shape": [ 2, 128, 6 ]
+                        "tensor_shape": [ 2, 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -113,7 +113,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 24 ],
+                            "dims": [ 128, 96 ],
                             "name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t23",
                             "pinned": false,
                             "type": "SB"
@@ -121,7 +121,7 @@
                     ],
                     "name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t23_set",
                     "partition_dim": 1,
-                    "tensor_shape": [ 2, 128, 6 ]
+                    "tensor_shape": [ 2, 128, 24 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -159,9 +159,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 6, 1 ],
+                        "shape": [ 128, 24, 1 ],
                         "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t41",
-                        "tensor_shape": [ 128, 6 ]
+                        "tensor_shape": [ 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -173,7 +173,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 24 ],
+                            "dims": [ 128, 96 ],
                             "name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t41",
                             "pinned": false,
                             "type": "SB"
@@ -181,7 +181,7 @@
                     ],
                     "name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t41_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 6 ]
+                    "tensor_shape": [ 128, 24 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -189,9 +189,9 @@
                         "dtype": "int32",
                         "format": "CRSM",
                         "partition_dim": 0,
-                        "shape": [ 128, 3, 1, 1 ],
+                        "shape": [ 128, 12, 1, 1 ],
                         "tensor_name": "t6",
-                        "tensor_shape": [ 128, 3 ]
+                        "tensor_shape": [ 128, 12 ]
                     },
                     "dtype": "int32",
                     "file": "value_sg00_t6-24-42-44_CRSM.npy",
@@ -203,7 +203,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 384, 4 ],
+                            "dims": [ 1536, 4 ],
                             "name": "t6-24-42-44",
                             "pinned": false,
                             "type": "DRAM"
@@ -211,7 +211,7 @@
                     ],
                     "name": "t6-24-42-44_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 3 ]
+                    "tensor_shape": [ 128, 12 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -219,9 +219,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 4, 1 ],
+                        "shape": [ 128, 12, 1 ],
                         "tensor_name": "t6",
-                        "tensor_shape": [ 128, 4 ]
+                        "tensor_shape": [ 128, 12 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -233,7 +233,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 16 ],
+                            "dims": [ 128, 48 ],
                             "name": "t6-24_local_29",
                             "pinned": false,
                             "type": "SB"
@@ -241,7 +241,7 @@
                     ],
                     "name": "t6-24_local_29_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 4 ]
+                    "tensor_shape": [ 128, 12 ]
                 }
             ],
             "attributes": [
@@ -291,7 +291,7 @@
                             "predicates": []
                         },
                         {
-                            "constant": 128,
+                            "constant": 512,
                             "debug": {
                                 "op_name": "TapasModel_7/TapasEmbeddings_27/aten_to_1/Const"
                             },
@@ -483,7 +483,7 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 3, 128 ], [ 3, 1 ], [ 1, 3 ] ],
+                                    "ap": [ [ 12, 128 ], [ 12, 1 ], [ 1, 12 ] ],
                                     "dtype": "int32",
                                     "kind": "symbolic_ap",
                                     "memref": "t6-24-42-44",
@@ -505,7 +505,7 @@
                                             "terms": []
                                         }
                                     ],
-                                    "ap": [ [ 4, 128 ], [ 4, 1 ], [ 1, 3 ] ],
+                                    "ap": [ [ 12, 128 ], [ 12, 1 ], [ 1, 12 ] ],
                                     "dtype": "int32",
                                     "kind": "symbolic_ap",
                                     "memref": "t6-24_local_29",
@@ -548,7 +548,7 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 12, 64 ], [ 12, 1 ], [ 1, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
                                                     "memref": "t6-24_local_29",
@@ -581,7 +581,7 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
                                                     "memref": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t23",
@@ -622,7 +622,7 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 12, 64 ], [ 12, 1 ], [ 1, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
                                                     "memref": "t6-24_local_29",
@@ -657,7 +657,7 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
                                                     "memref": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t23",
@@ -739,7 +739,7 @@
                                                                             "terms": []
                                                                         }
                                                                     ],
-                                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
+                                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                                     "dtype": "int32",
                                                                     "kind": "symbolic_ap",
                                                                     "memref": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t23",
@@ -774,7 +774,7 @@
                                                                             ]
                                                                         }
                                                                     ],
-                                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
+                                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                                     "dtype": "int32",
                                                                     "kind": "symbolic_ap",
                                                                     "memref": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t41",
@@ -816,7 +816,7 @@
                                 "lb": 0,
                                 "name": "i0_5_0_40_60",
                                 "stride": 1,
-                                "ub": 3
+                                "ub": 12
                             },
                             "blocks": [
                                 {
@@ -845,7 +845,7 @@
                                                             ]
                                                         }
                                                     ],
-                                                    "ap": [ [ 6, 128 ], [ 6, 1 ], [ 1, 2 ] ],
+                                                    "ap": [ [ 24, 128 ], [ 24, 1 ], [ 1, 2 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
                                                     "memref": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape_t41",

@@ -1,6 +1,6 @@
 v0.0.1
-%6 = fn (%v2:0: Tensor[(3, 128), float32], %v0:0: Tensor[(3, 256), float32], %Linear_648/prim_Constant/Const:0: Tensor[(4, 256), float32], %Linear_648/prim_Constant_1/Const:0: Tensor[(4,), float32]) -> (Tensor[(3, 128), float32], Tensor[(3, 4), float32]) {
-  %0 = reshape(%v2:0, framework_op_name="aten_view/Reshape", output_tensors_name=["aten_view/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_view/Reshape", newshape=[3, 128]) // ty=Tensor[(3, 128), float32]
+%6 = fn (%v2:0: Tensor[(3, 512), float32], %v0:0: Tensor[(3, 256), float32], %Linear_648/prim_Constant/Const:0: Tensor[(4, 256), float32], %Linear_648/prim_Constant_1/Const:0: Tensor[(4,), float32]) -> (Tensor[(3, 512), float32], Tensor[(3, 4), float32]) {
+  %0 = reshape(%v2:0, framework_op_name="aten_view/Reshape", output_tensors_name=["aten_view/Reshape:0"], input_tensors_name=[], framework_op_debug_info="aten_view/Reshape", newshape=[3, 512]) // ty=Tensor[(3, 512), float32]
   %1 = transpose(%Linear_648/prim_Constant/Const:0, framework_op_name="Linear_648/aten_linear/transpose", output_tensors_name=["Linear_648/aten_linear/transpose:0"], input_tensors_name=[], framework_op_debug_info="Linear_648/aten_linear/transpose", axes=[1, 0]) // ty=Tensor[(256, 4), float32]
   %2 = transpose(%1, framework_op_name="transpose0", output_tensors_name=["transpose0:0"], input_tensors_name=[], framework_op_debug_info="Linear_648/aten_linear/MatMul", axes=[1, 0]) // ty=Tensor[(4, 256), float32]
   %3 = nn.dense(%v0:0, %2, framework_op_name="Linear_648/aten_linear/MatMul", output_tensors_name=["Linear_648/aten_linear/MatMul:0"], input_tensors_name=[], framework_op_debug_info="Linear_648/aten_linear/MatMul", units=4) // ty=Tensor[(3, 4), float32]

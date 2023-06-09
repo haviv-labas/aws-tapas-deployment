@@ -33,19 +33,19 @@
             "ops": [],
             "size": 1572864,
             "type": "input",
-            "var_id": 2
+            "var_id": 1
         },
         "1:0": {
             "#transfer-type": "input",
             "element_size": 4,
             "internal_shape": [
                 3,
-                256
+                1024
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "input",
-            "var_id": 1
+            "var_id": 2
         },
         "SB": {
             "type": "state-buffer",
@@ -62,7 +62,7 @@
             "ops": [],
             "size": 1572864,
             "type": "output",
-            "var_id": 4
+            "var_id": 3
         },
         "copy1:0": {
             "#file-name": "value_copy1:0-simout.npy",
@@ -70,12 +70,12 @@
             "element_size": 4,
             "internal_shape": [
                 3,
-                256
+                1024
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "output",
-            "var_id": 3
+            "var_id": 4
         }
     },
     "version": "0.6"

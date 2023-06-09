@@ -44,10 +44,10 @@
             "element_size": 4,
             "internal_shape": [
                 3,
-                256
+                1024
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "output",
             "var_id": 5
         },
@@ -56,52 +56,52 @@
             "element_size": 4,
             "internal_shape": [
                 3,
-                128,
+                512,
                 2
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "input",
-            "var_id": 2
+            "var_id": 4
         },
         "TapasModel_7/TapasEmbeddings_27/aten_select_1/Slice:0": {
             "#transfer-type": "input",
             "element_size": 4,
             "internal_shape": [
                 3,
-                128,
+                512,
                 2
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "input",
-            "var_id": 1
+            "var_id": 3
         },
         "TapasModel_7/TapasEmbeddings_27/aten_view_1/Reshape:0": {
             "#file-name": "value_TapasModel_7__TapasEmbeddings_27__aten_view_1__Reshape:0-simout.npy",
             "#transfer-type": "output",
             "element_size": 4,
             "internal_shape": [
-                768
+                3072
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "output",
             "var_id": 6
         },
-        "t33-98-100-v0": {
+        "t33-84-103-105-v0": {
             "#transfer-type": "weight",
             "fabric_path": "main",
-            "file_name": "value_sg00_t33-98-100_CRSM_0.npy",
+            "file_name": "value_sg00_t33-84-103-105_CRSM_0.npy",
             "type": "file",
-            "var_id": 3
+            "var_id": 1
         },
-        "t33-98-100-v1": {
+        "t33-84-103-105-v1": {
             "#transfer-type": "weight",
             "fabric_path": "alt",
-            "file_name": "value_sg00_t33-98-100_CRSM_1.npy",
+            "file_name": "value_sg00_t33-84-103-105_CRSM_1.npy",
             "type": "file",
-            "var_id": 4
+            "var_id": 2
         }
     },
     "version": "0.6"

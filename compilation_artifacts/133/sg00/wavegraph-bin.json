@@ -28,13 +28,13 @@
             "sim_format": "NC",
             "sim_shape": [
                 3,
-                128
+                512
             ],
             "tf_file": "value_2:0.npy",
             "tf_format": "NC",
             "tf_shape": [
                 3,
-                128
+                512
             ]
         },
         "aten_view/Reshape:0": {
@@ -62,19 +62,19 @@
             "sim_format": "NC",
             "sim_shape": [
                 3,
-                128
+                512
             ],
             "tf_file": "value_copy0:0.npy",
             "tf_format": "NC",
             "tf_shape": [
                 3,
-                128
+                512
             ]
         },
-        "identity_129": {
+        "identity_131": {
             "dtype": "float16",
             "is_const": true,
-            "layer_name": "identity_129",
+            "layer_name": "identity_131",
             "sim_format": "CRSM",
             "sim_shape": [
                 128,
@@ -87,10 +87,10 @@
                 64
             ],
             "split_npys": [
-                "value_sg00_identity_129_CRSM_0.npy",
-                "value_sg00_identity_129_CRSM_1.npy"
+                "value_sg00_identity_131_CRSM_0.npy",
+                "value_sg00_identity_131_CRSM_1.npy"
             ],
-            "tf_file": "value_sg00_identity_129_CRSM.npy",
+            "tf_file": "value_sg00_identity_131_CRSM.npy",
             "tf_format": "CRSM",
             "tf_shape": [
                 128,
@@ -99,10 +99,10 @@
                 1
             ]
         },
-        "identity_145": {
+        "identity_146": {
             "dtype": "bfloat16",
             "is_const": true,
-            "layer_name": "identity_145",
+            "layer_name": "identity_146",
             "sim_format": "CRSM",
             "sim_shape": [
                 128,
@@ -115,10 +115,10 @@
                 64
             ],
             "split_npys": [
-                "value_sg00_identity_145_CRSM_0.npy",
-                "value_sg00_identity_145_CRSM_1.npy"
+                "value_sg00_identity_146_CRSM_0.npy",
+                "value_sg00_identity_146_CRSM_1.npy"
             ],
-            "tf_file": "value_sg00_identity_145_CRSM.npy",
+            "tf_file": "value_sg00_identity_146_CRSM.npy",
             "tf_format": "CRSM",
             "tf_shape": [
                 128,
@@ -127,7 +127,7 @@
                 1
             ]
         },
-        "t13-76-101-105": {
+        "t13-77-103-107": {
             "dtype": "bfloat16",
             "is_const": true,
             "layer_name": "t13",
@@ -143,10 +143,10 @@
                 64
             ],
             "split_npys": [
-                "value_sg00_t13-76-101-105_CRSM_0.npy",
-                "value_sg00_t13-76-101-105_CRSM_1.npy"
+                "value_sg00_t13-77-103-107_CRSM_0.npy",
+                "value_sg00_t13-77-103-107_CRSM_1.npy"
             ],
-            "tf_file": "value_sg00_t13-76-101-105_CRSM.npy",
+            "tf_file": "value_sg00_t13-77-103-107_CRSM.npy",
             "tf_format": "CRSM",
             "tf_shape": [
                 128,
@@ -155,7 +155,7 @@
                 1
             ]
         },
-        "t20-103-107": {
+        "t20-105-109": {
             "dtype": "float32",
             "is_const": true,
             "layer_name": "t20",
@@ -171,10 +171,10 @@
                 2
             ],
             "split_npys": [
-                "value_sg00_t20-103-107_CRSM_0.npy",
-                "value_sg00_t20-103-107_CRSM_1.npy"
+                "value_sg00_t20-105-109_CRSM_0.npy",
+                "value_sg00_t20-105-109_CRSM_1.npy"
             ],
-            "tf_file": "value_sg00_t20-103-107_CRSM.npy",
+            "tf_file": "value_sg00_t20-105-109_CRSM.npy",
             "tf_format": "CRSM",
             "tf_shape": [
                 4,
@@ -209,7 +209,7 @@
             "previous_syncs": [],
             "previous_waveops": [],
             "queue0": "qPoolPW0",
-            "ref_file": "value_sg00_identity_145_CRSM.npy",
+            "ref_file": "value_sg00_identity_146_CRSM.npy",
             "ref_file_shape": [
                 128,
                 128,
@@ -217,14 +217,14 @@
                 1
             ],
             "ref_file_sz": 32768,
-            "sb_address": 1312,
+            "sb_address": 3624,
             "start_at_part_num": 0,
             "stride": 1,
-            "tensor_name": "identity_145",
+            "tensor_name": "identity_146",
             "trig_ord0": 1,
             "trig_ord1": -1,
             "update_value0": 0,
-            "waveop_name": "identity_145_TO_identity_local_147_Load_I-149-0",
+            "waveop_name": "identity_146_TO_identity_local_148_Load_I-150-0",
             "waveop_type": "SBAtomLoad"
         },
         {
@@ -242,31 +242,31 @@
                     0
                 ]
             },
-            "layer_name": "2:0",
-            "length": 512,
+            "layer_name": "0:0",
+            "length": 1024,
             "num_partitions": 3,
             "offset_in_file": 0,
             "order": 1,
             "partition_step": 1,
-            "partition_step_bytes": 512,
+            "partition_step_bytes": 1024,
             "pinned": false,
             "previous_syncs": [],
             "previous_waveops": [],
             "queue0": "qPoolIn0",
-            "ref_file": "value_2:0.npy",
+            "ref_file": "value_0:0.npy",
             "ref_file_shape": [
                 3,
-                128
+                256
             ],
-            "ref_file_sz": 1536,
-            "sb_address": 96512,
+            "ref_file_sz": 3072,
+            "sb_address": 97024,
             "start_at_part_num": 0,
             "stride": 1,
-            "tensor_name": "2:0",
+            "tensor_name": "0:0",
             "trig_ord0": 1,
             "trig_ord1": -1,
             "update_value0": 0,
-            "waveop_name": "2:0_TO_2:0_t165_Load_I-114-0",
+            "waveop_name": "0:0_TO_0:0_local_67_Load_I-114-0",
             "waveop_type": "SBAtomLoad"
         },
         {
@@ -284,13 +284,13 @@
                     64
                 ]
             },
-            "layer_name": "0:0",
-            "length": 1024,
+            "layer_name": "2:0",
+            "length": 2048,
             "num_partitions": 3,
             "offset_in_file": 0,
             "order": 2,
             "partition_step": 1,
-            "partition_step_bytes": 1024,
+            "partition_step_bytes": 2048,
             "pinned": false,
             "previous_syncs": [
                 {
@@ -298,23 +298,23 @@
                 }
             ],
             "previous_waveops": [
-                "2:0_TO_2:0_t165_Load_I-114-0"
+                "0:0_TO_0:0_local_67_Load_I-114-0"
             ],
             "queue0": "qPoolIn0",
-            "ref_file": "value_0:0.npy",
+            "ref_file": "value_2:0.npy",
             "ref_file_shape": [
                 3,
-                256
+                512
             ],
-            "ref_file_sz": 3072,
-            "sb_address": 97024,
+            "ref_file_sz": 6144,
+            "sb_address": 94976,
             "start_at_part_num": 0,
             "stride": 1,
-            "tensor_name": "0:0",
+            "tensor_name": "2:0",
             "trig_ord0": 2,
             "trig_ord1": -1,
             "update_value0": 0,
-            "waveop_name": "0:0_TO_0:0_local_67_Load_I-112-0",
+            "waveop_name": "2:0_TO_2:0_local_74_Load_I-116-0",
             "waveop_type": "SBAtomLoad"
         },
         {
@@ -342,7 +342,7 @@
             "previous_waveops": [],
             "queue0": "qPoolPW0",
             "queue1": "qPoolPW1",
-            "ref_file": "value_sg00_identity_129_CRSM.npy",
+            "ref_file": "value_sg00_identity_131_CRSM.npy",
             "ref_file_shape": [
                 128,
                 128,
@@ -353,12 +353,12 @@
             "sb_address": 98048,
             "start_at_part_num": 0,
             "stride": 1,
-            "tensor_name": "identity_129",
+            "tensor_name": "identity_131",
             "trig_ord0": 2,
             "trig_ord1": 1,
             "update_value0": 0,
             "update_value1": 0,
-            "waveop_name": "identity_129_TO_identity_local_131_Load_I-133-0",
+            "waveop_name": "identity_131_TO_identity_local_133_Load_I-135-0",
             "waveop_type": "SBAtomLoad"
         },
         {
@@ -386,7 +386,7 @@
             "previous_waveops": [],
             "queue0": "qPoolPW0",
             "queue1": "qPoolPW1",
-            "ref_file": "value_sg00_t13-76-101-105_CRSM.npy",
+            "ref_file": "value_sg00_t13-77-103-107_CRSM.npy",
             "ref_file_shape": [
                 128,
                 8,
@@ -394,15 +394,15 @@
                 1
             ],
             "ref_file_sz": 2048,
-            "sb_address": 96496,
+            "sb_address": 94960,
             "start_at_part_num": 0,
             "stride": 1,
-            "tensor_name": "t13-76-101-105",
+            "tensor_name": "t13-77-103-107",
             "trig_ord0": 3,
             "trig_ord1": 2,
             "update_value0": 0,
             "update_value1": 0,
-            "waveop_name": "t13-76-101-105_TO_t13-76_local_82_Load_I-117-0",
+            "waveop_name": "t13-77-103-107_TO_t13-77_local_83_Load_I-119-0",
             "waveop_type": "SBAtomLoad"
         },
         {
@@ -430,7 +430,7 @@
             "previous_waveops": [],
             "queue0": "qPoolPW0",
             "queue1": "qPoolPW1",
-            "ref_file": "value_sg00_t20-103-107_CRSM.npy",
+            "ref_file": "value_sg00_t20-105-109_CRSM.npy",
             "ref_file_shape": [
                 4,
                 1,
@@ -441,22 +441,22 @@
             "sb_address": 98040,
             "start_at_part_num": 64,
             "stride": 1,
-            "tensor_name": "t20-103-107",
+            "tensor_name": "t20-105-109",
             "trig_ord0": 4,
             "trig_ord1": 3,
             "update_value0": 0,
             "update_value1": 0,
-            "waveop_name": "t20-103-107_TO__t164_Load_I-119-0",
+            "waveop_name": "t20-105-109_TO__t162_Load_I-121-0",
             "waveop_type": "SBAtomLoad"
         },
         {
             "contain_weights": false,
             "dst_is_psum": false,
-            "dst_sb_address": 528,
+            "dst_sb_address": 0,
             "dst_start_at_part_num": 0,
             "dst_w_num": 1,
             "dst_w_step": 0,
-            "dst_x_num": 128,
+            "dst_x_num": 256,
             "dst_x_step": 1,
             "dst_y_num": 1,
             "dst_y_step": 1,
@@ -472,7 +472,7 @@
                     192
                 ]
             },
-            "layer_name": "2:0",
+            "layer_name": "0:0",
             "num_partitions": 3,
             "order": 6,
             "out_dtype": "float16",
@@ -482,27 +482,27 @@
                 }
             ],
             "previous_waveops": [
-                "2:0_TO_2:0_t165_Load_I-114-0"
+                "0:0_TO_0:0_local_67_Load_I-114-0"
             ],
-            "ref_file": "value_2:0_t157.npy",
+            "ref_file": "value_0:0_t156.npy",
             "ref_file_shape": [
                 3,
-                128,
+                256,
                 1
             ],
             "src_is_psum": false,
-            "src_sb_address": 96512,
+            "src_sb_address": 97024,
             "src_start_at_part_num": 0,
             "src_w_num": 1,
             "src_w_step": 0,
-            "src_x_num": 128,
+            "src_x_num": 256,
             "src_x_step": 1,
             "src_y_num": 1,
             "src_y_step": 1,
             "src_z_num": 1,
             "src_z_step": 0,
-            "tensor_name": "2:0_t157",
-            "waveop_name": "I-137-0",
+            "tensor_name": "0:0_t156",
+            "waveop_name": "I-130-0",
             "waveop_type": "TensorCopy"
         },
         {
@@ -512,7 +512,7 @@
                     0
                 ]
             },
-            "layer_name": "2:0",
+            "layer_name": "0:0",
             "order": 7,
             "previous_syncs": [],
             "previous_waveops": [],
@@ -523,7 +523,7 @@
         {
             "contain_weights": false,
             "dst_is_psum": true,
-            "dst_psum_bank_id": 2,
+            "dst_psum_bank_id": 1,
             "dst_psum_bank_offset": 0,
             "dst_x_num": 3,
             "dst_x_step": 1,
@@ -545,7 +545,7 @@
                 ],
                 "pool": []
             },
-            "layer_name": "2:0",
+            "layer_name": "0:0",
             "num_column_partitions": 64,
             "num_row_partitions": 3,
             "order": 8,
@@ -570,478 +570,11 @@
                 }
             ],
             "previous_waveops": [
-                "I-137-0",
-                "identity_129_TO_identity_local_131_Load_I-133-0",
+                "I-130-0",
+                "identity_131_TO_identity_local_133_Load_I-135-0",
                 "pe_throttle-0"
             ],
-            "ref_file": "value_2:0_t154.npy",
-            "ref_file_shape": [
-                64,
-                6,
-                1
-            ],
-            "src_is_psum": false,
-            "src_sb_address": 98048,
-            "src_start_at_part_num": 0,
-            "src_x_num": 3,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "start_tensor_calc": true,
-            "stop_tensor_calc": false,
-            "tensor_name": "2:0_t154",
-            "waveop_name": "I-138-0",
-            "waveop_type": "MatMul",
-            "weights_sb_address": 528
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": true,
-            "dst_psum_bank_id": 2,
-            "dst_psum_bank_offset": 3,
-            "dst_x_num": 3,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pe",
-            "ifmap_replication_num_rows": 0,
-            "ifmap_replication_resolution": 0,
-            "ifmap_replication_shift_amnt": 0,
-            "in_dtype": "float16",
-            "instr_pcs": {
-                "act": [],
-                "pe": [
-                    256,
-                    320
-                ],
-                "pool": []
-            },
-            "layer_name": "2:0",
-            "num_column_partitions": 64,
-            "num_row_partitions": 3,
-            "order": 9,
-            "out_dtype": "float32",
-            "previous_syncs": [
-                {
-                    "sync_type": "none"
-                }
-            ],
-            "previous_waveops": [
-                "identity_129_TO_identity_local_131_Load_I-133-0"
-            ],
-            "ref_file": "value_2:0_t154.npy",
-            "ref_file_shape": [
-                64,
-                6,
-                1
-            ],
-            "src_is_psum": false,
-            "src_sb_address": 98048,
-            "src_start_at_part_num": 0,
-            "src_x_num": 3,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "start_tensor_calc": true,
-            "stop_tensor_calc": false,
-            "tensor_name": "2:0_t154",
-            "waveop_name": "I-138-1",
-            "waveop_type": "MatMul",
-            "weights_sb_address": 656
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": false,
-            "dst_sb_address": 784,
-            "dst_start_at_part_num": 0,
-            "dst_w_num": 1,
-            "dst_w_step": 0,
-            "dst_x_num": 3,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pool",
-            "in_dtype": "float32",
-            "instr_pcs": {
-                "act": [],
-                "pe": [],
-                "pool": [
-                    256
-                ]
-            },
-            "layer_name": "2:0",
-            "num_partitions": 64,
-            "order": 10,
-            "out_dtype": "float32",
-            "previous_syncs": [
-                {
-                    "event_id": 30,
-                    "event_id_wrap_cnt": 0,
-                    "set_mode": 2,
-                    "sync_type": "event",
-                    "wait_mode": 2
-                }
-            ],
-            "previous_waveops": [
-                "I-138-1"
-            ],
-            "ref_file": "value_2:0_t152.npy",
-            "ref_file_shape": [
-                128,
-                4,
-                1
-            ],
-            "src_is_psum": true,
-            "src_psum_bank_id": 2,
-            "src_psum_bank_offset": 0,
-            "src_w_num": 1,
-            "src_w_step": 0,
-            "src_x_num": 3,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "tensor_name": "2:0_t152",
-            "waveop_name": "I-153-0",
-            "waveop_type": "TensorCopy"
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": false,
-            "dst_sb_address": 800,
-            "dst_start_at_part_num": 0,
-            "dst_w_num": 1,
-            "dst_w_step": 0,
-            "dst_x_num": 3,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pool",
-            "in_dtype": "float32",
-            "instr_pcs": {
-                "act": [],
-                "pe": [],
-                "pool": [
-                    320
-                ]
-            },
-            "layer_name": "copy0",
-            "num_partitions": 64,
-            "order": 11,
-            "out_dtype": "float16",
-            "previous_syncs": [
-                {
-                    "sync_type": "none"
-                }
-            ],
-            "previous_waveops": [
-                "I-153-0"
-            ],
-            "ref_file": "value_copy0_t160.npy",
-            "ref_file_shape": [
-                128,
-                4,
-                1
-            ],
-            "src_is_psum": false,
-            "src_sb_address": 784,
-            "src_start_at_part_num": 0,
-            "src_w_num": 1,
-            "src_w_step": 0,
-            "src_x_num": 3,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "tensor_name": "copy0_t160",
-            "waveop_name": "I-141-0",
-            "waveop_type": "TensorCopy"
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": false,
-            "dst_sb_address": 784,
-            "dst_start_at_part_num": 64,
-            "dst_w_num": 1,
-            "dst_w_step": 0,
-            "dst_x_num": 3,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pool",
-            "in_dtype": "float32",
-            "instr_pcs": {
-                "act": [],
-                "pe": [],
-                "pool": [
-                    384
-                ]
-            },
-            "layer_name": "2:0",
-            "num_partitions": 64,
-            "order": 12,
-            "out_dtype": "float32",
-            "previous_syncs": [],
-            "previous_waveops": [],
-            "ref_file": "value_2:0_t152.npy",
-            "ref_file_shape": [
-                128,
-                4,
-                1
-            ],
-            "src_is_psum": true,
-            "src_psum_bank_id": 2,
-            "src_psum_bank_offset": 3,
-            "src_w_num": 1,
-            "src_w_step": 0,
-            "src_x_num": 3,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "tensor_name": "2:0_t152",
-            "waveop_name": "I-153-1",
-            "waveop_type": "TensorCopy"
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": false,
-            "dst_sb_address": 800,
-            "dst_start_at_part_num": 64,
-            "dst_w_num": 1,
-            "dst_w_step": 0,
-            "dst_x_num": 3,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pool",
-            "in_dtype": "float32",
-            "instr_pcs": {
-                "act": [],
-                "pe": [],
-                "pool": [
-                    448
-                ]
-            },
-            "layer_name": "copy0",
-            "num_partitions": 64,
-            "order": 13,
-            "out_dtype": "float16",
-            "previous_syncs": [
-                {
-                    "sync_type": "none"
-                }
-            ],
-            "previous_waveops": [
-                "I-153-1"
-            ],
-            "ref_file": "value_copy0_t160.npy",
-            "ref_file_shape": [
-                128,
-                4,
-                1
-            ],
-            "src_is_psum": false,
-            "src_sb_address": 784,
-            "src_start_at_part_num": 64,
-            "src_w_num": 1,
-            "src_w_step": 0,
-            "src_x_num": 3,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "tensor_name": "copy0_t160",
-            "waveop_name": "I-141-1",
-            "waveop_type": "TensorCopy"
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": true,
-            "dst_psum_bank_id": 0,
-            "dst_psum_bank_offset": 0,
-            "dst_x_num": 128,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pe",
-            "ifmap_replication_num_rows": 0,
-            "ifmap_replication_resolution": 0,
-            "ifmap_replication_shift_amnt": 0,
-            "in_dtype": "float16",
-            "instr_pcs": {
-                "act": [],
-                "pe": [
-                    384,
-                    448
-                ],
-                "pool": []
-            },
-            "layer_name": "copy0",
-            "num_column_partitions": 3,
-            "num_row_partitions": 128,
-            "order": 14,
-            "out_dtype": "float32",
-            "previous_syncs": [
-                {
-                    "event_id": 31,
-                    "event_id_wrap_cnt": 0,
-                    "set_mode": 2,
-                    "sync_type": "event",
-                    "wait_mode": 2
-                },
-                {
-                    "sync_type": "none"
-                }
-            ],
-            "previous_waveops": [
-                "I-141-1",
-                "identity_129_TO_identity_local_131_Load_I-133-0"
-            ],
-            "ref_file": "value_copy0_t140.npy",
-            "ref_file_shape": [
-                3,
-                128,
-                1
-            ],
-            "src_is_psum": false,
-            "src_sb_address": 98048,
-            "src_start_at_part_num": 0,
-            "src_x_num": 128,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "start_tensor_calc": true,
-            "stop_tensor_calc": false,
-            "tensor_name": "copy0_t140",
-            "waveop_name": "I-142-0",
-            "waveop_type": "MatMul",
-            "weights_sb_address": 800
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": false,
-            "dst_sb_address": 0,
-            "dst_start_at_part_num": 0,
-            "dst_w_num": 1,
-            "dst_w_step": 0,
-            "dst_x_num": 256,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pool",
-            "in_dtype": "float32",
-            "instr_pcs": {
-                "act": [],
-                "pe": [],
-                "pool": [
-                    512,
-                    576
-                ]
-            },
-            "layer_name": "0:0",
-            "num_partitions": 3,
-            "order": 15,
-            "out_dtype": "float16",
-            "previous_syncs": [
-                {
-                    "sync_type": "semaphore"
-                }
-            ],
-            "previous_waveops": [
-                "0:0_TO_0:0_local_67_Load_I-112-0"
-            ],
-            "ref_file": "value_0:0_t155.npy",
-            "ref_file_shape": [
-                3,
-                256,
-                1
-            ],
-            "src_is_psum": false,
-            "src_sb_address": 97024,
-            "src_start_at_part_num": 0,
-            "src_w_num": 1,
-            "src_w_step": 0,
-            "src_x_num": 256,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "tensor_name": "0:0_t155",
-            "waveop_name": "I-128-0",
-            "waveop_type": "TensorCopy"
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": true,
-            "dst_psum_bank_id": 1,
-            "dst_psum_bank_offset": 0,
-            "dst_x_num": 3,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pe",
-            "ifmap_replication_num_rows": 0,
-            "ifmap_replication_resolution": 0,
-            "ifmap_replication_shift_amnt": 0,
-            "in_dtype": "float16",
-            "instr_pcs": {
-                "act": [],
-                "pe": [
-                    512,
-                    576
-                ],
-                "pool": []
-            },
-            "layer_name": "0:0",
-            "num_column_partitions": 64,
-            "num_row_partitions": 3,
-            "order": 16,
-            "out_dtype": "float32",
-            "previous_syncs": [
-                {
-                    "event_id": 33,
-                    "event_id_wrap_cnt": 0,
-                    "set_mode": 2,
-                    "sync_type": "event",
-                    "wait_mode": 2
-                },
-                {
-                    "sync_type": "none"
-                }
-            ],
-            "previous_waveops": [
-                "I-128-0",
-                "identity_129_TO_identity_local_131_Load_I-133-0"
-            ],
-            "ref_file": "value_0:0_t126.npy",
+            "ref_file": "value_0:0_t128.npy",
             "ref_file_shape": [
                 64,
                 12,
@@ -1058,8 +591,8 @@
             "src_z_step": 0,
             "start_tensor_calc": true,
             "stop_tensor_calc": false,
-            "tensor_name": "0:0_t126",
-            "waveop_name": "I-134-0",
+            "tensor_name": "0:0_t128",
+            "waveop_name": "I-136-0",
             "waveop_type": "MatMul",
             "weights_sb_address": 0
         },
@@ -1082,15 +615,15 @@
             "instr_pcs": {
                 "act": [],
                 "pe": [
-                    640,
-                    704
+                    256,
+                    320
                 ],
                 "pool": []
             },
             "layer_name": "0:0",
             "num_column_partitions": 64,
             "num_row_partitions": 3,
-            "order": 17,
+            "order": 9,
             "out_dtype": "float32",
             "previous_syncs": [
                 {
@@ -1098,9 +631,9 @@
                 }
             ],
             "previous_waveops": [
-                "identity_129_TO_identity_local_131_Load_I-133-0"
+                "identity_131_TO_identity_local_133_Load_I-135-0"
             ],
-            "ref_file": "value_0:0_t126.npy",
+            "ref_file": "value_0:0_t128.npy",
             "ref_file_shape": [
                 64,
                 12,
@@ -1117,8 +650,8 @@
             "src_z_step": 0,
             "start_tensor_calc": true,
             "stop_tensor_calc": false,
-            "tensor_name": "0:0_t126",
-            "waveop_name": "I-134-1",
+            "tensor_name": "0:0_t128",
+            "waveop_name": "I-136-1",
             "waveop_type": "MatMul",
             "weights_sb_address": 128
         },
@@ -1141,15 +674,15 @@
             "instr_pcs": {
                 "act": [],
                 "pe": [
-                    768,
-                    832
+                    384,
+                    448
                 ],
                 "pool": []
             },
             "layer_name": "0:0",
             "num_column_partitions": 64,
             "num_row_partitions": 3,
-            "order": 18,
+            "order": 10,
             "out_dtype": "float32",
             "previous_syncs": [
                 {
@@ -1157,9 +690,9 @@
                 }
             ],
             "previous_waveops": [
-                "identity_129_TO_identity_local_131_Load_I-133-0"
+                "identity_131_TO_identity_local_133_Load_I-135-0"
             ],
-            "ref_file": "value_0:0_t126.npy",
+            "ref_file": "value_0:0_t128.npy",
             "ref_file_shape": [
                 64,
                 12,
@@ -1176,8 +709,8 @@
             "src_z_step": 0,
             "start_tensor_calc": true,
             "stop_tensor_calc": false,
-            "tensor_name": "0:0_t126",
-            "waveop_name": "I-134-2",
+            "tensor_name": "0:0_t128",
+            "waveop_name": "I-136-2",
             "waveop_type": "MatMul",
             "weights_sb_address": 256
         },
@@ -1200,15 +733,15 @@
             "instr_pcs": {
                 "act": [],
                 "pe": [
-                    896,
-                    960
+                    512,
+                    576
                 ],
                 "pool": []
             },
             "layer_name": "0:0",
             "num_column_partitions": 64,
             "num_row_partitions": 3,
-            "order": 19,
+            "order": 11,
             "out_dtype": "float32",
             "previous_syncs": [
                 {
@@ -1216,9 +749,9 @@
                 }
             ],
             "previous_waveops": [
-                "identity_129_TO_identity_local_131_Load_I-133-0"
+                "identity_131_TO_identity_local_133_Load_I-135-0"
             ],
-            "ref_file": "value_0:0_t126.npy",
+            "ref_file": "value_0:0_t128.npy",
             "ref_file_shape": [
                 64,
                 12,
@@ -1235,113 +768,10 @@
             "src_z_step": 0,
             "start_tensor_calc": true,
             "stop_tensor_calc": false,
-            "tensor_name": "0:0_t126",
-            "waveop_name": "I-134-3",
+            "tensor_name": "0:0_t128",
+            "waveop_name": "I-136-3",
             "waveop_type": "MatMul",
             "weights_sb_address": 384
-        },
-        {
-            "contain_weights": false,
-            "dst_is_psum": false,
-            "dst_sb_address": 808,
-            "dst_start_at_part_num": 64,
-            "dst_w_num": 1,
-            "dst_w_step": 0,
-            "dst_x_num": 128,
-            "dst_x_step": 1,
-            "dst_y_num": 1,
-            "dst_y_step": 1,
-            "dst_z_num": 1,
-            "dst_z_step": 0,
-            "engine": "pool",
-            "in_dtype": "float32",
-            "instr_pcs": {
-                "act": [],
-                "pe": [],
-                "pool": [
-                    640
-                ]
-            },
-            "layer_name": "copy0",
-            "num_partitions": 3,
-            "order": 20,
-            "out_dtype": "float32",
-            "previous_syncs": [
-                {
-                    "event_id": 32,
-                    "event_id_wrap_cnt": 0,
-                    "set_mode": 2,
-                    "sync_type": "event",
-                    "wait_mode": 2
-                }
-            ],
-            "previous_waveops": [
-                "I-142-0"
-            ],
-            "ref_file": "value_copy0_t166.npy",
-            "ref_file_shape": [
-                3,
-                128,
-                1
-            ],
-            "src_is_psum": true,
-            "src_psum_bank_id": 0,
-            "src_psum_bank_offset": 0,
-            "src_w_num": 1,
-            "src_w_step": 0,
-            "src_x_num": 128,
-            "src_x_step": 1,
-            "src_y_num": 1,
-            "src_y_step": 1,
-            "src_z_num": 1,
-            "src_z_step": 0,
-            "tensor_name": "copy0_t166",
-            "waveop_name": "I-162-0",
-            "waveop_type": "TensorCopy"
-        },
-        {
-            "contain_weights": false,
-            "data_type": "float32",
-            "dtype": "float32",
-            "engine": "pool",
-            "final_layer_ofmap": true,
-            "instr_pcs": {
-                "act": [],
-                "pe": [],
-                "pool": [
-                    704
-                ]
-            },
-            "layer_name": "copy0",
-            "length": 512,
-            "num_partitions": 3,
-            "offset_in_file": 0,
-            "order": 21,
-            "partition_step": 1,
-            "partition_step_bytes": 512,
-            "previous_syncs": [
-                {
-                    "sync_type": "none"
-                }
-            ],
-            "previous_waveops": [
-                "I-162-0"
-            ],
-            "queue0": "qPoolOut0",
-            "ref_file": "value_copy0:0-simout.npy",
-            "ref_file_shape": [
-                3,
-                128
-            ],
-            "ref_file_sz": 1536,
-            "sb_address": 808,
-            "start_at_part_num": 64,
-            "tensor_name": "copy0:0",
-            "trig_ord0": 1,
-            "trig_ord1": -1,
-            "update_value0": 0,
-            "waveop_name": "copy0_t166_TO_copy0:0_Save_I-123-0",
-            "waveop_type": "SBAtomSave"
         },
         {
             "contain_weights": false,
@@ -1362,16 +792,16 @@
                 "act": [],
                 "pe": [],
                 "pool": [
-                    768
+                    256
                 ]
             },
             "layer_name": "0:0",
             "num_partitions": 64,
-            "order": 22,
+            "order": 12,
             "out_dtype": "bfloat16",
             "previous_syncs": [
                 {
-                    "event_id": 34,
+                    "event_id": 30,
                     "event_id_wrap_cnt": 0,
                     "set_mode": 2,
                     "sync_type": "event",
@@ -1379,7 +809,7 @@
                 }
             ],
             "previous_waveops": [
-                "I-134-3"
+                "I-136-3"
             ],
             "ref_file": "value_0:0_transpose_41.npy",
             "ref_file_shape": [
@@ -1399,7 +829,7 @@
             "src_z_num": 1,
             "src_z_step": 0,
             "tensor_name": "0:0_transpose_41",
-            "waveop_name": "I-127-0",
+            "waveop_name": "I-129-0",
             "waveop_type": "TensorCopy"
         },
         {
@@ -1421,12 +851,12 @@
                 "act": [],
                 "pe": [],
                 "pool": [
-                    832
+                    320
                 ]
             },
             "layer_name": "0:0",
             "num_partitions": 64,
-            "order": 23,
+            "order": 13,
             "out_dtype": "bfloat16",
             "previous_syncs": [],
             "previous_waveops": [],
@@ -1448,7 +878,7 @@
             "src_z_num": 1,
             "src_z_step": 0,
             "tensor_name": "0:0_transpose_41",
-            "waveop_name": "I-127-1",
+            "waveop_name": "I-129-1",
             "waveop_type": "TensorCopy"
         },
         {
@@ -1470,22 +900,22 @@
             "instr_pcs": {
                 "act": [],
                 "pe": [
-                    1024,
-                    1088
+                    640,
+                    704
                 ],
                 "pool": []
             },
             "layer_name": "Linear_648/aten_linear/MatMul",
             "num_column_partitions": 4,
             "num_row_partitions": 128,
-            "order": 24,
+            "order": 14,
             "out_dtype": "float32",
             "previous_syncs": [
                 {
                     "sync_type": "none"
                 },
                 {
-                    "event_id": 35,
+                    "event_id": 31,
                     "event_id_wrap_cnt": 0,
                     "set_mode": 2,
                     "sync_type": "event",
@@ -1493,10 +923,10 @@
                 }
             ],
             "previous_waveops": [
-                "t13-76-101-105_TO_t13-76_local_82_Load_I-117-0",
-                "I-127-1"
+                "t13-77-103-107_TO_t13-77_local_83_Load_I-119-0",
+                "I-129-1"
             ],
-            "ref_file": "value_Linear_648__aten_linear__MatMul_t90.npy",
+            "ref_file": "value_Linear_648__aten_linear__MatMul_t96.npy",
             "ref_file_shape": [
                 4,
                 3,
@@ -1513,10 +943,10 @@
             "src_z_step": 0,
             "start_tensor_calc": true,
             "stop_tensor_calc": false,
-            "tensor_name": "Linear_648/aten_linear/MatMul_t90",
-            "waveop_name": "I-118-0",
+            "tensor_name": "Linear_648/aten_linear/MatMul_t96",
+            "waveop_name": "I-120-0",
             "waveop_type": "MatMul",
-            "weights_sb_address": 96496
+            "weights_sb_address": 94960
         },
         {
             "contain_weights": false,
@@ -1537,15 +967,15 @@
             "instr_pcs": {
                 "act": [],
                 "pe": [
-                    1152,
-                    1216
+                    768,
+                    832
                 ],
                 "pool": []
             },
             "layer_name": "Linear_648/aten_linear/MatMul",
             "num_column_partitions": 4,
             "num_row_partitions": 128,
-            "order": 25,
+            "order": 15,
             "out_dtype": "float32",
             "previous_syncs": [
                 {
@@ -1553,9 +983,9 @@
                 }
             ],
             "previous_waveops": [
-                "t13-76-101-105_TO_t13-76_local_82_Load_I-117-0"
+                "t13-77-103-107_TO_t13-77_local_83_Load_I-119-0"
             ],
-            "ref_file": "value_Linear_648__aten_linear__MatMul_t90.npy",
+            "ref_file": "value_Linear_648__aten_linear__MatMul_t96.npy",
             "ref_file_shape": [
                 4,
                 3,
@@ -1572,10 +1002,546 @@
             "src_z_step": 0,
             "start_tensor_calc": false,
             "stop_tensor_calc": false,
-            "tensor_name": "Linear_648/aten_linear/MatMul_t90",
-            "waveop_name": "I-118-1",
+            "tensor_name": "Linear_648/aten_linear/MatMul_t96",
+            "waveop_name": "I-120-1",
             "waveop_type": "MatMul",
-            "weights_sb_address": 96504
+            "weights_sb_address": 94968
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 528,
+            "dst_start_at_part_num": 0,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 512,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "float32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    384,
+                    448
+                ]
+            },
+            "layer_name": "2:0",
+            "num_partitions": 3,
+            "order": 16,
+            "out_dtype": "float16",
+            "previous_syncs": [
+                {
+                    "sync_type": "semaphore"
+                }
+            ],
+            "previous_waveops": [
+                "2:0_TO_2:0_local_74_Load_I-116-0"
+            ],
+            "ref_file": "value_2:0_t159.npy",
+            "ref_file_shape": [
+                3,
+                512,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 94976,
+            "src_start_at_part_num": 0,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 512,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "2:0_t159",
+            "waveop_name": "I-139-0",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    896,
+                    960
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 17,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "event_id": 33,
+                    "event_id_wrap_cnt": 0,
+                    "set_mode": 2,
+                    "sync_type": "event",
+                    "wait_mode": 2
+                },
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "I-139-0",
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-0",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 528
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 3,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    1024,
+                    1088
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 18,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-1",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 656
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 6,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    1152,
+                    1216
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 19,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-2",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 784
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 9,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    1280,
+                    1344
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 20,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-3",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 912
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 12,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    1408,
+                    1472
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 21,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-4",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1040
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 15,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    1536,
+                    1600
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 22,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-5",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1168
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 18,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    1664,
+                    1728
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 23,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-6",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1296
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 2,
+            "dst_psum_bank_offset": 21,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    1792,
+                    1856
+                ],
+                "pool": []
+            },
+            "layer_name": "2:0",
+            "num_column_partitions": 64,
+            "num_row_partitions": 3,
+            "order": 24,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_2:0_t138.npy",
+            "ref_file_shape": [
+                64,
+                24,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "2:0_t138",
+            "waveop_name": "I-140-7",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1424
         },
         {
             "contain_weights": false,
@@ -1598,18 +1564,21 @@
                 "act": [],
                 "pe": [],
                 "pool": [
-                    896
+                    512
                 ]
             },
             "layer_name": "Linear_648/aten_linear/MatMul",
             "num_partitions": 4,
             "op0": "add",
             "op1": "bypass",
-            "order": 26,
+            "order": 25,
             "out_dtype": "bfloat16",
             "previous_syncs": [
                 {
-                    "event_id": 36,
+                    "sync_type": "none"
+                },
+                {
+                    "event_id": 32,
                     "event_id_wrap_cnt": 0,
                     "set_mode": 2,
                     "sync_type": "event",
@@ -1617,20 +1586,17 @@
                 },
                 {
                     "sync_type": "none"
-                },
-                {
-                    "sync_type": "none"
                 }
             ],
             "previous_waveops": [
-                "I-118-1",
-                "t20-103-107_TO__t164_Load_I-119-0",
-                "I-128-0"
+                "I-130-0",
+                "I-120-1",
+                "t20-105-109_TO__t162_Load_I-121-0"
             ],
-            "ref_file": "value_Linear_648__aten_linear__MatMul_t159.npy",
+            "ref_file": "value_Linear_648__aten_linear__MatMul_t163.npy",
             "ref_file_shape": [
                 4,
-                4,
+                3,
                 1
             ],
             "reverse0": false,
@@ -1644,8 +1610,8 @@
             "src_y_step": 1,
             "src_z_num": 1,
             "src_z_step": 0,
-            "tensor_name": "Linear_648/aten_linear/MatMul_t159",
-            "waveop_name": "I-121-0",
+            "tensor_name": "Linear_648/aten_linear/MatMul_t163",
+            "waveop_name": "I-123-0",
             "waveop_type": "TensorScalarPtr"
         },
         {
@@ -1667,22 +1633,19 @@
             "instr_pcs": {
                 "act": [],
                 "pe": [
-                    1280,
-                    1344
+                    1920,
+                    1984
                 ],
                 "pool": []
             },
             "layer_name": "unknown",
             "num_column_partitions": 3,
             "num_row_partitions": 4,
-            "order": 27,
+            "order": 26,
             "out_dtype": "float32",
             "previous_syncs": [
                 {
-                    "sync_type": "none"
-                },
-                {
-                    "event_id": 37,
+                    "event_id": 35,
                     "event_id_wrap_cnt": 0,
                     "set_mode": 2,
                     "sync_type": "event",
@@ -1693,22 +1656,25 @@
                 },
                 {
                     "sync_type": "none"
+                },
+                {
+                    "sync_type": "none"
                 }
             ],
             "previous_waveops": [
-                "I-134-1",
-                "I-121-0",
-                "identity_145_TO_identity_local_147_Load_I-149-0",
-                "I-134-3"
+                "I-123-0",
+                "I-136-2",
+                "identity_146_TO_identity_local_148_Load_I-150-0",
+                "I-136-3"
             ],
-            "ref_file": "value__t144.npy",
+            "ref_file": "value__t145.npy",
             "ref_file_shape": [
                 3,
                 4,
                 1
             ],
             "src_is_psum": false,
-            "src_sb_address": 1312,
+            "src_sb_address": 3624,
             "src_start_at_part_num": 0,
             "src_x_num": 4,
             "src_x_step": 1,
@@ -1718,24 +1684,40 @@
             "src_z_step": 0,
             "start_tensor_calc": true,
             "stop_tensor_calc": false,
-            "tensor_name": "_t144",
-            "waveop_name": "I-150-0",
+            "tensor_name": "_t145",
+            "waveop_name": "I-151-0",
             "waveop_type": "MatMul",
             "weights_sb_address": 98040
         },
         {
-            "engine": "pe",
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 1552,
+            "dst_start_at_part_num": 0,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 4,
+            "dst_y_step": 4,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "float32",
             "instr_pcs": {
-                "pe": [
-                    1408,
-                    1472
+                "act": [],
+                "pe": [],
+                "pool": [
+                    576
                 ]
             },
-            "layer_name": "unknown",
-            "order": 28,
+            "layer_name": "copy0",
+            "num_partitions": 64,
+            "order": 27,
+            "out_dtype": "float16",
             "previous_syncs": [
                 {
-                    "event_id": 38,
+                    "event_id": 34,
                     "event_id_wrap_cnt": 0,
                     "set_mode": 2,
                     "sync_type": "event",
@@ -1743,10 +1725,321 @@
                 }
             ],
             "previous_waveops": [
-                "I-150-0"
+                "I-140-7"
             ],
-            "waveop_name": "mm-broadcast-I-150-0",
-            "waveop_type": "Nop"
+            "ref_file": "value_copy0_t158.npy",
+            "ref_file_shape": [
+                128,
+                16,
+                1
+            ],
+            "src_is_psum": true,
+            "src_psum_bank_id": 2,
+            "src_psum_bank_offset": 0,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 4,
+            "src_y_step": 6,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "copy0_t158",
+            "waveop_name": "I-142-0",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 1552,
+            "dst_start_at_part_num": 64,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 3,
+            "dst_x_step": 1,
+            "dst_y_num": 4,
+            "dst_y_step": 4,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "float32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    640
+                ]
+            },
+            "layer_name": "copy0",
+            "num_partitions": 64,
+            "order": 28,
+            "out_dtype": "float16",
+            "previous_syncs": [],
+            "previous_waveops": [],
+            "ref_file": "value_copy0_t158.npy",
+            "ref_file_shape": [
+                128,
+                16,
+                1
+            ],
+            "src_is_psum": true,
+            "src_psum_bank_id": 2,
+            "src_psum_bank_offset": 3,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 3,
+            "src_x_step": 1,
+            "src_y_num": 4,
+            "src_y_step": 6,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "copy0_t158",
+            "waveop_name": "I-142-1",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 0,
+            "dst_psum_bank_offset": 0,
+            "dst_x_num": 128,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    2048,
+                    2112
+                ],
+                "pool": []
+            },
+            "layer_name": "copy0",
+            "num_column_partitions": 3,
+            "num_row_partitions": 128,
+            "order": 29,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "event_id": 37,
+                    "event_id_wrap_cnt": 0,
+                    "set_mode": 2,
+                    "sync_type": "event",
+                    "wait_mode": 2
+                },
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "I-142-1",
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_copy0_t155.npy",
+            "ref_file_shape": [
+                3,
+                512,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 128,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "copy0_t155",
+            "waveop_name": "I-143-0",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1552
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 0,
+            "dst_psum_bank_offset": 128,
+            "dst_x_num": 128,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    2176,
+                    2240
+                ],
+                "pool": []
+            },
+            "layer_name": "copy0",
+            "num_column_partitions": 3,
+            "num_row_partitions": 128,
+            "order": 30,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_copy0_t155.npy",
+            "ref_file_shape": [
+                3,
+                512,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 128,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "copy0_t155",
+            "waveop_name": "I-143-1",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1560
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 0,
+            "dst_psum_bank_offset": 256,
+            "dst_x_num": 128,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    2304,
+                    2368
+                ],
+                "pool": []
+            },
+            "layer_name": "copy0",
+            "num_column_partitions": 3,
+            "num_row_partitions": 128,
+            "order": 31,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_copy0_t155.npy",
+            "ref_file_shape": [
+                3,
+                512,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 128,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "copy0_t155",
+            "waveop_name": "I-143-2",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1568
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": true,
+            "dst_psum_bank_id": 0,
+            "dst_psum_bank_offset": 384,
+            "dst_x_num": 128,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pe",
+            "ifmap_replication_num_rows": 0,
+            "ifmap_replication_resolution": 0,
+            "ifmap_replication_shift_amnt": 0,
+            "in_dtype": "float16",
+            "instr_pcs": {
+                "act": [],
+                "pe": [
+                    2432,
+                    2496
+                ],
+                "pool": []
+            },
+            "layer_name": "copy0",
+            "num_column_partitions": 3,
+            "num_row_partitions": 128,
+            "order": 32,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "identity_131_TO_identity_local_133_Load_I-135-0"
+            ],
+            "ref_file": "value_copy0_t155.npy",
+            "ref_file_shape": [
+                3,
+                512,
+                1
+            ],
+            "src_is_psum": false,
+            "src_sb_address": 98048,
+            "src_start_at_part_num": 0,
+            "src_x_num": 128,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "start_tensor_calc": true,
+            "stop_tensor_calc": false,
+            "tensor_name": "copy0_t155",
+            "waveop_name": "I-143-3",
+            "waveop_type": "MatMul",
+            "weights_sb_address": 1576
         },
         {
             "contain_weights": false,
@@ -1767,26 +2060,26 @@
                 "act": [],
                 "pe": [],
                 "pool": [
-                    960
+                    704
                 ]
             },
             "layer_name": "unknown",
             "num_partitions": 3,
-            "order": 29,
+            "order": 33,
             "out_dtype": "float32",
             "previous_syncs": [
                 {
-                    "event_id": 39,
+                    "event_id": 36,
                     "event_id_wrap_cnt": 0,
-                    "set_mode": 3,
+                    "set_mode": 2,
                     "sync_type": "event",
                     "wait_mode": 2
                 }
             ],
             "previous_waveops": [
-                "mm-broadcast-I-150-0"
+                "I-151-0"
             ],
-            "ref_file": "value__t167.npy",
+            "ref_file": "value__t164.npy",
             "ref_file_shape": [
                 3,
                 4,
@@ -1803,8 +2096,8 @@
             "src_y_step": 1,
             "src_z_num": 1,
             "src_z_step": 0,
-            "tensor_name": "_t167",
-            "waveop_name": "I-163-0",
+            "tensor_name": "_t164",
+            "waveop_name": "I-161-0",
             "waveop_type": "TensorCopy"
         },
         {
@@ -1817,27 +2110,23 @@
                 "act": [],
                 "pe": [],
                 "pool": [
-                    1024
+                    768
                 ]
             },
             "layer_name": "unknown",
             "length": 16,
             "num_partitions": 3,
             "offset_in_file": 0,
-            "order": 30,
+            "order": 34,
             "partition_step": 1,
             "partition_step_bytes": 16,
             "previous_syncs": [
                 {
                     "sync_type": "none"
-                },
-                {
-                    "sync_type": "none"
                 }
             ],
             "previous_waveops": [
-                "I-163-0",
-                "copy0_t166_TO_copy0:0_Save_I-123-0"
+                "I-161-0"
             ],
             "queue0": "qPoolOut0",
             "ref_file": "value_aten_view__Reshape:0-simout.npy",
@@ -1849,28 +2138,160 @@
             "sb_address": 0,
             "start_at_part_num": 64,
             "tensor_name": "aten_view/Reshape:0",
-            "trig_ord0": 2,
+            "trig_ord0": 1,
             "trig_ord1": -1,
             "update_value0": 0,
-            "waveop_name": "_t167_TO_aten_view/Reshape:0_Save_I-125-0",
+            "waveop_name": "_t164_TO_aten_view/Reshape:0_Save_I-127-0",
             "waveop_type": "SBAtomSave"
         },
         {
             "engine": "pe",
             "instr_pcs": {
                 "pe": [
-                    1536
+                    2560,
+                    2624
                 ]
             },
-            "layer_name": "unknown",
-            "order": 31,
+            "layer_name": "copy0",
+            "order": 35,
+            "previous_syncs": [
+                {
+                    "event_id": 38,
+                    "event_id_wrap_cnt": 0,
+                    "set_mode": 2,
+                    "sync_type": "event",
+                    "wait_mode": 2
+                }
+            ],
+            "previous_waveops": [
+                "I-143-3"
+            ],
+            "waveop_name": "mm-broadcast-I-143-3",
+            "waveop_type": "Nop"
+        },
+        {
+            "contain_weights": false,
+            "dst_is_psum": false,
+            "dst_sb_address": 1584,
+            "dst_start_at_part_num": 64,
+            "dst_w_num": 1,
+            "dst_w_step": 0,
+            "dst_x_num": 512,
+            "dst_x_step": 1,
+            "dst_y_num": 1,
+            "dst_y_step": 1,
+            "dst_z_num": 1,
+            "dst_z_step": 0,
+            "engine": "pool",
+            "in_dtype": "float32",
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    832
+                ]
+            },
+            "layer_name": "copy0",
+            "num_partitions": 3,
+            "order": 36,
+            "out_dtype": "float32",
+            "previous_syncs": [
+                {
+                    "event_id": 39,
+                    "event_id_wrap_cnt": 0,
+                    "set_mode": 3,
+                    "sync_type": "event",
+                    "wait_mode": 2
+                }
+            ],
+            "previous_waveops": [
+                "mm-broadcast-I-143-3"
+            ],
+            "ref_file": "value_copy0_t153.npy",
+            "ref_file_shape": [
+                3,
+                512,
+                1
+            ],
+            "src_is_psum": true,
+            "src_psum_bank_id": 0,
+            "src_psum_bank_offset": 0,
+            "src_w_num": 1,
+            "src_w_step": 0,
+            "src_x_num": 512,
+            "src_x_step": 1,
+            "src_y_num": 1,
+            "src_y_step": 1,
+            "src_z_num": 1,
+            "src_z_step": 0,
+            "tensor_name": "copy0_t153",
+            "waveop_name": "I-154-0",
+            "waveop_type": "TensorCopy"
+        },
+        {
+            "contain_weights": false,
+            "data_type": "float32",
+            "dtype": "float32",
+            "engine": "pool",
+            "final_layer_ofmap": true,
+            "instr_pcs": {
+                "act": [],
+                "pe": [],
+                "pool": [
+                    896
+                ]
+            },
+            "layer_name": "copy0",
+            "length": 2048,
+            "num_partitions": 3,
+            "offset_in_file": 0,
+            "order": 37,
+            "partition_step": 1,
+            "partition_step_bytes": 2048,
+            "previous_syncs": [
+                {
+                    "sync_type": "none"
+                },
+                {
+                    "sync_type": "none"
+                }
+            ],
+            "previous_waveops": [
+                "_t164_TO_aten_view/Reshape:0_Save_I-127-0",
+                "I-154-0"
+            ],
+            "queue0": "qPoolOut0",
+            "ref_file": "value_copy0:0-simout.npy",
+            "ref_file_shape": [
+                3,
+                512
+            ],
+            "ref_file_sz": 6144,
+            "sb_address": 1584,
+            "start_at_part_num": 64,
+            "tensor_name": "copy0:0",
+            "trig_ord0": 2,
+            "trig_ord1": -1,
+            "update_value0": 0,
+            "waveop_name": "copy0_t153_TO_copy0:0_Save_I-125-0",
+            "waveop_type": "SBAtomSave"
+        },
+        {
+            "engine": "pe",
+            "instr_pcs": {
+                "pe": [
+                    2688
+                ]
+            },
+            "layer_name": "copy0",
+            "order": 38,
             "previous_syncs": [
                 {
                     "sync_type": "none"
                 }
             ],
             "previous_waveops": [
-                "mm-broadcast-I-150-0"
+                "mm-broadcast-I-143-3"
             ],
             "throttle_on": false,
             "waveop_name": "pe_throttle-1",
@@ -1880,11 +2301,11 @@
             "engine": "pe",
             "instr_pcs": {
                 "pe": [
-                    1600
+                    2752
                 ]
             },
-            "layer_name": "unknown",
-            "order": 32,
+            "layer_name": "copy0",
+            "order": 39,
             "previous_syncs": [
                 {
                     "event_id": 40,

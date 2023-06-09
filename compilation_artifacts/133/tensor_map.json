@@ -16,10 +16,10 @@
         "kind": "input",
         "layer_name": "2:0",
         "sim_format": "NC",
-        "sim_shape": [ 3, 128 ],
+        "sim_shape": [ 3, 512 ],
         "tf_file": "value_2:0.npy",
         "tf_format": "NC",
-        "tf_shape": [ 3, 128 ]
+        "tf_shape": [ 3, 512 ]
     },
     "aten_view/Reshape:0": {
         "dtype": "float32",
@@ -38,36 +38,36 @@
         "kind": "output",
         "layer_name": "copy0:0",
         "sim_format": "NC",
-        "sim_shape": [ 3, 128 ],
+        "sim_shape": [ 3, 512 ],
         "tf_file": "value_copy0:0.npy",
         "tf_format": "NC",
-        "tf_shape": [ 3, 128 ]
+        "tf_shape": [ 3, 512 ]
     },
-    "identity_129": {
+    "identity_131": {
         "dtype": "float16",
         "is_const": true,
-        "layer_name": "identity_129",
+        "layer_name": "identity_131",
         "sim_format": "CRSM",
         "sim_shape": [ 128, 128, 1, 1 ],
         "split_axis": 0,
         "split_indices_or_sections": [ 64 ],
-        "tf_file": "value_sg00_identity_129_CRSM.npy",
+        "tf_file": "value_sg00_identity_131_CRSM.npy",
         "tf_format": "CRSM",
         "tf_shape": [ 128, 128, 1, 1 ]
     },
-    "identity_145": {
+    "identity_146": {
         "dtype": "bfloat16",
         "is_const": true,
-        "layer_name": "identity_145",
+        "layer_name": "identity_146",
         "sim_format": "CRSM",
         "sim_shape": [ 128, 128, 1, 1 ],
         "split_axis": 0,
         "split_indices_or_sections": [ 64 ],
-        "tf_file": "value_sg00_identity_145_CRSM.npy",
+        "tf_file": "value_sg00_identity_146_CRSM.npy",
         "tf_format": "CRSM",
         "tf_shape": [ 128, 128, 1, 1 ]
     },
-    "t13-76-101-105": {
+    "t13-77-103-107": {
         "dtype": "bfloat16",
         "is_const": true,
         "layer_name": "t13",
@@ -75,11 +75,11 @@
         "sim_shape": [ 128, 8, 1, 1 ],
         "split_axis": 0,
         "split_indices_or_sections": [ 64 ],
-        "tf_file": "value_sg00_t13-76-101-105_CRSM.npy",
+        "tf_file": "value_sg00_t13-77-103-107_CRSM.npy",
         "tf_format": "CRSM",
         "tf_shape": [ 128, 8, 1, 1 ]
     },
-    "t20-103-107": {
+    "t20-105-109": {
         "dtype": "float32",
         "is_const": true,
         "layer_name": "t20",
@@ -87,7 +87,7 @@
         "sim_shape": [ 4, 1, 1, 1 ],
         "split_axis": 0,
         "split_indices_or_sections": [ 2 ],
-        "tf_file": "value_sg00_t20-103-107_CRSM.npy",
+        "tf_file": "value_sg00_t20-105-109_CRSM.npy",
         "tf_format": "CRSM",
         "tf_shape": [ 4, 1, 1, 1 ]
     }

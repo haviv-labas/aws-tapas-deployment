@@ -34,10 +34,10 @@
             "element_size": 4,
             "internal_shape": [
                 3,
-                256
+                1024
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "output",
             "var_id": 2
         },
@@ -46,11 +46,11 @@
             "element_size": 4,
             "internal_shape": [
                 3,
-                128,
+                512,
                 2
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "input",
             "var_id": 1
         }

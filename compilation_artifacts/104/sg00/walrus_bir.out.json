@@ -13,7 +13,7 @@
           "allocated": false,
           "debug": {
             "format": "NC",
-            "shape": [ 3, 256 ],
+            "shape": [ 3, 1024 ],
             "tensor_name": "2:0"
           },
           "dtype": "int32",
@@ -26,7 +26,7 @@
               "allocated": false,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 1024 ],
+              "dims": [ 3, 4096 ],
               "name": "2:0",
               "pinned": false,
               "tensor_id": 0,
@@ -36,18 +36,18 @@
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128, 2 ]
+          "tensor_shape": [ 3, 4, 128, 2 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": false,
           "debug": {
             "format": "CRSM",
-            "shape": [ 128, 3, 1, 1 ],
+            "shape": [ 128, 12, 1, 1 ],
             "tensor_name": "t4"
           },
-          "dtype": "int32",
-          "file": "value_sg00_t4-55-57_CRSM.npy",
+          "dtype": "float32",
+          "file": "value_sg00_t4-45-59-61_CRSM.npy",
           "kind": "Const",
           "memorylocations": [
             {
@@ -56,25 +56,55 @@
               "allocated": false,
               "bank": 0,
               "base": 0,
-              "dims": [ 384, 4 ],
-              "name": "t4-55-57",
+              "dims": [ 1536, 4 ],
+              "name": "t4-45-59-61",
               "pinned": false,
               "tensor_id": 0,
               "type": "DRAM"
             } ],
-          "name": "t4-55-57_set",
+          "name": "t4-45-59-61_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 3 ]
+          "tensor_shape": [ 128, 12 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 6, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78"
+            "shape": [ 128, 12, 1 ],
+            "tensor_name": "t4"
+          },
+          "dtype": "float32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98160,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 48 ],
+              "name": "t4-45_local_51",
+              "pinned": true,
+              "tensor_id": 0,
+              "type": "SB"
+            } ],
+          "name": "t4-45_local_51_set",
+          "partition_dim": 0,
+          "pinned": true,
+          "tensorId2MemLocSize": 1,
+          "tensor_shape": [ 128, 12 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
           },
           "dtype": "int32",
           "file": "",
@@ -82,59 +112,27 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 98264,
+              "addr": 98296,
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 24 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78",
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0",
               "pinned": false,
-              "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_set",
-          "partition_dim": 0,
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_set",
+          "partition_dim": 2,
           "pinned": false,
-          "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 6 ]
+          "tensor_shape": [ 128, 2 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "2:0_local_41"
-          },
-          "dtype": "int32",
-          "file": "",
-          "kind": "Internal",
-          "memorylocations": [
-            {
-              "Skind": "memory_location",
-              "addr": 0,
-              "allocated": true,
-              "bank": 0,
-              "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "2:0_local_41",
-              "pinned": false,
-              "tensor_id": 0,
-              "type": "SB"
-            } ],
-          "name": "2:0_local_41_set",
-          "partition_dim": 0,
-          "pinned": false,
-          "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 4 ]
-        },
-        {
-          "Skind": "memory_location_set",
-          "allocated": true,
-          "debug": {
-            "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70"
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
           },
           "dtype": "int32",
           "file": "",
@@ -146,25 +144,363 @@
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70",
-              "pinned": true,
-              "tensor_id": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1",
+              "pinned": false,
               "type": "SB"
             } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_set",
-          "partition_dim": 0,
-          "pinned": true,
-          "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 4 ]
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 64, 8, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77"
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98280,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98272,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98264,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98256,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98248,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98240,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98232,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98224,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98216,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 98208,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11_set",
+          "partition_dim": 2,
+          "pinned": false,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "_t78"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 0,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "_t78",
+              "pinned": false,
+              "tensor_id": 0,
+              "type": "SB"
+            } ],
+          "name": "_t78_set",
+          "partition_dim": 0,
+          "pinned": false,
+          "tensorId2MemLocSize": 1,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 2, 1 ],
+            "tensor_name": "_t75"
+          },
+          "dtype": "float32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 8,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 8 ],
+              "name": "_t75",
+              "pinned": false,
+              "tensor_id": 0,
+              "type": "SB"
+            } ],
+          "name": "_t75_set",
+          "partition_dim": 0,
+          "pinned": false,
+          "tensorId2MemLocSize": 1,
+          "tensor_shape": [ 128, 2 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 24, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80"
           },
           "dtype": "int32",
           "file": "",
@@ -176,110 +512,24 @@
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 64, 32 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0",
-              "pinned": false,
-              "type": "SB"
-            } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0_set",
-          "partition_dim": 1,
-          "pinned": false,
-          "tensor_shape": [ 64, 8 ]
-        },
-        {
-          "Skind": "memory_location_set",
-          "allocated": true,
-          "debug": {
-            "format": "UNDEF",
-            "shape": [ 64, 8, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77"
-          },
-          "dtype": "int32",
-          "file": "",
-          "kind": "Internal",
-          "memorylocations": [
-            {
-              "Skind": "memory_location",
-              "addr": 48,
-              "allocated": true,
-              "bank": 0,
-              "base": 0,
-              "dims": [ 64, 32 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1",
-              "pinned": false,
-              "type": "SB"
-            } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1_set",
-          "partition_dim": 1,
-          "pinned": false,
-          "tensor_shape": [ 64, 8 ]
-        },
-        {
-          "Skind": "memory_location_set",
-          "allocated": true,
-          "debug": {
-            "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69"
-          },
-          "dtype": "int32",
-          "file": "",
-          "kind": "Internal",
-          "memorylocations": [
-            {
-              "Skind": "memory_location",
-              "addr": 80,
-              "allocated": true,
-              "bank": 0,
-              "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69",
+              "dims": [ 128, 96 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69_set",
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 4 ]
+          "tensor_shape": [ 128, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71"
-          },
-          "dtype": "int32",
-          "file": "",
-          "kind": "Internal",
-          "memorylocations": [
-            {
-              "Skind": "memory_location",
-              "addr": 96,
-              "allocated": true,
-              "bank": 0,
-              "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71",
-              "pinned": false,
-              "tensor_id": 0,
-              "type": "SB"
-            } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71_set",
-          "partition_dim": 0,
-          "pinned": false,
-          "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 4 ]
-        },
-        {
-          "Skind": "memory_location_set",
-          "allocated": true,
-          "debug": {
-            "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
+            "shape": [ 128, 24, 1 ],
             "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37"
           },
           "dtype": "int32",
@@ -292,22 +542,22 @@
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
+              "dims": [ 128, 96 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
               "pinned": false,
               "type": "SB"
             } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
           "partition_dim": 1,
           "pinned": false,
-          "tensor_shape": [ 128, 4 ]
+          "tensor_shape": [ 128, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
+            "shape": [ 128, 24, 1 ],
             "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37"
           },
           "dtype": "int32",
@@ -316,27 +566,27 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 128,
+              "addr": 208,
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
+              "dims": [ 128, 96 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
               "pinned": false,
               "type": "SB"
             } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
           "partition_dim": 1,
           "pinned": false,
-          "tensor_shape": [ 128, 4 ]
+          "tensor_shape": [ 128, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 6, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54"
+            "shape": [ 128, 24, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58"
           },
           "dtype": "int32",
           "file": "",
@@ -344,28 +594,28 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 144,
+              "addr": 304,
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 24 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
+              "dims": [ 128, 96 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 6 ]
+          "tensor_shape": [ 128, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": false,
           "debug": {
             "format": "NC",
-            "shape": [ 3, 256 ],
+            "shape": [ 3, 1024 ],
             "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0"
           },
           "dtype": "int32",
@@ -378,7 +628,7 @@
               "allocated": false,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 1024 ],
+              "dims": [ 3, 4096 ],
               "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
               "pinned": false,
               "tensor_id": 0,
@@ -388,7 +638,7 @@
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128, 2 ]
+          "tensor_shape": [ 3, 4, 128, 2 ]
         } ],
       "attributes": [
         "no_spill",
@@ -401,6 +651,33 @@
           "instructions": [
             {
               "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 12, 128 ], [ 1, 1 ], [ 1, 12 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45-59-61",
+                  "memsetref": "t4-45-59-61_set",
+                  "offset": 0
+                } ],
+              "name": "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 12, 128 ], [ 1, 1 ], [ 1, 12 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
                 "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
                 "penguin_id": "18446744073709551615"
               },
@@ -414,15 +691,15 @@
                   "memsetref": "2:0_set",
                   "offset": 0
                 } ],
-              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-0",
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_Load_I-65-0",
               "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_set",
                   "offset": 0
                 } ]
             },
@@ -432,7 +709,127 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-0",
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_Load_I-65-0",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 1024
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_Load_I-65-4",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_Load_I-65-4",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 2560
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_Load_I-65-10",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_Load_I-65-10",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 2048
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_Load_I-65-8",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_Load_I-65-8",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 1792
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_Load_I-65-7",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_Load_I-65-7",
                   "Output" ] ],
               "engine": "DMA",
               "ins": [
@@ -444,16 +841,16 @@
                   "memsetref": "2:0_set",
                   "offset": 256
                 } ],
-              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-1",
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_Load_I-65-1",
               "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_set",
-                  "offset": 2
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_set",
+                  "offset": 0
                 } ]
             },
             {
@@ -462,7 +859,97 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-1",
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_Load_I-65-1",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 1280
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_Load_I-65-5",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_Load_I-65-5",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 768
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_Load_I-65-3",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_Load_I-65-3",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 1536
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_Load_I-65-6",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_Load_I-65-6",
                   "Output" ] ],
               "engine": "DMA",
               "ins": [
@@ -474,42 +961,15 @@
                   "memsetref": "2:0_set",
                   "offset": 512
                 } ],
-              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-2",
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_Load_I-65-2",
               "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_set",
-                  "offset": 4
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "DMA",
-              "ins": [
-                {
-                  "ap": [ [ 3, 128 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "t4-55-57",
-                  "memsetref": "t4-55-57_set",
-                  "offset": 0
-                } ],
-              "name": "t4-55-57_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_Load_I-62-0",
-              "opcode": "Load",
-              "outs": [
-                {
-                  "ap": [ [ 4, 128 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_set",
                   "offset": 0
                 } ]
             },
@@ -519,33 +979,105 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-2",
-                  "Flow" ] ],
-              "engine": "Pool",
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_Load_I-65-2",
+                  "Output" ] ],
+              "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_set",
-                  "offset": 0
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 2304
                 } ],
-              "name": "I-74-0",
-              "opcode": "TensorCopy",
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_Load_I-65-9",
+              "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "2:0_local_41",
-                  "memsetref": "2:0_local_41_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_set",
                   "offset": 0
                 } ]
             },
             {
               "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_Load_I-65-9",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 2816
+                } ],
+              "name": "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11_Load_I-65-11",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "constant": 511,
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [],
+              "mode": "Const",
+              "name": "I-74-0",
+              "opcode": "Memset",
+              "outs": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t78",
+                  "memsetref": "_t78_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "constant": 511,
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [],
+              "mode": "Const",
+              "name": "I-74-1",
+              "opcode": "Memset",
+              "outs": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t78",
+                  "memsetref": "_t78_set",
+                  "offset": 128
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
@@ -554,55 +1086,28 @@
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "2:0_local_41",
-                  "memsetref": "2:0_local_41_set",
+                  "memref": "_t78",
+                  "memsetref": "_t78_set",
                   "offset": 0
                 } ],
-              "name": "I-76-0",
+              "name": "I-77-0",
               "opcode": "TensorCopy",
               "outs": [
                 {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0_set",
-                  "offset": 4
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
                 } ]
             },
             {
               "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_set",
-                  "offset": 384
-                } ],
-              "name": "I-74-1",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_local_41",
-                  "memsetref": "2:0_local_41_set",
-                  "offset": 256
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "op_name": "unknown",
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
@@ -611,23 +1116,23 @@
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "2:0_local_41",
-                  "memsetref": "2:0_local_41_set",
-                  "offset": 256
+                  "memref": "_t78",
+                  "memsetref": "_t78_set",
+                  "offset": 128
                 } ],
-              "name": "I-76-1",
+              "name": "I-77-1",
               "opcode": "TensorCopy",
               "outs": [
                 {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1_set",
-                  "offset": 4
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
                 } ]
             },
             {
@@ -636,411 +1141,1468 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "t4-55-57_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_Load_I-62-0",
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_Load_I-65-0",
+                  "Flow" ], [
+                  "I-77-0",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
                   "Flow" ] ],
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_set",
-                  "offset": 0
-                } ],
-              "name": "I-75-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "t4-55-57_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_Load_I-62-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_set",
-                  "offset": 256
-                } ],
-              "name": "I-75-1",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-75-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_set",
                   "offset": 0
                 },
                 {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i0_set",
-                  "offset": 4
-                } ],
-              "name": "I-63-0",
-              "op": "subtract",
-              "opcode": "TensorTensor",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "const0": 511.0,
-              "const1": 0.0,
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-63-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69_set",
-                  "offset": 0
-                } ],
-              "name": "I-64-0",
-              "op0": "min",
-              "op1": "bypass",
-              "opcode": "TensorScalar",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71_set",
-                  "offset": 0
-                } ],
-              "reverse0": false,
-              "reverse1": false
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1_set",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
                   "offset": 0
                 },
                 {
-                  "ap": [ [ 8, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t77_i1_set",
-                  "offset": 4
-                } ],
-              "name": "I-63-1",
-              "op": "subtract",
-              "opcode": "TensorTensor",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69_set",
-                  "offset": 256
-                } ]
-            },
-            {
-              "const0": 511.0,
-              "const1": 0.0,
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-63-1",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t69_set",
-                  "offset": 256
-                } ],
-              "name": "I-64-1",
-              "op0": "min",
-              "op1": "bypass",
-              "opcode": "TensorScalar",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71_set",
-                  "offset": 256
-                } ],
-              "reverse0": false,
-              "reverse1": false
-            },
-            {
-              "const0": 31.0,
-              "const1": 0.0,
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71_set",
-                  "offset": 0
-                } ],
-              "name": "I-66-0",
-              "op0": "arith_shift_right",
-              "op1": "bypass",
-              "opcode": "TensorScalar",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
-                  "offset": 0
-                } ],
-              "reverse0": false,
-              "reverse1": false
-            },
-            {
-              "const0": 31.0,
-              "const1": 0.0,
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-64-1",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71_set",
-                  "offset": 256
-                } ],
-              "name": "I-66-1",
-              "op0": "arith_shift_right",
-              "op1": "bypass",
-              "opcode": "TensorScalar",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
-                  "offset": 256
-                } ],
-              "reverse0": false,
-              "reverse1": false
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71_set",
-                  "offset": 0
-                } ],
-              "name": "I-65-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t71_set",
-                  "offset": 256
-                } ],
-              "name": "I-65-1",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
-                  "offset": 256
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-65-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
                   "offset": 0
                 } ],
               "name": "I-67-0",
-              "opcode": "TensorCopy",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
               "outs": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
                   "offset": 0
-                } ]
+                } ],
+              "reverse0": true,
+              "reverse1": false
             },
             {
               "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
                 "penguin_id": "18446744073709551615"
               },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_Load_I-65-4",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
-                  "offset": 256
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 4
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
                 } ],
-              "name": "I-67-3",
-              "opcode": "TensorCopy",
+              "name": "I-67-8",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
               "outs": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
-                  "offset": 385
-                } ]
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 8
+                } ],
+              "reverse0": true,
+              "reverse1": false
             },
             {
               "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
                 "penguin_id": "18446744073709551615"
               },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_Load_I-65-10",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 10
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-20",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 20
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_Load_I-65-8",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 8
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-16",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 16
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_Load_I-65-7",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 7
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-14",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 14
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_Load_I-65-1",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 1
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
                   "offset": 0
                 } ],
               "name": "I-67-2",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 2
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_Load_I-65-5",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 5
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-10",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 10
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_Load_I-65-3",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 3
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-6",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 6
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_Load_I-65-6",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 6
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-12",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 12
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_Load_I-65-2",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 2
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-4",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 4
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_Load_I-65-9",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 9
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-18",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 18
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11_Load_I-65-11",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 11
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 0
+                } ],
+              "name": "I-67-22",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 22
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-77-1",
+                  "Flow" ], [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 768
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-1",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1536
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 776
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-17",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1552
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 770
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-5",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1540
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 771
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-7",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1542
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 778
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-21",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1556
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 777
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-19",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1554
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 769
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-3",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1538
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 774
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-13",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1548
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 773
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-11",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1546
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 779
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-23",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1558
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 775
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-15",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1550
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_set",
+                  "offset": 128
+                },
+                {
+                  "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "t4-45_local_51",
+                  "memsetref": "t4-45_local_51_set",
+                  "offset": 772
+                },
+                {
+                  "ap": [ [ 2, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "_t75",
+                  "memsetref": "_t75_set",
+                  "offset": 128
+                } ],
+              "name": "I-67-9",
+              "op0": "subtract",
+              "op1": "min",
+              "opcode": "TensorScalarPtr",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1544
+                } ],
+              "reverse0": true,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-67-22",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 0
+                } ],
+              "name": "I-69-0",
               "opcode": "TensorCopy",
               "outs": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-67-9",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1536
+                } ],
+              "name": "I-69-1",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
+                  "offset": 1536
+                } ]
+            },
+            {
+              "const0": 31.0,
+              "const1": 0.0,
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 0
+                } ],
+              "name": "I-70-0",
+              "op0": "arith_shift_right",
+              "op1": "bypass",
+              "opcode": "TensorScalar",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
+                  "offset": 0
+                } ],
+              "reverse0": false,
+              "reverse1": false
+            },
+            {
+              "const0": 31.0,
+              "const1": 0.0,
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t80_set",
+                  "offset": 1536
+                } ],
+              "name": "I-70-1",
+              "op0": "arith_shift_right",
+              "op1": "bypass",
+              "opcode": "TensorScalar",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
+                  "offset": 1536
+                } ],
+              "reverse0": false,
+              "reverse1": false
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-69-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
+                  "offset": 0
+                } ],
+              "name": "I-71-0",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-69-1",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
+                  "offset": 1536
+                } ],
+              "name": "I-71-1",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 1536
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-70-1",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
+                  "offset": 1536
+                } ],
+              "name": "I-71-3",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 1537
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i1_set",
+                  "offset": 0
+                } ],
+              "name": "I-71-2",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
                   "offset": 1
                 } ]
             },
@@ -1050,49 +2612,19 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-65-1",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t37_i0_set",
-                  "offset": 256
-                } ],
-              "name": "I-67-1",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
-                  "offset": 384
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-67-1",
+                  "I-71-2",
                   "Flow" ] ],
               "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
-                  "offset": 0
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 6
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-0",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-3",
               "opcode": "Save",
               "outs": [
                 {
@@ -1101,7 +2633,7 @@
                   "kind": "physical_ap",
                   "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
-                  "offset": 0
+                  "offset": 768
                 } ]
             },
             {
@@ -1110,49 +2642,19 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-0",
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-3",
                   "Output" ] ],
               "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
-                  "offset": 2
-                } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-1",
-              "opcode": "Save",
-              "outs": [
-                {
-                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
-                  "offset": 256
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-1",
-                  "Output" ] ],
-              "engine": "DMA",
-              "ins": [
-                {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 2 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
                   "offset": 4
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-2",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-2",
               "opcode": "Save",
               "outs": [
                 {
@@ -1162,6 +2664,306 @@
                   "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
                   "offset": 512
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-2",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 12
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-6",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 1536
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-6",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 18
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-9",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 2304
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-9",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 10
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-5",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 1280
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-5",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 22
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-11",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 2816
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-11",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 2
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-1",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 256
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-1",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 16
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-8",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 2048
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-8",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 20
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-10",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 2560
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-10",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 14
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-7",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 1792
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-7",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 8
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-4",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 1024
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-4",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_set",
+                  "offset": 0
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-0",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_set",
+                  "offset": 0
                 } ]
             } ],
           "name": "Block1"

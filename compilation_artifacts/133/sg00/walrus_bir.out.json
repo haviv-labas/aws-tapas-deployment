@@ -13,7 +13,7 @@
           "allocated": false,
           "debug": {
             "format": "NC",
-            "shape": [ 3, 128 ],
+            "shape": [ 3, 512 ],
             "tensor_name": "2:0"
           },
           "dtype": "float32",
@@ -26,7 +26,7 @@
               "allocated": false,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 512 ],
+              "dims": [ 3, 2048 ],
               "name": "2:0",
               "pinned": false,
               "tensor_id": 0,
@@ -36,7 +36,7 @@
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128 ]
+          "tensor_shape": [ 3, 512 ]
         },
         {
           "Skind": "memory_location_set",
@@ -77,7 +77,7 @@
             "tensor_name": "t13"
           },
           "dtype": "bfloat16",
-          "file": "value_sg00_t13-76-101-105_CRSM.npy",
+          "file": "value_sg00_t13-77-103-107_CRSM.npy",
           "kind": "Const",
           "memorylocations": [
             {
@@ -87,12 +87,12 @@
               "bank": 0,
               "base": 0,
               "dims": [ 1024, 2 ],
-              "name": "t13-76-101-105",
+              "name": "t13-77-103-107",
               "pinned": false,
               "tensor_id": 0,
               "type": "DRAM"
             } ],
-          "name": "t13-76-101-105_set",
+          "name": "t13-77-103-107_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -107,7 +107,7 @@
             "tensor_name": "t20"
           },
           "dtype": "float32",
-          "file": "value_sg00_t20-103-107_CRSM.npy",
+          "file": "value_sg00_t20-105-109_CRSM.npy",
           "kind": "Const",
           "memorylocations": [
             {
@@ -117,12 +117,12 @@
               "bank": 0,
               "base": 0,
               "dims": [ 4, 4 ],
-              "name": "t20-103-107",
+              "name": "t20-105-109",
               "pinned": false,
               "tensor_id": 0,
               "type": "DRAM"
             } ],
-          "name": "t20-103-107_set",
+          "name": "t20-105-109_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -134,10 +134,10 @@
           "debug": {
             "format": "CRSM",
             "shape": [ 128, 128, 1, 1 ],
-            "tensor_name": "identity_129"
+            "tensor_name": "identity_131"
           },
           "dtype": "float16",
-          "file": "value_sg00_identity_129_CRSM.npy",
+          "file": "value_sg00_identity_131_CRSM.npy",
           "kind": "Const",
           "memorylocations": [
             {
@@ -147,12 +147,12 @@
               "bank": 0,
               "base": 0,
               "dims": [ 16384, 2 ],
-              "name": "identity_129",
+              "name": "identity_131",
               "pinned": false,
               "tensor_id": 0,
               "type": "DRAM"
             } ],
-          "name": "identity_129_set",
+          "name": "identity_131_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -164,10 +164,10 @@
           "debug": {
             "format": "CRSM",
             "shape": [ 128, 128, 1, 1 ],
-            "tensor_name": "identity_145"
+            "tensor_name": "identity_146"
           },
           "dtype": "bfloat16",
-          "file": "value_sg00_identity_145_CRSM.npy",
+          "file": "value_sg00_identity_146_CRSM.npy",
           "kind": "Const",
           "memorylocations": [
             {
@@ -177,12 +177,12 @@
               "bank": 0,
               "base": 0,
               "dims": [ 16384, 2 ],
-              "name": "identity_145",
+              "name": "identity_146",
               "pinned": false,
               "tensor_id": 0,
               "type": "DRAM"
             } ],
-          "name": "identity_145_set",
+          "name": "identity_146_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -194,7 +194,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 4, 4 ],
-            "tensor_name": "identity_local_147"
+            "tensor_name": "identity_local_148"
           },
           "dtype": "bfloat16",
           "file": "",
@@ -202,16 +202,16 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 1312,
+              "addr": 3624,
               "allocated": true,
               "bank": 0,
               "base": 0,
               "dims": [ 4, 8 ],
-              "name": "identity_local_147_shrinked",
+              "name": "identity_local_148_shrinked",
               "pinned": true,
               "type": "SB"
             } ],
-          "name": "identity_local_147_shrinked_set",
+          "name": "identity_local_148_shrinked_set",
           "partition_dim": 0,
           "pinned": true,
           "tensor_shape": [ 128, 128 ]
@@ -222,7 +222,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 128, 128, 1 ],
-            "tensor_name": "identity_local_131"
+            "tensor_name": "identity_local_133"
           },
           "dtype": "float16",
           "file": "",
@@ -235,12 +235,12 @@
               "bank": 0,
               "base": 0,
               "dims": [ 128, 256 ],
-              "name": "identity_local_131",
+              "name": "identity_local_133",
               "pinned": true,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "identity_local_131_set",
+          "name": "identity_local_133_set",
           "partition_dim": 0,
           "pinned": true,
           "tensorId2MemLocSize": 1,
@@ -282,7 +282,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 3, 256, 1 ],
-            "tensor_name": "0:0_t155"
+            "tensor_name": "0:0_t156"
           },
           "dtype": "float16",
           "file": "",
@@ -295,12 +295,12 @@
               "bank": 0,
               "base": 0,
               "dims": [ 3, 512 ],
-              "name": "0:0_t155",
+              "name": "0:0_t156",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "0:0_t155_set",
+          "name": "0:0_t156_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -312,7 +312,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 64, 12, 1 ],
-            "tensor_name": "0:0_t126"
+            "tensor_name": "0:0_t128"
           },
           "dtype": "float32",
           "file": "",
@@ -325,12 +325,12 @@
               "bank": 1,
               "base": 0,
               "dims": [ 64, 48 ],
-              "name": "0:0_t126",
+              "name": "0:0_t128",
               "pinned": false,
               "tensor_id": 0,
               "type": "PSUM"
             } ],
-          "name": "0:0_t126_set",
+          "name": "0:0_t128_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -371,8 +371,8 @@
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 3, 128, 1 ],
-            "tensor_name": "2:0_t165"
+            "shape": [ 3, 512, 1 ],
+            "tensor_name": "2:0_local_74"
           },
           "dtype": "float32",
           "file": "",
@@ -380,29 +380,29 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 96512,
+              "addr": 94976,
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 512 ],
-              "name": "2:0_t165",
+              "dims": [ 3, 2048 ],
+              "name": "2:0_local_74",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "2:0_t165_set",
+          "name": "2:0_local_74_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128 ]
+          "tensor_shape": [ 3, 512 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 3, 128, 1 ],
-            "tensor_name": "2:0_t157"
+            "shape": [ 3, 512, 1 ],
+            "tensor_name": "2:0_t159"
           },
           "dtype": "float16",
           "file": "",
@@ -414,25 +414,25 @@
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 256 ],
-              "name": "2:0_t157",
+              "dims": [ 3, 1024 ],
+              "name": "2:0_t159",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "2:0_t157_set",
+          "name": "2:0_t159_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128 ]
+          "tensor_shape": [ 3, 512 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 64, 6, 1 ],
-            "tensor_name": "2:0_t154"
+            "shape": [ 64, 24, 1 ],
+            "tensor_name": "2:0_t138"
           },
           "dtype": "float32",
           "file": "",
@@ -444,55 +444,25 @@
               "allocated": true,
               "bank": 2,
               "base": 0,
-              "dims": [ 64, 24 ],
-              "name": "2:0_t154",
+              "dims": [ 64, 96 ],
+              "name": "2:0_t138",
               "pinned": false,
               "tensor_id": 0,
               "type": "PSUM"
             } ],
-          "name": "2:0_t154_set",
+          "name": "2:0_t138_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 64, 6 ]
+          "tensor_shape": [ 64, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "2:0_t152"
-          },
-          "dtype": "float32",
-          "file": "",
-          "kind": "Internal",
-          "memorylocations": [
-            {
-              "Skind": "memory_location",
-              "addr": 784,
-              "allocated": true,
-              "bank": 0,
-              "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "2:0_t152",
-              "pinned": false,
-              "tensor_id": 0,
-              "type": "SB"
-            } ],
-          "name": "2:0_t152_set",
-          "partition_dim": 0,
-          "pinned": false,
-          "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 4 ]
-        },
-        {
-          "Skind": "memory_location_set",
-          "allocated": true,
-          "debug": {
-            "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "copy0_t160"
+            "shape": [ 128, 16, 1 ],
+            "tensor_name": "copy0_t158"
           },
           "dtype": "float16",
           "file": "",
@@ -500,29 +470,29 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 800,
+              "addr": 1552,
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 8 ],
-              "name": "copy0_t160",
+              "dims": [ 128, 32 ],
+              "name": "copy0_t158",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "copy0_t160_set",
+          "name": "copy0_t158_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 4 ]
+          "tensor_shape": [ 128, 16 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 3, 128, 1 ],
-            "tensor_name": "copy0_t140"
+            "shape": [ 3, 512, 1 ],
+            "tensor_name": "copy0_t155"
           },
           "dtype": "float32",
           "file": "",
@@ -534,25 +504,25 @@
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 512 ],
-              "name": "copy0_t140",
+              "dims": [ 3, 2048 ],
+              "name": "copy0_t155",
               "pinned": false,
               "tensor_id": 0,
               "type": "PSUM"
             } ],
-          "name": "copy0_t140_set",
+          "name": "copy0_t155_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128 ]
+          "tensor_shape": [ 3, 512 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 3, 128, 1 ],
-            "tensor_name": "copy0_t166"
+            "shape": [ 3, 512, 1 ],
+            "tensor_name": "copy0_t153"
           },
           "dtype": "float32",
           "file": "",
@@ -560,28 +530,28 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 808,
+              "addr": 1584,
               "allocated": true,
               "bank": 0,
               "base": 64,
-              "dims": [ 3, 512 ],
-              "name": "copy0_t166",
+              "dims": [ 3, 2048 ],
+              "name": "copy0_t153",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "copy0_t166_set",
+          "name": "copy0_t153_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128 ]
+          "tensor_shape": [ 3, 512 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": false,
           "debug": {
             "format": "NC",
-            "shape": [ 3, 128 ],
+            "shape": [ 3, 512 ],
             "tensor_name": "copy0:0"
           },
           "dtype": "float32",
@@ -594,7 +564,7 @@
               "allocated": false,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 512 ],
+              "dims": [ 3, 2048 ],
               "name": "copy0:0",
               "pinned": false,
               "tensor_id": 0,
@@ -604,7 +574,7 @@
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128 ]
+          "tensor_shape": [ 3, 512 ]
         },
         {
           "Skind": "memory_location_set",
@@ -620,17 +590,17 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 96496,
+              "addr": 94960,
               "allocated": true,
               "bank": 0,
               "base": 0,
               "dims": [ 128, 16 ],
-              "name": "t13-76_local_82",
+              "name": "t13-77_local_83",
               "pinned": true,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "t13-76_local_82_set",
+          "name": "t13-77_local_83_set",
           "partition_dim": 0,
           "pinned": true,
           "tensorId2MemLocSize": 1,
@@ -642,7 +612,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 4, 3, 1 ],
-            "tensor_name": "Linear_648/aten_linear/MatMul_t90"
+            "tensor_name": "Linear_648/aten_linear/MatMul_t96"
           },
           "dtype": "float32",
           "file": "",
@@ -655,12 +625,12 @@
               "bank": 3,
               "base": 0,
               "dims": [ 4, 12 ],
-              "name": "Linear_648/aten_linear/MatMul_t90",
+              "name": "Linear_648/aten_linear/MatMul_t96",
               "pinned": false,
               "tensor_id": 0,
               "type": "PSUM"
             } ],
-          "name": "Linear_648/aten_linear/MatMul_t90_set",
+          "name": "Linear_648/aten_linear/MatMul_t96_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -672,7 +642,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 4, 2, 1 ],
-            "tensor_name": "_t164"
+            "tensor_name": "_t162"
           },
           "dtype": "float32",
           "file": "",
@@ -685,12 +655,12 @@
               "bank": 0,
               "base": 64,
               "dims": [ 4, 8 ],
-              "name": "_t164",
+              "name": "_t162",
               "pinned": true,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "_t164_set",
+          "name": "_t162_set",
           "partition_dim": 0,
           "pinned": true,
           "tensorId2MemLocSize": 1,
@@ -701,8 +671,8 @@
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 4, 4, 1 ],
-            "tensor_name": "Linear_648/aten_linear/MatMul_t159"
+            "shape": [ 4, 3, 1 ],
+            "tensor_name": "Linear_648/aten_linear/MatMul_t163"
           },
           "dtype": "bfloat16",
           "file": "",
@@ -714,17 +684,17 @@
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 4, 8 ],
-              "name": "Linear_648/aten_linear/MatMul_t159",
+              "dims": [ 4, 6 ],
+              "name": "Linear_648/aten_linear/MatMul_t163",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "Linear_648/aten_linear/MatMul_t159_set",
+          "name": "Linear_648/aten_linear/MatMul_t163_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 4, 4 ]
+          "tensor_shape": [ 4, 3 ]
         },
         {
           "Skind": "memory_location_set",
@@ -732,7 +702,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 3, 4, 1 ],
-            "tensor_name": "_t144"
+            "tensor_name": "_t145"
           },
           "dtype": "float32",
           "file": "",
@@ -745,12 +715,12 @@
               "bank": 1,
               "base": 0,
               "dims": [ 3, 16 ],
-              "name": "_t144",
+              "name": "_t145",
               "pinned": false,
               "tensor_id": 0,
               "type": "PSUM"
             } ],
-          "name": "_t144_set",
+          "name": "_t145_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -762,7 +732,7 @@
           "debug": {
             "format": "UNDEF",
             "shape": [ 3, 4, 1 ],
-            "tensor_name": "_t167"
+            "tensor_name": "_t164"
           },
           "dtype": "float32",
           "file": "",
@@ -775,12 +745,12 @@
               "bank": 0,
               "base": 64,
               "dims": [ 3, 16 ],
-              "name": "_t167",
+              "name": "_t164",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "_t167_set",
+          "name": "_t164_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
@@ -836,46 +806,19 @@
                   "ap": [ [ 128, 4 ], [ 1, 4 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "identity_145",
-                  "memsetref": "identity_145_set",
+                  "memref": "identity_146",
+                  "memsetref": "identity_146_set",
                   "offset": 0
                 } ],
-              "name": "identity_145_TO_identity_local_147_Load_I-149-0",
+              "name": "identity_146_TO_identity_local_148_Load_I-150-0",
               "opcode": "Load",
               "outs": [
                 {
                   "ap": [ [ 4, 4 ], [ 1, 4 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "identity_local_147_shrinked",
-                  "memsetref": "identity_local_147_shrinked_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "2:0",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "DMA",
-              "ins": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0",
-                  "memsetref": "2:0_set",
-                  "offset": 0
-                } ],
-              "name": "2:0_TO_2:0_t165_Load_I-114-0",
-              "opcode": "Load",
-              "outs": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t165",
-                  "memsetref": "2:0_t165_set",
+                  "memref": "identity_local_148_shrinked",
+                  "memsetref": "identity_local_148_shrinked_set",
                   "offset": 0
                 } ]
             },
@@ -884,9 +827,6 @@
                 "op_name": "0:0",
                 "penguin_id": "18446744073709551615"
               },
-              "dependencies": [ [
-                  "2:0_TO_2:0_t165_Load_I-114-0",
-                  "Output" ] ],
               "engine": "DMA",
               "ins": [
                 {
@@ -897,7 +837,7 @@
                   "memsetref": "0:0_set",
                   "offset": 0
                 } ],
-              "name": "0:0_TO_0:0_local_67_Load_I-112-0",
+              "name": "0:0_TO_0:0_local_67_Load_I-114-0",
               "opcode": "Load",
               "outs": [
                 {
@@ -911,6 +851,36 @@
             },
             {
               "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "0:0_TO_0:0_local_67_Load_I-114-0",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0",
+                  "memsetref": "2:0_set",
+                  "offset": 0
+                } ],
+              "name": "2:0_TO_2:0_local_74_Load_I-116-0",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_local_74",
+                  "memsetref": "2:0_local_74_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
                 "op_name": "0:0",
                 "penguin_id": "18446744073709551615"
               },
@@ -920,19 +890,19 @@
                   "ap": [ [ 128, 128 ], [ 1, 1 ], [ 1, 128 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "identity_129",
-                  "memsetref": "identity_129_set",
+                  "memref": "identity_131",
+                  "memsetref": "identity_131_set",
                   "offset": 0
                 } ],
-              "name": "identity_129_TO_identity_local_131_Load_I-133-0",
+              "name": "identity_131_TO_identity_local_133_Load_I-135-0",
               "opcode": "Load",
               "outs": [
                 {
                   "ap": [ [ 128, 128 ], [ 1, 1 ], [ 1, 128 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
                   "offset": 0
                 } ]
             },
@@ -947,19 +917,19 @@
                   "ap": [ [ 8, 128 ], [ 1, 1 ], [ 1, 8 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "t13-76-101-105",
-                  "memsetref": "t13-76-101-105_set",
+                  "memref": "t13-77-103-107",
+                  "memsetref": "t13-77-103-107_set",
                   "offset": 0
                 } ],
-              "name": "t13-76-101-105_TO_t13-76_local_82_Load_I-117-0",
+              "name": "t13-77-103-107_TO_t13-77_local_83_Load_I-119-0",
               "opcode": "Load",
               "outs": [
                 {
                   "ap": [ [ 8, 128 ], [ 1, 1 ], [ 1, 8 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "t13-76_local_82",
-                  "memsetref": "t13-76_local_82_set",
+                  "memref": "t13-77_local_83",
+                  "memsetref": "t13-77_local_83_set",
                   "offset": 0
                 } ]
             },
@@ -974,298 +944,21 @@
                   "ap": [ [ 1, 4 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "t20-103-107",
-                  "memsetref": "t20-103-107_set",
+                  "memref": "t20-105-109",
+                  "memsetref": "t20-105-109_set",
                   "offset": 0
                 } ],
-              "name": "t20-103-107_TO__t164_Load_I-119-0",
+              "name": "t20-105-109_TO__t162_Load_I-121-0",
               "opcode": "Load",
               "outs": [
                 {
                   "ap": [ [ 2, 4 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "_t164",
-                  "memsetref": "_t164_set",
+                  "memref": "_t162",
+                  "memsetref": "_t162_set",
                   "offset": 0
                 } ]
-            },
-            {
-              "debug": {
-                "op_name": "2:0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "2:0_TO_2:0_t165_Load_I-114-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t165",
-                  "memsetref": "2:0_t165_set",
-                  "offset": 0
-                } ],
-              "name": "I-137-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t157",
-                  "memsetref": "2:0_t157_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "2:0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-137-0",
-                  "Flow" ], [
-                  "identity_129_TO_identity_local_131_Load_I-133-0",
-                  "Flow" ] ],
-              "engine": "PE",
-              "ins": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
-                  "offset": 0
-                },
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 64 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t157",
-                  "memsetref": "2:0_t157_set",
-                  "offset": 0
-                } ],
-              "name": "I-138-0",
-              "opcode": "Matmult",
-              "outs": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t154",
-                  "memsetref": "2:0_t154_set",
-                  "offset": 0
-                } ],
-              "replication_num_rows": 0,
-              "replication_resolution": 0,
-              "replication_shift_amnt": 0,
-              "start_tensor_calc": true
-            },
-            {
-              "debug": {
-                "op_name": "2:0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "identity_129_TO_identity_local_131_Load_I-133-0",
-                  "Flow" ] ],
-              "engine": "PE",
-              "ins": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
-                  "offset": 0
-                },
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 64 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t157",
-                  "memsetref": "2:0_t157_set",
-                  "offset": 64
-                } ],
-              "name": "I-138-1",
-              "opcode": "Matmult",
-              "outs": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t154",
-                  "memsetref": "2:0_t154_set",
-                  "offset": 3
-                } ],
-              "replication_num_rows": 0,
-              "replication_resolution": 0,
-              "replication_shift_amnt": 0,
-              "start_tensor_calc": true
-            },
-            {
-              "debug": {
-                "op_name": "2:0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-138-1",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t154",
-                  "memsetref": "2:0_t154_set",
-                  "offset": 0
-                } ],
-              "name": "I-153-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t152",
-                  "memsetref": "2:0_t152_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "copy0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-153-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t152",
-                  "memsetref": "2:0_t152_set",
-                  "offset": 0
-                } ],
-              "name": "I-141-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "copy0_t160",
-                  "memsetref": "copy0_t160_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "2:0",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t154",
-                  "memsetref": "2:0_t154_set",
-                  "offset": 3
-                } ],
-              "name": "I-153-1",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t152",
-                  "memsetref": "2:0_t152_set",
-                  "offset": 256
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "copy0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-153-1",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "2:0_t152",
-                  "memsetref": "2:0_t152_set",
-                  "offset": 256
-                } ],
-              "name": "I-141-1",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "copy0_t160",
-                  "memsetref": "copy0_t160_set",
-                  "offset": 256
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "copy0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-141-1",
-                  "Flow" ], [
-                  "identity_129_TO_identity_local_131_Load_I-133-0",
-                  "Flow" ] ],
-              "engine": "PE",
-              "ins": [
-                {
-                  "ap": [ [ 128, 128 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
-                  "offset": 0
-                },
-                {
-                  "ap": [ [ 4, 128 ], [ 1, 3 ] ],
-                  "dtype": "float16",
-                  "kind": "physical_ap",
-                  "memref": "copy0_t160",
-                  "memsetref": "copy0_t160_set",
-                  "offset": 0
-                } ],
-              "name": "I-142-0",
-              "opcode": "Matmult",
-              "outs": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "copy0_t140",
-                  "memsetref": "copy0_t140_set",
-                  "offset": 0
-                } ],
-              "replication_num_rows": 0,
-              "replication_resolution": 0,
-              "replication_shift_amnt": 0,
-              "start_tensor_calc": true
             },
             {
               "debug": {
@@ -1273,7 +966,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "0:0_TO_0:0_local_67_Load_I-112-0",
+                  "0:0_TO_0:0_local_67_Load_I-114-0",
                   "Flow" ] ],
               "engine": "Pool",
               "ins": [
@@ -1285,15 +978,15 @@
                   "memsetref": "0:0_local_67_set",
                   "offset": 0
                 } ],
-              "name": "I-128-0",
+              "name": "I-130-0",
               "opcode": "TensorCopy",
               "outs": [
                 {
                   "ap": [ [ 256, 3 ], [ 1, 1 ], [ 1, 256 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "0:0_t155",
-                  "memsetref": "0:0_t155_set",
+                  "memref": "0:0_t156",
+                  "memsetref": "0:0_t156_set",
                   "offset": 0
                 } ]
             },
@@ -1303,9 +996,9 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-128-0",
+                  "I-130-0",
                   "Flow" ], [
-                  "identity_129_TO_identity_local_131_Load_I-133-0",
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
                   "Flow" ] ],
               "engine": "PE",
               "ins": [
@@ -1313,27 +1006,27 @@
                   "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
                   "offset": 0
                 },
                 {
                   "ap": [ [ 256, 3 ], [ 1, 64 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "0:0_t155",
-                  "memsetref": "0:0_t155_set",
+                  "memref": "0:0_t156",
+                  "memsetref": "0:0_t156_set",
                   "offset": 0
                 } ],
-              "name": "I-134-0",
+              "name": "I-136-0",
               "opcode": "Matmult",
               "outs": [
                 {
                   "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "0:0_t126",
-                  "memsetref": "0:0_t126_set",
+                  "memref": "0:0_t128",
+                  "memsetref": "0:0_t128_set",
                   "offset": 0
                 } ],
               "replication_num_rows": 0,
@@ -1347,7 +1040,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "identity_129_TO_identity_local_131_Load_I-133-0",
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
                   "Flow" ] ],
               "engine": "PE",
               "ins": [
@@ -1355,27 +1048,27 @@
                   "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
                   "offset": 0
                 },
                 {
                   "ap": [ [ 256, 3 ], [ 1, 64 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "0:0_t155",
-                  "memsetref": "0:0_t155_set",
+                  "memref": "0:0_t156",
+                  "memsetref": "0:0_t156_set",
                   "offset": 64
                 } ],
-              "name": "I-134-1",
+              "name": "I-136-1",
               "opcode": "Matmult",
               "outs": [
                 {
                   "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "0:0_t126",
-                  "memsetref": "0:0_t126_set",
+                  "memref": "0:0_t128",
+                  "memsetref": "0:0_t128_set",
                   "offset": 3
                 } ],
               "replication_num_rows": 0,
@@ -1389,7 +1082,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "identity_129_TO_identity_local_131_Load_I-133-0",
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
                   "Flow" ] ],
               "engine": "PE",
               "ins": [
@@ -1397,27 +1090,27 @@
                   "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
                   "offset": 0
                 },
                 {
                   "ap": [ [ 256, 3 ], [ 1, 64 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "0:0_t155",
-                  "memsetref": "0:0_t155_set",
+                  "memref": "0:0_t156",
+                  "memsetref": "0:0_t156_set",
                   "offset": 128
                 } ],
-              "name": "I-134-2",
+              "name": "I-136-2",
               "opcode": "Matmult",
               "outs": [
                 {
                   "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "0:0_t126",
-                  "memsetref": "0:0_t126_set",
+                  "memref": "0:0_t128",
+                  "memsetref": "0:0_t128_set",
                   "offset": 6
                 } ],
               "replication_num_rows": 0,
@@ -1431,7 +1124,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "identity_129_TO_identity_local_131_Load_I-133-0",
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
                   "Flow" ] ],
               "engine": "PE",
               "ins": [
@@ -1439,27 +1132,27 @@
                   "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "identity_local_131",
-                  "memsetref": "identity_local_131_set",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
                   "offset": 0
                 },
                 {
                   "ap": [ [ 256, 3 ], [ 1, 64 ] ],
                   "dtype": "float16",
                   "kind": "physical_ap",
-                  "memref": "0:0_t155",
-                  "memsetref": "0:0_t155_set",
+                  "memref": "0:0_t156",
+                  "memsetref": "0:0_t156_set",
                   "offset": 192
                 } ],
-              "name": "I-134-3",
+              "name": "I-136-3",
               "opcode": "Matmult",
               "outs": [
                 {
                   "ap": [ [ 12, 64 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "0:0_t126",
-                  "memsetref": "0:0_t126_set",
+                  "memref": "0:0_t128",
+                  "memsetref": "0:0_t128_set",
                   "offset": 9
                 } ],
               "replication_num_rows": 0,
@@ -1469,71 +1162,11 @@
             },
             {
               "debug": {
-                "op_name": "copy0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-142-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "copy0_t140",
-                  "memsetref": "copy0_t140_set",
-                  "offset": 0
-                } ],
-              "name": "I-162-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "copy0_t166",
-                  "memsetref": "copy0_t166_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "copy0",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-162-0",
-                  "Flow" ] ],
-              "engine": "DMA",
-              "ins": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "copy0_t166",
-                  "memsetref": "copy0_t166_set",
-                  "offset": 0
-                } ],
-              "name": "copy0_t166_TO_copy0:0_Save_I-123-0",
-              "opcode": "Save",
-              "outs": [
-                {
-                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 128 ] ],
-                  "dtype": "float32",
-                  "kind": "physical_ap",
-                  "memref": "copy0:0",
-                  "memsetref": "copy0:0_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
                 "op_name": "0:0",
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-134-3",
+                  "I-136-3",
                   "Flow" ] ],
               "engine": "Pool",
               "ins": [
@@ -1541,11 +1174,11 @@
                   "ap": [ [ 12, 64 ], [ 6, 2 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "0:0_t126",
-                  "memsetref": "0:0_t126_set",
+                  "memref": "0:0_t128",
+                  "memsetref": "0:0_t128_set",
                   "offset": 0
                 } ],
-              "name": "I-127-0",
+              "name": "I-129-0",
               "opcode": "TensorCopy",
               "outs": [
                 {
@@ -1568,11 +1201,11 @@
                   "ap": [ [ 12, 64 ], [ 6, 2 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "0:0_t126",
-                  "memsetref": "0:0_t126_set",
+                  "memref": "0:0_t128",
+                  "memsetref": "0:0_t128_set",
                   "offset": 3
                 } ],
-              "name": "I-127-1",
+              "name": "I-129-1",
               "opcode": "TensorCopy",
               "outs": [
                 {
@@ -1590,9 +1223,9 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "t13-76-101-105_TO_t13-76_local_82_Load_I-117-0",
+                  "t13-77-103-107_TO_t13-77_local_83_Load_I-119-0",
                   "Flow" ], [
-                  "I-127-1",
+                  "I-129-1",
                   "Flow" ] ],
               "engine": "PE",
               "ins": [
@@ -1608,19 +1241,19 @@
                   "ap": [ [ 8, 128 ], [ 1, 4 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "t13-76_local_82",
-                  "memsetref": "t13-76_local_82_set",
+                  "memref": "t13-77_local_83",
+                  "memsetref": "t13-77_local_83_set",
                   "offset": 0
                 } ],
-              "name": "I-118-0",
+              "name": "I-120-0",
               "opcode": "Matmult",
               "outs": [
                 {
                   "ap": [ [ 3, 4 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "Linear_648/aten_linear/MatMul_t90",
-                  "memsetref": "Linear_648/aten_linear/MatMul_t90_set",
+                  "memref": "Linear_648/aten_linear/MatMul_t96",
+                  "memsetref": "Linear_648/aten_linear/MatMul_t96_set",
                   "offset": 0
                 } ],
               "replication_num_rows": 0,
@@ -1634,7 +1267,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "t13-76-101-105_TO_t13-76_local_82_Load_I-117-0",
+                  "t13-77-103-107_TO_t13-77_local_83_Load_I-119-0",
                   "Flow" ] ],
               "engine": "PE",
               "ins": [
@@ -1650,19 +1283,19 @@
                   "ap": [ [ 8, 128 ], [ 1, 4 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "t13-76_local_82",
-                  "memsetref": "t13-76_local_82_set",
+                  "memref": "t13-77_local_83",
+                  "memsetref": "t13-77_local_83_set",
                   "offset": 4
                 } ],
-              "name": "I-118-1",
+              "name": "I-120-1",
               "opcode": "Matmult",
               "outs": [
                 {
                   "ap": [ [ 3, 4 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "Linear_648/aten_linear/MatMul_t90",
-                  "memsetref": "Linear_648/aten_linear/MatMul_t90_set",
+                  "memref": "Linear_648/aten_linear/MatMul_t96",
+                  "memsetref": "Linear_648/aten_linear/MatMul_t96_set",
                   "offset": 0
                 } ],
               "replication_num_rows": 0,
@@ -1672,45 +1305,413 @@
             },
             {
               "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "2:0_TO_2:0_local_74_Load_I-116-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_local_74",
+                  "memsetref": "2:0_local_74_set",
+                  "offset": 0
+                } ],
+              "name": "I-139-0",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-139-0",
+                  "Flow" ], [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 0
+                } ],
+              "name": "I-140-0",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 0
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 64
+                } ],
+              "name": "I-140-1",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 3
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 128
+                } ],
+              "name": "I-140-2",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 6
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 192
+                } ],
+              "name": "I-140-3",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 9
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 256
+                } ],
+              "name": "I-140-4",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 12
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 320
+                } ],
+              "name": "I-140-5",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 15
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 384
+                } ],
+              "name": "I-140-6",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 18
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "2:0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 3 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 64 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t159",
+                  "memsetref": "2:0_t159_set",
+                  "offset": 448
+                } ],
+              "name": "I-140-7",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 21
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
                 "op_name": "Linear_648/aten_linear/MatMul",
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-118-1",
+                  "I-130-0",
+                  "Anti" ], [
+                  "I-120-1",
                   "Flow" ], [
-                  "t20-103-107_TO__t164_Load_I-119-0",
-                  "Flow" ], [
-                  "I-128-0",
-                  "Anti" ] ],
+                  "t20-105-109_TO__t162_Load_I-121-0",
+                  "Flow" ] ],
               "engine": "Pool",
               "ins": [
                 {
                   "ap": [ [ 3, 4 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "Linear_648/aten_linear/MatMul_t90",
-                  "memsetref": "Linear_648/aten_linear/MatMul_t90_set",
+                  "memref": "Linear_648/aten_linear/MatMul_t96",
+                  "memsetref": "Linear_648/aten_linear/MatMul_t96_set",
                   "offset": 0
                 },
                 {
                   "ap": [ [ 2, 4 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "_t164",
-                  "memsetref": "_t164_set",
+                  "memref": "_t162",
+                  "memsetref": "_t162_set",
                   "offset": 0
                 } ],
-              "name": "I-121-0",
+              "name": "I-123-0",
               "op0": "add",
               "op1": "bypass",
               "opcode": "TensorScalarPtr",
               "outs": [
                 {
-                  "ap": [ [ 4, 4 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 3, 4 ], [ 1, 1 ], [ 1, 3 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "Linear_648/aten_linear/MatMul_t159",
-                  "memsetref": "Linear_648/aten_linear/MatMul_t159_set",
+                  "memref": "Linear_648/aten_linear/MatMul_t163",
+                  "memsetref": "Linear_648/aten_linear/MatMul_t163_set",
                   "offset": 0
                 } ],
               "reverse0": false,
@@ -1722,13 +1723,13 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-134-1",
+                  "I-123-0",
+                  "Flow" ], [
+                  "I-136-2",
                   "Output" ], [
-                  "I-121-0",
+                  "identity_146_TO_identity_local_148_Load_I-150-0",
                   "Flow" ], [
-                  "identity_145_TO_identity_local_147_Load_I-149-0",
-                  "Flow" ], [
-                  "I-134-3",
+                  "I-136-3",
                   "Output" ] ],
               "engine": "PE",
               "ins": [
@@ -1736,28 +1737,255 @@
                   "ap": [ [ 4, 4 ], [ 1, 1 ], [ 1, 4 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "identity_local_147_shrinked",
-                  "memsetref": "identity_local_147_shrinked_set",
+                  "memref": "identity_local_148_shrinked",
+                  "memsetref": "identity_local_148_shrinked_set",
                   "offset": 0
                 },
                 {
-                  "ap": [ [ 4, 4 ], [ 1, 3 ] ],
+                  "ap": [ [ 3, 4 ], [ 1, 3 ] ],
                   "dtype": "bfloat16",
                   "kind": "physical_ap",
-                  "memref": "Linear_648/aten_linear/MatMul_t159",
-                  "memsetref": "Linear_648/aten_linear/MatMul_t159_set",
+                  "memref": "Linear_648/aten_linear/MatMul_t163",
+                  "memsetref": "Linear_648/aten_linear/MatMul_t163_set",
                   "offset": 0
                 } ],
-              "name": "I-150-0",
+              "name": "I-151-0",
               "opcode": "Matmult",
               "outs": [
                 {
                   "ap": [ [ 4, 3 ], [ 1, 1 ], [ 1, 4 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "_t144",
-                  "memsetref": "_t144_set",
+                  "memref": "_t145",
+                  "memsetref": "_t145_set",
                   "offset": 0
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-140-7",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 6, 4 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 0
+                } ],
+              "name": "I-142-0",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 16, 64 ], [ 4, 4 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t158",
+                  "memsetref": "copy0_t158_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 6, 4 ], [ 1, 3 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "2:0_t138",
+                  "memsetref": "2:0_t138_set",
+                  "offset": 3
+                } ],
+              "name": "I-142-1",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 16, 64 ], [ 4, 4 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t158",
+                  "memsetref": "copy0_t158_set",
+                  "offset": 1024
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-142-1",
+                  "Flow" ], [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 128 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 16, 128 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t158",
+                  "memsetref": "copy0_t158_set",
+                  "offset": 0
+                } ],
+              "name": "I-143-0",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t155",
+                  "memsetref": "copy0_t155_set",
+                  "offset": 0
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 128 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 16, 128 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t158",
+                  "memsetref": "copy0_t158_set",
+                  "offset": 4
+                } ],
+              "name": "I-143-1",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t155",
+                  "memsetref": "copy0_t155_set",
+                  "offset": 128
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 128 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 16, 128 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t158",
+                  "memsetref": "copy0_t158_set",
+                  "offset": 8
+                } ],
+              "name": "I-143-2",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t155",
+                  "memsetref": "copy0_t155_set",
+                  "offset": 256
+                } ],
+              "replication_num_rows": 0,
+              "replication_resolution": 0,
+              "replication_shift_amnt": 0,
+              "start_tensor_calc": true
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "identity_131_TO_identity_local_133_Load_I-135-0",
+                  "Flow" ] ],
+              "engine": "PE",
+              "ins": [
+                {
+                  "ap": [ [ 128, 128 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "identity_local_133",
+                  "memsetref": "identity_local_133_set",
+                  "offset": 0
+                },
+                {
+                  "ap": [ [ 16, 128 ], [ 1, 3 ] ],
+                  "dtype": "float16",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t158",
+                  "memsetref": "copy0_t158_set",
+                  "offset": 12
+                } ],
+              "name": "I-143-3",
+              "opcode": "Matmult",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 128 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t155",
+                  "memsetref": "copy0_t155_set",
+                  "offset": 384
                 } ],
               "replication_num_rows": 0,
               "replication_resolution": 0,
@@ -1770,7 +1998,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-150-0",
+                  "I-151-0",
                   "Flow" ] ],
               "engine": "Pool",
               "ins": [
@@ -1778,19 +2006,19 @@
                   "ap": [ [ 4, 3 ], [ 1, 1 ], [ 1, 4 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "_t144",
-                  "memsetref": "_t144_set",
+                  "memref": "_t145",
+                  "memsetref": "_t145_set",
                   "offset": 0
                 } ],
-              "name": "I-163-0",
+              "name": "I-161-0",
               "opcode": "TensorCopy",
               "outs": [
                 {
                   "ap": [ [ 4, 3 ], [ 1, 1 ], [ 1, 4 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "_t167",
-                  "memsetref": "_t167_set",
+                  "memref": "_t164",
+                  "memsetref": "_t164_set",
                   "offset": 0
                 } ]
             },
@@ -1800,21 +2028,19 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-163-0",
-                  "Flow" ], [
-                  "copy0_t166_TO_copy0:0_Save_I-123-0",
-                  "Output" ] ],
+                  "I-161-0",
+                  "Flow" ] ],
               "engine": "DMA",
               "ins": [
                 {
                   "ap": [ [ 4, 3 ], [ 1, 1 ], [ 1, 4 ] ],
                   "dtype": "float32",
                   "kind": "physical_ap",
-                  "memref": "_t167",
-                  "memsetref": "_t167_set",
+                  "memref": "_t164",
+                  "memsetref": "_t164_set",
                   "offset": 0
                 } ],
-              "name": "_t167_TO_aten_view/Reshape:0_Save_I-125-0",
+              "name": "_t164_TO_aten_view/Reshape:0_Save_I-127-0",
               "opcode": "Save",
               "outs": [
                 {
@@ -1823,6 +2049,68 @@
                   "kind": "physical_ap",
                   "memref": "aten_view/Reshape:0",
                   "memsetref": "aten_view/Reshape:0_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-143-3",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t155",
+                  "memsetref": "copy0_t155_set",
+                  "offset": 0
+                } ],
+              "name": "I-154-0",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t153",
+                  "memsetref": "copy0_t153_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "copy0",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "_t164_TO_aten_view/Reshape:0_Save_I-127-0",
+                  "Output" ], [
+                  "I-154-0",
+                  "Flow" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0_t153",
+                  "memsetref": "copy0_t153_set",
+                  "offset": 0
+                } ],
+              "name": "copy0_t153_TO_copy0:0_Save_I-125-0",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 512, 3 ], [ 1, 1 ], [ 1, 512 ] ],
+                  "dtype": "float32",
+                  "kind": "physical_ap",
+                  "memref": "copy0:0",
+                  "memsetref": "copy0:0_set",
                   "offset": 0
                 } ]
             } ],

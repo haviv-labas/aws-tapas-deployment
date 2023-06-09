@@ -6,12 +6,12 @@
         "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape:0",
         "sim_format": "N",
         "sim_shape": [
-            768
+            3072
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_reshape__Reshape:0.npy",
         "tf_format": "N",
         "tf_shape": [
-            768
+            3072
         ]
     },
     "TapasModel_7/TapasEmbeddings_27/aten_to_1/Const:0": {
@@ -36,7 +36,7 @@
         "sim_format": "CRSM",
         "sim_shape": [
             128,
-            3,
+            12,
             1,
             1
         ],
@@ -52,7 +52,7 @@
         "tf_format": "CRSM",
         "tf_shape": [
             128,
-            3,
+            12,
             1,
             1
         ]

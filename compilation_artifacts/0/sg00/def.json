@@ -37,10 +37,10 @@
             "#transfer-type": "output",
             "element_size": 4,
             "internal_shape": [
-                768
+                3072
             ],
             "ops": [],
-            "size": 3072,
+            "size": 12288,
             "type": "output",
             "var_id": 4
         },

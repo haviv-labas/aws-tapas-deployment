@@ -16,10 +16,10 @@
         "kind": "input",
         "layer_name": "1:0",
         "sim_format": "NC",
-        "sim_shape": [ 3, 256 ],
+        "sim_shape": [ 3, 1024 ],
         "tf_file": "value_1:0.npy",
         "tf_format": "NC",
-        "tf_shape": [ 3, 256 ]
+        "tf_shape": [ 3, 1024 ]
     },
     "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape:0": {
         "dtype": "int32",
@@ -38,9 +38,9 @@
         "kind": "output",
         "layer_name": "copy1:0",
         "sim_format": "NC",
-        "sim_shape": [ 3, 256 ],
+        "sim_shape": [ 3, 1024 ],
         "tf_file": "value_copy1:0.npy",
         "tf_format": "NC",
-        "tf_shape": [ 3, 256 ]
+        "tf_shape": [ 3, 1024 ]
     }
 }

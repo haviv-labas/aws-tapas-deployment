@@ -1,5 +1,5 @@
 v0.0.1
-%42 = fn (%v3:0: Tensor[(6144,), float32], %v4:0: Tensor[(6144,), float32], %v7:0: Tensor[(3, 2048), float32], %tensor.11:0: Tensor[(3, 2048), int64], %v0:0: Tensor[(96,), float32], %v2:0: Tensor[(96,), float32], %v8:0: Tensor[(3, 128), int64]) -> (Tensor[(3, 2048), float32], Tensor[(3, 128), int64]) {
+%42 = fn (%v3:0: Tensor[(6144,), float32], %v4:0: Tensor[(6144,), float32], %v7:0: Tensor[(3, 2048), float32], %tensor.11:0: Tensor[(3, 2048), int64], %v0:0: Tensor[(96,), float32], %v2:0: Tensor[(96,), float32], %v8:0: Tensor[(3, 512), int64]) -> (Tensor[(3, 2048), float32], Tensor[(3, 512), int64]) {
   %0 = copy(%v3:0, framework_op_name="copy0", output_tensors_name=["copy0:0"], input_tensors_name=[], framework_op_debug_info="aten_div_1/truediv", axis=0) // ty=Tensor[(6144,), float32]
   %1 = copy(%v4:0, framework_op_name="copy1", output_tensors_name=["copy1:0"], input_tensors_name=[], framework_op_debug_info="aten_expand/BroadcastTo", axis=0) // ty=Tensor[(6144,), float32]
   %2 = broadcast_to(%1, framework_op_name="aten_expand/BroadcastTo", output_tensors_name=["aten_expand/BroadcastTo:0"], input_tensors_name=[], framework_op_debug_info="aten_expand/BroadcastTo", shape=[6144]) // ty=Tensor[(6144,), float32]
@@ -40,7 +40,7 @@ v0.0.1
   %37 = multiply(%36, meta[relay.Constant][9] // ty=Tensor[(1,), float32], framework_op_name="aten_mul_3/mul", output_tensors_name=["aten_mul_3/mul:0"], input_tensors_name=[], framework_op_debug_info="aten_mul_3/mul", axis=0) // ty=Tensor[(3, 2048), float32]
   %38 = add(%5, %37, framework_op_name="add0", output_tensors_name=["add0:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 2048), float32]
   %39 = copy(%38, framework_op_name="aten_add_3/add", output_tensors_name=["aten_add_3/add:0"], input_tensors_name=[], framework_op_debug_info="aten_add_3/add", axis=0) // ty=Tensor[(3, 2048), float32]
-  %40 = copy(%v8:0, framework_op_name="copy6", output_tensors_name=["copy6:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 128), int64]
+  %40 = copy(%v8:0, framework_op_name="copy6", output_tensors_name=["copy6:0"], input_tensors_name=[], framework_op_debug_info="", axis=0) // ty=Tensor[(3, 512), int64]
   %41 = (%39, %40)
   %41
 }

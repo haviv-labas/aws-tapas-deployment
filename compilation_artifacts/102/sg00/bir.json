@@ -69,9 +69,9 @@
                         "dtype": "int32",
                         "format": "NC",
                         "partition_dim": 0,
-                        "shape": [ 3, 256 ],
+                        "shape": [ 3, 1024 ],
                         "tensor_name": "1:0",
-                        "tensor_shape": [ 3, 128, 2 ]
+                        "tensor_shape": [ 3, 4, 128, 2 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -83,7 +83,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 1024 ],
+                            "dims": [ 3, 4096 ],
                             "name": "1:0",
                             "pinned": false,
                             "type": "DRAM"
@@ -91,7 +91,7 @@
                     ],
                     "name": "1:0_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128, 2 ]
+                    "tensor_shape": [ 3, 4, 128, 2 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -99,9 +99,9 @@
                         "dtype": "int32",
                         "format": "NC",
                         "partition_dim": 0,
-                        "shape": [ 3, 256 ],
+                        "shape": [ 3, 1024 ],
                         "tensor_name": "copy1:0",
-                        "tensor_shape": [ 3, 128, 2 ]
+                        "tensor_shape": [ 3, 4, 128, 2 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -113,7 +113,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 3, 1024 ],
+                            "dims": [ 3, 4096 ],
                             "name": "copy1:0",
                             "pinned": false,
                             "type": "DRAM"
@@ -121,7 +121,7 @@
                     ],
                     "name": "copy1:0_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 3, 128, 2 ]
+                    "tensor_shape": [ 3, 4, 128, 2 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -159,9 +159,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 1,
-                        "shape": [ 128, 4, 1 ],
+                        "shape": [ 128, 24, 1 ],
                         "tensor_name": "copy1_t40",
-                        "tensor_shape": [ 2, 128, 4 ]
+                        "tensor_shape": [ 2, 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -173,7 +173,7 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 16 ],
+                            "dims": [ 128, 96 ],
                             "name": "copy1_t40",
                             "pinned": false,
                             "type": "SB"
@@ -181,7 +181,7 @@
                     ],
                     "name": "copy1_t40_set",
                     "partition_dim": 1,
-                    "tensor_shape": [ 2, 128, 4 ]
+                    "tensor_shape": [ 2, 128, 24 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -190,7 +190,7 @@
                         "format": "UNDEF",
                         "partition_dim": 2,
                         "shape": [ 128, 32, 1 ],
-                        "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t58",
+                        "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t59",
                         "tensor_shape": [ 3, 32, 128, 32 ]
                     },
                     "dtype": "int32",
@@ -204,12 +204,12 @@
                             "bank": 0,
                             "base": 0,
                             "dims": [ 128, 128 ],
-                            "name": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t58",
+                            "name": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t59",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t58_set",
+                    "name": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t59_set",
                     "partition_dim": 2,
                     "tensor_shape": [ 3, 32, 128, 32 ]
                 },
@@ -219,9 +219,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 6, 1 ],
-                        "tensor_name": "copy1_t63",
-                        "tensor_shape": [ 128, 6 ]
+                        "shape": [ 128, 24, 1 ],
+                        "tensor_name": "copy1_t64",
+                        "tensor_shape": [ 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -233,45 +233,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 24 ],
-                            "name": "copy1_t63",
+                            "dims": [ 128, 96 ],
+                            "name": "copy1_t64",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "copy1_t63_set",
+                    "name": "copy1_t64_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 6 ]
-                },
-                {
-                    "Skind": "memory_location_set",
-                    "debug": {
-                        "dtype": "int32",
-                        "format": "UNDEF",
-                        "partition_dim": 0,
-                        "shape": [ 128, 4, 1 ],
-                        "tensor_name": "1:0_local_51",
-                        "tensor_shape": [ 128, 4 ]
-                    },
-                    "dtype": "int32",
-                    "file": "",
-                    "kind": "Internal",
-                    "memorylocations": [
-                        {
-                            "Skind": "memory_location",
-                            "addr": 0,
-                            "allocated": false,
-                            "bank": 0,
-                            "base": 0,
-                            "dims": [ 128, 16 ],
-                            "name": "1:0_local_51",
-                            "pinned": false,
-                            "type": "SB"
-                        }
-                    ],
-                    "name": "1:0_local_51_set",
-                    "partition_dim": 0,
-                    "tensor_shape": [ 128, 4 ]
+                    "tensor_shape": [ 128, 24 ]
                 },
                 {
                     "Skind": "memory_location_set",
@@ -309,9 +279,9 @@
                         "dtype": "int32",
                         "format": "UNDEF",
                         "partition_dim": 0,
-                        "shape": [ 128, 6, 1 ],
-                        "tensor_name": "_t87",
-                        "tensor_shape": [ 128, 6 ]
+                        "shape": [ 128, 24, 1 ],
+                        "tensor_name": "_t84",
+                        "tensor_shape": [ 128, 24 ]
                     },
                     "dtype": "int32",
                     "file": "",
@@ -323,15 +293,15 @@
                             "allocated": false,
                             "bank": 0,
                             "base": 0,
-                            "dims": [ 128, 24 ],
-                            "name": "_t87",
+                            "dims": [ 128, 96 ],
+                            "name": "_t84",
                             "pinned": false,
                             "type": "SB"
                         }
                     ],
-                    "name": "_t87_set",
+                    "name": "_t84_set",
                     "partition_dim": 0,
-                    "tensor_shape": [ 128, 6 ]
+                    "tensor_shape": [ 128, 24 ]
                 }
             ],
             "attributes": [
@@ -345,289 +315,7 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "c1_49",
-                                "stride": 1,
-                                "ub": 3
-                            },
-                            "blocks": [
-                                {
-                                    "instructions": [
-                                        {
-                                            "debug": {
-                                                "op_name": "unknown"
-                                            },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "DMA",
-                                            "ins": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "c1_49",
-                                                                    "coef": 1
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "1:0",
-                                                    "memsetref": "1:0_set"
-                                                }
-                                            ],
-                                            "loopnest": [
-                                                "c1_49"
-                                            ],
-                                            "name": "I-70",
-                                            "opcode": "AbstractCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "c1_49",
-                                                                    "coef": 2
-                                                                }
-                                                            ]
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 6, 128 ], [ 6, 1 ], [ 1, 1 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "_t87",
-                                                    "memsetref": "_t87_set"
-                                                }
-                                            ],
-                                            "predicates": []
-                                        }
-                                    ],
-                                    "name": "block0"
-                                }
-                            ],
-                            "engine": "Unassigned",
-                            "ins": [],
-                            "isBasicBlock": false,
-                            "isParallel": true,
-                            "loopnest": [],
-                            "name": "c1_49_loop",
-                            "opcode": "Loop",
-                            "outs": [],
-                            "predicates": []
-                        },
-                        {
-                            "LoopAxis": {
-                                "lb": 0,
-                                "name": "p_88_89",
-                                "stride": 1,
-                                "ub": 2
-                            },
-                            "blocks": [
-                                {
-                                    "instructions": [
-                                        {
-                                            "debug": {
-                                                "op_name": "unknown"
-                                            },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "Pool",
-                                            "ins": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_88_89",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "_t87",
-                                                    "memsetref": "_t87_set"
-                                                }
-                                            ],
-                                            "loopnest": [
-                                                "p_88_89"
-                                            ],
-                                            "name": "I-86",
-                                            "opcode": "TensorCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_88_89",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "1:0_local_51",
-                                                    "memsetref": "1:0_local_51_set"
-                                                }
-                                            ],
-                                            "predicates": []
-                                        }
-                                    ],
-                                    "name": "block0"
-                                }
-                            ],
-                            "engine": "Unassigned",
-                            "ins": [],
-                            "isBasicBlock": false,
-                            "isParallel": true,
-                            "loopnest": [],
-                            "name": "p_88_89_loop",
-                            "opcode": "Loop",
-                            "outs": [],
-                            "predicates": []
-                        },
-                        {
-                            "LoopAxis": {
-                                "lb": 0,
-                                "name": "p_80",
-                                "stride": 1,
-                                "ub": 2
-                            },
-                            "blocks": [
-                                {
-                                    "instructions": [
-                                        {
-                                            "debug": {
-                                                "op_name": "copy1"
-                                            },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "Pool",
-                                            "expr0": {
-                                                "c": 0,
-                                                "terms": []
-                                            },
-                                            "expr1": {
-                                                "c": 0,
-                                                "terms": []
-                                            },
-                                            "ins": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_80",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "1:0_local_51",
-                                                    "memsetref": "1:0_local_51_set"
-                                                }
-                                            ],
-                                            "loopnest": [
-                                                "p_80"
-                                            ],
-                                            "name": "I-73",
-                                            "op0": "arith_shift_right",
-                                            "op1": "bypass",
-                                            "opcode": "TensorScalarSymbolic",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 1,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "p_80",
-                                                                    "coef": 64
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "copy1_t40",
-                                                    "memsetref": "copy1_t40_set"
-                                                }
-                                            ],
-                                            "predicates": [],
-                                            "reverse0": false,
-                                            "reverse1": false,
-                                            "value0": [ 31 ],
-                                            "value1": [
-                                                0.0
-                                            ]
-                                        }
-                                    ],
-                                    "name": "block0"
-                                }
-                            ],
-                            "engine": "Unassigned",
-                            "ins": [],
-                            "isBasicBlock": false,
-                            "isParallel": true,
-                            "loopnest": [],
-                            "name": "p_80_loop",
-                            "opcode": "Loop",
-                            "outs": [],
-                            "predicates": []
-                        },
-                        {
-                            "LoopAxis": {
-                                "lb": 0,
-                                "name": "i0_3_57",
+                                "name": "i0_3_58",
                                 "stride": 1,
                                 "ub": 3
                             },
@@ -637,7 +325,7 @@
                                         {
                                             "LoopAxis": {
                                                 "lb": 0,
-                                                "name": "i1_3_0_57_0",
+                                                "name": "i1_3_0_58_0",
                                                 "stride": 1,
                                                 "ub": 32
                                             },
@@ -647,7 +335,7 @@
                                                         {
                                                             "LoopAxis": {
                                                                 "lb": 0,
-                                                                "name": "i1_3_0_57_1",
+                                                                "name": "i1_3_0_58_1",
                                                                 "stride": 1,
                                                                 "ub": 16
                                                             },
@@ -668,7 +356,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -677,11 +365,11 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 16
                                                                                                 },
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_1",
+                                                                                                    "AxisLabel": "i1_3_0_58_1",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -703,11 +391,11 @@
                                                                                 }
                                                                             ],
                                                                             "loopnest": [
-                                                                                "i0_3_57",
-                                                                                "i1_3_0_57_0",
-                                                                                "i1_3_0_57_1"
+                                                                                "i0_3_58",
+                                                                                "i1_3_0_58_0",
+                                                                                "i1_3_0_58_1"
                                                                             ],
-                                                                            "name": "I-66",
+                                                                            "name": "I-67",
                                                                             "opcode": "AbstractCopy",
                                                                             "outs": [
                                                                                 {
@@ -716,7 +404,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -725,7 +413,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -738,7 +426,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_1",
+                                                                                                    "AxisLabel": "i1_3_0_58_1",
                                                                                                     "coef": 2
                                                                                                 }
                                                                                             ]
@@ -762,7 +450,7 @@
                                                             "isBasicBlock": false,
                                                             "isParallel": true,
                                                             "loopnest": [],
-                                                            "name": "i1_3_0_57_1_loop",
+                                                            "name": "i1_3_0_58_1_loop",
                                                             "opcode": "Loop",
                                                             "outs": [],
                                                             "predicates": []
@@ -770,7 +458,7 @@
                                                         {
                                                             "LoopAxis": {
                                                                 "lb": 0,
-                                                                "name": "p_82_90",
+                                                                "name": "p_82_87",
                                                                 "stride": 1,
                                                                 "ub": 2
                                                             },
@@ -791,7 +479,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -800,7 +488,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -809,7 +497,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "p_82_90",
+                                                                                                    "AxisLabel": "p_82_87",
                                                                                                     "coef": 64
                                                                                                 }
                                                                                             ]
@@ -827,11 +515,11 @@
                                                                                 }
                                                                             ],
                                                                             "loopnest": [
-                                                                                "i0_3_57",
-                                                                                "i1_3_0_57_0",
-                                                                                "p_82_90"
+                                                                                "i0_3_58",
+                                                                                "i1_3_0_58_0",
+                                                                                "p_82_87"
                                                                             ],
-                                                                            "name": "I-79",
+                                                                            "name": "I-80",
                                                                             "opcode": "TensorCopy",
                                                                             "outs": [
                                                                                 {
@@ -840,7 +528,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -853,7 +541,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -862,7 +550,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "p_82_90",
+                                                                                                    "AxisLabel": "p_82_87",
                                                                                                     "coef": 64
                                                                                                 }
                                                                                             ]
@@ -903,7 +591,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -912,7 +600,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -921,7 +609,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "p_82_90",
+                                                                                                    "AxisLabel": "p_82_87",
                                                                                                     "coef": 64
                                                                                                 }
                                                                                             ]
@@ -939,11 +627,11 @@
                                                                                 }
                                                                             ],
                                                                             "loopnest": [
-                                                                                "i0_3_57",
-                                                                                "i1_3_0_57_0",
-                                                                                "p_82_90"
+                                                                                "i0_3_58",
+                                                                                "i1_3_0_58_0",
+                                                                                "p_82_87"
                                                                             ],
-                                                                            "name": "I-69",
+                                                                            "name": "I-70",
                                                                             "op0": "arith_shift_right",
                                                                             "op1": "bypass",
                                                                             "opcode": "TensorScalarSymbolic",
@@ -954,7 +642,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -967,7 +655,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -976,7 +664,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "p_82_90",
+                                                                                                    "AxisLabel": "p_82_87",
                                                                                                     "coef": 64
                                                                                                 }
                                                                                             ]
@@ -1010,7 +698,7 @@
                                                             "isBasicBlock": false,
                                                             "isParallel": true,
                                                             "loopnest": [],
-                                                            "name": "p_82_90_loop",
+                                                            "name": "p_82_87_loop",
                                                             "opcode": "Loop",
                                                             "outs": [],
                                                             "predicates": []
@@ -1049,7 +737,7 @@
                                                                                                             "c": 0,
                                                                                                             "terms": [
                                                                                                                 {
-                                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                                     "coef": 1
                                                                                                                 }
                                                                                                             ]
@@ -1067,7 +755,7 @@
                                                                                                             "c": 0,
                                                                                                             "terms": [
                                                                                                                 {
-                                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                                     "coef": 1
                                                                                                                 }
                                                                                                             ]
@@ -1094,12 +782,12 @@
                                                                                                 }
                                                                                             ],
                                                                                             "loopnest": [
-                                                                                                "i0_3_57",
-                                                                                                "i1_3_0_57_0",
+                                                                                                "i0_3_58",
+                                                                                                "i1_3_0_58_0",
                                                                                                 "i2_3",
                                                                                                 "p_83"
                                                                                             ],
-                                                                                            "name": "I-74",
+                                                                                            "name": "I-75",
                                                                                             "opcode": "TensorCopy",
                                                                                             "outs": [
                                                                                                 {
@@ -1108,7 +796,7 @@
                                                                                                             "c": 0,
                                                                                                             "terms": [
                                                                                                                 {
-                                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                                     "coef": 1
                                                                                                                 }
                                                                                                             ]
@@ -1117,7 +805,7 @@
                                                                                                             "c": 0,
                                                                                                             "terms": [
                                                                                                                 {
-                                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                                     "coef": 1
                                                                                                                 }
                                                                                                             ]
@@ -1144,8 +832,8 @@
                                                                                                     "ap": [ [ 32, 64 ], [ 32, 1 ], [ 2, 16 ] ],
                                                                                                     "dtype": "int32",
                                                                                                     "kind": "symbolic_ap",
-                                                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t58",
-                                                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t58_set"
+                                                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t59",
+                                                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t59_set"
                                                                                                 }
                                                                                             ],
                                                                                             "predicates": []
@@ -1181,7 +869,7 @@
                                                         {
                                                             "LoopAxis": {
                                                                 "lb": 0,
-                                                                "name": "i1_3_0_57_1_90_91",
+                                                                "name": "i1_3_0_58_1_87_88",
                                                                 "stride": 1,
                                                                 "ub": 16
                                                             },
@@ -1202,7 +890,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -1211,7 +899,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -1224,7 +912,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_1_90_91",
+                                                                                                    "AxisLabel": "i1_3_0_58_1_87_88",
                                                                                                     "coef": 2
                                                                                                 }
                                                                                             ]
@@ -1233,16 +921,16 @@
                                                                                     "ap": [ [ 32, 128 ], [ 32, 1 ], [ 1, 2 ] ],
                                                                                     "dtype": "int32",
                                                                                     "kind": "symbolic_ap",
-                                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t58",
-                                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t58_set"
+                                                                                    "memref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t59",
+                                                                                    "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_view/Reshape_t59_set"
                                                                                 }
                                                                             ],
                                                                             "loopnest": [
-                                                                                "i0_3_57",
-                                                                                "i1_3_0_57_0",
-                                                                                "i1_3_0_57_1_90_91"
+                                                                                "i0_3_58",
+                                                                                "i1_3_0_58_0",
+                                                                                "i1_3_0_58_1_87_88"
                                                                             ],
-                                                                            "name": "I-75",
+                                                                            "name": "I-76",
                                                                             "opcode": "AbstractCopy",
                                                                             "outs": [
                                                                                 {
@@ -1251,7 +939,7 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i0_3_57",
+                                                                                                    "AxisLabel": "i0_3_58",
                                                                                                     "coef": 1
                                                                                                 }
                                                                                             ]
@@ -1260,11 +948,11 @@
                                                                                             "c": 0,
                                                                                             "terms": [
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_1_90_91",
+                                                                                                    "AxisLabel": "i1_3_0_58_1_87_88",
                                                                                                     "coef": 1
                                                                                                 },
                                                                                                 {
-                                                                                                    "AxisLabel": "i1_3_0_57_0",
+                                                                                                    "AxisLabel": "i1_3_0_58_0",
                                                                                                     "coef": 16
                                                                                                 }
                                                                                             ]
@@ -1296,7 +984,7 @@
                                                             "isBasicBlock": false,
                                                             "isParallel": true,
                                                             "loopnest": [],
-                                                            "name": "i1_3_0_57_1_90_91_loop",
+                                                            "name": "i1_3_0_58_1_87_88_loop",
                                                             "opcode": "Loop",
                                                             "outs": [],
                                                             "predicates": []
@@ -1310,7 +998,7 @@
                                             "isBasicBlock": false,
                                             "isParallel": false,
                                             "loopnest": [],
-                                            "name": "i1_3_0_57_0_loop",
+                                            "name": "i1_3_0_58_0_loop",
                                             "opcode": "Loop",
                                             "outs": [],
                                             "predicates": []
@@ -1324,7 +1012,7 @@
                             "isBasicBlock": false,
                             "isParallel": false,
                             "loopnest": [],
-                            "name": "i0_3_57_loop",
+                            "name": "i0_3_58_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []
@@ -1332,7 +1020,135 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "p_84",
+                                "name": "i0_4_63",
+                                "stride": 1,
+                                "ub": 3
+                            },
+                            "blocks": [
+                                {
+                                    "instructions": [
+                                        {
+                                            "LoopAxis": {
+                                                "lb": 0,
+                                                "name": "i1_4_0_63",
+                                                "stride": 1,
+                                                "ub": 4
+                                            },
+                                            "blocks": [
+                                                {
+                                                    "instructions": [
+                                                        {
+                                                            "debug": {
+                                                                "op_name": "unknown"
+                                                            },
+                                                            "dependencies": [],
+                                                            "descendants": [],
+                                                            "engine": "DMA",
+                                                            "ins": [
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_4_63",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i1_4_0_63",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "1:0",
+                                                                    "memsetref": "1:0_set"
+                                                                }
+                                                            ],
+                                                            "loopnest": [
+                                                                "i0_4_63",
+                                                                "i1_4_0_63"
+                                                            ],
+                                                            "name": "I-71",
+                                                            "opcode": "AbstractCopy",
+                                                            "outs": [
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_4_63",
+                                                                                    "coef": 8
+                                                                                },
+                                                                                {
+                                                                                    "AxisLabel": "i1_4_0_63",
+                                                                                    "coef": 2
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 24, 128 ], [ 24, 1 ], [ 1, 1 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "_t84",
+                                                                    "memsetref": "_t84_set"
+                                                                }
+                                                            ],
+                                                            "predicates": []
+                                                        }
+                                                    ],
+                                                    "name": "block0"
+                                                }
+                                            ],
+                                            "engine": "Unassigned",
+                                            "ins": [],
+                                            "isBasicBlock": false,
+                                            "isParallel": true,
+                                            "loopnest": [],
+                                            "name": "i1_4_0_63_loop",
+                                            "opcode": "Loop",
+                                            "outs": [],
+                                            "predicates": []
+                                        }
+                                    ],
+                                    "name": "block0"
+                                }
+                            ],
+                            "engine": "Unassigned",
+                            "ins": [],
+                            "isBasicBlock": false,
+                            "isParallel": true,
+                            "loopnest": [],
+                            "name": "i0_4_63_loop",
+                            "opcode": "Loop",
+                            "outs": [],
+                            "predicates": []
+                        },
+                        {
+                            "LoopAxis": {
+                                "lb": 0,
+                                "name": "p_85_89_91",
                                 "stride": 1,
                                 "ub": 2
                             },
@@ -1353,7 +1169,7 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_84",
+                                                                    "AxisLabel": "p_85_89_91",
                                                                     "coef": 64
                                                                 }
                                                             ]
@@ -1363,17 +1179,17 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
-                                                    "memref": "1:0_local_51",
-                                                    "memsetref": "1:0_local_51_set"
+                                                    "memref": "_t84",
+                                                    "memsetref": "_t84_set"
                                                 }
                                             ],
                                             "loopnest": [
-                                                "p_84"
+                                                "p_85_89_91"
                                             ],
-                                            "name": "I-78",
+                                            "name": "I-79",
                                             "opcode": "TensorCopy",
                                             "outs": [
                                                 {
@@ -1386,7 +1202,7 @@
                                                             "c": 0,
                                                             "terms": [
                                                                 {
-                                                                    "AxisLabel": "p_84",
+                                                                    "AxisLabel": "p_85_89_91",
                                                                     "coef": 64
                                                                 }
                                                             ]
@@ -1396,7 +1212,7 @@
                                                             "terms": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                     "dtype": "int32",
                                                     "kind": "symbolic_ap",
                                                     "memref": "copy1_t40",
@@ -1404,6 +1220,88 @@
                                                 }
                                             ],
                                             "predicates": []
+                                        },
+                                        {
+                                            "debug": {
+                                                "op_name": "copy1"
+                                            },
+                                            "dependencies": [],
+                                            "descendants": [],
+                                            "engine": "Pool",
+                                            "expr0": {
+                                                "c": 0,
+                                                "terms": []
+                                            },
+                                            "expr1": {
+                                                "c": 0,
+                                                "terms": []
+                                            },
+                                            "ins": [
+                                                {
+                                                    "addrs": [
+                                                        {
+                                                            "c": 0,
+                                                            "terms": [
+                                                                {
+                                                                    "AxisLabel": "p_85_89_91",
+                                                                    "coef": 64
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "c": 0,
+                                                            "terms": []
+                                                        }
+                                                    ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
+                                                    "dtype": "int32",
+                                                    "kind": "symbolic_ap",
+                                                    "memref": "_t84",
+                                                    "memsetref": "_t84_set"
+                                                }
+                                            ],
+                                            "loopnest": [
+                                                "p_85_89_91"
+                                            ],
+                                            "name": "I-74",
+                                            "op0": "arith_shift_right",
+                                            "op1": "bypass",
+                                            "opcode": "TensorScalarSymbolic",
+                                            "outs": [
+                                                {
+                                                    "addrs": [
+                                                        {
+                                                            "c": 1,
+                                                            "terms": []
+                                                        },
+                                                        {
+                                                            "c": 0,
+                                                            "terms": [
+                                                                {
+                                                                    "AxisLabel": "p_85_89_91",
+                                                                    "coef": 64
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "c": 0,
+                                                            "terms": []
+                                                        }
+                                                    ],
+                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
+                                                    "dtype": "int32",
+                                                    "kind": "symbolic_ap",
+                                                    "memref": "copy1_t40",
+                                                    "memsetref": "copy1_t40_set"
+                                                }
+                                            ],
+                                            "predicates": [],
+                                            "reverse0": false,
+                                            "reverse1": false,
+                                            "value0": [ 31 ],
+                                            "value1": [
+                                                0.0
+                                            ]
                                         }
                                     ],
                                     "name": "block0"
@@ -1414,7 +1312,7 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "p_84_loop",
+                            "name": "p_85_89_91_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []
@@ -1432,7 +1330,7 @@
                                         {
                                             "LoopAxis": {
                                                 "lb": 0,
-                                                "name": "p_85",
+                                                "name": "p_86",
                                                 "stride": 1,
                                                 "ub": 2
                                             },
@@ -1462,7 +1360,7 @@
                                                                             "c": 0,
                                                                             "terms": [
                                                                                 {
-                                                                                    "AxisLabel": "p_85",
+                                                                                    "AxisLabel": "p_86",
                                                                                     "coef": 64
                                                                                 }
                                                                             ]
@@ -1472,7 +1370,7 @@
                                                                             "terms": []
                                                                         }
                                                                     ],
-                                                                    "ap": [ [ 4, 64 ], [ 4, 1 ], [ 1, 3 ] ],
+                                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                                     "dtype": "int32",
                                                                     "kind": "symbolic_ap",
                                                                     "memref": "copy1_t40",
@@ -1481,9 +1379,9 @@
                                                             ],
                                                             "loopnest": [
                                                                 "i2_4",
-                                                                "p_85"
+                                                                "p_86"
                                                             ],
-                                                            "name": "I-76",
+                                                            "name": "I-77",
                                                             "opcode": "TensorCopy",
                                                             "outs": [
                                                                 {
@@ -1492,7 +1390,7 @@
                                                                             "c": 0,
                                                                             "terms": [
                                                                                 {
-                                                                                    "AxisLabel": "p_85",
+                                                                                    "AxisLabel": "p_86",
                                                                                     "coef": 64
                                                                                 }
                                                                             ]
@@ -1507,11 +1405,11 @@
                                                                             ]
                                                                         }
                                                                     ],
-                                                                    "ap": [ [ 6, 64 ], [ 6, 1 ], [ 2, 3 ] ],
+                                                                    "ap": [ [ 24, 64 ], [ 24, 1 ], [ 2, 12 ] ],
                                                                     "dtype": "int32",
                                                                     "kind": "symbolic_ap",
-                                                                    "memref": "copy1_t63",
-                                                                    "memsetref": "copy1_t63_set"
+                                                                    "memref": "copy1_t64",
+                                                                    "memsetref": "copy1_t64_set"
                                                                 }
                                                             ],
                                                             "predicates": []
@@ -1525,7 +1423,7 @@
                                             "isBasicBlock": false,
                                             "isParallel": true,
                                             "loopnest": [],
-                                            "name": "p_85_loop",
+                                            "name": "p_86_loop",
                                             "opcode": "Loop",
                                             "outs": [],
                                             "predicates": []
@@ -1547,7 +1445,7 @@
                         {
                             "LoopAxis": {
                                 "lb": 0,
-                                "name": "i0_4_62",
+                                "name": "i0_4_63_91_92",
                                 "stride": 1,
                                 "ub": 3
                             },
@@ -1555,69 +1453,107 @@
                                 {
                                     "instructions": [
                                         {
-                                            "debug": {
-                                                "op_name": "copy1"
+                                            "LoopAxis": {
+                                                "lb": 0,
+                                                "name": "i1_4_0_63_89_90_92",
+                                                "stride": 1,
+                                                "ub": 4
                                             },
-                                            "dependencies": [],
-                                            "descendants": [],
-                                            "engine": "DMA",
-                                            "ins": [
+                                            "blocks": [
                                                 {
-                                                    "addrs": [
+                                                    "instructions": [
                                                         {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
+                                                            "debug": {
+                                                                "op_name": "copy1"
+                                                            },
+                                                            "dependencies": [],
+                                                            "descendants": [],
+                                                            "engine": "DMA",
+                                                            "ins": [
                                                                 {
-                                                                    "AxisLabel": "i0_4_62",
-                                                                    "coef": 2
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_4_63_91_92",
+                                                                                    "coef": 8
+                                                                                },
+                                                                                {
+                                                                                    "AxisLabel": "i1_4_0_63_89_90_92",
+                                                                                    "coef": 2
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 24, 128 ], [ 24, 1 ], [ 1, 2 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "copy1_t64",
+                                                                    "memsetref": "copy1_t64_set"
                                                                 }
-                                                            ]
+                                                            ],
+                                                            "loopnest": [
+                                                                "i0_4_63_91_92",
+                                                                "i1_4_0_63_89_90_92"
+                                                            ],
+                                                            "name": "I-78",
+                                                            "opcode": "AbstractCopy",
+                                                            "outs": [
+                                                                {
+                                                                    "addrs": [
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i0_4_63_91_92",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": [
+                                                                                {
+                                                                                    "AxisLabel": "i1_4_0_63_89_90_92",
+                                                                                    "coef": 1
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        },
+                                                                        {
+                                                                            "c": 0,
+                                                                            "terms": []
+                                                                        }
+                                                                    ],
+                                                                    "ap": [ [ 2, 128 ], [ 2, 1 ], [ 1, 2 ] ],
+                                                                    "dtype": "int32",
+                                                                    "kind": "symbolic_ap",
+                                                                    "memref": "copy1:0",
+                                                                    "memsetref": "copy1:0_set"
+                                                                }
+                                                            ],
+                                                            "predicates": []
                                                         }
                                                     ],
-                                                    "ap": [ [ 6, 128 ], [ 6, 1 ], [ 1, 2 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "copy1_t63",
-                                                    "memsetref": "copy1_t63_set"
+                                                    "name": "block0"
                                                 }
                                             ],
-                                            "loopnest": [
-                                                "i0_4_62"
-                                            ],
-                                            "name": "I-77",
-                                            "opcode": "AbstractCopy",
-                                            "outs": [
-                                                {
-                                                    "addrs": [
-                                                        {
-                                                            "c": 0,
-                                                            "terms": [
-                                                                {
-                                                                    "AxisLabel": "i0_4_62",
-                                                                    "coef": 1
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        },
-                                                        {
-                                                            "c": 0,
-                                                            "terms": []
-                                                        }
-                                                    ],
-                                                    "ap": [ [ 2, 128 ], [ 2, 1 ], [ 1, 2 ] ],
-                                                    "dtype": "int32",
-                                                    "kind": "symbolic_ap",
-                                                    "memref": "copy1:0",
-                                                    "memsetref": "copy1:0_set"
-                                                }
-                                            ],
+                                            "engine": "Unassigned",
+                                            "ins": [],
+                                            "isBasicBlock": false,
+                                            "isParallel": true,
+                                            "loopnest": [],
+                                            "name": "i1_4_0_63_89_90_92_loop",
+                                            "opcode": "Loop",
+                                            "outs": [],
                                             "predicates": []
                                         }
                                     ],
@@ -1629,7 +1565,7 @@
                             "isBasicBlock": false,
                             "isParallel": true,
                             "loopnest": [],
-                            "name": "i0_4_62_loop",
+                            "name": "i0_4_63_91_92_loop",
                             "opcode": "Loop",
                             "outs": [],
                             "predicates": []

@@ -589,3 +589,594 @@
 06/08/2023 08:12:11 AM INFO [WalrusDriver.0]: ru_maxrss:  713mb (delta=0mb)
 06/08/2023 08:12:11 AM INFO [WalrusDriver.0]: Walrus pass: run_stargazer succeeded!
 06/08/2023 08:12:11 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: max_allowed_parallelism=24
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: unroll
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to unroll: modules=1 functions=1 allocs=5 blocks=1 instructions=2
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (Unroll) Start unrolling at Fri Jun  9 08:01:38 2023
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (Unroll) DONE unrolling Fri Jun  9 08:01:38 2023
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Instruction count after Unroll: 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Total count: 151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Shuffle: 96
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: TensorCopy: 48
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Save: 6
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Load: 1
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: unroll succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: birverifier
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to birverifier: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: birverifier succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: vn_splitter
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to vn_splitter: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Collected all the internal vnodes: size = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Done with analyze and splitting: total dead nodes = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: number of penguin non-local-tensor caused reload left 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: number of penguin non-local-tensor caused spill left 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Time: 0 seconds
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (VerticalFusion) Time: 0 seconds
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (ShrinkDN) Time: 0 seconds
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (LowerAC) Time: -0.001 seconds
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: vn_splitter succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: lower_ac
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to lower_ac: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO (LowerAC) Lowered 1 loads, 6 saves, 0 copies.
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: lower_ac succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: pre_sched
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to pre_sched: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: pre_sched succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: coloring_allocator
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to coloring_allocator: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: GCA DRAM bytes loaded or saved 36864
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: GCA average DMA size 275 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Allocating functions
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:   linearize and check
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:   allocating PSUM
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:     main loop
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:     renumber locations
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         size = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       build interference graph
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         bit-matrix size = 0 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         pass 1
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: 0% PSUM demand before spilling
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           PSUM high-water mark = 0 tensors
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         pass 2
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         found 0 edges
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         adjacency vectors require 0 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       find costs
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       best-of-n loop, heuristic = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         simplify interference graph
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           initialize low and high
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             lo = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             hi = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             inf = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             total = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           simplify
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             new candidates = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         select ranges
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           no more spills
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         PSUM score = 0 (lower is better)
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: spilling from PSUM cost about 0 cycles
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: 0% PSUM utilization after allocation
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:   allocating SB
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:     main loop
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       renumber locations
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         size = 55
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       find partners
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         found 0 accumulation groups
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       expanding partners
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       find first defs
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       find loads
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         1 pin count
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         0 remat count
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         1 pinned tensors will require about 96 bytes/partition
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       build interference graph
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         bit-matrix size = 190 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         pass 1
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: 13% SB demand before allocation
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           SB high-water mark = 13280 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [0, 31]
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [32, 63]
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [64, 95]
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [96, 127]
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         pass 2
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         found 853 edges
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         adjacency vectors require 6824 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       find costs
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       best-of-n loop, heuristic = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         simplify interference graph
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           initialize safe & unsafe
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:               safe = 52
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             unsafe = 3
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:                inf = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:       preallocated = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:              total = 55
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           simplify
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:             new candidates = 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         select ranges
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:           success
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]:         SB score = 0
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: spilling from SB cost about 0 cycles
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: 96 bytes/partition (100%) successfully pinned
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: pinning saved approximately 1728 cycles
+06/09/2023 08:01:38 AM WARNING [WalrusDriver.0]: 13% SB utilization after allocation
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: coloring_allocator succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: dma_optimization
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to dma_optimization: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive Matmul Accumulation group dst PSUM Allocation 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive Activation source PSUM Allocation 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive DVE engine source/dst PSUM Allocation 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: DMA optimization In bytes loaded or saved 36864, 33.3333% input load, 66.6667% output write, 0% spill/reload 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Load Merging]: removed 0 GCA remat/cloned instructions
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Load Merging] reduced input/const loading DMA traffic 0, 0% out of total input/const loading dma traffic
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload instructions
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload memory locations
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Spill Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Allocation optimization]: removed 0 spill/reload instructions
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Allocation optimization]: removed 0 spill/reload memory locations
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Re-allocation Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload instructions
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload memory locations
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Spill Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [DMA optimization] reduced DMA traffic 0, 0% out of total dma traffic
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: DMA optimization Out bytes loaded or saved 36864, 33.3333% input load, 66.6667% output write, 0% spill/reload 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes loaded 12288
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average loaded DMA size 96 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes saved 24576
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average saved DMA size 4096 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes DMAcopyed 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average DMAcopyed DMA size 0 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: [Experiment partial DMA access] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: DMA SpillSave Coalescing Round 0 combined 0 SpillSaves and Reloads
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing DRAM bytes loaded 12288
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing average loaded DMA size 96 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing DRAM bytes saved 24576
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing average saved DMA size 4096 bytes
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive SpillSave overlapping address 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive Load overlapping address 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive Any overlapping address 
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Reload number 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Spill number 0
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: DMA optimization enable optimization
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: dma_optimization succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: build_fdeps
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to build_fdeps: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: build_fdeps succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: remove_redundancies
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to remove_redundancies: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: remove_redundancies succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: anti_dependency_analyzer
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to anti_dependency_analyzer: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: anti_dependency_analyzer succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: post_sched
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to post_sched: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: post_sched succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: tensorcopy_accel
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to tensorcopy_accel: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running peephole optimization pass
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: tensorcopy_accel succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: birverifier
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to birverifier: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: birverifier succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Running walrus pass: run_stargazer
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Input to run_stargazer: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: ru_maxrss:  710mb (delta=0mb)
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Walrus pass: run_stargazer succeeded!
+06/09/2023 08:01:38 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: max_allowed_parallelism=24
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: unroll
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to unroll: modules=1 functions=1 allocs=5 blocks=1 instructions=2
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (Unroll) Start unrolling at Fri Jun  9 09:12:07 2023
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (Unroll) DONE unrolling Fri Jun  9 09:12:07 2023
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Instruction count after Unroll: 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Total count: 151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Shuffle: 96
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: TensorCopy: 48
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Save: 6
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Load: 1
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: unroll succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: birverifier
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to birverifier: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: birverifier succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: vn_splitter
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to vn_splitter: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Collected all the internal vnodes: size = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Done with analyze and splitting: total dead nodes = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: number of penguin non-local-tensor caused reload left 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: number of penguin non-local-tensor caused spill left 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Time: 0 seconds
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (VerticalFusion) Time: 0 seconds
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (ShrinkDN) Time: 0 seconds
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (LowerAC) Time: -0.001 seconds
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: vn_splitter succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: lower_ac
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to lower_ac: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO (LowerAC) Lowered 1 loads, 6 saves, 0 copies.
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: lower_ac succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: pre_sched
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to pre_sched: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: pre_sched succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: coloring_allocator
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to coloring_allocator: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: GCA DRAM bytes loaded or saved 36864
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: GCA average DMA size 275 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Allocating functions
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:   linearize and check
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:   allocating PSUM
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:     main loop
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:     renumber locations
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         size = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       build interference graph
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         bit-matrix size = 0 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         pass 1
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: 0% PSUM demand before spilling
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           PSUM high-water mark = 0 tensors
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         pass 2
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         found 0 edges
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         adjacency vectors require 0 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       find costs
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       best-of-n loop, heuristic = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         simplify interference graph
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           initialize low and high
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             lo = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             hi = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             inf = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             total = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           simplify
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             new candidates = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         select ranges
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           no more spills
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         PSUM score = 0 (lower is better)
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: spilling from PSUM cost about 0 cycles
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: 0% PSUM utilization after allocation
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:   allocating SB
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:     main loop
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       renumber locations
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         size = 55
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       find partners
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         found 0 accumulation groups
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       expanding partners
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       find first defs
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       find loads
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         1 pin count
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         0 remat count
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         1 pinned tensors will require about 96 bytes/partition
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       build interference graph
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         bit-matrix size = 190 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         pass 1
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: 13% SB demand before allocation
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           SB high-water mark = 13280 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [0, 31]
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [32, 63]
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [64, 95]
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [96, 127]
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         pass 2
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         found 853 edges
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         adjacency vectors require 6824 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       find costs
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       best-of-n loop, heuristic = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         simplify interference graph
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           initialize safe & unsafe
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:               safe = 52
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             unsafe = 3
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:                inf = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:       preallocated = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:              total = 55
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           simplify
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:             new candidates = 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         select ranges
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:           success
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]:         SB score = 0
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: spilling from SB cost about 0 cycles
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: 96 bytes/partition (100%) successfully pinned
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: pinning saved approximately 1728 cycles
+06/09/2023 09:12:07 AM WARNING [WalrusDriver.0]: 13% SB utilization after allocation
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: coloring_allocator succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: dma_optimization
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to dma_optimization: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive Matmul Accumulation group dst PSUM Allocation 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive Activation source PSUM Allocation 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive DVE engine source/dst PSUM Allocation 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: DMA optimization In bytes loaded or saved 36864, 33.3333% input load, 66.6667% output write, 0% spill/reload 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Load Merging]: removed 0 GCA remat/cloned instructions
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Load Merging] reduced input/const loading DMA traffic 0, 0% out of total input/const loading dma traffic
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload instructions
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload memory locations
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Spill Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Allocation optimization]: removed 0 spill/reload instructions
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Allocation optimization]: removed 0 spill/reload memory locations
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Re-allocation Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload instructions
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload memory locations
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Spill Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [DMA optimization] reduced DMA traffic 0, 0% out of total dma traffic
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: DMA optimization Out bytes loaded or saved 36864, 33.3333% input load, 66.6667% output write, 0% spill/reload 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes loaded 12288
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average loaded DMA size 96 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes saved 24576
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average saved DMA size 4096 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes DMAcopyed 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average DMAcopyed DMA size 0 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: [Experiment partial DMA access] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: DMA SpillSave Coalescing Round 0 combined 0 SpillSaves and Reloads
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing DRAM bytes loaded 12288
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing average loaded DMA size 96 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing DRAM bytes saved 24576
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing average saved DMA size 4096 bytes
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive SpillSave overlapping address 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive Load overlapping address 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive Any overlapping address 
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Reload number 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Spill number 0
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: DMA optimization enable optimization
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: dma_optimization succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: build_fdeps
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to build_fdeps: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: build_fdeps succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: remove_redundancies
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to remove_redundancies: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: remove_redundancies succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: anti_dependency_analyzer
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to anti_dependency_analyzer: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: anti_dependency_analyzer succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: post_sched
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to post_sched: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: post_sched succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: tensorcopy_accel
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to tensorcopy_accel: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running peephole optimization pass
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: tensorcopy_accel succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: birverifier
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to birverifier: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: birverifier succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Running walrus pass: run_stargazer
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Input to run_stargazer: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: ru_maxrss:  1458mb (delta=0mb)
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Walrus pass: run_stargazer succeeded!
+06/09/2023 09:12:07 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: max_allowed_parallelism=24
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: unroll
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to unroll: modules=1 functions=1 allocs=5 blocks=1 instructions=2
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (Unroll) Start unrolling at Fri Jun  9 09:30:32 2023
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (Unroll) DONE unrolling Fri Jun  9 09:30:32 2023
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Instruction count after Unroll: 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Total count: 151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Shuffle: 96
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: TensorCopy: 48
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Save: 6
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Load: 1
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: unroll succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: birverifier
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to birverifier: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: birverifier succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: vn_splitter
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to vn_splitter: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Collected all the internal vnodes: size = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Done with analyze and splitting: total dead nodes = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: number of penguin non-local-tensor caused reload left 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: number of penguin non-local-tensor caused spill left 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (VNSplitter) Time: 0 seconds
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (VerticalFusion) Time: 0 seconds
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (ShrinkDN) Time: 0 seconds
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (LowerAC) Time: -0.001 seconds
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: vn_splitter succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: lower_ac
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to lower_ac: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO (LowerAC) Lowered 1 loads, 6 saves, 0 copies.
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: lower_ac succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: pre_sched
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to pre_sched: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: pre_sched succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: coloring_allocator
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to coloring_allocator: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: GCA DRAM bytes loaded or saved 36864
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: GCA average DMA size 275 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Allocating functions
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:   linearize and check
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:   allocating PSUM
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:     main loop
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:     renumber locations
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         size = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       build interference graph
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         bit-matrix size = 0 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         pass 1
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: 0% PSUM demand before spilling
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           PSUM high-water mark = 0 tensors
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         pass 2
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         found 0 edges
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         adjacency vectors require 0 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       find costs
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       best-of-n loop, heuristic = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         simplify interference graph
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           initialize low and high
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             lo = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             hi = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             inf = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             total = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           simplify
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             new candidates = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         select ranges
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           no more spills
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         PSUM score = 0 (lower is better)
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: spilling from PSUM cost about 0 cycles
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: 0% PSUM utilization after allocation
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:   allocating SB
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:     main loop
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       renumber locations
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         size = 55
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       find partners
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         found 0 accumulation groups
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       expanding partners
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       find first defs
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       find loads
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         1 pin count
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         0 remat count
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         1 pinned tensors will require about 96 bytes/partition
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       build interference graph
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         bit-matrix size = 190 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         pass 1
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: 13% SB demand before allocation
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           SB high-water mark = 13280 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [0, 31]
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [32, 63]
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [64, 95]
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             13280 bytes in partitions [96, 127]
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         pass 2
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         found 853 edges
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         adjacency vectors require 6824 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       find costs
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       best-of-n loop, heuristic = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         simplify interference graph
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           initialize safe & unsafe
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:               safe = 52
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             unsafe = 3
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:                inf = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:       preallocated = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:              total = 55
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           simplify
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:             new candidates = 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         select ranges
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:           success
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]:         SB score = 0
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: spilling from SB cost about 0 cycles
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: 96 bytes/partition (100%) successfully pinned
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: pinning saved approximately 1728 cycles
+06/09/2023 09:30:32 AM WARNING [WalrusDriver.0]: 13% SB utilization after allocation
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: coloring_allocator succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: dma_optimization
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to dma_optimization: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive Matmul Accumulation group dst PSUM Allocation 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive Activation source PSUM Allocation 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: PSUM Rotation rotated 0 PSUM Banks, reduced 0 consecutive DVE engine source/dst PSUM Allocation 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: DMA optimization In bytes loaded or saved 36864, 33.3333% input load, 66.6667% output write, 0% spill/reload 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Load Merging]: removed 0 GCA remat/cloned instructions
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Load Merging] reduced input/const loading DMA traffic 0, 0% out of total input/const loading dma traffic
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload instructions
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload memory locations
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Spill Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Allocation optimization]: removed 0 spill/reload instructions
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Allocation optimization]: removed 0 spill/reload memory locations
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Re-allocation Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload instructions
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [spill optimization round 0]: removed 0 spill/reload memory locations
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Spill Optimization] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [DMA optimization] reduced DMA traffic 0, 0% out of total dma traffic
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: DMA optimization Out bytes loaded or saved 36864, 33.3333% input load, 66.6667% output write, 0% spill/reload 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes loaded 12288
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average loaded DMA size 96 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes saved 24576
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average saved DMA size 4096 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization DRAM bytes DMAcopyed 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA optimization average DMAcopyed DMA size 0 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: [Experiment partial DMA access] reduced DMA traffic 0, -nan% out of total spill/reload dma traffic
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: DMA SpillSave Coalescing Round 0 combined 0 SpillSaves and Reloads
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing DRAM bytes loaded 12288
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing average loaded DMA size 96 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing DRAM bytes saved 24576
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: INFO: Post DMA coalescing average saved DMA size 4096 bytes
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive SpillSave overlapping address 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive Load overlapping address 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: SB Rotation rotated 0 Sb address, reduced 0 consecutive Any overlapping address 
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Reload number 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Spill number 0
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: DMA optimization enable optimization
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: dma_optimization succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: build_fdeps
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to build_fdeps: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: build_fdeps succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: remove_redundancies
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to remove_redundancies: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: remove_redundancies succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: anti_dependency_analyzer
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to anti_dependency_analyzer: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: anti_dependency_analyzer succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: post_sched
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to post_sched: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: post_sched succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: tensorcopy_accel
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to tensorcopy_accel: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running peephole optimization pass
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: tensorcopy_accel succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: birverifier
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to birverifier: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: birverifier succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Running walrus pass: run_stargazer
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Input to run_stargazer: modules=1 functions=1 allocs=57 blocks=1 instructions=151
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: ru_maxrss:  1529mb (delta=0mb)
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Walrus pass: run_stargazer succeeded!
+06/09/2023 09:30:32 AM INFO [WalrusDriver.0]: Output has 1 module(s), 1 function(s), 57 memory location(s), 1 block(s), and 151 instruction(s).

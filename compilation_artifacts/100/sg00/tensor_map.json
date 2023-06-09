@@ -7,13 +7,13 @@
         "sim_format": "NC",
         "sim_shape": [
             3,
-            256
+            1024
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_add__add:0.npy",
         "tf_format": "NC",
         "tf_shape": [
             3,
-            256
+            1024
         ]
     },
     "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0": {
@@ -24,14 +24,14 @@
         "sim_format": "NHC",
         "sim_shape": [
             3,
-            128,
+            512,
             2
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select__Slice:0.npy",
         "tf_format": "NHC",
         "tf_shape": [
             3,
-            128,
+            512,
             2
         ]
     },
@@ -43,14 +43,14 @@
         "sim_format": "NHC",
         "sim_shape": [
             3,
-            128,
+            512,
             2
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_select_1__Slice:0.npy",
         "tf_format": "NHC",
         "tf_shape": [
             3,
-            128,
+            512,
             2
         ]
     },
@@ -61,22 +61,22 @@
         "layer_name": "TapasModel_7/TapasEmbeddings_27/aten_view_1/Reshape:0",
         "sim_format": "N",
         "sim_shape": [
-            768
+            3072
         ],
         "tf_file": "value_TapasModel_7__TapasEmbeddings_27__aten_view_1__Reshape:0.npy",
         "tf_format": "N",
         "tf_shape": [
-            768
+            3072
         ]
     },
-    "t33-98-100": {
-        "dtype": "int32",
+    "t33-84-103-105": {
+        "dtype": "float32",
         "is_const": true,
         "layer_name": "t33",
         "sim_format": "CRSM",
         "sim_shape": [
             128,
-            3,
+            12,
             1,
             1
         ],
@@ -85,14 +85,14 @@
             64
         ],
         "split_npys": [
-            "value_sg00_t33-98-100_CRSM_0.npy",
-            "value_sg00_t33-98-100_CRSM_1.npy"
+            "value_sg00_t33-84-103-105_CRSM_0.npy",
+            "value_sg00_t33-84-103-105_CRSM_1.npy"
         ],
-        "tf_file": "value_sg00_t33-98-100_CRSM.npy",
+        "tf_file": "value_sg00_t33-84-103-105_CRSM.npy",
         "tf_format": "CRSM",
         "tf_shape": [
             128,
-            3,
+            12,
             1,
             1
         ]

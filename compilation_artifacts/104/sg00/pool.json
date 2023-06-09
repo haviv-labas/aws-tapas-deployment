@@ -1,25 +1,25 @@
 {
     "dma": [
         {
-            "#block_num_bytes": 768,
+            "#block_num_bytes": 3072,
             "#block_num_descs": 64,
-            "#comment": "3-t4-55-57_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_Load_I-62-0",
+            "#comment": "0-t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
             "desc": [
                 {
-                    "from": "t4-55-57-v0",
+                    "from": "t4-45-59-61-v0",
                     "from_off": 0,
                     "from_sizes": [
-                        768,
+                        3072,
                         1
                     ],
                     "from_steps": [
                         1,
-                        12
+                        48
                     ],
                     "to": "SB",
-                    "to_off": 98288,
+                    "to_off": 98160,
                     "to_sizes": [
-                        12,
+                        48,
                         64
                     ],
                     "to_steps": [
@@ -32,25 +32,25 @@
             "queue": "qPoolPW0"
         },
         {
-            "#block_num_bytes": 768,
+            "#block_num_bytes": 3072,
             "#block_num_descs": 64,
-            "#comment": "3-t4-55-57_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/sub_t70_Load_I-62-0",
+            "#comment": "0-t4-45-59-61_TO_t4-45_local_51_Load_I-66-0",
             "desc": [
                 {
-                    "from": "t4-55-57-v1",
+                    "from": "t4-45-59-61-v1",
                     "from_off": 0,
                     "from_sizes": [
-                        768,
+                        3072,
                         1
                     ],
                     "from_steps": [
                         1,
-                        12
+                        48
                     ],
                     "to": "SB",
-                    "to_off": 8486896,
+                    "to_off": 8486768,
                     "to_sizes": [
-                        12,
+                        48,
                         64
                     ],
                     "to_steps": [
@@ -65,11 +65,11 @@
         {
             "#block_num_bytes": 1024,
             "#block_num_descs": 128,
-            "#comment": "22-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-0",
+            "#comment": "49-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-3",
             "desc": [
                 {
                     "from": "SB",
-                    "from_off": 144,
+                    "from_off": 328,
                     "from_sizes": [
                         8,
                         128
@@ -79,7 +79,7 @@
                         131072
                     ],
                     "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
-                    "to_off": 0,
+                    "to_off": 3072,
                     "to_sizes": [
                         1024,
                         1
@@ -96,42 +96,11 @@
         {
             "#block_num_bytes": 1024,
             "#block_num_descs": 128,
-            "#comment": "23-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-1",
+            "#comment": "50-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-2",
             "desc": [
                 {
                     "from": "SB",
-                    "from_off": 152,
-                    "from_sizes": [
-                        8,
-                        128
-                    ],
-                    "from_steps": [
-                        1,
-                        131072
-                    ],
-                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
-                    "to_off": 1024,
-                    "to_sizes": [
-                        1024,
-                        1
-                    ],
-                    "to_steps": [
-                        1,
-                        8
-                    ]
-                }
-            ],
-            "id": 1,
-            "queue": "qPoolOut0"
-        },
-        {
-            "#block_num_bytes": 1024,
-            "#block_num_descs": 128,
-            "#comment": "24-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t54_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-68-2",
-            "desc": [
-                {
-                    "from": "SB",
-                    "from_off": 160,
+                    "from_off": 320,
                     "from_sizes": [
                         8,
                         128
@@ -152,17 +121,358 @@
                     ]
                 }
             ],
+            "id": 1,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "51-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-6",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 352,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 6144,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
             "id": 2,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "52-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-9",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 376,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 9216,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 3,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "53-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-5",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 344,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 5120,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 4,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "54-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-11",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 392,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 11264,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 5,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "55-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-1",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 312,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 1024,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 6,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "56-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-8",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 368,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 8192,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 7,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "57-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-10",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 384,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 10240,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 8,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "58-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-7",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 360,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 7168,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 9,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "59-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-4",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 336,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 4096,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 10,
+            "queue": "qPoolOut0"
+        },
+        {
+            "#block_num_bytes": 1024,
+            "#block_num_descs": 128,
+            "#comment": "60-TapasModel_7/TapasEmbeddings_27/aten_min/Minimum_t58_TO_TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0_Save_I-72-0",
+            "desc": [
+                {
+                    "from": "SB",
+                    "from_off": 304,
+                    "from_sizes": [
+                        8,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        131072
+                    ],
+                    "to": "TapasModel_7/TapasEmbeddings_27/aten_min/Minimum:0",
+                    "to_off": 0,
+                    "to_sizes": [
+                        1024,
+                        1
+                    ],
+                    "to_steps": [
+                        1,
+                        8
+                    ]
+                }
+            ],
+            "id": 11,
             "queue": "qPoolOut0"
         },
         {
             "#block_num_bytes": 512,
             "#block_num_descs": 128,
-            "#comment": "0-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-0",
+            "#comment": "1-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i0_Load_I-65-0",
             "desc": [
                 {
                     "from": "2:0",
                     "from_off": 0,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98296,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 0,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "2-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i4_Load_I-65-4",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 4096,
                     "from_sizes": [
                         4,
                         128
@@ -183,17 +493,172 @@
                     ]
                 }
             ],
-            "id": 0,
+            "id": 1,
             "queue": "qPoolIn0"
         },
         {
             "#block_num_bytes": 512,
             "#block_num_descs": 128,
-            "#comment": "1-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-1",
+            "#comment": "3-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i10_Load_I-65-10",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 10240,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98216,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 2,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "4-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i8_Load_I-65-8",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 8192,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98232,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 3,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "5-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i7_Load_I-65-7",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 7168,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98240,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 4,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "6-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i1_Load_I-65-1",
             "desc": [
                 {
                     "from": "2:0",
                     "from_off": 1024,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98288,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 5,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "7-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i5_Load_I-65-5",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 5120,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98256,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 6,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "8-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i3_Load_I-65-3",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 3072,
                     "from_sizes": [
                         4,
                         128
@@ -214,13 +679,44 @@
                     ]
                 }
             ],
-            "id": 1,
+            "id": 7,
             "queue": "qPoolIn0"
         },
         {
             "#block_num_bytes": 512,
             "#block_num_descs": 128,
-            "#comment": "2-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t78_Load_I-61-2",
+            "#comment": "9-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i6_Load_I-65-6",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 6144,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98248,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 8,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "10-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i2_Load_I-65-2",
             "desc": [
                 {
                     "from": "2:0",
@@ -245,7 +741,69 @@
                     ]
                 }
             ],
-            "id": 2,
+            "id": 9,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "11-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i9_Load_I-65-9",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 9216,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98224,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 10,
+            "queue": "qPoolIn0"
+        },
+        {
+            "#block_num_bytes": 512,
+            "#block_num_descs": 128,
+            "#comment": "12-2:0_TO_TapasModel_7/TapasEmbeddings_27/aten_sub/mul_t81_i11_Load_I-65-11",
+            "desc": [
+                {
+                    "from": "2:0",
+                    "from_off": 11264,
+                    "from_sizes": [
+                        4,
+                        128
+                    ],
+                    "from_steps": [
+                        1,
+                        8
+                    ],
+                    "to": "SB",
+                    "to_off": 98208,
+                    "to_sizes": [
+                        4,
+                        128
+                    ],
+                    "to_steps": [
+                        1,
+                        131072
+                    ]
+                }
+            ],
+            "id": 11,
             "queue": "qPoolIn0"
         }
     ],

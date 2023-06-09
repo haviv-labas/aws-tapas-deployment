@@ -13,7 +13,7 @@
           "allocated": false,
           "debug": {
             "format": "NHC",
-            "shape": [ 3, 128, 2 ],
+            "shape": [ 3, 512, 2 ],
             "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0"
           },
           "dtype": "int32",
@@ -26,7 +26,7 @@
               "allocated": false,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 1024 ],
+              "dims": [ 3, 4096 ],
               "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
               "pinned": false,
               "tensor_id": 0,
@@ -36,15 +36,15 @@
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128, 2 ]
+          "tensor_shape": [ 3, 4, 128, 2 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 6, 1 ],
-            "tensor_name": "_t46"
+            "shape": [ 128, 24, 1 ],
+            "tensor_name": "_t44"
           },
           "dtype": "int32",
           "file": "",
@@ -52,29 +52,29 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 98280,
+              "addr": 98208,
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 24 ],
-              "name": "_t46",
+              "dims": [ 128, 96 ],
+              "name": "_t44",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "_t46_set",
+          "name": "_t44_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 6 ]
+          "tensor_shape": [ 128, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27"
+            "shape": [ 128, 24, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23"
           },
           "dtype": "int32",
           "file": "",
@@ -86,65 +86,7 @@
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-              "pinned": false,
-              "tensor_id": 0,
-              "type": "SB"
-            } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
-          "partition_dim": 0,
-          "pinned": false,
-          "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 4 ]
-        },
-        {
-          "Skind": "memory_location_set",
-          "allocated": true,
-          "debug": {
-            "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23"
-          },
-          "dtype": "int32",
-          "file": "",
-          "kind": "Internal",
-          "memorylocations": [
-            {
-              "Skind": "memory_location",
-              "addr": 16,
-              "allocated": true,
-              "bank": 0,
-              "base": 0,
-              "dims": [ 128, 16 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
-              "pinned": false,
-              "type": "SB"
-            } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
-          "partition_dim": 1,
-          "pinned": false,
-          "tensor_shape": [ 128, 4 ]
-        },
-        {
-          "Skind": "memory_location_set",
-          "allocated": true,
-          "debug": {
-            "format": "UNDEF",
-            "shape": [ 128, 4, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23"
-          },
-          "dtype": "int32",
-          "file": "",
-          "kind": "Internal",
-          "memorylocations": [
-            {
-              "Skind": "memory_location",
-              "addr": 32,
-              "allocated": true,
-              "bank": 0,
-              "base": 0,
-              "dims": [ 128, 16 ],
+              "dims": [ 128, 96 ],
               "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
               "pinned": false,
               "type": "SB"
@@ -152,15 +94,15 @@
           "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
           "partition_dim": 1,
           "pinned": false,
-          "tensor_shape": [ 128, 4 ]
+          "tensor_shape": [ 128, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": true,
           "debug": {
             "format": "UNDEF",
-            "shape": [ 128, 6, 1 ],
-            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34"
+            "shape": [ 128, 24, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23"
           },
           "dtype": "int32",
           "file": "",
@@ -168,28 +110,56 @@
           "memorylocations": [
             {
               "Skind": "memory_location",
-              "addr": 48,
+              "addr": 96,
               "allocated": true,
               "bank": 0,
               "base": 0,
-              "dims": [ 128, 24 ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
+              "dims": [ 128, 96 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
+              "pinned": false,
+              "type": "SB"
+            } ],
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
+          "partition_dim": 1,
+          "pinned": false,
+          "tensor_shape": [ 128, 24 ]
+        },
+        {
+          "Skind": "memory_location_set",
+          "allocated": true,
+          "debug": {
+            "format": "UNDEF",
+            "shape": [ 128, 24, 1 ],
+            "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35"
+          },
+          "dtype": "int32",
+          "file": "",
+          "kind": "Internal",
+          "memorylocations": [
+            {
+              "Skind": "memory_location",
+              "addr": 192,
+              "allocated": true,
+              "bank": 0,
+              "base": 0,
+              "dims": [ 128, 96 ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
               "pinned": false,
               "tensor_id": 0,
               "type": "SB"
             } ],
-          "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
+          "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 128, 6 ]
+          "tensor_shape": [ 128, 24 ]
         },
         {
           "Skind": "memory_location_set",
           "allocated": false,
           "debug": {
             "format": "NC",
-            "shape": [ 3, 256 ],
+            "shape": [ 3, 1024 ],
             "tensor_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0"
           },
           "dtype": "int32",
@@ -202,7 +172,7 @@
               "allocated": false,
               "bank": 0,
               "base": 0,
-              "dims": [ 3, 1024 ],
+              "dims": [ 3, 4096 ],
               "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
               "pinned": false,
               "tensor_id": 0,
@@ -212,7 +182,7 @@
           "partition_dim": 0,
           "pinned": false,
           "tensorId2MemLocSize": 1,
-          "tensor_shape": [ 3, 128, 2 ]
+          "tensor_shape": [ 3, 4, 128, 2 ]
         } ],
       "attributes": [
         "no_spill",
@@ -238,15 +208,15 @@
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
                   "offset": 0
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-0",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-0",
               "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "_t46",
-                  "memsetref": "_t46_set",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
                   "offset": 0
                 } ]
             },
@@ -256,7 +226,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-0",
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-0",
                   "Output" ] ],
               "engine": "DMA",
               "ins": [
@@ -268,15 +238,15 @@
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
                   "offset": 256
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-1",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-1",
               "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "_t46",
-                  "memsetref": "_t46_set",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
                   "offset": 2
                 } ]
             },
@@ -286,7 +256,7 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-1",
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-1",
                   "Output" ] ],
               "engine": "DMA",
               "ins": [
@@ -298,15 +268,15 @@
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
                   "offset": 512
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-2",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-2",
               "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "_t46",
-                  "memsetref": "_t46_set",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
                   "offset": 4
                 } ]
             },
@@ -316,93 +286,28 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-0",
-                  "Flow" ], [
-                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t46_Load_I-36-2",
-                  "Flow" ] ],
-              "engine": "Pool",
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-2",
+                  "Output" ] ],
+              "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "_t46",
-                  "memsetref": "_t46_set",
-                  "offset": 0
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 768
                 } ],
-              "name": "I-45-0",
-              "opcode": "TensorCopy",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-3",
+              "opcode": "Load",
               "outs": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "const0": 31.0,
-              "const1": 0.0,
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
-                "penguin_id": "18446744073709551615"
-              },
-              "dependencies": [ [
-                  "I-45-0",
-                  "Flow" ] ],
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
-                  "offset": 0
-                } ],
-              "name": "I-39-0",
-              "op0": "arith_shift_right",
-              "op1": "bypass",
-              "opcode": "TensorScalar",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
-                  "offset": 0
-                } ],
-              "reverse0": false,
-              "reverse1": false
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
-                  "offset": 0
-                } ],
-              "name": "I-42-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
-                  "offset": 0
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 6
                 } ]
             },
             {
@@ -410,26 +315,328 @@
                 "op_name": "unknown",
                 "penguin_id": "18446744073709551615"
               },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-3",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 1024
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-4",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 8
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-4",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 1280
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-5",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 10
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-5",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 1536
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-6",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 12
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-6",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 1792
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-7",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 14
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-7",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 2048
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-8",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 16
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-8",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 2304
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-9",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 18
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-9",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 2560
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-10",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 20
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "unknown",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-10",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_set",
+                  "offset": 2816
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-11",
+              "opcode": "Load",
+              "outs": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 1 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 22
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-6",
+                  "Flow" ], [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_TO__t44_Load_I-37-11",
+                  "Flow" ] ],
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "_t46",
-                  "memsetref": "_t46_set",
-                  "offset": 384
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 0
                 } ],
-              "name": "I-45-1",
+              "name": "I-43-0",
               "opcode": "TensorCopy",
               "outs": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
-                  "offset": 256
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-43-0",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
+                  "offset": 0
+                } ],
+              "name": "I-41-0",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 1536
+                } ],
+              "name": "I-43-1",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
+                  "offset": 1536
                 } ]
             },
             {
@@ -439,31 +646,61 @@
                 "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
                 "penguin_id": "18446744073709551615"
               },
-              "dependencies": [ [
-                  "I-45-1",
-                  "Flow" ] ],
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
-                  "offset": 256
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 0
                 } ],
-              "name": "I-39-1",
+              "name": "I-40-0",
               "op0": "arith_shift_right",
               "op1": "bypass",
               "opcode": "TensorScalar",
               "outs": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
                   "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
-                  "offset": 256
+                  "offset": 0
+                } ],
+              "reverse0": false,
+              "reverse1": false
+            },
+            {
+              "const0": 31.0,
+              "const1": 0.0,
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "_t44",
+                  "memsetref": "_t44_set",
+                  "offset": 1536
+                } ],
+              "name": "I-40-1",
+              "op0": "arith_shift_right",
+              "op1": "bypass",
+              "opcode": "TensorScalar",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
+                  "offset": 1536
                 } ],
               "reverse0": false,
               "reverse1": false
@@ -473,26 +710,59 @@
                 "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
                 "penguin_id": "18446744073709551615"
               },
+              "dependencies": [ [
+                  "I-43-1",
+                  "Flow" ] ],
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Slice:0_local_27_set",
-                  "offset": 256
-                } ],
-              "name": "I-42-1",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
                   "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
-                  "offset": 256
+                  "offset": 1536
+                } ],
+              "name": "I-41-1",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 1536
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "I-40-1",
+                  "Flow" ] ],
+              "engine": "Pool",
+              "ins": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
+                  "offset": 1536
+                } ],
+              "name": "I-41-3",
+              "opcode": "TensorCopy",
+              "outs": [
+                {
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 1537
                 } ]
             },
             {
@@ -503,49 +773,22 @@
               "engine": "Pool",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
-                  "offset": 0
-                } ],
-              "name": "I-40-0",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
-                  "offset": 0
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
                   "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
                   "offset": 0
                 } ],
-              "name": "I-40-2",
+              "name": "I-41-2",
               "opcode": "TensorCopy",
               "outs": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 24, 64 ], [ 1, 1 ], [ 2, 12 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
                   "offset": 1
                 } ]
             },
@@ -555,55 +798,28 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-42-1",
+                  "I-41-2",
                   "Flow" ] ],
-              "engine": "Pool",
+              "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i0_set",
-                  "offset": 256
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 12
                 } ],
-              "name": "I-40-1",
-              "opcode": "TensorCopy",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-6",
+              "opcode": "Save",
               "outs": [
                 {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
-                  "offset": 384
-                } ]
-            },
-            {
-              "debug": {
-                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
-                "penguin_id": "18446744073709551615"
-              },
-              "engine": "Pool",
-              "ins": [
-                {
-                  "ap": [ [ 4, 64 ], [ 1, 1 ], [ 1, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t23_i1_set",
-                  "offset": 256
-                } ],
-              "name": "I-40-3",
-              "opcode": "TensorCopy",
-              "outs": [
-                {
-                  "ap": [ [ 6, 64 ], [ 1, 1 ], [ 2, 3 ] ],
-                  "dtype": "int32",
-                  "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
-                  "offset": 385
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 1536
                 } ]
             },
             {
@@ -612,19 +828,19 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "I-40-3",
-                  "Flow" ] ],
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-6",
+                  "Output" ] ],
               "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
                   "offset": 2
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-1",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-1",
               "opcode": "Save",
               "outs": [
                 {
@@ -642,19 +858,139 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-1",
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-1",
                   "Output" ] ],
               "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 20
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-10",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 2560
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-10",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 6
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-3",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 768
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-3",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 18
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-9",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 2304
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-9",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 0
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-0",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 0
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-0",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
                   "offset": 4
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-2",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-2",
               "opcode": "Save",
               "outs": [
                 {
@@ -672,19 +1008,19 @@
                 "penguin_id": "18446744073709551615"
               },
               "dependencies": [ [
-                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-2",
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-2",
                   "Output" ] ],
               "engine": "DMA",
               "ins": [
                 {
-                  "ap": [ [ 6, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
                   "dtype": "int32",
                   "kind": "physical_ap",
-                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34",
-                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_set",
-                  "offset": 0
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 10
                 } ],
-              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t34_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-41-0",
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-5",
               "opcode": "Save",
               "outs": [
                 {
@@ -693,7 +1029,127 @@
                   "kind": "physical_ap",
                   "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
                   "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
-                  "offset": 0
+                  "offset": 1280
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-5",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 16
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-8",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 2048
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-8",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 8
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-4",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 1024
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-4",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 14
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-7",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 1792
+                } ]
+            },
+            {
+              "debug": {
+                "op_name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape",
+                "penguin_id": "18446744073709551615"
+              },
+              "dependencies": [ [
+                  "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-7",
+                  "Output" ] ],
+              "engine": "DMA",
+              "ins": [
+                {
+                  "ap": [ [ 24, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_set",
+                  "offset": 22
+                } ],
+              "name": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape_t35_TO_TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_Save_I-42-11",
+              "opcode": "Save",
+              "outs": [
+                {
+                  "ap": [ [ 2, 128 ], [ 1, 1 ], [ 1, 2 ] ],
+                  "dtype": "int32",
+                  "kind": "physical_ap",
+                  "memref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0",
+                  "memsetref": "TapasModel_7/TapasEmbeddings_27/aten_select/Reshape:0_set",
+                  "offset": 2816
                 } ]
             } ],
           "name": "Block1"
