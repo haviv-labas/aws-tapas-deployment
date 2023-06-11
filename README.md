@@ -15,6 +15,6 @@ This notebook creates an instance of ```TAPAS_Deployer``` and calls all neccessa
 - Create an AWS account.
 - Create an IAM role with the following access permissions: ```AmazonSageMakerFullAccess, EC2InstanceProfileForImageBuilderECRContainerBuilds, AWSAppRunnerServicePolicyForECRAccess```
 - Start a new Notebook instance in Sagemaker using the role created above.
-- Clone this repository and run this notebook.
+- Clone this repository and run the notebook ```run.ipynb```.
 
 
