@@ -1,7 +1,0 @@
-v0.0.1
-%2 = fn (%v0:0: Tensor[(196608,), int64], %v1:0: Tensor[(3, 512), int64]) -> (Tensor[(3, 65536), int64], Tensor[(3, 512), int64]) {
-  %0 = reshape(%v0:0, framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_view/Reshape", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_view/Reshape:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_view/Reshape", newshape=[3, 65536]) // ty=Tensor[(3, 65536), int64]
-  %1 = (%0, %v1:0)
-  %1
-}
-%2

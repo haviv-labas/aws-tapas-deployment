@@ -1,44 +1,48 @@
-import os, pdb
+import os
 import json
-import torch
-import torch.neuron
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, AutoConfig, AutoModel
 from transformers import TapasTokenizer, TapasForQuestionAnswering
 import pandas as pd
-import torch
-import torch_neuron
+from typing import Any, Dict, List, Tuple, Union
 
-JSON_CONTENT_TYPE = 'application/json'
+JSON_CONTENT_TYPE = "application/json"
 
-def model_fn(model_dir):
+
+def model_fn(model_dir: str) -> Tuple[TapasForQuestionAnswering, TapasTokenizer]:
     model_name = "google/tapas-base-finetuned-wtq"
     model = TapasForQuestionAnswering.from_pretrained(model_name)
     tokenizer = TapasTokenizer.from_pretrained(model_name)
     return (model, tokenizer)
 
 
-def input_fn(serialized_input_data, content_type=JSON_CONTENT_TYPE):
+def input_fn(
+    serialized_input_data: str, content_type: str = JSON_CONTENT_TYPE
+) -> Dict[str, Any]:
     if content_type == JSON_CONTENT_TYPE:
         input_data = json.loads(serialized_input_data)
         return input_data
-
     else:
-        raise Exception('Requested unsupported ContentType in Accept: ' + content_type)
-        return
+        raise Exception("Requested unsupported ContentType in Accept: " + content_type)
 
-def predict_fn(input_data, models):
+
+def predict_fn(
+    input_data: Dict[str, Any], models: Tuple[TapasForQuestionAnswering, TapasTokenizer]
+) -> str:
     model_tapas, tokenizer = models
-    
+
     data = input_data[0]["data"]
     queries = input_data[0]["queries"]
     table = pd.DataFrame.from_dict(data)
 
-    inputs = tokenizer(table=table, queries=queries, padding="max_length", return_tensors="pt")
+    inputs = tokenizer(
+        table=table, queries=queries, padding="max_length", return_tensors="pt"
+    )
     outputs = model_tapas(**inputs)
 
-    
-    predicted_answer_coordinates, predicted_aggregation_indices = tokenizer.convert_logits_to_predictions(
-    inputs, outputs.logits.detach(), outputs.logits_aggregation.detach()
+    (
+        predicted_answer_coordinates,
+        predicted_aggregation_indices,
+    ) = tokenizer.convert_logits_to_predictions(
+        inputs, outputs.logits.detach(), outputs.logits_aggregation.detach()
     )
 
     id2aggregation = {0: "NONE", 1: "SUM", 2: "AVERAGE", 3: "COUNT"}
@@ -56,22 +60,24 @@ def predict_fn(input_data, models):
                 cell_values.append(table.iat[coordinate])
             answers.append(", ".join(cell_values))
 
-    print("")
     queries_and_answers = []
     for query, answer, predicted_agg in zip(
         queries, answers, aggregation_predictions_string
     ):
         if predicted_agg == "NONE":
-            print("Predicted answer: " + answer)
             queries_and_answers.append(f"Query:{query}\nAnswer:{answer}")
         else:
-            print("Predicted answer: " + predicted_agg + " > " + answer)
-            queries_and_answers.append(f"Query:{query}\nAnswer:{predicted_agg} > {answer}")
+            queries_and_answers.append(
+                f"Query:{query}\nAnswer:{predicted_agg} > {answer}"
+            )
 
     return "\n".join(queries_and_answers)
 
-def output_fn(prediction_output, accept=JSON_CONTENT_TYPE):
+
+def output_fn(
+    prediction_output: str, accept: str = JSON_CONTENT_TYPE
+) -> Tuple[str, str]:
     if accept == JSON_CONTENT_TYPE:
         return json.dumps(prediction_output), accept
 
-    raise Exception('Requested unsupported ContentType in Accept: ' + accept)
+    raise Exception("Requested unsupported ContentType in Accept: " + accept)

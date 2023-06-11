@@ -1,3 +1,9 @@
+![SageMaker](https://github.com/aws/sagemaker-inference-toolkit/raw/master/branding/icon/sagemaker-banner.png)
+
+# SageMaker Inference Toolkit
+
+[![Latest Version](https://img.shields.io/pypi/v/sagemaker-inference.svg)](https://pypi.python.org/pypi/sagemaker-inference) [![Supported Python Versions](https://img.shields.io/pypi/pyversions/sagemaker-inference.svg)](https://pypi.python.org/pypi/sagemaker-inference) [![Code Style: Black](https://img.shields.io/badge/code_style-black-000000.svg)](https://github.com/python/black)
+
 # TAPAS deployment via Sagemaker-Neuron.
 Please see ```run.ipynb``` for full details on how to run and test this repository.
 

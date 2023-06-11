@@ -1,9 +1,0 @@
-v0.0.1
-%3 = fn () -> (Tensor[(1,), int64], Tensor[(1536,), int64]) {
-  %0 = copy(meta[relay.Constant][0] // ty=Tensor[(1,), int64], framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_to_1/Const", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_to_1/Const:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_to_1/Const", axis=0) // ty=Tensor[(1,), int64]
-  %1 = copy(meta[relay.Constant][1] // ty=Tensor[(1536,), int64], framework_op_name="TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape", output_tensors_name=["TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape:0"], input_tensors_name=[], framework_op_debug_info="TapasModel_7/TapasEmbeddings_27/aten_reshape/Reshape", axis=0) // ty=Tensor[(1536,), int64]
-  %2 = (%0, %1)
-  %2
-}
-%3
-// meta data omitted. you can use show_meta_data=True to include meta data

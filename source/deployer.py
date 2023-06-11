@@ -1,36 +1,45 @@
 import os
+from abc import ABC, abstractmethod
+from typing import Any
 
-class Deployer:
-    algorithm_name = "inference-to-deploy"
 
-    def __init__(self, use_neuron=False):
-        self.entrypoint_to_use = (
+class Deployer(ABC):
+    algorithm_name: str = "inference-to-deploy"
+
+    def __init__(self, use_neuron: bool = False) -> None:
+        self.entrypoint_to_use: str = (
             "inference_neuron.py" if use_neuron else "inference_cpu.py"
         )
 
-    def get_model_and_tokeniser(self):
-        raise NotImplemented
+    @abstractmethod
+    def get_model_and_tokeniser(self) -> None:
+        pass
 
-    def tracing_inputs(self):
-        raise NotImplemented
+    @abstractmethod
+    def tracing_inputs(self) -> None:
+        pass
 
-    def trace_model(self):
-        raise NotImplemented
+    @abstractmethod
+    def trace_model(self) -> None:
+        pass
 
-    def upload_model_to_s3(self):
-        raise NotImplemented
+    @abstractmethod
+    def upload_model_to_s3(self) -> None:
+        pass
 
-    def deploy_ecr_image(self):
-        raise NotImplemented
-    
-    def build_ecr_image(self):
+    @abstractmethod
+    def deploy_ecr_image(self) -> None:
+        pass
+
+    def build_ecr_image(self) -> None:
         os.system("bash ./build_and_push.sh")
-        
-    def test_endpoint(self):
+
+    def test_endpoint(self) -> Any:
         return self.predictor.predict(self.endpoint_testing_query())
 
-    def terminate(self):
+    def terminate(self) -> None:
         return self.predictor.delete_endpoint(self.predictor.endpoint)
 
-    def endpoint_testing_query(self):
-        raise NotImplemented
+    @abstractmethod
+    def endpoint_testing_query(self) -> None:
+        pass
