@@ -1,4 +1,4 @@
-import os, pdb, json
+import os, json
 
 os.environ["NEURON_RT_NUM_CORES"] = "1"
 os.environ["AWS_NEURON_VISIBLE_DEVICES"] = "1"
@@ -7,7 +7,6 @@ from transformers import TapasTokenizer, TapasForQuestionAnswering
 import pandas as pd
 
 JSON_CONTENT_TYPE = "application/json"
-
 
 def model_fn(model_dir):
     model_name = "google/tapas-mini-finetuned-wtq"
@@ -25,7 +24,6 @@ def input_fn(serialized_input_data, content_type=JSON_CONTENT_TYPE):
         return input_data
     else:
         raise Exception("Requested unsupported ContentType in Accept: " + content_type)
-        return
 
 
 def predict_fn(input_data, models):
@@ -75,7 +73,7 @@ def predict_fn(input_data, models):
         queries, answers, aggregation_predictions_string
     ):
         print(query)
-        if predicted_agg == "NONE":
+        if predicted_agg == None:
             print("Predicted answer: " + answer)
             queries_and_answers.append(f"Query:{query}\nAnswer:{answer}")
         else:
